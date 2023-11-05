@@ -22,7 +22,10 @@ import Register from "./views/pages/auth/Register";
 import SetiapSaat from "./views/pages/informasi/SetiapSaat";
 import InformasiBerkala from "./views/pages/informasi/InformasiBerkala";
 // import OwlCarousel from 'react-owl-carousel2';
-
+import Maklumat from "./views/pages/Maklumat";
+import Dikecualikan from "./views/pages/informasi/Dikecualikan";
+import Kanal from "./views/pages/informasi/Kanal";
+import PermohonanInformasi from "./views/pages/FormPermohonanInformasi";
 
 function App() {
   return (
@@ -41,6 +44,8 @@ function App() {
           <Route path="/penyelesaian" component={PenyelesaianSengketa} exact />
           <Route path="/pengumuman" component={Pengumuman} exact />
           <Route path="/library" component={eLibrary} exact />
+          <Route path="/dikecualikan" component={Dikecualikan} exact />
+          <Route path="/kanal" component={Kanal} exact />
           <Route
             path="/pengumuman-calon-anggota-bawaslu-kabupaten-kota-terpilih-provinsi-jawa-tengah"
             component={CalonAnggotaBawaslu}
