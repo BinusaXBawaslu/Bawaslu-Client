@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import Footer from "../../component/Footer";
 import Navbar from "../../component/Navbar";
 // import OwlCarousel from "react-owl-carousel2";
-import ReactOwlCarousel from "react-owl-carousel";
-// import "react-owl-carousel2/src/owl.carousel.css";
+// // import ReactOwlCarousel from "react-owl-carousel";
+import "react-owl-carousel2/src/owl.carousel.css";
 // import "react-owl-carousel2/src/owl.theme.default.css";
 // import "react-owl-carousel/style.css";
 

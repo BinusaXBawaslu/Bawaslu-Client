@@ -29,11 +29,11 @@ function Home() {
             <div className="row">
               <div className="col-lg-6 col-md-9">
                 <div className="banner-inner">
-                  <h5 className="sub-title left-border">Berita</h5>
-
+                  <div className="bg-primary w-25">
+                    <h1 className=" text-white  align-center">Berita</h1>
+                  </div>
                   <h2 className="title">
-                    KPU boyolali gelar
-                    <span>kirab pemilu 2024</span>
+                    KPU boyolali gelar&nbsp;<span>kirab pemilu 2024</span>
                   </h2>
                   <h2 className="fs-1">
                     Bawaslu boyolali turut hadir dan mengawasi
@@ -162,7 +162,8 @@ function Home() {
                       BY HUMAS BAWASLU BOYOLALI
                       <h6 class="fs-6 title">
                         <a href="blog-details.html">
-                        Panwaslu Kecamatan Nogosari Gelar Sosialisasi Pengawasan Partisipatif Pada Pemilih Pemula
+                          Panwaslu Kecamatan Nogosari Gelar Sosialisasi
+                          Pengawasan Partisipatif Pada Pemilih Pemula
                         </a>
                       </h6>
                       <div class="post-info">

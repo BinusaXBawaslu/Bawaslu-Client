@@ -10,6 +10,9 @@ import PermintaanInformasi from "./views/prosedur/PermintaanInformasi";
 import PermohonanKeberatan from "./views/prosedur/PermohonanKeberatan";
 import WaktuLayanan from "./views/prosedur/WaktuLayanan";
 
+import InformasiBerkala from "./views/pages/informasi/InformasiBerkala";
+import SetiapSaat from "./views/pages/informasi/SetiapSaat";
+
 import Profil from "./views/pages/Profil";
 import BiayaLayanan from "./views/prosedur/BiayaLayanan";
 
@@ -24,6 +27,7 @@ import Register from "./views/pages/auth/Register";
 import Maklumat from "./views/pages/Maklumat";
 import Dikecualikan from "./views/pages/informasi/Dikecualikan";
 import Kanal from "./views/pages/informasi/Kanal";
+import PublikRegulasi from "./views/pages/informasi/PublikRegulasi";
 import PermohonanInformasi from "./views/pages/FormPermohonanInformasi";
 
 import OwlCarousel from "react-owl-carousel2";
@@ -47,6 +51,7 @@ function App() {
           <Route path="/library" component={eLibrary} exact />
           <Route path="/dikecualikan" component={Dikecualikan} exact />
           <Route path="/kanal" component={Kanal} exact />
+          <Route path="/publik-regulasi" component={PublikRegulasi} exact />
           <Route
             path="/pengumuman-calon-anggota-bawaslu-kabupaten-kota-terpilih-provinsi-jawa-tengah"
             component={CalonAnggotaBawaslu}

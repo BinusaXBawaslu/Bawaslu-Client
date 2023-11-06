@@ -46,7 +46,9 @@ function Dikecualikan() {
         <div class=" mx-4 my-4 d-flex  ">
           <div class="d-flex flex-column">
             <div class="section-title">
-              <h2 class="title ">Informasi Dikecualikan</h2>
+              <h1 class="title  text-primary display-4">
+                Informasi Dikecualikan
+              </h1>
             </div>
             <div class="d-flex flex-column gap-3   bg-white shadow-lg p-3 mb-5 bg-body-tertiary rounded rounded-4 p-4">
               <li>
