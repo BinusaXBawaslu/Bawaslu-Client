@@ -20,7 +20,7 @@ function eLibrary() {
       >
         <div class="bg-overlay-gradient"></div>
         {/* <div class="banner-bg-img" style={{ backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/banner/4.webp')` }}></div> */}
-        <div class="container">
+        <div class="container service-area bg-relative pd-top-60 pd-bottom-90 ">
           <div class="row">
             <div class="col-lg-6 col-md-9">
               <div class="banner-inner">
@@ -46,7 +46,7 @@ function eLibrary() {
       </div>
       {/* <!-- banner area end --> */}
       <div
-        class="team-area pd-top-115 pd-bottom-90"
+        class="team-area pd-top-115 pd-bottom-90 service-area bg-relative pd-top-60 pd-bottom-90"
         id="buku"
         style={{
           backgroundImage: `url('https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg?w=740&t=st=1698973959~exp=1698974559~hmac=418240e9f8d698b9b7f2c0907f5c8e0013885b44976fa36e713b8801491993db')`,
@@ -54,6 +54,16 @@ function eLibrary() {
           backgroundSize: "cover",
         }}
       >
+        <img
+          class="shape-left-top top_image_bounce"
+          src="https://www.solverwp.com/demo/html/itechie/assets/img/shape/3.webp"
+          alt="img"
+        />
+        <img
+          class="shape-right-top top_image_bounce"
+          src="https://www.solverwp.com/demo/html/itechie/assets/img/shape/4.webp"
+          alt="img"
+        />
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-lg-6 col-md-10">

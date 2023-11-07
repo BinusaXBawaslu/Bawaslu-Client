@@ -140,42 +140,22 @@ function Navbar() {
                 <a href="#">Informasi Publik</a>
                 <ul class="sub-menu">
                   {/* <li className="text-black"><a>Daftar Informasi Publik</a></li> */}
-                  <li>
-                    <a href="/serta-merta">Informasi Serta Merta</a>
-                  </li>
-                  <li>
-                    <a href="/informasi-setiap-saat">Informasi Setiap Saat</a>
-                  </li>
-                  <li>
-                    <a href="/informasi-berkala-kepemiluan">
-                      Informasi Berkala
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">Informasi DiKecualikan</a>
-                  </li>
-                  <li>
-                    <a href="">Kanal Pengawasan Pemilu</a>
-                  </li>
-                </ul>
+                            <li><a href="/serta-merta">Informasi Serta Merta</a></li>
+                            <li><a href="">Informasi Setiap Saat</a></li>
+                            <li><a href="">Informasi Berkala</a></li>
+                            <li><a href="">Informasi DiKecualikan</a></li>
+                            <li><a href="">Kanal Pengawasan Pemilu</a></li>
+                        </ul>
               </li>
               <li class="menu-item-has-children">
                 <a href="#">Daftar Regulasi</a>
                 <ul class="sub-menu">
                   {/* <li className="text-black"><a>Daftar Informasi Publik</a></li> */}
-                  <li>
-                    <a href="">Regulasi</a>
-                  </li>
-                  <li>
-                    <a href="">DIP</a>
-                  </li>
-                  <li>
-                    <a href="">Standar Operasional Prosedur</a>
-                  </li>
-                  <li>
-                    <a href="/maklumat">Maklumat Pelayanan</a>
-                  </li>
-                </ul>
+                            <li><a href="">Regulasi</a></li>
+                            <li><a href="/dip">DIP</a></li>
+                            <li><a href="/standarOp">Standar Operasional Prosedur</a></li>
+                            <li><a href="/maklumat">Maklumat Pelayanan</a></li>
+                        </ul>
               </li>
               <li class="menu-item-has-children">
                 <a href="#">Form Online</a>

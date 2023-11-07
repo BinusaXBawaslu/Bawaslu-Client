@@ -125,7 +125,7 @@ function Home() {
             <h2 class="title">Berita Bawaslu</h2>
           </div>
           <div className="row">
-            <div class="col-4 widget widget-recent-post pe-lg-5">
+            <div class="col-lg-4 col-md-12 widget widget-recent-post pe-lg-5">
               <ul>
                 <li>
                   <div class="media">
@@ -248,7 +248,7 @@ function Home() {
                 </li>
               </ul>
             </div>
-            <div class="col-4 widget widget-recent-post pe-lg-5">
+            <div class="col-lg-4 col-md-12 widget widget-recent-post pe-lg-5">
               <ul>
                 <li>
                   <div class="media">
@@ -372,7 +372,7 @@ function Home() {
               </ul>
             </div>
             <div
-              class="col-4 widget widget_catagory"
+              class="col-lg-4 col-md-12 widget widget_catagory"
               style={{
                 boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
                 padding: "30px",
@@ -438,9 +438,10 @@ function Home() {
                 </li>
               </ul>
             </div>
-            <br />
-            <br />
-            <div class="pagination">
+            <div
+              class="pagination justify-content-center"
+              style={{ marginTop: "50px" }}
+            >
               <a class="prev page-numbers" href="http://icare.local/">
                 {" "}
                 <i class="fa fa-angle-left"></i>
@@ -469,156 +470,167 @@ function Home() {
               </div>
             </div>
 
-            <div className="row">
-              <div className=" row justify-content-center gap-3">
-                <div class="col-lg-3 col-md-6 shadow p-3 mb-5 bg-body rounded w-25">
-                  <div class="single-work-inner style-two text-center">
-                    <div class="count-wrap">
-                      <div class="count-inner">
-                        <h2>01</h2>
-                      </div>
+            <div class="how-it-work-area pd-top-115 pd-bottom-90">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section-title text-center">
+                        <h5 class="sub-title double-line">Bawaslu Boyolali</h5>
+                        <h2 class="title">Informasi</h2>
                     </div>
-                    <div class="details-wrap">
-                      <div class="details-inner">
-                        <h2>Formulir Permohonan Informasi</h2>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-
-                <div class="col-lg-3 col-md-6 shadow p-3 mb-5 bg-body rounded w-25">
-                  <div class="single-work-inner style-two text-center">
-                    <div class="count-wrap">
-                      <div class="count-inner">
-                        <h2>02</h2>
-                      </div>
+            </div>
+            <div class="how-it-work-inner arrow-line">
+                <div class="row justify-content-center gap-3">
+                    <div class="card col-lg-3 col-md-6 border">
+                        <div class="single-work-inner style-four text-center">
+                            <div class="count-wrap pb-2">
+                                <div class="count-inner">
+                                    <h2>01</h2>
+                                </div>
+                            </div>
+                            <div class="details-wrap">
+                                <div class="details-inner">
+                                    <h4>Formulir Permohonan Informasi</h4>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="details-wrap">
-                      <div class="details-inner">
-                        <h2>Formulir Keberatan Informasi</h2>
-                      </div>
+                    <div class="card col-lg-3 col-md-6 border">
+                        <div class="single-work-inner style-four text-center">
+                            <div class="count-wrap pb-2">
+                                <div class="count-inner">
+                                    <h2>02</h2>
+                                </div>
+                            </div>
+                            <div class="details-wrap">
+                                <div class="details-inner">
+                                    <h4>Formulir Kebebasan Komunikasi</h4>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
+            </div>
+        </div>
+    </div>
 
-              <div className="row justify-content-center">
-                <div className="col-lg-3 col-md-6">
-                  <div className="single-service-inner text-center">
-                    <div className="details">
+            <div className="row justify-content-center">
+              <div className="col-lg-3 col-md-6">
+                <div className="single-service-inner text-center">
+                  <div className="details">
+                    <img
+                      className="d-block w-100"
+                      src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-20.png"
+                      alt="Second slide"
+                    />
+                    <h3>Informasi Berkala</h3>
+                  </div>
+                  <div className="details-hover-wrap">
+                    <div className="details-hover">
                       <img
                         className="d-block w-100"
                         src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-20.png"
                         alt="Second slide"
                       />
                       <h3>Informasi Berkala</h3>
-                    </div>
-                    <div className="details-hover-wrap">
-                      <div className="details-hover">
-                        <img
-                          className="d-block w-100"
-                          src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-20.png"
-                          alt="Second slide"
-                        />
-                        <h3>Informasi Berkala</h3>
 
-                        <a
-                          className="btn btn-base btn-small"
-                          href="service-details.html"
-                        >
-                          View Details
-                        </a>
-                      </div>
+                      <a
+                        className="btn btn-base btn-small"
+                        href="service-details.html"
+                      >
+                        View Details
+                      </a>
                     </div>
                   </div>
                 </div>
+              </div>
 
-                <div className="col-lg-3 col-md-6">
-                  <div className="single-service-inner text-center">
-                    <div className="details">
+              <div className="col-lg-3 col-md-6">
+                <div className="single-service-inner text-center">
+                  <div className="details">
+                    <img
+                      className="d-block w-100"
+                      src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-19.png"
+                      alt="Second slide"
+                    />
+                    <h3>Informasi Setiap Saat</h3>
+                  </div>
+                  <div className="details-hover-wrap">
+                    <div className="details-hover">
                       <img
                         className="d-block w-100"
                         src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-19.png"
                         alt="Second slide"
                       />
                       <h3>Informasi Setiap Saat</h3>
-                    </div>
-                    <div className="details-hover-wrap">
-                      <div className="details-hover">
-                        <img
-                          className="d-block w-100"
-                          src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-19.png"
-                          alt="Second slide"
-                        />
-                        <h3>Informasi Setiap Saat</h3>
 
-                        <a
-                          className="btn btn-base btn-small"
-                          href="service-details.html"
-                        >
-                          View Details
-                        </a>
-                      </div>
+                      <a
+                        className="btn btn-base btn-small"
+                        href="service-details.html"
+                      >
+                        View Details
+                      </a>
                     </div>
                   </div>
                 </div>
+              </div>
 
-                <div className="col-lg-3 col-md-6">
-                  <div className="single-service-inner text-center">
-                    <div className="details">
+              <div className="col-lg-3 col-md-6">
+                <div className="single-service-inner text-center">
+                  <div className="details">
+                    <img
+                      className="d-block w-100"
+                      src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-18.png"
+                      alt="Second slide"
+                    />
+                    <h3>Informasi Serta Merta</h3>
+                  </div>
+                  <div className="details-hover-wrap">
+                    <div className="details-hover">
                       <img
                         className="d-block w-100"
                         src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-18.png"
                         alt="Second slide"
                       />
                       <h3>Informasi Serta Merta</h3>
-                    </div>
-                    <div className="details-hover-wrap">
-                      <div className="details-hover">
-                        <img
-                          className="d-block w-100"
-                          src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-18.png"
-                          alt="Second slide"
-                        />
-                        <h3>Informasi Serta Merta</h3>
 
-                        <a
-                          className="btn btn-base btn-small"
-                          href="service-details.html"
-                        >
-                          View Details
-                        </a>
-                      </div>
+                      <a
+                        className="btn btn-base btn-small"
+                        href="service-details.html"
+                      >
+                        View Details
+                      </a>
                     </div>
                   </div>
                 </div>
+              </div>
 
-                <div className="col-lg-3 col-md-6">
-                  <div className="single-service-inner text-center">
-                    <div className="details">
+              <div className="col-lg-3 col-md-6">
+                <div className="single-service-inner text-center">
+                  <div className="details">
+                    <img
+                      className="d-block w-100"
+                      src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-21.png"
+                      alt="Second slide"
+                    />
+                    <h3>Informasi Dikecualikan</h3>
+                  </div>
+                  <div className="details-hover-wrap">
+                    <div className="details-hover">
                       <img
                         className="d-block w-100"
                         src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-21.png"
                         alt="Second slide"
                       />
                       <h3>Informasi Dikecualikan</h3>
-                    </div>
-                    <div className="details-hover-wrap">
-                      <div className="details-hover">
-                        <img
-                          className="d-block w-100"
-                          src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-21.png"
-                          alt="Second slide"
-                        />
-                        <h3>Informasi Dikecualikan</h3>
 
-                        <a
-                          className="btn btn-base btn-small"
-                          href="service-details.html"
-                        >
-                          View Details
-                        </a>
-                      </div>
+                      <a
+                        className="btn btn-base btn-small"
+                        href="service-details.html"
+                      >
+                        View Details
+                      </a>
                     </div>
                   </div>
                 </div>

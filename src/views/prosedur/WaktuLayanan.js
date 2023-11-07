@@ -78,7 +78,7 @@ function WaktuLayanan() {
                       </div>
                     </div>
                     <div class="media-body">
-                      <h4>Hubungi Kami</h4>
+                      <h4>Nomer Hp</h4>
                       <p>(0276)320420</p>
                     </div>
                   </div>
