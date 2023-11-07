@@ -134,7 +134,8 @@ function CalonAnggotaBawaslu() {
             </div>
             <div class="col-lg-4 col-12">
               <div class="td-sidebar">
-                <div class="widget widget_catagory">
+                <div class="widget widget_catagory"
+                    style={{ background: "#F1F6F9" }}>
                   <h4 class="widget-title">Tautan Lembaga</h4>
                   <ul class="catagory-items">
                     <li>
@@ -199,7 +200,8 @@ function CalonAnggotaBawaslu() {
                     </li>
                   </ul>
                 </div>
-                <div class="widget widget_tag_cloud mb-0">
+                <div class="widget widget_tag_cloud mb-0"
+                    style={{ background: "#F1F6F9" }}>
                   <h4 class="widget-title">Berbagi</h4>
                   <div class="tagcloud">
                     <a href="#" style={{width:"100%", display:"flex", alignItems:"center", justifyContent:"center", fontWeight:"bold"}}><i class="fab fa-facebook"></i> Share To Facebook</a>

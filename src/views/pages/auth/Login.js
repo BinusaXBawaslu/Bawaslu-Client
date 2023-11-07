@@ -1,7 +1,10 @@
 import React from "react";
 import "../../../css/login.css";
+import { useState } from "react";
 
 function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   return (
     <>
       <div class="container d-flex justify-content-center align-items-center min-vh-100">

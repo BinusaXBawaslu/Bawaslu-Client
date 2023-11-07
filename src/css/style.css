@@ -2515,6 +2515,15 @@ ul {
   top: 20px; 
 }
 
+.scrolling-container {
+  width: 100%; /* Atur lebar maksimal untuk kontainer */
+  overflow-x: auto; /* Aktifkan scrolling samping jika kontennya melebihi lebar kontainer */
+  white-space: nowrap; /* Menghindari pemisahan baris dalam kontainer */
+}
+
+.row {
+  display: inline-block; /* Menampilkan elemen-elemen 'col' dalam satu baris */
+}
 
 
 .sticky-active.navbar-area-2 {
@@ -8753,7 +8762,7 @@ ul {
   position: absolute;
   left: 50%;
   top: 65px;
-  height: 100px;
+  height: 160px;
   width: 2px;
   border: 2px dashed #1e6af4;
   -webkit-transform: translate(-50%, 0px);
