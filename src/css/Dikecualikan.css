@@ -1,0 +1,29 @@
+@media screen and (max-width: 767px){
+    .link-box {
+        width: 100% !important;
+    }
+   
+    .image-data{
+        flex-wrap: wrap !important;
+       
+    }
+    .judul {
+        font-Size: 30px !important;
+    }
+    .Judul{
+        font-Size: 20px !important;
+    }
+    .kolom{
+        width: 270px !important;
+        font-Size: 10px !important;
+    }
+   #img{
+    width: 300px;
+   
+   }
+   #image{
+    width: 100% !important;
+   
+   }
+
+}

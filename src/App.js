@@ -59,7 +59,7 @@ function App() {
           />
           <Route path="/berita" component={Berita} exact />
           <Route path="/maklumat" component={Maklumat} exact />
-          <Route path="/dip" component={Dip} exact />
+          {/* <Route path="/dip" component={Dip} exact /> */}
         </Switch>
       </main>
     </BrowserRouter>

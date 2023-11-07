@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "../../../component/Footer";
 import Navbar from "../../../component/Navbar";
+import "../../../css/Kanal.css";
 
 function Kanal() {
   return (
@@ -20,7 +21,9 @@ function Kanal() {
           <div class="row justify-content-center">
             <div class="col-xl-7 col-lg-8">
               <div class="breadcrumb-inner text-center">
-                <h4 class="page-title">Kanal Pengawasan pemuli 2024</h4>
+                <h4 id="judul" class="page-title">
+                  Kanal Pengawasan pemuli 2024
+                </h4>
                 <ul class="page-list">
                   <li>
                     <a href="/">Home</a>

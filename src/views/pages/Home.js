@@ -471,49 +471,49 @@ function Home() {
             </div>
 
             <div class="how-it-work-area pd-top-115 pd-bottom-90">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-lg-6">
                     <div class="section-title text-center">
-                        <h5 class="sub-title double-line">Bawaslu Boyolali</h5>
-                        <h2 class="title">Informasi</h2>
+                      <h5 class="sub-title double-line">Bawaslu Boyolali</h5>
+                      <h2 class="title">Informasi</h2>
                     </div>
+                  </div>
                 </div>
-            </div>
-            <div class="how-it-work-inner arrow-line">
-                <div class="row justify-content-center gap-3">
+                <div class="how-it-work-inner arrow-line">
+                  <div class="row justify-content-center gap-3">
                     <div class="card col-lg-3 col-md-6 border">
-                        <div class="single-work-inner style-four text-center">
-                            <div class="count-wrap pb-2">
-                                <div class="count-inner">
-                                    <h2>01</h2>
-                                </div>
-                            </div>
-                            <div class="details-wrap">
-                                <div class="details-inner">
-                                    <h4>Formulir Permohonan Informasi</h4>
-                                </div>
-                            </div>
+                      <div class="single-work-inner style-four text-center">
+                        <div class="count-wrap pb-2">
+                          <div class="count-inner">
+                            <h2>01</h2>
+                          </div>
                         </div>
+                        <div class="details-wrap">
+                          <div class="details-inner">
+                            <h4>Formulir Permohonan Informasi</h4>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <div class="card col-lg-3 col-md-6 border">
-                        <div class="single-work-inner style-four text-center">
-                            <div class="count-wrap pb-2">
-                                <div class="count-inner">
-                                    <h2>02</h2>
-                                </div>
-                            </div>
-                            <div class="details-wrap">
-                                <div class="details-inner">
-                                    <h4>Formulir Kebebasan Komunikasi</h4>
-                                </div>
-                            </div>
+                      <div class="single-work-inner style-four text-center">
+                        <div class="count-wrap pb-2">
+                          <div class="count-inner">
+                            <h2>02</h2>
+                          </div>
                         </div>
+                        <div class="details-wrap">
+                          <div class="details-inner">
+                            <h4>Formulir Kebebasan Komunikasi</h4>
+                          </div>
+                        </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
-        </div>
-    </div>
 
             <div className="row justify-content-center">
               <div className="col-lg-3 col-md-6">
@@ -536,10 +536,10 @@ function Home() {
                       <h3>Informasi Berkala</h3>
 
                       <a
-                        className="btn btn-base btn-small"
+                        className="btn btn-base btn-small text-white bg-primary"
                         href="service-details.html"
                       >
-                        View Details
+                        Informasi Berkala
                       </a>
                     </div>
                   </div>
@@ -566,10 +566,10 @@ function Home() {
                       <h3>Informasi Setiap Saat</h3>
 
                       <a
-                        className="btn btn-base btn-small"
+                        className="btn btn-base btn-small text-white  bg-primary"
                         href="service-details.html"
                       >
-                        View Details
+                        Informasi Setiap Saat
                       </a>
                     </div>
                   </div>
@@ -596,10 +596,10 @@ function Home() {
                       <h3>Informasi Serta Merta</h3>
 
                       <a
-                        className="btn btn-base btn-small"
-                        href="service-details.html"
+                        className="btn btn-base btn-small text-white  bg-primary"
+                        href="/serta-merta"
                       >
-                        View Details
+                        Informasi Serta Merta
                       </a>
                     </div>
                   </div>
@@ -626,10 +626,10 @@ function Home() {
                       <h3>Informasi Dikecualikan</h3>
 
                       <a
-                        className="btn btn-base btn-small"
-                        href="service-details.html"
+                        className="btn btn-base btn-small text-white  bg-primary"
+                        href="/dikecualikan"
                       >
-                        View Details
+                        Informasi Dikecualikan
                       </a>
                     </div>
                   </div>

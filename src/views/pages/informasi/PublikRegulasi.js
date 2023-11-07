@@ -20,7 +20,9 @@ function PublikRegulasi() {
           <div class="row justify-content-center">
             <div class="col-xl-7 col-lg-8">
               <div class="breadcrumb-inner text-center">
-                <h4 class="page-title">Informasi Publik Regulasi</h4>
+                <h4 id="judul" class="page-title">
+                  Informasi Publik Regulasi
+                </h4>
                 <ul class="page-list">
                   <li>
                     <a href="/">Home</a>
