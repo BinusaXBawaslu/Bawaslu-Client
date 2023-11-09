@@ -1,9 +1,10 @@
 import React from "react";
-import Navbar from "../../component/Navbar";
-import "../../css/FormPermohonanInformasi.css";
-import info from "../../aset/undraw_settings_tab_mgiw.svg";
-import Footer from "../../component/Footer";
-const PermohonanInformasi = () => {
+import Navbar from "../../../component/Navbar";
+// import "../../css/FormPermohonanInformasi.css";
+import "../../../css/FormPermohonanInformasi.css"
+import info from "../../../aset/undraw_settings_tab_mgiw.svg";
+import Footer from "../../../component/Footer";
+const FormPermohonanInformasi = () => {
   return (
     <>
       <div>
@@ -130,4 +131,4 @@ const PermohonanInformasi = () => {
   );
 };
 
-export default PermohonanInformasi;
+export default FormPermohonanInformasi;

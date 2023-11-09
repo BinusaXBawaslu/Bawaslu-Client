@@ -1,13 +1,13 @@
 import React from "react";
-import "../../css/FormKeberatan.css";
-import Navbar from "../../component/Navbar";
-import Footer from "../../component/Footer";
-import info from "../../aset/undraw_settings_tab_mgiw.svg";
-import RI from "../../aset/Bawaslu-RI-300x73-1.png";
-import jateng from "../../aset/bawaslu-jateng-300x73-1.png";
-import dkpp from "../../aset/dkpp-300x73-1.png";
-import KPU from "../../aset/KPU-300x73-1.png";
-import MAHKAMAH from "../../aset/MAHKAMAKONSTITUSI-300x73-1.png";
+import "../../../css/FormKeberatan.css";
+import Navbar from "../../../component/Navbar";
+import Footer from "../../../component/Footer";
+import info from "../../../aset/undraw_settings_tab_mgiw.svg";
+import RI from "../../../aset/Bawaslu-RI-300x73-1.png";
+import jateng from "../../../aset/bawaslu-jateng-300x73-1.png";
+import dkpp from "../../../aset/dkpp-300x73-1.png";
+import KPU from "../../../aset/KPU-300x73-1.png";
+import MAHKAMAH from "../../../aset/MAHKAMAKONSTITUSI-300x73-1.png";
 
 const FormPermohonaKeberatan = () => {
   return (

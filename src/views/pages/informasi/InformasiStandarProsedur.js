@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "../../component/Navbar";
-import Footer from "../../component/Footer";
-import "../../css/LayananInformasi.css";
+import Navbar from "../../../component/Navbar";
+import Footer from "../../../component/Footer";
+import "../../../css/LayananInformasi.css";
 import OwlCarousel from "react-owl-carousel2";
 import "react-owl-carousel2/src/owl.carousel.css";
 import "react-owl-carousel2/src/owl.theme.default.css";

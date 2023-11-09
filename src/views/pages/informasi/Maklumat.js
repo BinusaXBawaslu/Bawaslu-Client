@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "../../component/Navbar";
-import Footer from "../../component/Footer";
-import maklumat from "../../aset/maklumat.png"
+import Navbar from "../../../component/Navbar";
+import Footer from "../../../component/Footer";
+import maklumat from "../../../aset/maklumat.png"
 
 function Maklumat() {
   return (

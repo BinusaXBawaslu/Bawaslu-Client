@@ -8,11 +8,15 @@ import { API_DUMMY } from "../../utils/base_URL";
 // import "react-owl-carousel2/src/owl.carousel.css";
 // import "react-owl-carousel2/src/owl.theme.default.css";
 // import "react-owl-carousel/style.css";
+// import moment from "moment"; // Menggunakan moment.js untuk bekerja dengan tanggal
+
 
 function Berita() {
   const [scroll, setScroll] = useState(false);
   const [list, setList] = useState([]);
   const [listTerbaru, setListTerbaru] = useState([]);
+  const [november, setNovember] = useState([]);
+  // const [bulan, setBulan] = useState("");
 
   const getAll = async () => {
     try {
@@ -23,6 +27,20 @@ function Berita() {
       console.error("Terjadi Kesalahan", error);
     }
   };
+
+  const getAllRekapNovember = async () => {
+    try {
+      const response = await axios.get(`${API_DUMMY}/bawaslu/api/berita/arsip?bulan=2023-11`);
+      setNovember(response.data.data);
+      console.log(response.data.data);
+    } catch (error) {
+      console.error("Terjadi Kesalahan", error);
+    }
+  };
+
+  // useEffect(() => {
+  //   const currentMonth = moment().format("MMMM")
+  // },[])
 
   const getAllTerbaru = async () => {
     try {
@@ -39,6 +57,7 @@ function Berita() {
   useEffect(() => {
     getAll(0);
     getAllTerbaru(0);
+    getAllRekapNovember(0);
   }, []);
 
   useEffect(() => {
@@ -96,7 +115,8 @@ function Berita() {
         <div class="container">
           <div class="row">
             <div class="col-lg-8">
-              {list.map((berita, index) => {
+              {list.length > 0 ? (
+              list.map((berita, index) => {
                 return (
                   <div class="single-blog-inner">
                     <div class="tag-and-share">
@@ -188,7 +208,84 @@ function Berita() {
                     </div>
                   </div>
                 );
-              })}
+              })
+              ):(
+                <div class="single-blog-inner">
+                    <div class="tag-and-share">
+                      <div class="row">
+                        <div class="col-sm-7">
+                          <div class="tags d-inline-block">
+                            <button className="border">
+                              <i class="fa-regular fa-thumbs-up"></i>
+                            </button>
+                            <button className="border">
+                              <i class="fa-regular fa-thumbs-down"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
+                          <div class="blog-share">
+                            <ul>
+                              <li>
+                                <a href="#">
+                                  <button className="border p-2">
+                                    <i
+                                      class="fab fa-facebook-f"
+                                      aria-hidden="true"
+                                    ></i>{" "}
+                                    Facebook
+                                  </button>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <button className="border p-2">
+                                    <i
+                                      class="fab fa-twitter"
+                                      aria-hidden="true"
+                                    ></i>{" "}
+                                    Twitter
+                                  </button>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <button className="border p-2">
+                                    <i class="fa-brands fa-pinterest"></i> Pin
+                                  </button>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="thumb">
+                      <img
+                        style={{ height: "450px" }}
+                        src="https://tapanuliutara.bawaslu.go.id/wp-content/uploads/2019/09/punya-logo-baru-bawaslu-kian-bersemangat-iil.jpg"
+                        alt="img"
+                      />
+                    </div>
+                    <div class="details">
+                      <h2>
+                        <a href="">test</a>
+                      </h2>
+                      <ul class="blog-meta">
+                        <li>
+                          <i class="far fa-user"></i>BY admin
+                        </li>
+                        <li>
+                          <i class="far fa-calendar-alt"></i>{" "}
+                          test
+                        </li>
+                        <li>
+                          <i class="far fa-comment-dots"></i> 22 Comment
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+              )}
             </div>
             <div class="col-lg-4 col-12">
               <div className="sidebar-container">
@@ -233,47 +330,62 @@ function Berita() {
                     <ul class="catagory-items">
                       <li>
                         <a href="#">
-                          <i class="fa-solid fa-file"></i> Oktober 2023 (10)
+                          <i class="fa-solid fa-file"></i> Desember 2023 ()
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/rekap-berita-november">
+                          <i class="fa-solid fa-file"></i> November 2023 ({november.length})
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i class="fa-solid fa-file"></i> Agustus 2023 (10)
+                          <i class="fa-solid fa-file"></i> Oktober 2023 ()
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i class="fa-solid fa-file"></i> Juli 2023 (10)
+                          <i class="fa-solid fa-file"></i> Setember 2023 ()
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i class="fa-solid fa-file"></i> Juni 2023 (10)
+                          <i class="fa-solid fa-file"></i> Agustus 2023 ()
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i class="fa-solid fa-file"></i> Mei 2023 (10)
+                          <i class="fa-solid fa-file"></i> Juli 2023 ()
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i class="fa-solid fa-file"></i> April 2023 (10)
+                          <i class="fa-solid fa-file"></i> Juni 2023 ()
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i class="fa-solid fa-file"></i> Maret 2023 (10)
+                          <i class="fa-solid fa-file"></i> Mei 2023 ()
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i class="fa-solid fa-file"></i> Februari 2023 (10)
+                          <i class="fa-solid fa-file"></i> April 2023 ()
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i class="fa-solid fa-file"></i> Januari 2023 (10)
+                          <i class="fa-solid fa-file"></i> Maret 2023 ()
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa-solid fa-file"></i> Februari 2023 ()
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa-solid fa-file"></i> Januari 2023 ()
                         </a>
                       </li>
                     </ul>
