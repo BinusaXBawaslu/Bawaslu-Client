@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../../component/Navbar";
 import Footer from "../../component/Footer";
+import waktu from "../../aset/waktu.png";
 
 function WaktuLayanan() {
   return (
@@ -59,7 +60,7 @@ function WaktuLayanan() {
             <div class="col-lg-6 col-md-8 order-lg-last">
               <div class="thumb">
                 <img
-                  src="https://img.freepik.com/free-vector/consulting-concept-illustration_114360-2579.jpg?w=740&t=st=1698900961~exp=1698901561~hmac=3830815d8f9240e6a511acaa018c6ad33e7f50cf5255fd0c99a45a0813618d1c"
+                  src={waktu}
                   alt="img"
                 />
               </div>

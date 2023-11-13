@@ -44,166 +44,166 @@ function eLibrary() {
           </div>
         </div>
       </div>
-      {/* <!-- banner area end --> */}
-      <div
-        class="team-area pd-top-115 pd-bottom-90 service-area bg-relative pd-top-60 pd-bottom-90"
-        id="buku"
-        style={{
-          backgroundImage: `url('https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg?w=740&t=st=1698973959~exp=1698974559~hmac=418240e9f8d698b9b7f2c0907f5c8e0013885b44976fa36e713b8801491993db')`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-        }}
-      >
+      {/* <!-- service area start --> */}
+      <div class="service-area bg-relative pd-top-115 pd-bottom-90">
         <img
           class="shape-left-top top_image_bounce"
-          src="https://www.solverwp.com/demo/html/itechie/assets/img/shape/3.webp"
+          src="https://solverwp.com/demo/html/itechie/assets/img/shape/3.webp"
           alt="img"
         />
         <img
           class="shape-right-top top_image_bounce"
-          src="https://www.solverwp.com/demo/html/itechie/assets/img/shape/4.webp"
+          src="https://solverwp.com/demo/html/itechie/assets/img/shape/4.webp"
           alt="img"
         />
         <div class="container">
           <div class="row justify-content-center">
-            <div class="col-lg-6 col-md-10">
+            <div class="col-xl-6 col-lg-7">
               <div class="section-title text-center">
                 <h5 class="sub-title double-line">Bawaslu Boyolali</h5>
                 <h2 class="title">Buku Bawaslu Kabupaten Boyolali</h2>
+                <p class="content">
+                  Melalui website ini, Bawaslu Kabupaten Boyolali akan selalu
+                  memperbaharui informasi terkait pengawasan dan pemantauan
+                  pemilu.
+                </p>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-3 col-md-6">
-              <div class="single-team-inner text-center">
-                <div class="thumb">
-                  <img src={bawaslu} alt="img" />
+          <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6">
+              <div
+                class="single-service-inner style-2 text-center"
+                style={{
+                  backgroundImage: `url('https://solverwp.com/demo/html/itechie/assets/img/bg/01.webp')`,
+                }}
+              >
+                <div class="icon-box">
+                  <i class="icomoon-application"></i>
                 </div>
-                <div class="details-wrap">
-                  <div class="details-inner">
-                    <h4>
-                      <a href="" style={{ textDecoration: "none" }}>
-                        Buletin Bawaslu Kabupaten Boyolali Edisi 1
-                      </a>
-                    </h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-              <div class="single-team-inner text-center">
-                <div class="thumb">
-                  <img src={bawaslu1} alt="img" />
-                </div>
-                <div class="details-wrap">
-                  <div class="details-inner">
-                    <h4>
-                      <a
-                        href="team-details.html"
-                        style={{ textDecoration: "none" }}
-                      >
-                        Buletin Bawaslu Kabupaten Boyolali Edisi 2
-                      </a>
-                    </h4>
-                  </div>
+                <div class="details">
+                  <h3>
+                    <a href="service-details.html">Buletin</a>
+                  </h3>
+                  <p>Buletin Bawaslu Kabupaten Boyolali Edisi 1</p>
+                  <a class="read-more-btn" href="service-details.html">
+                    <i class="fa fa-arrow-right"></i>
+                  </a>
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6">
-              <div class="single-team-inner text-center">
-                <div class="thumb">
-                  <img src={bawaslu2} alt="img" />
+            <div class="col-lg-4 col-md-6">
+              <div
+                class="single-service-inner style-2 text-center"
+                style={{
+                  backgroundImage: `url('https://solverwp.com/demo/html/itechie/assets/img/bg/01.webp')`,
+                }}
+              >
+                <div class="icon-box">
+                  <i class="icomoon-cloud-data"></i>
                 </div>
-                <div class="details-wrap">
-                  <div class="details-inner">
-                    <h4>
-                      <a
-                        href="team-details.html"
-                        style={{ textDecoration: "none" }}
-                      >
-                        Buletin Bawaslu Kabupaten Boyolali Edisi 3
-                      </a>
-                    </h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-              <div class="single-team-inner text-center">
-                <div class="thumb">
-                  <img src={bawaslu3} alt="img" />
-                </div>
-                <div class="details-wrap">
-                  <div class="details-inner">
-                    <h4>
-                      <a
-                        href="team-details.html"
-                        style={{ textDecoration: "none" }}
-                      >
-                        Buletin Bawaslu Kabupaten Boyolali Edisi 4
-                      </a>
-                    </h4>
-                  </div>
+                <div class="details">
+                  <h3>
+                    <a href="service-details.html">Buletin</a>
+                  </h3>
+                  <p>Buletin Bawaslu Kabupaten Boyolali Edisi 2</p>
+                  <a class="read-more-btn" href="service-details.html">
+                    <i class="fa fa-arrow-right"></i>
+                  </a>
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-lg-3 col-md-6" style={{ marginLeft: "23%" }}>
-                <div class="single-team-inner text-center">
-                  <div class="thumb">
-                    <img
-                      src="https://boyolali.bawaslu.go.id/cepogo/2023/09/Jejak-Pengawasan-depan-212x300-1.jpg"
-                      alt="img"
-                    />
-                  </div>
-                  <div class="details-wrap">
-                    <div class="details-inner">
-                      <h4>
-                        <a
-                          href="team-details.html"
-                          style={{
-                            textDecoration: "none",
-                            textAlign: "justify",
-                          }}
-                        >
-                          Jejak Pengawasan | Catatan Pengawas Pemilu 2019
-                        </a>
-                      </h4>
-                    </div>
-                  </div>
+            <div class="col-lg-4 col-md-6">
+              <div
+                class="single-service-inner style-2 text-center"
+                style={{
+                  backgroundImage: `url('https://solverwp.com/demo/html/itechie/assets/img/bg/01.webp')`,
+                }}
+              >
+                <div class="icon-box">
+                  <i class="icomoon-megaphone"></i>
+                </div>
+                <div class="details">
+                  <h3>
+                    <a href="service-details.html">Buletin</a>
+                  </h3>
+                  <p>Buletin Bawaslu Kabupaten Boyolali Edisi 3</p>
+                  <a class="read-more-btn" href="service-details.html">
+                    <i class="fa fa-arrow-right"></i>
+                  </a>
                 </div>
               </div>
-              <div class="col-lg-3 col-md-6" style={{ marginLeft: "5%" }}>
-                <div class="single-team-inner text-center">
-                  <div class="thumb">
-                    <img
-                      src="https://boyolali.bawaslu.go.id/cepogo/2023/09/Napak-Tilas-Depan-212x300-1.jpg"
-                      alt="img"
-                    />
-                  </div>
-                  <div class="details-wrap">
-                    <div class="details-inner">
-                      <h4>
-                        <a
-                          href="team-details.html"
-                          style={{
-                            textDecoration: "none",
-                            textAlign: "justify",
-                          }}
-                        >
-                          Napak Tilas | Sejarah Pengawasan Pemilihan Umum Kab.
-                          Boyolali
-                        </a>
-                      </h4>
-                    </div>
-                  </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div
+                class="single-service-inner style-2 text-center"
+                style={{
+                  backgroundImage: `url('https://solverwp.com/demo/html/itechie/assets/img/bg/01.webp')`,
+                }}
+              >
+                <div class="icon-box">
+                  <i class="icomoon-application"></i>
+                </div>
+                <div class="details">
+                  <h3>
+                    <a href="service-details.html">Buletin</a>
+                  </h3>
+                  <p>Buletin Bawaslu Kabupaten Boyolali Edisi 4</p>
+                  <a class="read-more-btn" href="service-details.html">
+                    <i class="fa fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div
+                class="single-service-inner style-2 text-center"
+                style={{
+                  backgroundImage: `url('https://solverwp.com/demo/html/itechie/assets/img/bg/01.webp')`,
+                }}
+              >
+                <div class="icon-box">
+                  <i class="icomoon-application"></i>
+                </div>
+                <div class="details">
+                  <h3>
+                    <a href="service-details.html">Buletin</a>
+                  </h3>
+                  <p>Jejak Pengawasan | Catatan Pengawas Pemilu 2019</p>
+                  <a class="read-more-btn" href="service-details.html">
+                    <i class="fa fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div
+                class="single-service-inner style-2 text-center"
+                style={{
+                  backgroundImage: `url('https://solverwp.com/demo/html/itechie/assets/img/bg/01.webp')`,
+                }}
+              >
+                <div class="icon-box">
+                  <i class="icomoon-application"></i>
+                </div>
+                <div class="details">
+                  <h3>
+                    <a href="service-details.html">Buletin</a>
+                  </h3>
+                  <p>
+                    Napak Tilas | Sejarah Pengawasan Pemilihan Umum Kab.
+                    Boyolali
+                  </p>
+                  <a class="read-more-btn" href="service-details.html">
+                    <i class="fa fa-arrow-right"></i>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      {/* //   team area end */}
+      {/* <!-- service area end --> */}
       <Footer />
     </>
   );

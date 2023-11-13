@@ -1,48 +1,36 @@
-import React, { useRef } from "react";
-import Footer from "../../../component/Footer";
+import React from "react";
+// import OwlCarousel from "react-owl-carousel2";
+// import "react-owl-carousel2/src/owl.carousel.css";
+// import "react-owl-carousel2/src/owl.theme.default.css";
 import Navbar from "../../../component/Navbar";
-import jsPDF from "jspdf";
-import html2canvas from "html2canvas";
-import gambar from "../../../asset/img/bawaslu(berita).jpeg";
+import Footer from "../../../component/Footer";
 
-function SetiapSaat() {
-  const imageRef = useRef(null);
+// import "../../../css/owl.css";
 
-  const downloadPdf = () => {
-    const imageElement = imageRef.current;
-
-    if (imageElement) {
-      html2canvas(imageElement)
-        .then((canvas) => {
-          const imgData = canvas.toDataURL("image/png");
-          const pdf = new jsPDF();
-          const imgWidth = 210;
-          const imgHeight = (canvas.height * imgWidth) / canvas.width;
-
-          pdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight);
-          pdf.save("download.pdf");
-        })
-        .catch((error) => {
-          console.error("Error converting to canvas:", error);
-        });
-    }
+function Regulasi() {
+  const options = {
+    items: 1, // Jumlah item yang akan ditampilkan dalam satu slide
+    nav: true, // Tombol navigasi
+    dots: true, // Indikator titik
   };
   return (
     <div>
       <Navbar />
       <div
         class="breadcrumb-area bg-relative"
-        style={{ background: "#151423" }}>
+        style={{ background: "#151423" }}
+      >
         <div
           class="banner-bg-img"
           style={{
             backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp')`,
-          }}></div>
+          }}
+        ></div>
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-xl-7 col-lg-8">
               <div class="breadcrumb-inner text-center">
-                <h4 class="page-title">Informasi Setiap Saat</h4>
+                <h4 class="page-title">Daftar regulasi</h4>
                 <ul class="page-list">
                   <li>
                     <a href="home">Home</a>
@@ -61,44 +49,55 @@ function SetiapSaat() {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
-        class="project-area pd-top-115 pd-bottom-90">
+        class="project-area pd-top-115 pd-bottom-90"
+      >
         <div
           style={{
             backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp') `,
-          }}>
+          }}
+        >
           <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-12 ">
-                <div class="isotope-filters project-isotope-btn text-center mb-5">
-                  <button class="button active ml-0" data-filter="*">
-                    Organisasi Administrasi
-                  </button>
-                  <button class="button" data-filter=".cat-1">
-                    Peraturan & Kebijakan
-                  </button>
-                  <button class="button" data-filter=".cat-2">
-                    MOU
-                  </button>
-                  <button class="button" data-filter=".cat-3">
-                    Pemantauan Pemilu
-                  </button>
-                  <button class="button" data-filter=".cat-3">
-                    Rencana Strategi
-                  </button>
-                  <button class="button" data-filter=".cat-3">
-                    Materi Rakor
-                  </button>
-                  <button class="button" data-filter=".cat-3">
-                    Piagam Penghargaan
-                  </button>
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-12">
+                  <div class="isotope-filters project-isotope-btn text-center mb-5">
+                    <button class="btn btn-primary active ml-0" data-filter="*">
+                      Undang-Undang
+                    </button>
+                    <button class="btn btn-primary" data-filter=".cat-1">
+                      Peraturan Pemerintah
+                    </button>
+                    <button class="btn btn-primary" data-filter=".cat-2">
+                      Peraturan mahkamah agung
+                    </button>
+                    <button class="btn btn-primary" data-filter=".cat-3">
+                      Peraturan komisi informasi
+                    </button>
+                    <button class="btn btn-primary" data-filter=".cat-3">
+                      Peraturan Menteri
+                    </button>
+                    <button class="btn btn-primary" data-filter=".cat-3">
+                      Perbawaslu
+                    </button>
+                    <button class="btn btn-primary" data-filter=".cat-3">
+                      Penetapan PPID
+                    </button>
+                    <button class="btn btn-primary" data-filter=".cat-3">
+                      Surat edaran
+                    </button>
+                    <button class="btn btn-primary" data-filter=".cat-3">
+                      Intruksi Kabupaten
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="card mb-4 shadow ">
+
+            <div className="card mb-4 shadow">
               <div className="card-header bg-primary text-light">
                 <div style={{ display: "flex" }}>
-                  <div className="">
-                    <h4>Putusan Pelanggaran</h4>
+                  <div className="col">
+                    <h4>Undang - Undang</h4>
                   </div>
                   <div className="col">
                     {/* <button className="btn btn-primary float-end"> Tambah
@@ -117,50 +116,7 @@ function SetiapSaat() {
                   <tbody>
                     <tr>
                       <td data-cell="dokumen" scope="row">
-                        <p>
-                          DATA JUMLAH ANGGOTA BAWASLU KAB BOYOLALI PERIODE 2018
-                          - 2023
-                        </p>
-                      </td>
-                      <td>
-                        <div ref={imageRef}>
-                          {/* <img src={gambar}alt="Your Image" /> */}
-                        </div>
-
-                        <button
-                          onClick={downloadPdf}
-                          className="bg-primary text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}>
-                          <i class="fa-solid fa-download"></i>
-                        </button>
-                        <button
-                          className="bg-warning text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}>
-                          <i class="fa-solid fa-circle-info"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td data-cell="unduh">
-                        <p>
-                          {" "}
-                          DATA JUMLAH PENGAWAS DESA KELURAHAN DI BOYOLALI 2018
-                          dan 2019
-                        </p>
+                        <p>UU NOMOR 14 TAHUN 2008</p>
                       </td>
                       <td>
                         <button
@@ -172,7 +128,8 @@ function SetiapSaat() {
                             paddingRight: "13px",
                             borderRadius: "5px",
                             marginRight: "10px",
-                          }}>
+                          }}
+                        >
                           <i class="fa-solid fa-download"></i>
                         </button>
                         <button
@@ -184,18 +141,48 @@ function SetiapSaat() {
                             paddingRight: "13px",
                             borderRadius: "5px",
                             marginRight: "10px",
-                          }}>
+                          }}
+                        >
                           <i class="fa-solid fa-circle-info"></i>
                         </button>
                       </td>
                     </tr>
                     <tr>
                       <td data-cell="unduh">
-                        <p>
-                          {" "}
-                          DATA TAHAPAN SELEKSI DAN JUMLAH PENGAWAS TPS PEMILU
-                          2019
-                        </p>
+                        <p> UU NOMOR 25 TAHUN 2009K</p>
+                      </td>
+                      <td>
+                        <button
+                          className="bg-primary text-light"
+                          style={{
+                            border: "none",
+                            padding: "7px",
+                            paddingLeft: "13px",
+                            paddingRight: "13px",
+                            borderRadius: "5px",
+                            marginRight: "10px",
+                          }}
+                        >
+                          <i class="fa-solid fa-download"></i>
+                        </button>
+                        <button
+                          className="bg-warning text-light"
+                          style={{
+                            border: "none",
+                            padding: "7px",
+                            paddingLeft: "13px",
+                            paddingRight: "13px",
+                            borderRadius: "5px",
+                            marginRight: "10px",
+                          }}
+                        >
+                          <i class="fa-solid fa-circle-info"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-cell="unduh">
+                        <p> UU NOMOR 43 TAHUN 2009</p>
                       </td>{" "}
                       <td>
                         <button
@@ -207,7 +194,8 @@ function SetiapSaat() {
                             paddingRight: "13px",
                             borderRadius: "5px",
                             marginRight: "10px",
-                          }}>
+                          }}
+                        >
                           <i class="fa-solid fa-download"></i>
                         </button>
                         <button
@@ -219,7 +207,74 @@ function SetiapSaat() {
                             paddingRight: "13px",
                             borderRadius: "5px",
                             marginRight: "10px",
-                          }}>
+                          }}
+                        >
+                          <i class="fa-solid fa-circle-info"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-cell="unduh">
+                        <p>UU NOMOR 10 TAHUN 2016</p>
+                      </td>{" "}
+                      <td>
+                        <button
+                          className="bg-primary text-light"
+                          style={{
+                            border: "none",
+                            padding: "7px",
+                            paddingLeft: "13px",
+                            paddingRight: "13px",
+                            borderRadius: "5px",
+                            marginRight: "10px",
+                          }}
+                        >
+                          <i class="fa-solid fa-download"></i>
+                        </button>
+                        <button
+                          className="bg-warning text-light"
+                          style={{
+                            border: "none",
+                            padding: "7px",
+                            paddingLeft: "13px",
+                            paddingRight: "13px",
+                            borderRadius: "5px",
+                            marginRight: "10px",
+                          }}
+                        >
+                          <i class="fa-solid fa-circle-info"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-cell="unduh">
+                        <p>UU NOMOR 7 TAHUN 2017</p>
+                      </td>{" "}
+                      <td>
+                        <button
+                          className="bg-primary text-light"
+                          style={{
+                            border: "none",
+                            padding: "7px",
+                            paddingLeft: "13px",
+                            paddingRight: "13px",
+                            borderRadius: "5px",
+                            marginRight: "10px",
+                          }}
+                        >
+                          <i class="fa-solid fa-download"></i>
+                        </button>
+                        <button
+                          className="bg-warning text-light"
+                          style={{
+                            border: "none",
+                            padding: "7px",
+                            paddingLeft: "13px",
+                            paddingRight: "13px",
+                            borderRadius: "5px",
+                            marginRight: "10px",
+                          }}
+                        >
                           <i class="fa-solid fa-circle-info"></i>
                         </button>
                       </td>
@@ -239,4 +294,4 @@ function SetiapSaat() {
   );
 }
 
-export default SetiapSaat;
+export default Regulasi;

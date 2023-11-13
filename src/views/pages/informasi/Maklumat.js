@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
-import maklumat from "../../../aset/maklumat.png"
+import maklumat from "../../../aset/maklumatinf.png"
 
 function Maklumat() {
   return (
@@ -68,7 +68,7 @@ function Maklumat() {
               />
             </div>
           </div>
-          <div class="col-xl-5 col-lg-6 align-self-center">
+          <div class="col-xl-5 col-lg-6 " style={{marginTop:"100px"}}>
             <div class="section-title px-lg-5 mb-0">
               <h2 class="title mb-4">
                 <img

@@ -23,10 +23,15 @@ function Pengumuman() {
     <div>
       <Navbar />
       {/* <!-- page title start --> */}
-      <div class="breadcrumb-area bg-relative" style={{background:"#151423"}}>
+      <div
+        class="breadcrumb-area bg-relative"
+        style={{ background: "#151423" }}
+      >
         <div
           class="banner-bg-img"
-          style={{ backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp')` }}
+          style={{
+            backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp')`,
+          }}
         ></div>
         <div class="container">
           <div class="row justify-content-center">
@@ -46,11 +51,14 @@ function Pengumuman() {
       </div>
       {/* <!-- page title end --> */}
       {/* <!-- blog area start --> */}
-      <div class="blog-area pd-top-115 pd-bottom-60" style={{
+      <div
+        class="blog-area pd-top-115 pd-bottom-60"
+        style={{
           backgroundImage: `url('https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg?w=740&t=st=1698973959~exp=1698974559~hmac=418240e9f8d698b9b7f2c0907f5c8e0013885b44976fa36e713b8801491993db')`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
-        }}>
+        }}
+      >
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-xl-6 col-lg-7 col-md-10">
@@ -61,37 +69,37 @@ function Pengumuman() {
             </div>
           </div>
           <div class="row justify-content-center">
-            {pengumuman.map((isi) =>{
-              return(
-            <div class="col-lg-4 col-md-6">
-              <div class="single-blog-inner style-2">
-                <div class="thumb">
-                  <img src={isi.image} alt="img" />
+            {pengumuman.map((isi) => {
+              return (
+                <div class="col-lg-4 col-md-6">
+                  <div class="single-blog-inner style-2">
+                    <div class="thumb">
+                      <img src={isi.image} alt="img" />
+                    </div>
+                    <div class="details">
+                      <h4>
+                        <a>{isi.judulPengumuman}</a>
+                      </h4>
+                      <ul class="blog-meta">
+                        <li>
+                          <i class="far fa-user"></i> {isi.author}
+                        </li>
+                        <li>
+                          <i class="far fa-calendar-alt"></i> {isi.createdDate}
+                        </li>
+                      </ul>
+                      <p>{isi.isiPengumuman}</p>
+                      <a
+                        class="read-more-text"
+                        href="/pengumuman-calon-anggota-bawaslu-kabupaten-kota-terpilih-provinsi-jawa-tengah"
+                      >
+                        Detail<i class="fa fa-caret-right"></i>
+                      </a>
+                    </div>
+                  </div>
                 </div>
-                <div class="details">
-                  <h4>
-                    <a>
-                    {isi.judulPengumuman}
-                    </a>
-                  </h4>
-                  <ul class="blog-meta">
-                    <li>
-                      <i class="far fa-user"></i> {isi.author}
-                    </li>
-                    <li>
-                      <i class="far fa-calendar-alt"></i> {isi.createdDate}
-                    </li>
-                  </ul>
-                  <p>
-                    {isi.isiPengumuman}
-                  </p>
-                  <a class="read-more-text" href="/pengumuman-calon-anggota-bawaslu-kabupaten-kota-terpilih-provinsi-jawa-tengah">
-                    Detail<i class="fa fa-caret-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            )})}
+              );
+            })}
           </div>
           <div class="pagination justify-content-center">
             <a class="prev page-numbers" href="http://icare.local/">

@@ -1,8 +1,241 @@
 import React from "react";
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
+import { useState } from "react";
+import axios from "axios";
+import { useEffect } from "react";
 
 function InformasiBerkala() {
+  const [table1Visible, setTable1Visible] = useState(false);
+  const [table2Visible, setTable2Visible] = useState(false);
+  const [table3Visible, setTable3Visible] = useState(false);
+  const [table4Visible, setTable4Visible] = useState(false);
+  const [table5Visible, setTable5Visible] = useState(false);
+  const [table6Visible, setTable6Visible] = useState(false);
+  const [table7Visible, setTable7Visible] = useState(false);
+  const [table8Visible, setTable8Visible] = useState(false);
+  const [table9Visible, setTable9Visible] = useState(false);
+
+  const showTable = (tableNumber) => {
+    setTable1Visible(false);
+    setTable2Visible(false);
+    setTable3Visible(false);
+    setTable4Visible(false);
+    setTable5Visible(false);
+    setTable6Visible(false);
+    setTable7Visible(false);
+    setTable8Visible(false);
+    setTable9Visible(false);
+
+    switch (tableNumber) {
+      case "Hasil Pengawasan":
+        setTable1Visible(true);
+        break;
+      case "Analisa Calon Terpilih":
+        setTable2Visible(true);
+        break;
+      case "Laporan Akhir Pengawasan":
+        setTable3Visible(true);
+        break;
+      case "Penanganan Pelanggaran":
+        setTable4Visible(true);
+        break;
+      case "Naskah Perjanjian Hibah Daerah":
+        setTable5Visible(true);
+        break;
+      case "Layanan Pengaduan Publik":
+        setTable6Visible(true);
+        break;
+      case "Sarana Partisipasi Publik":
+        setTable7Visible(true);
+        break;
+      case "Surat Edaran":
+        setTable8Visible(true);
+        break;
+      case "Intruksi Kabupaten":
+        setTable9Visible(true);
+        break;
+      default:
+        break;
+    }
+  };
+  const [list, setList] = useState([]);
+  const [isi, setIsi] = useState([]);
+  const [isi1, setIsi1] = useState([]);
+  const [isi2, setIsi2] = useState([]);
+  const [isi3, setIsi3] = useState([]);
+  const [isi4, setIsi4] = useState([]);
+  const [isi5, setIsi5] = useState([]);
+  const [isi6, setIsi6] = useState([]);
+  const [isi7, setIsi7] = useState([]);
+  const [isi8, setIsi8] = useState([]);
+
+  // const getAll = async () => {
+  //   await axios
+  //     .get("http://localhost:3030/bawaslu/api/regulasi/all")
+  //     .then((res) => {
+  //       setRegulasi(res.data.data.data);
+  //     })
+  //     .catch((error) => {
+  //       alert("Terjadi kesalahan" + error);
+  //     });
+  // };
+  const getByMenu = async () => {
+    await axios
+      .get(
+        `http://localhost:3030/bawaslu/api/jenisinformasi/1`
+      )
+      .then((response) => {
+        setList(response.data.data);
+      })
+      .catch((error) => {
+        alert("Terjadi kesalahan" + error);
+      });
+  };
+  const getByIsi = async () => {
+    await axios
+      .get(
+        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=1`
+      )
+      .then((response) => {
+        // console.log(response.data.data);
+        setIsi(response.data.data);
+      })
+      .catch((error) => {
+        alert("Terjadi kesalahan" + error);
+      });
+  };
+  const getByIsi1 = async () => {
+    await axios
+      .get(
+        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=2`
+      )
+      .then((response) => {
+        // console.log(response.data.data);
+        setIsi1(response.data.data);
+      })
+      .catch((error) => {
+        alert("Terjadi kesalahan" + error);
+      });
+  };
+  const getByIsi2 = async () => {
+    await axios
+      .get(
+        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=3`
+      )
+      .then((response) => {
+        // console.log(response.data.data);
+        setIsi2(response.data.data);
+      })
+      .catch((error) => {
+        alert("Terjadi kesalahan" + error);
+      });
+  };
+  const getByIsi3 = async () => {
+    await axios
+      .get(
+        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=4`
+      )
+      .then((response) => {
+        // console.log(response.data.data);
+        setIsi3(response.data.data);
+      })
+      .catch((error) => {
+        alert("Terjadi kesalahan" + error);
+      });
+  };
+  const getByIsi4 = async () => {
+    await axios
+      .get(
+        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=5`
+      )
+      .then((response) => {
+        // console.log(response.data.data);
+        setIsi4(response.data.data);
+      })
+      .catch((error) => {
+        alert("Terjadi kesalahan" + error);
+      });
+  };
+  const getByIsi5 = async () => {
+    await axios
+      .get(
+        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=6`
+      )
+      .then((response) => {
+        // console.log(response.data.data);
+        setIsi5(response.data.data);
+      })
+      .catch((error) => {
+        alert("Terjadi kesalahan" + error);
+      });
+  };
+  const getByIsi6 = async () => {
+    await axios
+      .get(
+        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=7`
+      )
+      .then((response) => {
+        // console.log(response.data.data);
+        setIsi6(response.data.data);
+      })
+      .catch((error) => {
+        alert("Terjadi kesalahan" + error);
+      });
+  };
+  const getByIsi7 = async () => {
+    await axios
+      .get(
+        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=8`
+      )
+      .then((response) => {
+        // console.log(response.data.data);
+        setIsi7(response.data.data);
+      })
+      .catch((error) => {
+        alert("Terjadi kesalahan" + error);
+      });
+  };
+  const getByIsi8 = async () => {
+    await axios
+      .get(
+        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=9`
+      )
+      .then((response) => {
+        // console.log(response.data.data);
+        setIsi8(response.data.data);
+      })
+      .catch((error) => {
+        alert("Terjadi kesalahan" + error);
+      });
+  };
+
+  // const getByMenu2 = async () => {
+  //   await axios
+  //     .get(
+  //       `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=1`
+  //     )
+  //     .then((response) => {
+  //       console.log(response.data.data);
+  //     })
+  //     .catch((error) => {
+  //       alert("Terjadi kesalahan" + error);
+  //     });
+  // };
+
+  useEffect(() => {
+    //mengambil data, memperbarui DOM secara langsung,
+    getByMenu();
+    getByIsi();
+    getByIsi1();
+    getByIsi2();
+    getByIsi3();
+    getByIsi4();
+    getByIsi5();
+    getByIsi6();
+    getByIsi7();
+    getByIsi8();
+  }, []);
   return (
     <div>
       <Navbar />
@@ -56,25 +289,25 @@ function InformasiBerkala() {
               <div class="col-lg-12 ">
                 <div class="isotope-filters project-isotope-btn text-center mb-5">
                   <button class="button active ml-0" data-filter="*">
-                    Organisasi Administrasi
+                  Hasil Pengawasan
                   </button>
                   <button class="button" data-filter=".cat-1">
-                    Peraturan & Kebijakan
+                  Analisa Calon Terpilih
                   </button>
                   <button class="button" data-filter=".cat-2">
-                    MOU
+                  Laporan Akhir Pengawasan
                   </button>
                   <button class="button" data-filter=".cat-3">
-                    Pemantauan Pemilu
+                  Penanganan Pelanggaran
                   </button>
                   <button class="button" data-filter=".cat-3">
-                    Rencana Strategi
+                  Naskah Perjanjian Hibah Daerah
                   </button>
                   <button class="button" data-filter=".cat-3">
-                    Materi Rakor
+                  Layanan Pengaduan Publik
                   </button>
                   <button class="button" data-filter=".cat-3">
-                    Piagam Penghargaan
+                  Sarana Partisipasi Publik
                   </button>
                 </div>
               </div>
@@ -82,7 +315,7 @@ function InformasiBerkala() {
             <div className="card mb-4 shadow border-dark-subtle border">
               <div className="card-header bg-primary text-light">
                 <div style={{ display: "flex" }}>
-                  <div className="col">
+                  <div className="">
                     <h4>Putusan Pelanggaran</h4>
                   </div>
                   <div className="col">

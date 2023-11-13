@@ -15,12 +15,14 @@ function BeritaAdmin() {
   const [image, setImage] = useState("");
   const [show, setShow] = useState(false);
   const [showAdd, setShowAdd] = useState(false);
+  const [showEdit, setShowEdit] = useState(false);
   const handleCloseAdd = () => setModalAdd(false);
   const handleClosEdit = () => setModalEdit(false);
   const handleShowAdd = () => setModalAdd(true);
   const handleShowEdit = () => setModalEdit(true);
   const [modalAdd, setModalAdd] = useState(false);
   const [modalEdit, setModalEdit] = useState(false);
+  const [id, setId] = useState(0);
 
   const handleClose = () => setShow(false);
   const history = useHistory();
@@ -47,9 +49,7 @@ function BeritaAdmin() {
 
     try {
       await axios.post(`${API_DUMMY}/bawaslu/api/berita/add`, formData, {
-        headers: {
-          headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
-        },
+        headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
 
       setShow(false);
@@ -72,6 +72,104 @@ function BeritaAdmin() {
   useEffect(() => {
     getAll();
   }, []);
+
+  const deleteData = async (id) => {
+    Swal.fire({
+      title: "Apakah Anda Ingin Menghapus?",
+      text: "Perubahan data tidak bisa dikembalikan!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Hapus",
+      cancelButtonText: "Batal",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axios
+          .delete(`${API_DUMMY}/bawaslu/api/berita/` + id, {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          })
+          .then((res) => {
+            Swal.fire({
+              icon: "success",
+              title: "Dihapus!",
+              showConfirmButton: false,
+              timer: 1500,
+            });
+
+            setTimeout(() => {
+              window.location.reload();
+            }, 1500);
+          });
+      }
+    });
+  };
+
+  const put = async (e) => {
+    e.preventDefault();
+    e.persist();
+
+    const formData = new FormData();
+    formData.append("author", author);
+    formData.append("isiBerita", isiBerita);
+    formData.append("judulBerita", judulBerita);
+    formData.append("tags", tags);
+    formData.append("file", image);
+
+    try {
+      const response = await axios.put(
+        `${API_DUMMY}/bawaslu/api/berita/` + id,
+        formData,
+        {
+          headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+        }
+      );
+
+      if (response.status === 200) {
+        setShowEdit(false);
+        Swal.fire({
+          icon: "success",
+          title: "Berhasil Mengedit",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        setTimeout(() => {
+          window.location.reload();
+        }, 1500);
+      } else {
+        // Handle unexpected status code
+        console.log("Unexpected status code:", response.status);
+      }
+    } catch (err) {
+      if (err.response && err.response.status === 401) {
+        // Handle Unauthorized error
+        console.log("Unauthorized. Please log in again.");
+      } else {
+        // Handle other errors
+        console.log("Error:", err.message);
+      }
+    }
+  };
+
+  const getById = async (id) => {
+    await axios
+      .get(`${API_DUMMY}/bawaslu/api/berita/get/` + id, {
+        headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+      })
+      .then((res) => {
+        setJudulBerita(res.data.data.judulBerita);
+        setAuthor(res.data.data.author);
+        setIsiBerita(res.data.data.isiBerita);
+        setImage(res.data.data.image);
+        setId(res.data.data.id);
+        console.log(res.data.data);
+      })
+      .catch((error) => {
+        alert("Terjadi Keslahan" + error);
+      });
+  };
 
   return (
     <div>
@@ -111,7 +209,11 @@ function BeritaAdmin() {
               </div>
               <div className="col">
                 <button
+                  type="button"
                   onClick={handleShowAdd}
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  data-modal-hide="authentication-modal"
                   className="bg-success text-light float-end"
                 >
                   {" "}
@@ -162,12 +264,19 @@ function BeritaAdmin() {
                       <p>{berita.tags}</p>
                     </td>
                     <td data-cell="dokumen">
-                      <p>{berita.updateDate}</p>
+                      <p>{berita.updatedDate}</p>
                     </td>
                     <td>
                       <div className="d-flex">
                         <button
+                          onClick={() => {
+                            setShowEdit(true);
+                            getById(berita.id);
+                          }}
                           className="bg-primary text-light"
+                          data-bs-toggle="modal"
+                          data-bs-target="#staticBackdrop"
+                          type="button"
                           style={{
                             border: "none",
                             padding: "7px",
@@ -180,6 +289,7 @@ function BeritaAdmin() {
                           <i class="fas fa-edit"></i>
                         </button>
                         <button
+                          onClick={() => deleteData(berita.id)}
                           className="bg-danger text-light"
                           style={{
                             border: "none",
@@ -294,7 +404,8 @@ function BeritaAdmin() {
               <button
                 type="button"
                 className="btn btn-secondary"
-                data-bs-dismiss="modal" onClick={handleCloseAdd}
+                data-bs-dismiss="modal"
+                onClick={handleCloseAdd}
               >
                 Close
               </button>
@@ -307,17 +418,19 @@ function BeritaAdmin() {
       </div>
       {/* modal edit data */}
       {/* <!-- Button trigger modal --> */}
-      <button
+      {/* <button
         type="button"
         class="btn btn-primary"
         data-bs-toggle="modal"
         data-bs-target="#staticBackdrop"
       >
         Launch static backdrop modal
-      </button>
+      </button> */}
 
       {/* <!-- Modal --> */}
       <div
+        show={showEdit}
+        onHide={!showEdit}
         class="modal fade"
         id="staticBackdrop"
         data-bs-backdrop="static"
@@ -327,7 +440,7 @@ function BeritaAdmin() {
         aria-hidden="true"
       >
         <div class="modal-dialog">
-          <div class="modal-content">
+          <form onSUbmit={put} class="modal-content">
             <div class="modal-header">
               <h1 class="modal-title fs-5" id="staticBackdropLabel">
                 Modal Edit Data
@@ -407,17 +520,18 @@ function BeritaAdmin() {
             </div>
             <div class="modal-footer">
               <button
+                onClick={() => setShowEdit(false)}
                 type="button"
                 class="btn btn-secondary"
                 data-bs-dismiss="modal"
               >
                 Close
               </button>
-              <button type="button" class="btn btn-primary">
-                Understood
+              <button type="submit" class="btn btn-primary">
+                Simpan
               </button>
             </div>
-          </div>
+          </form>
         </div>
       </div>
       <Footer />

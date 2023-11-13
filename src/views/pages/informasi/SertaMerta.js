@@ -6,7 +6,7 @@ import { useState } from "react";
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
 function SertaMerta() {
-  const [table1Visible, setTable1Visible] = useState(false);
+  const [table1Visible, setTable1Visible] = useState(true);
   const [table2Visible, setTable2Visible] = useState(false);
   const [table3Visible, setTable3Visible] = useState(false);
   const [table4Visible, setTable4Visible] = useState(false);
@@ -49,6 +49,8 @@ function SertaMerta() {
         break;
     }
   };
+
+  
   return (
     <div>
       <Navbar />
@@ -58,17 +60,33 @@ function SertaMerta() {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
-        class="project-area pd-top-115 pd-bottom-90"
       >
         <div
+        class="breadcrumb-area bg-relative"
+        style={{ background: "#151423" }}>
+        <div
+          class="banner-bg-img"
           style={{
-            backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp') `,
-          }}
-        >
-          <div class="container">
-            <div className="d-flex gap-5">
-            <div class="row justify-content-center">
-              <div class="col-lg-12 ">
+            backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp')`,
+          }}></div>
+       <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xl-7 col-lg-8">
+              <div class="breadcrumb-inner text-center">
+                <h4 class="page-title">Serta Merta</h4>
+                <ul class="page-list">
+                  <li>
+                    <a href="home">Home</a>
+                  </li>
+                  <li>Informasi</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="container" style={{marginTop:"10%"}}>
+            <div className="d-flex gap-4">
                 <div class="isotope-filters project-isotope-btn text-left mb-5">
                   <button style={{width:"250px", textAlign:"left"}}
                     class="button ml-0"
@@ -120,8 +138,6 @@ function SertaMerta() {
                     Piagam Penghargaan
                   </button>
                 </div>
-              </div>
-            </div>
             {/* Putusan Pelanggaran */}
             <div
               className="card mb-4 shadow"
@@ -133,7 +149,7 @@ function SertaMerta() {
             >
               <div className="card-header bg-primary text-light">
                 <div style={{ display: "flex" }}>
-                  <div className="col">
+                  <div className="">
                     <h4>Putusan Pelanggaran</h4>
                   </div>
                   <div className="col">
@@ -277,7 +293,7 @@ function SertaMerta() {
             >
               <div className="card-header bg-primary text-light">
                 <div style={{ display: "flex" }}>
-                  <div className="col">
+                  <div className="">
                     <h4>Sengketa Proses Pemilu</h4>
                   </div>
                   <div className="col">
@@ -451,14 +467,17 @@ function SertaMerta() {
             >
               <div className="card-header bg-primary text-light">
                 <div style={{ display: "flex" }}>
-                  <div className="col">
+                  <div className="">
                     <h4>Pemungutan Suara Ulang</h4>
+
                   </div>
                   <div className="col">
                     {/* <button className="btn btn-primary float-end"> Tambah
                         </button> */}
                   </div>
                 </div>
+
+
               </div>
               <div className="card-body bg-body-tertiary table-container rounded">
                 <table className="table table1 responsive-3 table-striped table-hover border rounded">
@@ -518,7 +537,7 @@ function SertaMerta() {
             >
               <div className="card-header bg-primary text-light">
                 <div style={{ display: "flex" }}>
-                  <div className="col">
+                  <div className="">
                     <h4>Organisasi dan Administrasi</h4>
                   </div>
                   <div className="col">
@@ -526,6 +545,7 @@ function SertaMerta() {
                         </button> */}
                   </div>
                 </div>
+
               </div>
               <div className="card-body bg-body-tertiary table-container rounded">
                 <table className="table table1 responsive-3 table-striped table-hover border rounded">
@@ -538,6 +558,13 @@ function SertaMerta() {
                   <tbody>
                     <tr>
                       <td data-cell="dokumen" scope="row">
+
+                        <p>
+                          PUTUSAN SENGKETA PROSES PEMILU TAHUN 2019 NOMOR :
+                          01/PS/BWSL.BYL.14.11/III/2019
+                        </p>
+                      </td>
+                      <td>
                         <p>SK PEMBERHENTIAN SEMENTARA PKD</p>
                       </td>
                       <td>
@@ -1113,6 +1140,7 @@ function SertaMerta() {
                           SK PENGAKTIFAN ANGGOTA PANWASCAM KAB BOYOLALI
                         </p>
                       </td>{" "}
+
                       <td>
                         <button
                           className="bg-primary text-light"
@@ -1146,6 +1174,13 @@ function SertaMerta() {
                       <td data-cell="unduh">
                         <p>
                           {" "}
+
+                          PUTUSAN PELANGGARAN PIDANA POLITIK UANG PEMILU 2019
+                          NOMOR : 10/Pid.Sus/2019/PNByl
+                        </p>
+                      </td>
+                      <td>
+                        <p>
                           SK PENGAKTIFAN ANGGOTA PANWASCAM KAB BOYOLALI
                         </p>
                       </td>{" "}
@@ -1185,6 +1220,7 @@ function SertaMerta() {
                           SK PENGAKTIFAN ANGGOTA PANWASCAM KAB BOYOLALI
                         </p>
                       </td>{" "}
+
                       <td>
                         <button
                           className="bg-primary text-light"
@@ -1218,7 +1254,12 @@ function SertaMerta() {
                       <td data-cell="unduh">
                         <p>
                           {" "}
+
+                          PUTUSAN ACARA CEPAT PELANGGARAN ADMINISTRATIF PEMILU
+                          2019 PERBEDAAN C1 DAN DAA1
+
                           SK PENGAKTIFAN ANGGOTA PANWASCAM KAB BOYOLALI
+
                         </p>
                       </td>{" "}
                       <td>
@@ -1251,13 +1292,13 @@ function SertaMerta() {
                       </td>
                     </tr>
                   </tbody>
-                  <div></div>
+                  <div>
+                  </div>
                 </table>
               </div>
             </div>
-            </div>
-          </div>
         </div>
+      </div>
       </div>
       {/* <!-- project area end --> */}
 

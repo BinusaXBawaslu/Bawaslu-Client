@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../../component/Navbar";
 import Footer from "../../component/Footer";
 import banner from "../../aset/banner.jpeg";
@@ -10,15 +10,44 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import { EffectCoverflow, Pagination } from "swiper/modules";
+import axios from "axios";
+import { API_DUMMY } from "../../utils/base_URL";
 
 function Home() {
+  const [list, setList] = useState([]);
+  const [listTerbaru, setListTerbaru] = useState([]);
+
+  const getAll = async () => {
+    try {
+      const response = await axios.get(`${API_DUMMY}/bawaslu/api/berita`);
+      setList(response.data.data);
+      console.log(response.data.data);
+    } catch (error) {
+      console.error("Terjadi Kesalahan", error);
+    }
+  };
+  const getAllTerbaru = async () => {
+    try {
+      const response = await axios.get(`${API_DUMMY}/bawaslu/api/berita-terbaru`);
+      setListTerbaru(response.data.data);
+      console.log(response.data.data);
+    } catch (error) {
+      console.error("Terjadi Kesalahan", error);
+    }
+  };
+
+  useEffect(() => {
+    getAll();
+    getAllTerbaru();
+  }, [])
   return (
     <div>
       <Navbar />
       <div>
         <div
           className="banner-area banner-area-2 bg-relative "
-          style={{ backgroundImage: `url(${banner})` }}>
+          style={{ backgroundImage: `url(${banner})` }}
+        >
           <div className="bg-overlay-gradient" />
           <div
             className="banner-bg-img"
@@ -33,11 +62,17 @@ function Home() {
           <div className="container">
             <div className="row">
               <div className="col-lg-6 col-md-9">
-                <div className="banner-inner">
-                  <h5 className="sub-title left-border">Berita</h5>
-
+                <div className="banner-inner ">
+                  <div className="banner-inner bg-primary w-25">
+                    <h1
+                      className="sub-title left-border text-white"
+                      style={{ fontSize: "50px" }}
+                    >
+                      Berita
+                    </h1>
+                  </div>
                   <h2 className="title">
-                    KPU boyolali gelar
+                    KPU boyolali gelar &nbsp;
                     <span>kirab pemilu 2024</span>
                   </h2>
                   <h2 className="fs-1">
@@ -56,7 +91,8 @@ function Home() {
               <div className="col-lg-4 col-md-6">
                 <div
                   className="single-intro-inner shadow p-3 mb-5 rounded"
-                  style={{ background: "#F1F6F9" }}>
+                  style={{ background: "#F1F6F9" }}
+                >
                   <div className="thumb media">
                     <div className="media-left">
                       <i class="fa-solid fa-newspaper"></i>
@@ -77,7 +113,8 @@ function Home() {
               <div className="col-lg-4 col-md-6">
                 <div
                   className="single-intro-inner shadow p-3 mb-5 rounded"
-                  style={{ background: "#F1F6F9" }}>
+                  style={{ background: "#F1F6F9" }}
+                >
                   <div className="thumb media">
                     <div className="media-left">
                       <i class="fa-solid fa-newspaper"></i>
@@ -97,7 +134,8 @@ function Home() {
               <div className="col-lg-4 col-md-6">
                 <div
                   className="single-intro-inner shadow p-3 mb-5 rounded"
-                  style={{ background: "#F1F6F9" }}>
+                  style={{ background: "#F1F6F9" }}
+                >
                   <div className="thumb media ">
                     <div className="media-left">
                       <i class="fa-solid fa-newspaper"></i>
@@ -121,7 +159,8 @@ function Home() {
 
         <div
           className="container"
-          style={{ marginTop: "30px", marginBottom: "70px" }}>
+          style={{ marginTop: "30px", marginBottom: "70px" }}
+        >
           <div class="section-title text-center">
             <h5 class="sub-title double-line">Bawaslu Boyolali</h5>
             <h2 class="title">Berita Bawaslu</h2>
@@ -129,125 +168,34 @@ function Home() {
           <div className="row">
             <div class="col-lg-4 col-md-12 widget widget-recent-post pe-lg-5">
               <ul>
-                <li>
-                  <div class="media">
-                    <div class="media-left">
-                      <img
-                        src="https://boyolali.bawaslu.go.id/cepogo/2023/11/WhatsApp-Image-2023-11-01-at-14.10.31.jpeg"
-                        alt="blog"
-                      />
-                    </div>
-                    <div class="media-body align-self-center">
-                      BY HUMAS BAWASLU BOYOLALI
-                      <h6 class="fs-6 title">
-                        <a href="blog-details.html">
-                          Libatkan BPD, Panwascam Gladagsari Gelar Soswatif
-                        </a>
-                      </h6>
-                      <div class="post-info">
-                        <i class="far fa-calendar-alt"></i>
-                        <span>18 Oktober 2023</span>
+                {list.map((berita) => {
+                  return (
+                    <li>
+                    <div class="media">
+                      <div class="media-left">
+                        <img
+                          src={berita.image}
+                          alt="blog"
+                        />
+                      </div>
+                      <div class="media-body align-self-center">
+                        BY {berita.author}
+                        <h6 class="fs-6 title">
+                          <a href="blog-details.html">
+                            {berita.judulBerita}
+                          </a>
+                        </h6>
+                        <div class="post-info">
+                          <i class="far fa-calendar-alt"></i>
+                          <span>{berita.createdDate}</span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <hr />
-                </li>
-                <li>
-                  <div class="media">
-                    <div class="media-left">
-                      <img
-                        src="https://boyolali.bawaslu.go.id/cepogo/2023/11/WhatsApp-Image-2023-11-01-at-14.10.31.jpeg"
-                        alt="blog"
-                      />
-                    </div>
-                    <div class="media-body align-self-center">
-                      BY HUMAS BAWASLU BOYOLALI
-                      <h6 class="fs-6 title">
-                        <a href="blog-details.html">
-                          Panwaslu Kecamatan Nogosari Gelar Sosialisasi
-                          Pengawasan Partisipatif Pada Pemilih Pemula
-                        </a>
-                      </h6>
-                      <div class="post-info">
-                        <i class="far fa-calendar-alt"></i>
-                        <span>13 Oktober 2023</span>
-                      </div>
-                    </div>
-                  </div>
-                  <hr />
-                </li>
-                <li>
-                  <div class="media">
-                    <div class="media-left">
-                      <img
-                        src="https://boyolali.bawaslu.go.id/cepogo/2023/11/WhatsApp-Image-2023-11-01-at-14.10.31.jpeg"
-                        alt="blog"
-                      />
-                    </div>
-                    <div class="media-body align-self-center">
-                      BY HUMAS BAWASLU BOYOLALI
-                      <h6 class="fs-6 title">
-                        <a href="blog-details.html">
-                          Panwaslu Selo Gelar Sosialisasi Pengawasan
-                          Partisipastif Di SMK N 1 Selo.
-                        </a>
-                      </h6>
-                      <div class="post-info">
-                        <i class="far fa-calendar-alt"></i>
-                        <span>13 Oktober 2023</span>
-                      </div>
-                    </div>
-                  </div>
-                  <hr />
-                </li>
-                <li>
-                  <div class="media">
-                    <div class="media-left">
-                      <img
-                        src="https://boyolali.bawaslu.go.id/cepogo/2023/11/WhatsApp-Image-2023-11-01-at-14.10.31.jpeg"
-                        alt="blog"
-                      />
-                    </div>
-                    <div class="media-body align-self-center">
-                      BY HUMAS BAWASLU BOYOLALI
-                      <h6 class="fs-6 title">
-                        <a href="blog-details.html">
-                          Panwascam Juwangi Adakan Rapat Koordinasi Pengawasan
-                          Tahapan Bersama Kapolsek, Danramil Serta PKD.
-                        </a>
-                      </h6>
-                      <div class="post-info">
-                        <i class="far fa-calendar-alt"></i>
-                        <span>18 Oktober 2023</span>
-                      </div>
-                    </div>
-                  </div>
-                  <hr />
-                </li>
-                <li>
-                  <div class="media">
-                    <div class="media-left">
-                      <img
-                        src="https://boyolali.bawaslu.go.id/cepogo/2023/11/WhatsApp-Image-2023-11-01-at-14.10.31.jpeg"
-                        alt="blog"
-                      />
-                    </div>
-                    <div class="media-body align-self-center">
-                      BY HUMAS BAWASLU BOYOLALI
-                      <h6 class="fs-6 title">
-                        <a href="blog-details.html">
-                          Panwaslu Kecamatan Ampel Ajak Pelajar SMP Untuk
-                          Belajar Demokrasi Dan Pemilu.
-                        </a>
-                      </h6>
-                      <div class="post-info">
-                        <i class="far fa-calendar-alt"></i>
-                        <span>13 Oktober 2023</span>
-                      </div>
-                    </div>
-                  </div>
-                  <hr />
-                </li>
+                    <hr />
+                  </li>
+                  )
+                })}
+               
               </ul>
             </div>
             <div class="col-lg-4 col-md-12 widget widget-recent-post pe-lg-5">
@@ -380,7 +328,8 @@ function Home() {
                 padding: "30px",
                 borderRadius: "10px",
                 background: "#F1F6F9",
-              }}>
+              }}
+            >
               <h4 class="widget-title">
                 Tautan{" "}
                 <span className="text-primary">
@@ -441,7 +390,8 @@ function Home() {
             </div>
             <div
               class="pagination justify-content-center"
-              style={{ marginTop: "50px" }}>
+              style={{ marginTop: "50px" }}
+            >
               <a class="prev page-numbers" href="http://icare.local/">
                 {" "}
                 <i class="fa fa-angle-left"></i>
@@ -476,123 +426,48 @@ function Home() {
             slideShadows: false,
           }}
           pagination={true}
-          loop={true}
+          // loop={true}
           modules={[EffectCoverflow, Pagination]}
-          className="mySwiper container">
-          <SwiperSlide>
-          <div class="">
-                    <div class="single-blog-inner style-3">
-                        <div class="thumb">
-                            <img src="https://solverwp.com/demo/html/itechie/assets/img/blog/7.webp" alt="img"/>
-                            <ul class="blog-meta">
-                                <li><i class="far fa-user"></i> By Admin</li>
-                                <li><i class="far fa-calendar-alt"></i> 25 May 2021</li>
-                            </ul>
-                        </div>
-                        <div class="details">
-                            <h4><a href="blog-details.html">Foreca Exchange Stock Market 2010-2023</a></h4>
-                            <p>Duis leo. Sed fringilla mauris iamet nibh. odales sagittis magonsequat letendum sodales
-                                augue velit</p>
-                            <a class="read-more-btn" href="blog-details.html"><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
+          className="mySwiper container"
+        >
+          {listTerbaru.map((beritaTerbaru) => {
+            return(
+               <SwiperSlide>
+            <div class="">
+              <div class="single-blog-inner style-3">
+                <div class="thumb">
+                  <img
+                    src="https://solverwp.com/demo/html/itechie/assets/img/blog/7.webp"
+                    alt="img"
+                  />
+                  <ul class="blog-meta">
+                    <li>
+                      <i class="far fa-user"></i> By {beritaTerbaru.author}
+                    </li>
+                    <li>
+                      <i class="far fa-calendar-alt"></i> {beritaTerbaru.createdDate}
+                    </li>
+                  </ul>
                 </div>
-          </SwiperSlide>
-          <SwiperSlide>
-          <div class="">
-                    <div class="single-blog-inner style-3">
-                        <div class="thumb">
-                            <img src="https://solverwp.com/demo/html/itechie/assets/img/blog/7.webp" alt="img"/>
-                            <ul class="blog-meta">
-                                <li><i class="far fa-user"></i> By Admin</li>
-                                <li><i class="far fa-calendar-alt"></i> 25 May 2021</li>
-                            </ul>
-                        </div>
-                        <div class="details">
-                            <h4><a href="blog-details.html">Foreca Exchange Stock Market 2010-2023</a></h4>
-                            <p>Duis leo. Sed fringilla mauris iamet nibh. odales sagittis magonsequat letendum sodales
-                                augue velit</p>
-                            <a class="read-more-btn" href="blog-details.html"><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
+                <div class="details">
+                  <h4>
+                    <a href="blog-details.html">
+                      {beritaTerbaru.judulBerita}
+                    </a>
+                  </h4>
+                  <p>
+                    {beritaTerbaru.isiBerita}
+                  </p>
+                  <a class="read-more-btn" href="blog-details.html">
+                    <i class="fa fa-arrow-right"></i>
+                  </a>
                 </div>
+              </div>
+            </div>
           </SwiperSlide>
-          <SwiperSlide>
-          <div class="">
-                    <div class="single-blog-inner style-3">
-                        <div class="thumb">
-                            <img src="https://solverwp.com/demo/html/itechie/assets/img/blog/7.webp" alt="img"/>
-                            <ul class="blog-meta">
-                                <li><i class="far fa-user"></i> By Admin</li>
-                                <li><i class="far fa-calendar-alt"></i> 25 May 2021</li>
-                            </ul>
-                        </div>
-                        <div class="details">
-                            <h4><a href="blog-details.html">Foreca Exchange Stock Market 2010-2023</a></h4>
-                            <p>Duis leo. Sed fringilla mauris iamet nibh. odales sagittis magonsequat letendum sodales
-                                augue velit</p>
-                            <a class="read-more-btn" href="blog-details.html"><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-          </SwiperSlide>
-          <SwiperSlide>
-          <div class="">
-                    <div class="single-blog-inner style-3">
-                        <div class="thumb">
-                            <img src="https://solverwp.com/demo/html/itechie/assets/img/blog/7.webp" alt="img"/>
-                            <ul class="blog-meta">
-                                <li><i class="far fa-user"></i> By Admin</li>
-                                <li><i class="far fa-calendar-alt"></i> 25 May 2021</li>
-                            </ul>
-                        </div>
-                        <div class="details">
-                            <h4><a href="blog-details.html">Foreca Exchange Stock Market 2010-2023</a></h4>
-                            <p>Duis leo. Sed fringilla mauris iamet nibh. odales sagittis magonsequat letendum sodales
-                                augue velit</p>
-                            <a class="read-more-btn" href="blog-details.html"><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-          </SwiperSlide>
-          <SwiperSlide>
-          <div class="">
-                    <div class="single-blog-inner style-3">
-                        <div class="thumb">
-                            <img src="https://solverwp.com/demo/html/itechie/assets/img/blog/7.webp" alt="img"/>
-                            <ul class="blog-meta">
-                                <li><i class="far fa-user"></i> By Admin</li>
-                                <li><i class="far fa-calendar-alt"></i> 25 May 2021</li>
-                            </ul>
-                        </div>
-                        <div class="details">
-                            <h4><a href="blog-details.html">Foreca Exchange Stock Market 2010-2023</a></h4>
-                            <p>Duis leo. Sed fringilla mauris iamet nibh. odales sagittis magonsequat letendum sodales
-                                augue velit</p>
-                            <a class="read-more-btn" href="blog-details.html"><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-          </SwiperSlide>
-          <SwiperSlide>
-          <div class="">
-                    <div class="single-blog-inner style-3">
-                        <div class="thumb">
-                            <img src="https://solverwp.com/demo/html/itechie/assets/img/blog/7.webp" alt="img"/>
-                            <ul class="blog-meta">
-                                <li><i class="far fa-user"></i> By Admin</li>
-                                <li><i class="far fa-calendar-alt"></i> 25 May 2021</li>
-                            </ul>
-                        </div>
-                        <div class="details">
-                            <h4><a href="blog-details.html">Foreca Exchange Stock Market 2010-2023</a></h4>
-                            <p>Duis leo. Sed fringilla mauris iamet nibh. odales sagittis magonsequat letendum sodales
-                                augue velit</p>
-                            <a class="read-more-btn" href="blog-details.html"><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-          </SwiperSlide>
+            )
+          })}
+         
         </Swiper>
         <div class="blog-area pd-top-115 pd-bottom-60">
           <div class="container">
@@ -784,9 +659,10 @@ function Home() {
                       <h3>Informasi Berkala</h3>
 
                       <a
-                        className="btn btn-base btn-small"
-                        href="service-details.html">
-                        View Details
+                        className="btn btn-base btn-small text-white bg-primary"
+                        href="service-details.html"
+                      >
+                        Informasi Berkala
                       </a>
                     </div>
                   </div>
@@ -813,9 +689,10 @@ function Home() {
                       <h3>Informasi Setiap Saat</h3>
 
                       <a
-                        className="btn btn-base btn-small"
-                        href="service-details.html">
-                        View Details
+                        className="btn btn-base btn-small text-white bg-primary"
+                        href="service-details.html"
+                      >
+                        Informasi Setiap Saat
                       </a>
                     </div>
                   </div>
@@ -842,9 +719,10 @@ function Home() {
                       <h3>Informasi Serta Merta</h3>
 
                       <a
-                        className="btn btn-base btn-small"
-                        href="service-details.html">
-                        View Details
+                        className="btn btn-base btn-small text-white bg-primary"
+                        href="/serta-merta"
+                      >
+                        Informasi Serta Merta
                       </a>
                     </div>
                   </div>
@@ -871,9 +749,10 @@ function Home() {
                       <h3>Informasi Dikecualikan</h3>
 
                       <a
-                        className="btn btn-base btn-small"
-                        href="service-details.html">
-                        View Details
+                        className="btn btn-base btn-small text-white bg-primary"
+                        href="/dikecualikan"
+                      >
+                        Informasi Dikecualikan
                       </a>
                     </div>
                   </div>

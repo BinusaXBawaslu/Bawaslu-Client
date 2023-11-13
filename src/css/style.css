@@ -9773,3 +9773,14 @@ ul {
   color: black;
   text-decoration: none;
 }
+
+.single-testimonial-inner img {
+  width: 100%; /* Gambar akan memiliki lebar 100% dari lebar parent (konten testimonial) */
+  height: auto; /* Mempertahankan rasio aspek gambar */
+}
+
+/* CSS tambahan untuk mengatur lebar konten testimoni */
+.single-testimonial-inner {
+  max-width: 900px; /* Atur lebar maksimum konten testimoni */
+  margin: 0 auto; /* Pusatkan konten testimoni */
+}

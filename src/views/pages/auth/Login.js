@@ -82,6 +82,13 @@ function Login() {
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
               />
+              <input
+                type="hidden"
+                className="form-control form-control-lg bg-light fs-6"
+                required
+                placeholder="Username"
+                value="admin"
+              />
             </div>
             <div className="input-group mb-1">
               <input
