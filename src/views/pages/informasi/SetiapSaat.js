@@ -95,6 +95,23 @@ function SetiapSaat() {
                 </div>
               </div>
             </div>
+
+          <div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-12">
+      <div class="isotope-filters project-isotope-btn text-center mb-5">
+        <button class="btn btn-primary active ml-0" data-filter="*">Organisasi Administrasi</button>
+        <button class="btn btn-primary" data-filter=".cat-1">Peraturan & Kebijakan</button>
+        <button class="btn btn-primary" data-filter=".cat-2">MOU</button>
+        <button class="btn btn-primary" data-filter=".cat-3">Pemantauan Pemilu</button>
+        <button class="btn btn-primary" data-filter=".cat-3">Rencana Strategi</button>
+        <button class="btn btn-primary" data-filter=".cat-3">Materi Rakor</button>
+        <button class="btn btn-primary" data-filter=".cat-3">Piagam Penghargaan</button>
+      </div>
+    </div>
+  </div>
+</div>
+
             <div className="card mb-4 shadow ">
               <div className="card-header bg-primary text-light">
                 <div style={{ display: "flex" }}>

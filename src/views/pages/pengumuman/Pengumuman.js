@@ -7,7 +7,7 @@ function Pengumuman() {
   const [pengumuman, setPengumuman] = useState([]);
   const getAll = async () => {
     await axios
-      .get("http://localhost:3030/bawaslu/api/pengumuman")
+      .get("${API_DUMMY}/bawaslu/api/pengumuman")
       .then((res) => {
         setPengumuman(res.data.data);
       })

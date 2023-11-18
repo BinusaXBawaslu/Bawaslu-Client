@@ -1,22 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
+import Footer from "../../../../component/Footer";
 import Header from "../../../../component/Header";
 import Sidebar from "../../../../component/Sidebar";
-import Footer from "../../../../component/Footer";
+import Swal from "sweetalert2";
 import { API_DUMMY } from "../../../../utils/base_URL";
 import axios from "axios";
-import Swal from "sweetalert2";
-import { History } from "swiper/modules";
-import { useState } from "react";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
-function AddBeritaAdmin() {
+function AddPengumuman() {
   const [author, setAuthor] = useState("");
-  const [judulBerita, setJudulBerita] = useState("");
+  const [isiPengumuman, setIsiPengumuman] = useState("");
+  const [judulPengumuman, setJudulPengumuman] = useState("");
+  const [tags, setTags] = useState("");
   const [image, setImage] = useState("");
-  const [category, setCategory] = useState(0);
-  const [isiBerita, setIsiBerita] = useState("");
+  const history = useState();
   const [show, setShow] = useState(false);
-  const history = useHistory();
 
   const add = async (e) => {
     e.preventDefault();
@@ -24,12 +21,12 @@ function AddBeritaAdmin() {
 
     const formData = new FormData();
     formData.append("author", author);
-    formData.append("judulBerita", judulBerita);
-    formData.append("isiBerita", isiBerita);
+    formData.append("isiPengumuman", isiPengumuman);
+    formData.append("judulPengumuman", judulPengumuman);
     formData.append("file", image);
-    formData.append("categoryBerita", category);
+    formData.append("tags", tags);
     try {
-      await axios.post(`${API_DUMMY}/bawaslu/api/berita/add`, formData, {
+      await axios.post(`${API_DUMMY}/bawaslu/api/pengumuman/add`, formData, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -43,7 +40,7 @@ function AddBeritaAdmin() {
         timer: 1500,
       });
       // //console.log(data);
-      history.push("/admin-berita");
+      history.push("/admin-pengumuman");
       setTimeout(() => {
         window.location.reload();
       }, 1500);
@@ -51,7 +48,6 @@ function AddBeritaAdmin() {
       console.log(error);
     }
   };
-
   return (
     <div>
       <Header />
@@ -69,10 +65,10 @@ function AddBeritaAdmin() {
                       Author
                     </label>
                     <input
-                      value={author}
-                      onChange={(e) => setAuthor(e.target.value)}
                       type="text"
                       class="form-control"
+                      value={author}
+                      onChange={(e) => setAuthor(e.target.value)}
                     />
                   </div>
                   <div class="mb-3 col-6">
@@ -80,8 +76,7 @@ function AddBeritaAdmin() {
                       Image
                     </label>
                     <input
-                      value={image}
-                      onChange={(e) => setImage(e.target.value)}
+                      onChange={(e) => setImage(e.target.files[0])}
                       type="file"
                       class="form-control"
                       id="exampleInputPassword1"
@@ -89,11 +84,11 @@ function AddBeritaAdmin() {
                   </div>
                   <div class="mb-3 col-6">
                     <label for="exampleInputPassword1" class="form-label">
-                      Judul Berita
+                      Isi Pengumuman
                     </label>
                     <input
-                      value={judulBerita}
-                      onChange={(e) => setJudulBerita(e.target.value)}
+                      value={isiPengumuman}
+                      onChange={(e) => setIsiPengumuman(e.target.value)}
                       type="text"
                       class="form-control"
                       id="exampleInputPassword1"
@@ -101,43 +96,48 @@ function AddBeritaAdmin() {
                   </div>
                   <div class="mb-3 col-6">
                     <label for="exampleInputPassword1" class="form-label">
-                      Category
+                      Judul Pengumuman
                     </label>
                     <input
-                      value={category}
-                      onChange={(e) => setCategory(e.target.value)}
-                      type="number"
+                      value={judulPengumuman}
+                      onChange={(e) => setJudulPengumuman(e.target.value)}
+                      type="text"
                       class="form-control"
                       id="exampleInputPassword1"
                     />
                   </div>
-                  <div className="col-6">
+                  <div class="mb-3 col-6">
                     <label for="exampleInputPassword1" class="form-label">
-                      Isi Berita
+                      Tags
                     </label>
-                    <div class="col-6">
-                      <textarea
-                        value={isiBerita}
-                        onChange={(e) => setIsiBerita(e.target.value)}
-                        class="form-control"
-                        placeholder="Leave a comment here"
-                        id="floatingTextarea2"
-                      ></textarea>
-                    </div>
+                    <input
+                      value={tags}
+                      onChange={(e) => setTags(e.target.value)}
+                      type="text"
+                      class="form-control"
+                      id="exampleInputPassword1"
+                    />
                   </div>
                 </div>
+                <button type="submit" class="btn-danger mt-3 mr-3">
+                  <a
+                    href="/admin-pengumuman"
+                    style={{ color: "white", textDecoration: "none" }}>
+                    {" "}
+                    Batal
+                  </a>
+                </button>
                 <button type="submit" class="btn-primary mt-3">
-                  Submit
+                  Simpan
                 </button>
               </form>
             </div>
           </div>
         </div>
       </div>
-      {/* sss */}
       <Footer />
     </div>
   );
 }
 
-export default AddBeritaAdmin;
+export default AddPengumuman;
