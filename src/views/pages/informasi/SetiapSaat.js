@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import Footer from "../../../component/Footer";
 import Navbar from "../../../component/Navbar";
 import jsPDF from "jspdf";
+import "../../../css/setiapsaat.css"
 import html2canvas from "html2canvas";
 import gambar from "../../../asset/img/bawaslu(berita).jpeg";
 
@@ -67,6 +68,34 @@ function SetiapSaat() {
             backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp') `,
           }}>
           <div class="container">
+            <div class="row justify-content-center">
+              <div id="tengah" class="col-lg-12 ">
+                <div id="button" class="isotope-filters project-isotope-btn text-center mb-5">
+                  <button id="button" class="button active ml-0" data-filter="*">
+                    Organisasi Administrasi
+                  </button>
+                  <button id="button" class="button" data-filter=".cat-1">
+                    Peraturan & Kebijakan
+                  </button>
+                  <button id="button" class="button" data-filter=".cat-2">
+                    MOU
+                  </button>
+                  <button id="button" class="button" data-filter=".cat-3">
+                    Pemantauan Pemilu
+                  </button>
+                  <button id="button" class="button" data-filter=".cat-3">
+                    Rencana Strategi
+                  </button>
+                  <button id="button" class="button" data-filter=".cat-3">
+                    Materi Rakor
+                  </button>
+                  <button id="button" class="button" data-filter=".cat-3">
+                    Piagam Penghargaan
+                  </button>
+                </div>
+              </div>
+            </div>
+
           <div class="container">
   <div class="row justify-content-center">
     <div class="col-lg-12">
@@ -214,7 +243,6 @@ function SetiapSaat() {
                       </td>
                     </tr>
                   </tbody>
-                  <div></div>
                 </table>
               </div>
             </div>

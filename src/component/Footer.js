@@ -23,22 +23,22 @@ function Footer() {
                   </p>
                   <ul class="social-media">
                     <li>
-                      <a class="facebook" href="#">
+                      <a class="facebook" href="https://www.facebook.com/Bawaslu.Kabupaten.Boyolali" target="_blank">
                         <i class="fab fa-facebook-f"></i>
                       </a>
                     </li>
                     <li>
-                      <a class="twitter" href="#">
+                      <a class="twitter"  href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbawasluboyolali" target="_blank">
                         <i class="fab fa-twitter"></i>
                       </a>
                     </li>
                     <li>
-                      <a class="instagram" href="#">
+                      <a class="instagram" href="https://www.instagram.com/bawaslu_boyolali/" target="_blank">
                         <i class="fab fa-instagram"></i>
                       </a>
                     </li>
                     <li>
-                      <a class="youtube" href="#">
+                      <a class="youtube" href="https://www.youtube.com/channel/UC-OZT-HT_Qg7cUmo-oHfkAw" target="_blank">
                         <i class="fab fa-youtube"></i>
                       </a>
                     </li>
@@ -51,7 +51,7 @@ function Footer() {
                 <h4 class="widget-title">Kategori</h4>
                 <ul>
                   <li>
-                    <a href="">Berita</a>
+                    <a href="/berita" >Berita</a>
                   </li>
                   <li>
                     <a href="">Kehumasan</a>
@@ -66,7 +66,7 @@ function Footer() {
                     <a href="">Pencegahan</a>
                   </li>
                   <li>
-                    <a href="">Pengumuman</a>
+                    <a href="/pengumuman">Pengumuman</a>
                   </li>
                 </ul>
               </div>
@@ -78,7 +78,7 @@ function Footer() {
                 {/* <h4 class="widget-title">Useful link</h4> */}
                 <ul>
                   <li>
-                    <a href="">Penyelesaian Sengketa</a>
+                    <a href="/prosedur-permohonan-penyelesaian-sengketa-informasi">Penyelesaian Sengketa</a>
                   </li>
                   <li>
                     <a href="">Sosialisasi</a>

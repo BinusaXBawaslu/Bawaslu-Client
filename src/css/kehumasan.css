@@ -1,0 +1,92 @@
+.pmbngks-img {
+    display: flex;
+}
+
+.wrapper1 {
+    width: 600px;
+    border: 1px solid red;
+    padding-top: 100px;
+}
+
+.wrap-img1 {
+    background-image: url("https://boyolali.bawaslu.go.id/cepogo/2023/09/20230711105903.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+}
+
+.wrap-opacity1 {
+    background-image: url("https://boyolali.bawaslu.go.id/cepogo/2023/09/20230711105903.jpeg");
+    display: flex;
+    align-items: end;
+    height: inherit;
+}
+
+.wrap-text1 {
+    border: 1px solid red;
+    color: white;
+    font-size: 20px;
+    padding: 50px;
+    padding-left: 140px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.wrap-img2 {
+    background-image: url("https://cdn-assetd.kompas.id/_RPDi5VwPIefC-qflRmJrWMJyiw=/1024x683/https%3A%2F%2Fasset.kgnewsroom.com%2Fphoto%2Fpre%2F2022%2F03%2F22%2F00c1978a-1f12-4201-b172-56b343607484_jpg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+}
+
+.wrap-opacity2 {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
+    display: flex;
+    align-items: end;
+    height: inherit;
+}
+
+.wrap-text2 {
+    border: 1px solid red;
+    color: white;
+    font-size: 20px;
+    padding: 30px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.wrapper2 {
+    width: 350px;
+    border: 1px solid red;
+    padding-top: 100px;
+}
+
+.wrapper1 {
+    width: 600px;
+    border: 1px solid red;
+    padding-top: 100px;
+}
+
+.wrap-img3 {
+    background-color: lightgray;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+}
+
+.wrap-opacity3 {
+    background-color: lightgray;
+    display: flex;
+    align-items: end;
+    height: inherit;
+}
+
+.wrap-text3 {
+    border: 1px solid red;
+    color: white;
+    font-size: 20px;
+    padding: 50px;
+    padding-left: 140px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}

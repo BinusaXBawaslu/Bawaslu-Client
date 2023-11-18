@@ -35,6 +35,8 @@ import AdminPermohonanKeberatan from "./views/pages/admin/permohonan/AdminPermoh
 import DetailPermohonanInformasi from "./views/pages/admin/permohonan/detail/DetailPermohonanInformasi";
 import DetailPermohonanKeberatan from "./views/pages/admin/permohonan/detail/DetailPermohonanKeberatan";
 import AdminSertaMerta from "./views/pages/admin/informasi/AdminSertaMerta";
+import Kehumasan from "./views/pages/informasi/Kehumasan";
+
 import AdminPengumuman from "./views/pages/admin/pengumuman/AdminPengumuman";
 import AddPengumuman from "./views/pages/admin/pengumuman/AddPengumuman";
 import EditPengumuman from "./views/pages/admin/pengumuman/EditPengumuman";
@@ -123,6 +125,8 @@ function App() {
           <Route path="/detail-permohonan-keberatan/:id" component={DetailPermohonanKeberatan} exact />
           {/* rekap data perbulan */}
           <Route path="/rekap-berita/:tahun_bulan" component={November} exact />
+          <Route path="/rekap-berita/:tahun_bulan" component={November} exact />
+          <Route path="/kehumasan" component={Kehumasan} exact />
         </Switch>
       </main>
     </BrowserRouter>
