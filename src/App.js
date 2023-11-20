@@ -34,10 +34,12 @@ import AdminPermohonanInformasi from "./views/pages/admin/permohonan/AdminPermoh
 import AdminPermohonanKeberatan from "./views/pages/admin/permohonan/AdminPermohonanKeberatan";
 import DetailPermohonanInformasi from "./views/pages/admin/permohonan/detail/DetailPermohonanInformasi";
 import DetailPermohonanKeberatan from "./views/pages/admin/permohonan/detail/DetailPermohonanKeberatan";
-import AdminSertaMerta from "./views/pages/admin/informasi/AdminSertaMerta";
+// import AdminSertaMerta from "./views/pages/admin/informasi/AdminSertaMerta";
 import AdminPengumuman from "./views/pages/admin/pengumuman/AdminPengumuman";
 import AddPengumuman from "./views/pages/admin/pengumuman/AddPengumuman";
 import EditPengumuman from "./views/pages/admin/pengumuman/EditPengumuman";
+import index from "./views/pages/admin/informasi/Index";
+import Index from "./views/pages/admin/informasi/Index";
 // test
 function App() {
 
@@ -118,7 +120,8 @@ function App() {
           <Route path="/edit-pengumuman/:id" component={EditPengumuman} exact />
           <Route path="/admin-permohonan-informasi" component={AdminPermohonanInformasi} exact />
           <Route path="/admin-permohonan-keberatan" component={AdminPermohonanKeberatan} exact />
-          <Route path="/admin-informasi-serta-merta" component={AdminSertaMerta} exact />
+          <Route path="/admin/:jenisRegulasi/:id" component={Index} exact />
+          {/* <Route path="/admin-informasi-serta-merta" component={AdminSertaMerta} exact /> */}
           <Route path="/detail-permohonan-informasi/:id" component={DetailPermohonanInformasi} exact />
           <Route path="/detail-permohonan-keberatan/:id" component={DetailPermohonanKeberatan} exact />
           {/* rekap data perbulan */}

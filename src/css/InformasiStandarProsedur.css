@@ -211,6 +211,9 @@
         width: 600px;
         height: 350px;
     }
+    #tabel{
+        padding-right: 14px;
+    }
  }
  @media screen and ( max-width:768px ) {
     #carouselExample{
@@ -223,7 +226,9 @@
         justify-content: center;
         align-items: center;
       }
-   
+   #tabel{
+    padding-right: 13px;
+   }
  }
  @media screen and (max-width: 320px) {
     #carouselExample{
@@ -240,5 +245,8 @@
         padding-top: 40px;
         width: 200px;
         font-size: 25px;
+    }
+    #tabel{
+        padding-right: 13px;
     }
  }

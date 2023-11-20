@@ -49,7 +49,7 @@ function EditPengumuman() {
     formData.append("tags", tags);
 
     await axios
-      .put(`${API_DUMMY}/bawaslu/api/pengumuman` + param.id, formData, {
+      .put(`${API_DUMMY}/bawaslu/api/pengumuman/` + param.id, formData, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

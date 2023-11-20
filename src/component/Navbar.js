@@ -56,7 +56,7 @@ function Navbar() {
           <div class="row">
             <div class="col-lg-3 d-lg-inline-block d-none">
               <div class="logo">
-                <a href="index.html">
+                <a href="/">
                   <img
                     src="https://boyolali.bawaslu.go.id/cepogo/2023/09/logo.png"
                     alt="img"
@@ -92,18 +92,18 @@ function Navbar() {
             </div>
             <div class="col-lg-2 d-lg-block d-none align-self-center">
               <div class="social-media-light text-md-end text-center">
-                <a href="#">
+                <a href="https://www.facebook.com/Bawaslu.Kabupaten.Boyolali" target="_blank">
                   <i class="fab fa-facebook"></i>
                 </a>
-                <a href="#">
+                <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbawasluboyolali" target="_blank">
                   <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
-                <a href="#">
+                <a href="https://www.instagram.com/bawaslu_boyolali/" target="_blank">
                   <i class="fab fa-instagram" aria-hidden="true"></i>
                 </a>
-                <a href="#">
-                  <i class="fab fa-pinterest" aria-hidden="true"></i>
-                </a>
+                <a class="youtube" href="https://www.youtube.com/channel/UC-OZT-HT_Qg7cUmo-oHfkAw" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                      </a>
               </div>
             </div>
           </div>

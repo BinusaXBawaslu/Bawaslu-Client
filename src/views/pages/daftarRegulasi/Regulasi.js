@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Footer from "../../../component/Footer";
 import Navbar from "../../../component/Navbar";
 import axios from "axios";
+import { API_DUMMY } from "../../../utils/base_URL";
 
 function Regulasi() {
   const [table1Visible, setTable1Visible] = useState(false);
@@ -71,7 +72,7 @@ function Regulasi() {
   const getByMenu = async () => {
     await axios
       .get(
-        `http://localhost:3030/bawaslu/api/menu-regulasi/get-by-jenis-regulasi?id-jenis-regulasi=1`
+        `${API_DUMMY}/bawaslu/api/menu-regulasi/get-by-jenis-regulasi?id-jenis-regulasi=1`
       )
       .then((response) => {
         setList(response.data.data);
@@ -83,7 +84,7 @@ function Regulasi() {
   const getByIsi = async () => {
     await axios
       .get(
-        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=1`
+        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=1`
       )
       .then((response) => {
         setIsi(response.data.data);
@@ -95,7 +96,7 @@ function Regulasi() {
   const getByIsi1 = async () => {
     await axios
       .get(
-        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=2`
+        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=2`
       )
       .then((response) => {
         setIsi1(response.data.data);
@@ -107,7 +108,7 @@ function Regulasi() {
   const getByIsi2 = async () => {
     await axios
       .get(
-        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=3`
+        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=3`
       )
       .then((response) => {
         setIsi2(response.data.data);
@@ -119,7 +120,7 @@ function Regulasi() {
   const getByIsi3 = async () => {
     await axios
       .get(
-        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=4`
+        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=4`
       )
       .then((response) => {
         setIsi3(response.data.data);
@@ -131,7 +132,7 @@ function Regulasi() {
   const getByIsi4 = async () => {
     await axios
       .get(
-        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=5`
+        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=5`
       )
       .then((response) => {
         setIsi4(response.data.data);
@@ -143,7 +144,7 @@ function Regulasi() {
   const getByIsi5 = async () => {
     await axios
       .get(
-        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=6`
+        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=6`
       )
       .then((response) => {
         setIsi5(response.data.data);
@@ -155,7 +156,7 @@ function Regulasi() {
   const getByIsi6 = async () => {
     await axios
       .get(
-        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=7`
+        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=7`
       )
       .then((response) => {
         setIsi6(response.data.data);
@@ -167,7 +168,7 @@ function Regulasi() {
   const getByIsi7 = async () => {
     await axios
       .get(
-        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=8`
+        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=8`
       )
       .then((response) => {
         setIsi7(response.data.data);
@@ -179,7 +180,7 @@ function Regulasi() {
   const getByIsi8 = async () => {
     await axios
       .get(
-        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=9`
+        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=9`
       )
       .then((response) => {
         setIsi8(response.data.data);

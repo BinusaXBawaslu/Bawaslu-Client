@@ -9,6 +9,7 @@ function Register() {
   const [errorMessage, setErrorMessage] = useState("");
   const [show, setShow] = useState(false);
   const history = useHistory();
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -25,7 +26,8 @@ function Register() {
     ) {
       Swal.fire({
         icon: "error",
-        title: "Password harus memiliki minimal 8 karakter, satu huruf besar, dan satu huruf kecil.",
+        title:
+          "Password harus memiliki minimal 8 karakter, satu huruf besar, dan satu huruf kecil.",
         showConfirmButton: false,
         timer: 1500,
       });
@@ -38,9 +40,7 @@ function Register() {
         password,
       });
 
-      // Cek jika username sudah terdaftar
       if (response.data === "Username already taken") {
-        // setErrorMessage("Username sudah terdaftar. Pilih username lain.");
         Swal.fire({
           icon: "error",
           title: "Username sudah terdaftar. Pilih username lain.",
@@ -55,25 +55,20 @@ function Register() {
           showConfirmButton: false,
           timer: 1500,
         });
+          history.push("/login");
         setTimeout(() => {
-          history.push('/login')
           window.location.reload();
         }, 1500);
       }
     } catch (error) {
       console.error("Error during registration:", error);
-      // setErrorMessage("Terjadi kesalahan saat mendaftar. Coba lagi nanti.");
       setShow(false);
-        Swal.fire({
-          icon: "error",
-          title: "Terjadi kesalahan saat mendaftar. Coba lagi nanti.",
-          showConfirmButton: false,
-          timer: 1500,
-        });
-        // setTimeout(() => {
-        //   history.push('/register')
-        //   window.location.reload();
-        // }, 1500);
+      Swal.fire({
+        icon: "error",
+        title: "Terjadi kesalahan saat mendaftar. Coba lagi nanti.",
+        showConfirmButton: false,
+        timer: 1500,
+      });
     }
   };
 
@@ -125,7 +120,8 @@ function Register() {
               </div>
               <div class="form-group mb-3">
                 <input
-                  type="password"
+                  type={showPassword ? "text" : "password"} // Menampilkan atau menyembunyikan password berdasarkan nilai showPassword
+                  id="password"
                   class="form-control form-control-lg bg-light fs-6"
                   name="Password"
                   placeholder="Password"
@@ -136,8 +132,6 @@ function Register() {
                 <input
                   type="hidden"
                   class="form-control form-control-lg bg-light fs-6"
-                  name="Password"
-                  placeholder="Password"
                   required
                   value="admin"
                 />
@@ -151,11 +145,12 @@ function Register() {
                   <input
                     type="checkbox"
                     class="form-check-input"
-                    id="show-password"
+                    id="showPassword"
+                    onChange={() => setShowPassword(!showPassword)}
                   />
                   <label
-                    for="formCheck"
-                    class="form-check-label text-secondary">
+                    htmlFor="showPassword"
+                    className="form-check-label text-secondary">
                     <small>Tampilkan Password</small>
                   </label>
                 </div>
@@ -171,7 +166,7 @@ function Register() {
               <div class="row">
                 <small>
                   Sudah Memiliki Akun Silahkan{" "}
-                  <a href="/absensi/auth/">Login</a>
+                  <a href="/login">Login</a>
                 </small>
               </div>
             </form>

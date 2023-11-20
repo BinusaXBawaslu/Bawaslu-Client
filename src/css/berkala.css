@@ -1,0 +1,30 @@
+@media screen and (max-width: 320px) {
+    #tabel{
+        display: flex;
+        flex-direction: column;
+        margin-right: 0%;
+        padding-right: 2px;
+    }
+    #display{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+}
+@media screen and (max-width: 768px) {
+    #display{
+        gap: 35px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    #display{
+        gap: 40px;
+    }
+}
+@media screen and (max-width: 1440px) {
+    #display{
+        gap: 40px;
+    }
+}
