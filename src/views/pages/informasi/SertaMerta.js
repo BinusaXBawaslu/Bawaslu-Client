@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
+import axios from "axios";
 function SertaMerta() {
-  const [table1Visible, setTable1Visible] = useState(true);
+  const [table1Visible, setTable1Visible] = useState(false);
   const [table2Visible, setTable2Visible] = useState(false);
   const [table3Visible, setTable3Visible] = useState(false);
   const [table4Visible, setTable4Visible] = useState(false);
@@ -21,52 +22,193 @@ function SertaMerta() {
     setTable7Visible(false);
 
     switch (tableNumber) {
-      case 1:
+      case "Putusan Pelanggaran":
         setTable1Visible(true);
         break;
-      case 2:
+      case "Sengketa Proses Pemilu":
         setTable2Visible(true);
         break;
-      case 3:
+      case "Pemungutan Suara Ulang & Susulan":
         setTable3Visible(true);
         break;
-      case 4:
-        setTable3Visible(true);
+      case "Organisasi dan Administrasi":
+        setTable4Visible(true);
         break;
-      case 5:
-        setTable3Visible(true);
+      case "Perselisihan Hasil Pemilihan Umum":
+        setTable5Visible(true);
         break;
-      case 6:
-        setTable3Visible(true);
+      case "Sosialisasi":
+        setTable6Visible(true);
         break;
-      case 7:
-        setTable3Visible(true);
+      case "Piagam Penghargaan":
+        setTable7Visible(true);
         break;
       default:
         break;
     }
   };
+  const [list, setList] = useState([]);
+  const [isi, setIsi] = useState([]);
+  const [isi1, setIsi1] = useState([]);
+  const [isi2, setIsi2] = useState([]);
+  const [isi3, setIsi3] = useState([]);
+  const [isi4, setIsi4] = useState([]);
+  const [isi5, setIsi5] = useState([]);
+  const [isi6, setIsi6] = useState([]);
 
+  // const getAll = async () => {
+  //   await axios
+  //     .get("http://localhost:3030/bawaslu/api/regulasi/all")
+  //     .then((res) => {
+  //       setRegulasi(res.data.data.data);
+  //     })
+  //     .catch((error) => {
+  //       alert("Terjadi kesalahan" + error);
+  //     });
+  // };
+  const getByMenu = async () => {
+    await axios
+      .get(
+        `http://localhost:3030/bawaslu/api/menu-regulasi/get-by-jenis-regulasi?id-jenis-regulasi=7`
+      )
+      .then((response) => {
+        setList(response.data.data);
+      })
+      .catch((error) => {
+        alert("Terjadi kesalahan" + error);
+      });
+  };
+  const getByIsi = async () => {
+    await axios
+      .get(
+        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=48`
+      )
+      .then((response) => {
+        // console.log(response.data.data);
+        setIsi(response.data.data);
+      })
+      .catch((error) => {
+        alert("Terjadi kesalahan" + error);
+      });
+  };
+  const getByIsi1 = async () => {
+    await axios
+      .get(
+        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=49`
+      )
+      .then((response) => {
+        // console.log(response.data.data);
+        setIsi1(response.data.data);
+      })
+      .catch((error) => {
+        alert("Terjadi kesalahan" + error);
+      });
+  };
+  const getByIsi2 = async () => {
+    await axios
+      .get(
+        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=50`
+      )
+      .then((response) => {
+        // console.log(response.data.data);
+        setIsi2(response.data.data);
+      })
+      .catch((error) => {
+        alert("Terjadi kesalahan" + error);
+      });
+  };
+  const getByIsi3 = async () => {
+    await axios
+      .get(
+        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=51`
+      )
+      .then((response) => {
+        // console.log(response.data.data);
+        setIsi3(response.data.data);
+      })
+      .catch((error) => {
+        alert("Terjadi kesalahan" + error);
+      });
+  };
+  const getByIsi4 = async () => {
+    await axios
+      .get(
+        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=52`
+      )
+      .then((response) => {
+        // console.log(response.data.data);
+        setIsi4(response.data.data);
+      })
+      .catch((error) => {
+        alert("Terjadi kesalahan" + error);
+      });
+  };
+  const getByIsi5 = async () => {
+    await axios
+      .get(
+        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=53`
+      )
+      .then((response) => {
+        // console.log(response.data.data);
+        setIsi5(response.data.data);
+      })
+      .catch((error) => {
+        alert("Terjadi kesalahan" + error);
+      });
+  };
+  const getByIsi6 = async () => {
+    await axios
+      .get(
+        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=54`
+      )
+      .then((response) => {
+        // console.log(response.data.data);
+        setIsi6(response.data.data);
+      })
+      .catch((error) => {
+        alert("Terjadi kesalahan" + error);
+      });
+  };
+
+  // const getByMenu2 = async () => {
+  //   await axios
+  //     .get(
+  //       `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=1`
+  //     )
+  //     .then((response) => {
+  //       console.log(response.data.data);
+  //     })
+  //     .catch((error) => {
+  //       alert("Terjadi kesalahan" + error);
+  //     });
+  // };
+
+  useEffect(() => {
+    //mengambil data, memperbarui DOM secara langsung,
+    getByMenu();
+    getByIsi();
+    getByIsi1();
+    getByIsi2();
+    getByIsi3();
+    getByIsi4();
+    getByIsi5();
+    getByIsi6();
+  }, []);
 
   return (
     <div>
       <Navbar />
       <div
-        style={{
-          backgroundImage: `url('https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg?w=740&t=st=1698973959~exp=1698974559~hmac=418240e9f8d698b9b7f2c0907f5c8e0013885b44976fa36e713b8801491993db')`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-        }}
-      >
-        <div
         class="breadcrumb-area bg-relative"
-        style={{ background: "#151423" }}>
+        style={{ background: "#151423" }}
+      >
         <div
           class="banner-bg-img"
           style={{
             backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp')`,
-          }}></div>
-       <div class="container">
+          }}
+        ></div>
+        <div class="container">
           <div class="row justify-content-center">
             <div class="col-xl-7 col-lg-8">
               <div class="breadcrumb-inner text-center">
@@ -82,47 +224,30 @@ function SertaMerta() {
           </div>
         </div>
       </div>
-      <div className="container" style={{marginTop:"10%"}}>
-            <div className="flex wrap gap-4">
-            <div class="row isotope-filters project-isotope-btn text-left mb-5">
-    <div class="col-md-3 col-sm-6 mb-2">
-        <button class="btn btn-primary w-100" data-filter="*" onClick={() => showTable(1)}>
-            Putusan Pelanggaran
-        </button>
-    </div>
-    <div class="col-md-3 col-sm-6 mb-2">
-        <button class="btn btn-primary w-100" data-filter=".cat-1" onClick={() => showTable(2)}>
-            Sengketa Proses Pemilu
-        </button>
-    </div>
-    <div class="col-md-3 col-sm-6 mb-2">
-        <button class="btn btn-primary w-100" data-filter=".cat-2" onClick={() => showTable(3)}>
-            Pemungutan Suara Ulang
-        </button>
-    </div>
-    <div class="col-md-3 col-sm-6 mb-2">
-        <button class="btn btn-primary w-100" data-filter=".cat-3" onClick={() => showTable(4)}>
-            Organisasi Dan Administrasi
-        </button>
-    </div>
-    <div class="col-md-3 col-sm-6 mb-2">
-        <button class="btn btn-primary w-100" data-filter=".cat-3" onClick={() => showTable(5)}>
-            Perselisihan Hasil Pemilihan Umum
-        </button>
-    </div>
-    <div class="col-md-3 col-sm-6 mb-2">
-        <button class="btn btn-primary w-100" data-filter=".cat-3" onClick={() => showTable(6)}>
-            Sosialisasi
-        </button>
-    </div>
-    <div class="col-md-3 col-sm-6 mb-2">
-        <button class="btn btn-primary w-100" data-filter=".cat-3" onClick={() => showTable(7)}>
-            Piagam Penghargaan
-        </button>
-    </div>
-</div>
-
-
+      <div
+        style={{
+          backgroundImage: `url('https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg?w=740&t=st=1698973959~exp=1698974559~hmac=418240e9f8d698b9b7f2c0907f5c8e0013885b44976fa36e713b8801491993db')`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+        class="project-area pd-top-115 pd-bottom-90"
+      >
+        <div className="container">
+          <div className="d-flex gap-5">
+            <div class="isotope-filters project-isotope-btn text-left mb-5">
+              {list.map((menu) => {
+                return (
+                  <button
+                    style={{ width: "250px", textAlign: "left" }}
+                    class="button ml-0"
+                    data-filter="*"
+                    onClick={() => showTable(`${menu.menuRegulasi}`)}
+                  >
+                    {menu.menuRegulasi}
+                  </button>
+                );
+              })}
+            </div>
             {/* Putusan Pelanggaran */}
             <div
               className="card mb-4 shadow"
@@ -151,118 +276,45 @@ function SertaMerta() {
                       <th scope="col"> Unduh / Lihat</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr>
-                      <td data-cell="dokumen" scope="row">
-                        <p>
-                          PUTUSAN SENGKETA PROSES PEMILU TAHUN 2019 NOMOR :
-                          01/PS/BWSL.BYL.14.11/III/2019
-                        </p>
-                      </td>
-                      <td>
-                        <button
-                          className="bg-primary text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-download"></i>
-                        </button>
-                        <button
-                          className="bg-warning text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-circle-info"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td data-cell="unduh">
-                        <p>
-                          {" "}
-                          PUTUSAN PELANGGARAN PIDANA POLITIK UANG PEMILU 2019
-                          NOMOR : 10/Pid.Sus/2019/PNByl
-                        </p>
-                      </td>
-                      <td>
-                        <button
-                          className="bg-primary text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-download"></i>
-                        </button>
-                        <button
-                          className="bg-warning text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-circle-info"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td data-cell="unduh">
-                        <p>
-                          {" "}
-                          PUTUSAN ACARA CEPAT PELANGGARAN ADMINISTRATIF PEMILU
-                          2019 PERBEDAAN C1 DAN DAA1
-                        </p>
-                      </td>{" "}
-                      <td>
-                        <button
-                          className="bg-primary text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-download"></i>
-                        </button>
-                        <button
-                          className="bg-warning text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-circle-info"></i>
-                        </button>
-                      </td>
-                    </tr>
-                  </tbody>
+                  {isi.map((isi) => {
+                    return (
+                      <tbody>
+                        <tr>
+                          <td data-cell="dokumen" scope="row">
+                            <p>{isi.dokumen}</p>
+                          </td>
+                          <td>
+                            <button
+                              className="bg-primary text-light"
+                              style={{
+                                border: "none",
+                                padding: "7px",
+                                paddingLeft: "13px",
+                                paddingRight: "13px",
+                                borderRadius: "5px",
+                                marginRight: "10px",
+                              }}
+                            >
+                              <i class="fa-solid fa-download"></i>
+                            </button>
+                            <button
+                              className="bg-warning text-light"
+                              style={{
+                                border: "none",
+                                padding: "7px",
+                                paddingLeft: "13px",
+                                paddingRight: "13px",
+                                borderRadius: "5px",
+                                marginRight: "10px",
+                              }}
+                            >
+                              <i class="fa-solid fa-circle-info"></i>
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    );
+                  })}
                   <div></div>
                 </table>
               </div>
@@ -295,148 +347,45 @@ function SertaMerta() {
                       <th scope="col"> Unduh / Lihat</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr>
-                      <td data-cell="dokumen" scope="row">
-                        <p>ALUR PENYELESAIAN SENGKETA PROSES PEMILU</p>
-                      </td>
-                      <td>
-                        <button
-                          className="bg-primary text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-download"></i>
-                        </button>
-                        <button
-                          className="bg-warning text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-circle-info"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td data-cell="unduh">
-                        <p> ALUR PENYELESAIAN SENGKETA PROSES PILKADA</p>
-                      </td>
-                      <td>
-                        <button
-                          className="bg-primary text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-download"></i>
-                        </button>
-                        <button
-                          className="bg-warning text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-circle-info"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td data-cell="unduh">
-                        <p>
-                          {" "}
-                          INFOGRAFIS PERMOHONAN PENYELESAIAN SENGKETA PROSES
-                          PEMILU 2019
-                        </p>
-                      </td>{" "}
-                      <td>
-                        <button
-                          className="bg-primary text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-download"></i>
-                        </button>
-                        <button
-                          className="bg-warning text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-circle-info"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td data-cell="unduh">
-                        <p>
-                          {" "}
-                          INFOGRAFIS PERMOHONAN PENYELESAIAN SENGKETA PROSES
-                          PILKADA 2020
-                        </p>
-                      </td>{" "}
-                      <td>
-                        <button
-                          className="bg-primary text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-download"></i>
-                        </button>
-                        <button
-                          className="bg-warning text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-circle-info"></i>
-                        </button>
-                      </td>
-                    </tr>
-                  </tbody>
+                  {isi1.map((isi1) => {
+                    return (
+                      <tbody>
+                        <tr>
+                          <td data-cell="dokumen" scope="row">
+                            <p>{isi1.dokumen}</p>
+                          </td>
+                          <td>
+                            <button
+                              className="bg-primary text-light"
+                              style={{
+                                border: "none",
+                                padding: "7px",
+                                paddingLeft: "13px",
+                                paddingRight: "13px",
+                                borderRadius: "5px",
+                                marginRight: "10px",
+                              }}
+                            >
+                              <i class="fa-solid fa-download"></i>
+                            </button>
+                            <button
+                              className="bg-warning text-light"
+                              style={{
+                                border: "none",
+                                padding: "7px",
+                                paddingLeft: "13px",
+                                paddingRight: "13px",
+                                borderRadius: "5px",
+                                marginRight: "10px",
+                              }}
+                            >
+                              <i class="fa-solid fa-circle-info"></i>
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    );
+                  })}
                   <div></div>
                 </table>
               </div>
@@ -454,15 +403,12 @@ function SertaMerta() {
                 <div style={{ display: "flex" }}>
                   <div className="">
                     <h4>Pemungutan Suara Ulang</h4>
-
                   </div>
                   <div className="col">
                     {/* <button className="btn btn-primary float-end"> Tambah
                         </button> */}
                   </div>
                 </div>
-
-
               </div>
               <div className="card-body bg-body-tertiary table-container rounded">
                 <table className="table table1 responsive-3 table-striped table-hover border rounded">
@@ -472,41 +418,45 @@ function SertaMerta() {
                       <th scope="col"> Unduh / Lihat</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr>
-                      <td data-cell="dokumen" scope="row">
-                        <p>PSU BOYOLALI</p>
-                      </td>
-                      <td>
-                        <button
-                          className="bg-primary text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-download"></i>
-                        </button>
-                        <button
-                          className="bg-warning text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-circle-info"></i>
-                        </button>
-                      </td>
-                    </tr>
-                  </tbody>
+                  {isi2.map((isi2) => {
+                    return (
+                      <tbody>
+                        <tr>
+                          <td data-cell="dokumen" scope="row">
+                            <p>{isi2.dokumen}</p>
+                          </td>
+                          <td>
+                            <button
+                              className="bg-primary text-light"
+                              style={{
+                                border: "none",
+                                padding: "7px",
+                                paddingLeft: "13px",
+                                paddingRight: "13px",
+                                borderRadius: "5px",
+                                marginRight: "10px",
+                              }}
+                            >
+                              <i class="fa-solid fa-download"></i>
+                            </button>
+                            <button
+                              className="bg-warning text-light"
+                              style={{
+                                border: "none",
+                                padding: "7px",
+                                paddingLeft: "13px",
+                                paddingRight: "13px",
+                                borderRadius: "5px",
+                                marginRight: "10px",
+                              }}
+                            >
+                              <i class="fa-solid fa-circle-info"></i>
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    );
+                  })}
                   <div></div>
                 </table>
               </div>
@@ -530,7 +480,6 @@ function SertaMerta() {
                         </button> */}
                   </div>
                 </div>
-
               </div>
               <div className="card-body bg-body-tertiary table-container rounded">
                 <table className="table table1 responsive-3 table-striped table-hover border rounded">
@@ -540,750 +489,264 @@ function SertaMerta() {
                       <th scope="col"> Unduh / Lihat</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr>
-                      <td data-cell="dokumen" scope="row">
-
-                        <p>
-                          PUTUSAN SENGKETA PROSES PEMILU TAHUN 2019 NOMOR :
-                          01/PS/BWSL.BYL.14.11/III/2019
-                        </p>
-                      </td>
-                      <td>
-                        <p>SK PEMBERHENTIAN SEMENTARA PKD</p>
-                      </td>
-                      <td>
-                        <button
-                          className="bg-primary text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-download"></i>
-                        </button>
-                        <button
-                          className="bg-warning text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-circle-info"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td data-cell="unduh">
-                        <p> SK PEMBERHENTIAN SEMENTARA SEKRETARIAT PANWAS</p>
-                      </td>
-                      <td>
-                        <button
-                          className="bg-primary text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-download"></i>
-                        </button>
-                        <button
-                          className="bg-warning text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-circle-info"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td data-cell="unduh">
-                        <p>
-                          {" "}
-                          SK PENGAKTIFAN ANGGOTA PANWASCAM
-                        </p>
-                      </td>{" "}
-                      <td>
-                        <button
-                          className="bg-primary text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-download"></i>
-                        </button>
-                        <button
-                          className="bg-warning text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-circle-info"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td data-cell="unduh">
-                        <p>
-                          {" "}
-                          SK PENGAKTIFAN ANGGOTA PANWASCAM KAB BOYOLALI
-                        </p>
-                      </td>{" "}
-                      <td>
-                        <button
-                          className="bg-primary text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-download"></i>
-                        </button>
-                        <button
-                          className="bg-warning text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-circle-info"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td data-cell="unduh">
-                        <p>
-                          {" "}
-                          SK PENGAKTIFAN PKD
-                        </p>
-                      </td>{" "}
-                      <td>
-                        <button
-                          className="bg-primary text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-download"></i>
-                        </button>
-                        <button
-                          className="bg-warning text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-circle-info"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td data-cell="unduh">
-                        <p>
-                          {" "}
-                          SK PENGAKTIFAN SEKRETARIAT PANWASCAM
-                        </p>
-                      </td>{" "}
-                      <td>
-                        <button
-                          className="bg-primary text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-download"></i>
-                        </button>
-                        <button
-                          className="bg-warning text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-circle-info"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td data-cell="unduh">
-                        <p>
-                          {" "}
-                          SK PENGANGKATAN ANGGOTA PANWASCAM KAB BOYOLALI
-                        </p>
-                      </td>{" "}
-                      <td>
-                        <button
-                          className="bg-primary text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-download"></i>
-                        </button>
-                        <button
-                          className="bg-warning text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-circle-info"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td data-cell="unduh">
-                        <p>
-                          {" "}
-                          DATA JUMLAH ANGGOTA BAWASLU KAB BOYOLALI 2018_2023
-                        </p>
-                      </td>{" "}
-                      <td>
-                        <button
-                          className="bg-primary text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-download"></i>
-                        </button>
-                        <button
-                          className="bg-warning text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-circle-info"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td data-cell="unduh">
-                        <p>
-                          {" "}
-                          SK PENGAKTIFAN ANGGOTA PANWASCAM KAB BOYOLALI
-                        </p>
-                      </td>{" "}
-                      <td>
-                        <button
-                          className="bg-primary text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-download"></i>
-                        </button>
-                        <button
-                          className="bg-warning text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-circle-info"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td data-cell="unduh">
-                        <p>
-                          {" "}
-                          SK PENGAKTIFAN ANGGOTA PANWASCAM KAB BOYOLALI
-                        </p>
-                      </td>{" "}
-                      <td>
-                        <button
-                          className="bg-primary text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-download"></i>
-                        </button>
-                        <button
-                          className="bg-warning text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-circle-info"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td data-cell="unduh">
-                        <p>
-                          {" "}
-                          SK PENGAKTIFAN ANGGOTA PANWASCAM KAB BOYOLALI
-                        </p>
-                      </td>{" "}
-                      <td>
-                        <button
-                          className="bg-primary text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-download"></i>
-                        </button>
-                        <button
-                          className="bg-warning text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-circle-info"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td data-cell="unduh">
-                        <p>
-                          {" "}
-                          SK PENGAKTIFAN ANGGOTA PANWASCAM KAB BOYOLALI
-                        </p>
-                      </td>{" "}
-                      <td>
-                        <button
-                          className="bg-primary text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-download"></i>
-                        </button>
-                        <button
-                          className="bg-warning text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-circle-info"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td data-cell="unduh">
-                        <p>
-                          {" "}
-                          SK PENGAKTIFAN ANGGOTA PANWASCAM KAB BOYOLALI
-                        </p>
-                      </td>{" "}
-                      <td>
-                        <button
-                          className="bg-primary text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-download"></i>
-                        </button>
-                        <button
-                          className="bg-warning text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-circle-info"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td data-cell="unduh">
-                        <p>
-                          {" "}
-                          SK PENGAKTIFAN ANGGOTA PANWASCAM KAB BOYOLALI
-                        </p>
-                      </td>{" "}
-                      <td>
-                        <button
-                          className="bg-primary text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-download"></i>
-                        </button>
-                        <button
-                          className="bg-warning text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-circle-info"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td data-cell="unduh">
-                        <p>
-                          {" "}
-                          SK PENGAKTIFAN ANGGOTA PANWASCAM KAB BOYOLALI
-                        </p>
-                      </td>{" "}
-                      <td>
-                        <button
-                          className="bg-primary text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-download"></i>
-                        </button>
-                        <button
-                          className="bg-warning text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-circle-info"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td data-cell="unduh">
-                        <p>
-                          {" "}
-                          SK PENGAKTIFAN ANGGOTA PANWASCAM KAB BOYOLALI
-                        </p>
-                      </td>{" "}
-                      <td>
-                        <button
-                          className="bg-primary text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-download"></i>
-                        </button>
-                        <button
-                          className="bg-warning text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-circle-info"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td data-cell="unduh">
-                        <p>
-                          {" "}
-                          SK PENGAKTIFAN ANGGOTA PANWASCAM KAB BOYOLALI
-                        </p>
-                      </td>{" "}
-
-                      <td>
-                        <button
-                          className="bg-primary text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-download"></i>
-                        </button>
-                        <button
-                          className="bg-warning text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-circle-info"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td data-cell="unduh">
-                        <p>
-                          {" "}
-
-                          PUTUSAN PELANGGARAN PIDANA POLITIK UANG PEMILU 2019
-                          NOMOR : 10/Pid.Sus/2019/PNByl
-                        </p>
-                      </td>
-                      <td>
-                        <p>
-                          SK PENGAKTIFAN ANGGOTA PANWASCAM KAB BOYOLALI
-                        </p>
-                      </td>{" "}
-                      <td>
-                        <button
-                          className="bg-primary text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-download"></i>
-                        </button>
-                        <button
-                          className="bg-warning text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-circle-info"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td data-cell="unduh">
-                        <p>
-                          {" "}
-                          SK PENGAKTIFAN ANGGOTA PANWASCAM KAB BOYOLALI
-                        </p>
-                      </td>{" "}
-
-                      <td>
-                        <button
-                          className="bg-primary text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-download"></i>
-                        </button>
-                        <button
-                          className="bg-warning text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-circle-info"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td data-cell="unduh">
-                        <p>
-                          {" "}
-
-                          PUTUSAN ACARA CEPAT PELANGGARAN ADMINISTRATIF PEMILU
-                          2019 PERBEDAAN C1 DAN DAA1
-
-                          SK PENGAKTIFAN ANGGOTA PANWASCAM KAB BOYOLALI
-
-                        </p>
-                      </td>{" "}
-                      <td>
-                        <button
-                          className="bg-primary text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-download"></i>
-                        </button>
-                        <button
-                          className="bg-warning text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-circle-info"></i>
-                        </button>
-                      </td>
-                    </tr>
-                  </tbody>
-                  <div>
-                  </div>
+                  {isi3.map((isi3) => {
+                    return (
+                      <tbody>
+                        <tr>
+                          <td data-cell="dokumen" scope="row">
+                            <p>{isi3.dokumen}</p>
+                          </td>
+                          <td>
+                            <button
+                              className="bg-primary text-light"
+                              style={{
+                                border: "none",
+                                padding: "7px",
+                                paddingLeft: "13px",
+                                paddingRight: "13px",
+                                borderRadius: "5px",
+                                marginRight: "10px",
+                              }}
+                            >
+                              <i class="fa-solid fa-download"></i>
+                            </button>
+                            <button
+                              className="bg-warning text-light"
+                              style={{
+                                border: "none",
+                                padding: "7px",
+                                paddingLeft: "13px",
+                                paddingRight: "13px",
+                                borderRadius: "5px",
+                                marginRight: "10px",
+                              }}
+                            >
+                              <i class="fa-solid fa-circle-info"></i>
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    );
+                  })}
+                  <div></div>
                 </table>
               </div>
             </div>
+            {/* Perselisihan Hasil Pemilihan Umum*/}
+            <div
+              className="card mb-4 shadow"
+              id="table5"
+              style={{
+                display: table5Visible ? "table" : "none",
+                width: "100%",
+              }}
+            >
+              <div className="card-header bg-primary text-light">
+                <div style={{ display: "flex" }}>
+                  <div className="">
+                    <h4>Perselisihan Hasil Pemilihan Umum</h4>
+                  </div>
+                  <div className="col">
+                    {/* <button className="btn btn-primary float-end"> Tambah
+                        </button> */}
+                  </div>
+                </div>
+              </div>
+              <div className="card-body bg-body-tertiary table-container rounded">
+                <table className="table table1 responsive-3 table-striped table-hover border rounded">
+                  <thead>
+                    <tr>
+                      <th scope="col"> Dokumen</th>
+                      <th scope="col"> Unduh / Lihat</th>
+                    </tr>
+                  </thead>
+                  {isi4.map((isi4) => {
+                    return (
+                      <tbody>
+                        <tr>
+                          <td data-cell="dokumen" scope="row">
+                            <p>{isi4.dokumen}</p>
+                          </td>
+                          <td>
+                            <button
+                              className="bg-primary text-light"
+                              style={{
+                                border: "none",
+                                padding: "7px",
+                                paddingLeft: "13px",
+                                paddingRight: "13px",
+                                borderRadius: "5px",
+                                marginRight: "10px",
+                              }}
+                            >
+                              <i class="fa-solid fa-download"></i>
+                            </button>
+                            <button
+                              className="bg-warning text-light"
+                              style={{
+                                border: "none",
+                                padding: "7px",
+                                paddingLeft: "13px",
+                                paddingRight: "13px",
+                                borderRadius: "5px",
+                                marginRight: "10px",
+                              }}
+                            >
+                              <i class="fa-solid fa-circle-info"></i>
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    );
+                  })}
+                  <div></div>
+                </table>
+              </div>
+            </div>
+            {/* Sosialisasi */}
+            <div
+              className="card mb-4 shadow"
+              id="table6"
+              style={{
+                display: table6Visible ? "table" : "none",
+                width: "100%",
+              }}
+            >
+              <div className="card-header bg-primary text-light">
+                <div style={{ display: "flex" }}>
+                  <div className="">
+                    <h4>Sosialisasi </h4>
+                  </div>
+                  <div className="col">
+                    {/* <button className="btn btn-primary float-end"> Tambah
+                        </button> */}
+                  </div>
+                </div>
+              </div>
+              <div className="card-body bg-body-tertiary table-container rounded">
+                <table className="table table1 responsive-3 table-striped table-hover border rounded">
+                  <thead>
+                    <tr>
+                      <th scope="col"> Dokumen</th>
+                      <th scope="col"> Unduh / Lihat</th>
+                    </tr>
+                  </thead>
+                  {isi5.map((isi5) => {
+                    return (
+                      <tbody>
+                        <tr>
+                          <td data-cell="dokumen" scope="row">
+                            <p>{isi5.dokumen}</p>
+                          </td>
+                          <td>
+                            <button
+                              className="bg-primary text-light"
+                              style={{
+                                border: "none",
+                                padding: "7px",
+                                paddingLeft: "13px",
+                                paddingRight: "13px",
+                                borderRadius: "5px",
+                                marginRight: "10px",
+                              }}
+                            >
+                              <i class="fa-solid fa-download"></i>
+                            </button>
+                            <button
+                              className="bg-warning text-light"
+                              style={{
+                                border: "none",
+                                padding: "7px",
+                                paddingLeft: "13px",
+                                paddingRight: "13px",
+                                borderRadius: "5px",
+                                marginRight: "10px",
+                              }}
+                            >
+                              <i class="fa-solid fa-circle-info"></i>
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    );
+                  })}
+                  <div></div>
+                </table>
+              </div>
+            </div>
+            {/* Piagam Penghargaan */}
+            <div
+              className="card mb-4 shadow"
+              id="table7"
+              style={{
+                display: table7Visible ? "table" : "none",
+                width: "100%",
+              }}
+            >
+              <div className="card-header bg-primary text-light">
+                <div style={{ display: "flex" }}>
+                  <div className="">
+                    <h4>Piagam Penghargaan </h4>
+                  </div>
+                  <div className="col">
+                    {/* <button className="btn btn-primary float-end"> Tambah
+                        </button> */}
+                  </div>
+                </div>
+              </div>
+              <div className="card-body bg-body-tertiary table-container rounded">
+                <table className="table table1 responsive-3 table-striped table-hover border rounded">
+                  <thead>
+                    <tr>
+                      <th scope="col"> Dokumen</th>
+                      <th scope="col"> Unduh / Lihat</th>
+                    </tr>
+                  </thead>
+                  {isi6.map((isi6) => {
+                    return (
+                      <tbody>
+                        <tr>
+                          <td data-cell="dokumen" scope="row">
+                            <p>{isi6.dokumen}</p>
+                          </td>
+                          <td>
+                            <button
+                              className="bg-primary text-light"
+                              style={{
+                                border: "none",
+                                padding: "7px",
+                                paddingLeft: "13px",
+                                paddingRight: "13px",
+                                borderRadius: "5px",
+                                marginRight: "10px",
+                              }}
+                            >
+                              <i class="fa-solid fa-download"></i>
+                            </button>
+                            <button
+                              className="bg-warning text-light"
+                              style={{
+                                border: "none",
+                                padding: "7px",
+                                paddingLeft: "13px",
+                                paddingRight: "13px",
+                                borderRadius: "5px",
+                                marginRight: "10px",
+                              }}
+                            >
+                              <i class="fa-solid fa-circle-info"></i>
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    );
+                  })}
+                  <div></div>
+                </table>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
       </div>
       {/* <!-- project area end --> */}
 
