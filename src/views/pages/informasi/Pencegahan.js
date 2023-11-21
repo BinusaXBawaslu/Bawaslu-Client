@@ -17,14 +17,15 @@ const Pencegahan = () => {
     return (
         <div>
             <Navbar />
-            <div style={{            backgroundImage: `url('https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg')`, backgroundRepeat:"no-repeat",backgroundSize:"cover"
- }}>
+            <div style={{
+                backgroundImage: `url('https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg')`, backgroundRepeat: "no-repeat", backgroundSize: "cover"
+            }}>
                 <div className="pmbngks-img">
                     <a href="https://boyolali.bawaslu.go.id/dialog-interaktif-isu-pemilu-di-sosial-media/#">
-                        <div className="wrapper1">
-                            <div className="wrap-img1">
-                                <div className="wrap-opacity1">
-                                    <div className="wrap-text1">
+                        <div id="wrapper1" className="wrapper1">
+                            <div id="awrap-img1" className="wrap-img1">
+                                <div id="awrap-opacity" className="wrap-opacity1">
+                                    <div id="wrap-text1" className="wrap-text1">
                                         Dialog Interaktif Isu Pemilu di Sosial Media
                                         <br />
                                         <span>by </span> <span>BAWASLU BOYOLALI</span>
@@ -42,12 +43,15 @@ const Pencegahan = () => {
 
                         </div>
                     </a>
-                    <a href="https://boyolali.bawaslu.go.id/bawaslu-mengawasi-verifikasi-administrasi-perbaikan-dokumen-persyaratan-bakal-calon-dprd-kab-kota/"> <div className="wrapper2">
-                        <div className="wrap-img2">
-                            <div className="wrap-opacity2">
-                                <div className="wrap-text2">
+                    <a href="https://boyolali.bawaslu.go.id/bawaslu-mengawasi-verifikasi-administrasi-perbaikan-dokumen-persyaratan-bakal-calon-dprd-kab-kota/">
+                         <div id="awrapper2" className="wrapper2">
+                        <div id="awrap-img2" className="wrap-img2">
+                            <div id="awrap-opacity" className="wrap-opacity2">
+                                <div id="awrap-text2" className="wrap-text2">
                                     Pesta Demokrasi Semakin Dekat, Bawaslu Diminta
                                     Menjadi Narasumber Sosialisasi Pemilu 2024
+                                    <br />
+                                    <span>by </span> <span>BAWASLU BOYOLALI</span>
                                     <br />
                                     <p className="span-txt" style={{ color: "white" }}>
                                         <span>
@@ -62,12 +66,16 @@ const Pencegahan = () => {
                         </div>
                     </div></a>
 
-                    <div className="wrapper3">
-                        <div className="pmbngks-img2">
-                            <a href="https://boyolali.bawaslu.go.id/bawaslu-boyolali-bersama-uns-lakukan-penandatanganan-mou/"> <div className="wrap-img3">
-                                <div className="wrap-opacity3">
-                                    <div className="wrap-text3">
+                    <div id="wrapper" className="wrapper3">
+                        <div id="pembngkus-img2" className="pmbngks-img2">
+                            <a href="https://boyolali.bawaslu.go.id/bawaslu-boyolali-bersama-uns-lakukan-penandatanganan-mou/"> 
+                            <div id="awrap-img3" className="wrap-img3">
+                                <div id="awrap-opacity3" className="wrap-opacity3">
+                                    <div id="awrap-text3" className="wrap-text3">
                                         Bawaslu Boyolali UNS Lakukan Penandatnganan MoU
+                                        <br />
+
+                                        <span>by </span> <span>BAWASLU BOYOLALI</span>
                                         <p className="span-txt" style={{ color: "white" }}>
                                             <span>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
@@ -82,10 +90,13 @@ const Pencegahan = () => {
 
                             <div>
                                 <a href="https://boyolali.bawaslu.go.id/bawaslu-provinsi-jawa-tengah-lakukan-supervisi-pemetaan-potensi-pelanggaran-tahapan-kampanye-pemilu-2024/">
-                                    <div className="wrap-img4">
-                                        <div className="wrap-opacity3">
-                                            <div className="wrap-text3">
+                                    <div id="awrap-img4" className="wrap-img4">
+                                        <div id="awrap-opacity4" className="wrap-opacity3">
+                                            <div id="awrap-text4" className="wrap-text3">
                                                 Bawaslu Provinsi Jawa Tengah Lakukan Supervisi Pemetaan Potensi Pelanggaran Tahapan Kampanye Pemilu 2024
+                                                <br />
+                                                <span>by </span> <span>BAWASLU BOYOLALI</span>
+
                                                 <p className="span-txt" style={{ color: "white" }}>
                                                     <span>
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
@@ -161,7 +172,7 @@ const Pencegahan = () => {
                                 </div>
                                 <div>
                                     <a href="" className="a-bold" style={{ color: "gray" }}>Pesta Demokrasi Semakin Dekat, Bawaslu Diminta Menjadi Narasumber Sosialisasi Pemilu 2024
-</a>
+                                    </a>
                                     <p className="p-info"> <a href=""></a> by <span className="txt-bold"> <a href="https://boyolali.bawaslu.go.id/author/pelanpaksopir932/" style={{ color: "gray" }}>BAWASLU BOYOLALI</a>  {" "}
                                         <a href="https://boyolali.bawaslu.go.id/pesta-demokrasi-semakin-dekat-bawaslu-diminta-menjadi-narasumber-sosialisasi-pemilu-2024/" style={{ color: "gray" }}>
                                             <span>

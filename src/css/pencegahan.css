@@ -14,14 +14,14 @@
     padding-top: 100px;
 }
 
-.wrap-img1 {
+#awrap-img1 {
     background-image: url("https://boyolali.bawaslu.go.id/cepogo/2023/09/20230803014724.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 500px;
 }
 
-.wrap-opacity1 {
+#awrap-opacity1 {
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
     display: flex;
     background-repeat: no-repeat;
@@ -39,21 +39,21 @@
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.wrap-img2 {
+#awrap-img2 {
     background-image: url("https://boyolali.bawaslu.go.id/cepogo/2023/09/20230718120146.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 500px;
 }
 
-.wrap-opacity2 {
+#awrap-opacity2 {
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
     display: flex;
     align-items: end;
     height: inherit;
 }
 
-.wrap-text2 {
+#awrap-text2 {
     color: white;
     font-size: 20px;
     padding: 30px;
@@ -72,7 +72,7 @@
    
 }
 
-.wrap-img3 {
+#awrap-img3 {
     background-image: url("https://boyolali.bawaslu.go.id/cepogo/2023/09/20230718121531-350x250.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -80,40 +80,40 @@
    
 }
 
-.wrap-opacity3 {
+#awrap-opacity3 {
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
     display: flex;
     align-items: end;
     height: inherit;
 }
 
-.wrap-text3 {
+#awrap-text3 {
     color: white;
-    font-size: 20px;
-    padding: 50px;
-    padding-left: 140px;
+    font-size: 15px;
+    padding: 5px 5px 5px 5px;
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-.wrap-img4 {
+#awrap-img4 {
     background-image: url("https://boyolali.bawaslu.go.id/cepogo/2023/09/20230713014836-350x250.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 250px;
+    height: 235px;
 }
 
-.wrap-opacity3 {
+#awrap-opacity4 {
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
     display: flex;
     align-items: end;
     height: inherit;
 }
 
-.wrap-text3 {
+#awrap-text4 {
     color: white;
     font-size: 15px;
-    padding: 10px;
-    padding-left: 10px;
+    padding: 5px 5px 5px 5px;
+    /* padding: 10px;
+    padding-left: 10px; */
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
@@ -175,3 +175,9 @@
     width: 100px;
     height: 30px;
 border: 2px solid lightgray;}
+
+@media screen and (max-width: 1024px) {
+    #wrapper1{
+
+    }
+}

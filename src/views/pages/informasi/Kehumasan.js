@@ -24,8 +24,8 @@ const Kehumasan = () => {
                     <a href="https://boyolali.bawaslu.go.id/dialog-interaktif-isu-pemilu-di-sosial-media/#">
                         <div id="wrapper1" className="wrapper1">
                             <div id="wrap-img1" className="wrap-img1">
-                                <div className="wrap-opacity1" id="wrap-opacity1">
-                                    <div className="wrap-text1" id="wrap-text1">
+                                <div className="warper-opacity1" id="warper-opacity1">
+                                    <div className="wrap-text1" id="wrapp-text1">
                                         Dialog Interaktif Isu Pemilu di Sosial Media <br /> {" "}
                                         <span>by </span> <span>BAWASLU BOYOLALI</span>
                                         <p className="span-txt" id="span-txt" style={{ color: "white" }}>
@@ -63,7 +63,7 @@ const Kehumasan = () => {
                         </div>
                     </div></a>
 
-                    <div id="wrapper3" className="wrapper3">
+                    <div id="warapper3" className="wrapper3">
                         <div className="pmbngks-img2" id="pmbngks-img2">
                             <a href=""> <div id="wrap-img3" className="wrap-img3">
                                 <div className="wrap-opacity3">

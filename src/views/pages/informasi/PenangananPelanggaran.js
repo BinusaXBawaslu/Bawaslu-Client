@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
-import "../../../css/kehumasan.css"
+import "../../../css/penanganan.css"
 import info from "../../../aset/undraw_settings_tab_mgiw.svg";
 import RI from "../../../aset/Bawaslu-RI-300x73-1.png";
 import jateng from "../../../aset/bawaslu-jateng-300x73-1.png";
@@ -18,14 +18,15 @@ const PenangananPelanggaran = () => {
     return (
         <div>
             <Navbar />
-            <div style={{            backgroundImage: `url('https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg')`, backgroundRepeat:"no-repeat",backgroundSize:"cover"
- }}>
-                <div className="pmbngks-img">
+            <div style={{
+                backgroundImage: `url('https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg')`, backgroundRepeat: "no-repeat", backgroundSize: "cover"
+            }}>
+                <div id="pmbngks-img" className="pmbngks-img">
                     <a href="https://boyolali.bawaslu.go.id/dialog-interaktif-isu-pemilu-di-sosial-media/#">
-                        <div className="wrapper1">
-                            <div className="wrap-img-penangan-1">
-                                <div className="wrap-opacity1">
-                                    <div className="wrap-text1">
+                        <div id="wrapper1" className="wrapper1">
+                            <div id="wraper-img1" className="wrap-img-penangan-1">
+                                <div id="wraper-opacity1" className="wrap-opacity1">
+                                    <div id="waraper-text1" className="wrap-text1">
                                         Bawaslu Boyolali Adakan Rakor Penanganan Pelanggaran Bersama Panwaslu Kecamatan <br /> {" "}
                                         <span>by </span> <span>BAWASLU BOYOLALI</span>
                                         <p className="span-txt" style={{ color: "white" }}>
@@ -42,31 +43,36 @@ const PenangananPelanggaran = () => {
 
                         </div>
                     </a>
-                    <a href="https://boyolali.bawaslu.go.id/pesta-demokrasi-semakin-dekat-bawaslu-diminta-menjadi-narasumber-sosialisasi-pemilu-2024/"> <div className="wrapper2">
-                        <div className="wrap-img2">
-                            <div className="wrap-opacity2">
-                                <div className="wrap-text2">
-                                   
+                    <a href="https://boyolali.bawaslu.go.id/pesta-demokrasi-semakin-dekat-bawaslu-diminta-menjadi-narasumber-sosialisasi-pemilu-2024/"> <div className="wrapper2" id="wrapper2">
+                        <div id="wrapp-img2" className="wrap-img2">
+                            <div id="waraper-opacity2" className="wrap-opacity2">
+                                <div id="wrap-text2" className="wrap-text2">
+
                                 </div>
                             </div>
                         </div>
                     </div></a>
 
-                    <div className="wrapper3">
-                        <div className="pmbngks-img2">
-                            <a href=""> <div className="wrap-img3">
-                                <div className="wrap-opacity3">
-                                    <div className="wrap-text3">
+                    <div id="warapper3" className="wrapper3">
+                        <div id="pembungkusimg2" className="pmbngks-img2">
+                            <a href="">
+                                <div>
+                                    <div id="wraper-img3" className="wrap-img3">
+                                        <div id="wrap-opacitry3" className="wrap-opacity3">
+                                            <div id="wrap-text3" className="wrap-text3">
 
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div></a>
+
+                            </a>
 
                             <div>
                                 <a href="">
-                                    <div className="wrap-img4">
-                                        <div className="wrap-opacity3">
-                                            <div className="wrap-text3">
+                                    <div id="wraper-img4" className="wrap-img4">
+                                        <div id="wrap-opacity3" className="wrap-opacity3">
+                                            <div id="wrap-text3" className="wrap-text3">
 
                                             </div>
                                         </div>
@@ -82,60 +88,60 @@ const PenangananPelanggaran = () => {
 
 
                 </div>
-                <div className="a-href">
+                <div id="a-href" className="a-href">
                     <div >
-                        <a href="/">Home  </a>
+                        <a id="a-text" href="/">Home  </a>
                     </div>
                     <div>
-                        <a href="">Category  </a>
+                        <a id="a-text" href="">Category  </a>
                     </div>
                     <div>
-                        <a href="/penanganan-pelanggaran">Penanganan Pelanggaran </a>                  
-                          </div>
+                        <a id="a-text" href="/penanganan-pelanggaran">Penanganan Pelanggaran </a>
+                    </div>
                 </div>
-                <div className="pmbngks-txt-logo">
-                    <div className="txt-kehumasan">
+                <div id="pmbngks-txt-logo" className="pmbngks-txt-logo">
+                    <div id="txt-kehumasan" className="txt-kehumasan">
                         <div>
                             <h1>Penanganan Pelanggaran</h1>
                             <p>Artikel Mengenai Penanganan Pealnggaran di Bawaslu Bpyolali Kabupaten Boyolali</p>
-                            <div className="bg-gray">
-                                <div className="txt-gray">
+                            <div id="bg-gray" className="bg-gray">
+                                <div id="txt-gray" className="txt-gray">
                                     No Content Available
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="logo">
-                        <div className="h3">
+                    <div id="logo" className="logo">
+                        <div id="h3" className="h3">
                             <h3>
                                 TAUTAN <span className="span" >LEMBAGA</span>
                             </h3>
-                            <hr />
-                            <div className="img-logo">
+                            <hr id="hr" />
+                            <div id="img-logo" className="img-logo">
                                 <div>
                                     <a href="">
-                                        <img className="img-src" src={RI} />
+                                        <img id="img-src" className="img-src" src={RI} />
                                     </a>
                                 </div>
                                 <div>
                                     {" "}
                                     <a href="">
-                                        <img className="img-src" src={dkpp} />
+                                        <img id="img-src" className="img-src" src={dkpp} />
                                     </a>
                                 </div>
                                 <div>
                                     <a href="">
-                                        <img className="img-src" src={MAHKAMAH} />
+                                        <img id="img-src" className="img-src" src={MAHKAMAH} />
                                     </a>
                                 </div>
                                 <div>
                                     <a href="">
-                                        <img className="img-src" src={KPU} />
+                                        <img id="img-src" className="img-src" src={KPU} />
                                     </a>
                                 </div>
                                 <div>
                                     <a href="">
-                                        <img className="img-src" src={jateng} />
+                                        <img id="img-src" className="img-src" src={jateng} />
                                     </a>
                                 </div>
                             </div>
