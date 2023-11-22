@@ -14,45 +14,42 @@
     padding-top: 100px;
 }
 
-.wrap-img1 {
-    background-image: url("https://boyolali.bawaslu.go.id/cepogo/2023/09/20230711105903.jpeg");
+.wraper-img1 {
+    background-image: url("https://boyolali.bawaslu.go.id/cepogo/2023/09/20230330094921.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 600px;
 }
 
-#warper-opacity1 {
+#wraper-opacity1 {
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
     display: flex;
-    padding-left: 50px;
     align-items: end;
     height: inherit;
 }
 
-#wrapp-text1 {
+#wraper-text1 {
     color: white;
     font-size: 20px;
-    padding: 50px;
-    padding-left: 130px;
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.wrap-img2 {
+#wraper-img2 {
     background-image: url("https://cdn-assetd.kompas.id/_RPDi5VwPIefC-qflRmJrWMJyiw=/1024x683/https%3A%2F%2Fasset.kgnewsroom.com%2Fphoto%2Fpre%2F2022%2F03%2F22%2F00c1978a-1f12-4201-b172-56b343607484_jpg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 600px;
+    height:450px;
 }
 
-.wrap-opacity2 {
+.wraper-opacity2 {
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
     display: flex;
     align-items: end;
     height: inherit;
 }
 
-.wrap-text2 {
+.wraper-text2 {
     color: white;
     font-size: 20px;
     padding: 30px;
@@ -60,18 +57,18 @@
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-#wrapper2 {
+#wrapper-2 {
     width: 400px;
     padding-top: 100px;
 }
 
-.warapper3 {
+.wrapper3 {
     width: 300px;
     padding-top: 100px;
    
 }
 
-.wrap-img3 {
+.wraper-img3 {
     background-image: url("https://www.denpasarkota.go.id/public/uploads/berita/Berita_230608050837_walikota-jaya-negara-hadiri-serah-terima-kirab-bendera-parpol-pemilu-2024.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -79,14 +76,14 @@
    
 }
 
-.wrap-opacity3 {
+.wraper-opacity3 {
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
     display: flex;
     align-items: end;
     height: inherit;
 }
 
-.wrap-text3 {
+.wraper-text3 {
     color: white;
     font-size: 20px;
     padding: 50px;
@@ -94,21 +91,21 @@
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-#wrap-img4 {
+#wraper-img4 {
     background-image: url("https://jatengprov.go.id/wp-content/uploads/2023/02/IMG-20230210-WA0066.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 236px;
 }
 
-.wrap-opacity3 {
+.wraper-opacity3 {
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
     display: flex;
     align-items: end;
     height: inherit;
 }
 
-.wrap-text3 {
+.wraper-text3 {
     color: white;
     font-size: 20px;
     padding: 50px;
@@ -149,19 +146,14 @@
 .span-txt{
     font-size: 10px;
 }
-.wrap-img-penangan-1{
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 500px;
-    background-image: url("https://boyolali.bawaslu.go.id/cepogo/2023/09/20230330094921.jpeg");
-}
-#a-txt{
-    font-size: 25px;
+
+#a-text{
+    font-size: 18px;
 }
 @media screen and (max-width: 1024px) {
     #pmbngks-img {
         display: flex;
-        gap: 5px;
+        gap: 20px;
         padding: 10px;
         padding-top: 40px;
     }
@@ -169,56 +161,57 @@
         display: flex;
         gap: 10px;
     }
-    #wrapper1 {
-        width: 400px;
-        padding-top: 100px;
-    }
-    #wrap-img1 {
+   #wrapper1{
+    width: 350px;
+   }
+    #wraper-img1 {
        
         height: 450px;
     }
-    #warper-opacity1 {
+    #wraper-opacity1 {
         display: flex;
         align-items: end;
         height: 450px;
     }
-    #wrap-text1 {
-        color: white;
-        font-size: 18px;
-        padding-left: 60px;
-
-        text-align: center;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    }
-    #wrap-img2 {
+   #waraper-text1{
+    color: white;
+    font-size: 18px;
+    padding: 1px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   }
+   #wrapper2{
+    width: 300px;
+   }
+    #wraper-img2 {
       
         height: 450px;
     }
-    #wrap-opacity2 {
+    #wraper-opacity2 {
         display: flex;
         align-items: end;
         height: 450px;
     }
-    #wrap-text2 {
+    #wraper-text2 {
         color: white;
         font-size: 20px;
         padding: 30px;
         text-align: center;
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     }
-    #wrap-img3 {
+    #wraper-img3 {
         height: 217px;
        
     }
-    .wrap-opacity3 {
+    .wraper-opacity3 {
        
         height:200px;
     }
-    #warapper3 {
+    #wrapper3 {
         width: 200px;
         padding-top: 100px;
        }
-       #wrap-img4 {    
+       #wraper-img4 {    
         height: 217px;
     }
     #a-txt{
@@ -241,6 +234,13 @@
     #hr{
         width: 250px;
     }
+    .wraper-img-penangan-1{
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 500px;
+        width: 250px;
+        background-image: url("https://boyolali.bawaslu.go.id/cepogo/2023/09/20230330094921.jpeg");
+    }
     
 }
 @media screen and (max-width: 768px) {
@@ -254,59 +254,57 @@
         gap: 10px;
     }
     #wrapper1 {
-        width: 250px;
+        width: 300px;
         padding-top: 100px;
     }
-    #wrap-img1 {
+    #wraper-img1 {
        
         height: 350px;
     }
-    #warper-opacity1 {
+    #wraper-opacity1 {
         display: flex;
         align-items: end;
         height: 350px;
     }
-    #wrap-text1 {
+    #waraper-text1 {
         color: white;
         font-size: 15px;
-        padding: 20px;
+        padding: 5px;
         text-align: center;
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     }
-    #wrapper2 {
-        width: 250px;
-        padding-top: 100px;
-       }
-    #wrap-img2 {
+   #wrapper2{
+    width: 200px;
+   }
+    #wraper-img2 {
       
         height: 350px;
     }
-    #wrap-opacity2 {
+    #wraper-opacity2 {
         display: flex;
         align-items: end;
-        height: 350px;
-        padding: 1px;
+        height: 200px;
     }
-    #wrap-text2 {
+    #wraper-text2 {
         color: white;
         font-size: 15px;
         padding: 30px;
         text-align: center;
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     }
-    #wrap-img3 {
+    #wraper-img3 {
         height: 170px;
        
     }
-    .wrap-opacity3 {
+    .wraper-opacity3 {
        
         height:170px;
     }
-    #warapper3 {
-        width: 180px;
+    #wrapper3 {
+        width: 170px;
         padding-top: 100px;
        }
-       #wrap-img4 {    
+       #wraper-img4 {    
         height: 170px;
     }
     #pmbngks-img2{
@@ -329,7 +327,7 @@
         width: 205px;
     }
     #hr{
-        width: 205px;
+        width: 200px;
     }
     #a-txt{
         font-size: 20px;
@@ -339,72 +337,70 @@
 @media screen and (max-width: 320px) {
     #pmbngks-img {
         display: flex;
-        gap: 5px;
+        gap: 3px;
         padding: 20px;
         padding-top: 40px;
+        display: flex;
+        flex-direction: column;
     }
     #wrapper1 {
-        width: 100px;
+        width: 280px;
         padding-top: 100px;
     }
-    #wrap-img1 {
+    #wraper-img1 {
        
         height: 150px;
     }
-    #warper-opacity1 {
+    #wraper-opacity1 {
         display: flex;
-        text-align: center;
         align-items: end;
         height: 150px;
     }
-    #wrap-text1 {
+    #waraper-text1 {
         color: white;
         font-size: 8px;
-        padding: 10px;
+        padding: 1px;
         text-align: center;
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     }
     #wrapper2 {
-        width: 100px;
-        padding-top: 100px;
+        width: 280px;
+        padding-top: 10px;
        }
-    #wrap-img2 {
+    #wrapp-img2 {
       
-        height: 150px;
+        height: 100px;
     }
-    #wrap-opacity2 {
-        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
+    #wraper-opacity2 {
         display: flex;
         align-items: end;
-        height: 150px;
+        height: 100px;
     }
-    #wrap-text2 {
+    #wraper-text2 {
         color: white;
         font-size: 8px;
         padding: 10px;
         text-align: center;
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     }
-    #wrap-img3 {
+   #pembungkusimg2{
+   }
+    #wraper-img3 {
         height: 100px;
        
     }
-    .wrap-opacity3 {
+    .wraper-opacity3 {
        
         height:80px;
     }
-    #wrapper3 {
+    #warapper3 {
         width: 280px;
         padding-top: 10px;
        }
-       #wrap-img4 {    
-        height: 75px;
+       #wraper-img4 {    
+        height: 100px;
     }
-    #pmbngks-img2{
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-    }
+    
     #bg-gray{
         background-color: lightgray;
         width: 200px;
@@ -430,9 +426,7 @@
         padding: 20px;
         justify-content: center;
     }
-    #h1-khmsn{
-        font-size: 23px;
-    }
+   
     #p-khmsn{
         font-size: 15px;
     }
@@ -455,7 +449,7 @@
     #h3{
         text-align: center;
     }
-    #a-txt{
-        font-size: 13px;
+    #a-text{
+        font-size: 10px;
     }
 }
