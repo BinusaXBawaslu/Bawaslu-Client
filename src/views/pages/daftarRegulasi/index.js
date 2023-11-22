@@ -11,9 +11,7 @@ function AdminBerita() {
   const [list1, setList1] = useState([]);
 
 
-  const [category, setCategory] = useState([""]);
-  const [createDate, setCreateDate] = useState([""]);
-  const [updateDate, setUpdateDate] = useState([""]);
+  
   const [author, setAuthor] = useState("");
   const [isiBerita, setIsiBerita] = useState("");
   const [judulBerita, setJudulBerita] = useState(""); 
@@ -35,15 +33,6 @@ function AdminBerita() {
     try {
       const response = await axios.get(`${API_DUMMY}/bawaslu/api/berita`);
       setList(response.data.data);
-      console.log(response.data.data);
-    } catch (error) {
-      console.error("Terjadi Kesalahan", error);
-    }
-  };
-  const getAll1 = async () => {
-    try {
-      const response = await axios.get(`${API_DUMMY}/bawaslu/api/category-berita`);
-      setList1(response.data.data);
       console.log(response.data.data);
     } catch (error) {
       console.error("Terjadi Kesalahan", error);
@@ -87,43 +76,11 @@ function AdminBerita() {
     });
   };
 
-  const deleteData1 = async (id) => {
-    Swal.fire({
-      title: "Apakah Anda Ingin Menghapus?",
-      text: "Perubahan data tidak bisa dikembalikan!",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Hapus",
-      cancelButtonText: "Batal",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        axios
-          .delete(`${API_DUMMY}/bawaslu/api/category-berita/delete/` + id, {
-            headers: {
-              Authorization: `Bearer ${localStorage.getItem("token")}`,
-            },
-          })
-          .then((res) => {
-            Swal.fire({
-              icon: "success",
-              title: "Dihapus!",
-              showConfirmButton: false,
-              timer: 1500,
-            });
-
-            setTimeout(() => {
-              window.location.reload();
-            }, 1500);
-          });
-      }
-    });
-  };
+  
 
   useEffect(() => {
     getAll();
-    getAll1();
+   
   }, []);
   return (
     <div>
@@ -207,59 +164,7 @@ function AdminBerita() {
           </div>
 
 
-          <div class="main-card mb-3 card">
-            <div class="card-header">
-              Category
-              <div class="btn-actions-pane-right">
-                <div role="group" class="btn-group-sm btn-group">
-                  <button class="active btn-focus p-2 rounded">
-                    Tambah Category
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="table-responsive">
-              <table class="align-middle mb-0 table table-borderless table-striped table-hover">
-                <thead>
-                  <tr>
-                    <th className="text-center">No</th>
-                    <th className="text-center">Category</th>
-                    <th className="text-center">Create Date</th>
-                    <th className="text-center">Update Date</th>
-                    <th className="text-center">Aksi</th>
-
-                  </tr>
-                </thead>
-                <tbody>
-                  {list1.map((kategory, index) => {
-                    return (
-                      <tr key={index}>
-                        <td class="text-center text-muted">{index + 1}</td>
-                        <td className="text-center">{kategory.category}</td>
-                        <td class="text-center">{kategory.createDate}</td>
-
-
-                        <td class="text-center">{kategory.updateDate}</td>
-
-                        <td class="text-center">
-                          <button type="button" class="btn-primary btn-sm mr-2">
-                            <i class="fa-solid fa-pen-to-square"></i>
-                          </button>
-
-                          <button 
-                           onClick={() => deleteData1(category.id)} type="button" class="btn-danger btn-sm">
-                            <i class="fa-solid fa-trash"></i>
-                          </button>
-                        </td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-            </div>
-            
-
-          </div>
+        
 
         </div>
       </div>

@@ -1,19 +1,32 @@
 import React, { useEffect, useState } from "react";
 import Header from "../../../../component/Header";
 import Sidebar from "../../../../component/Sidebar";
-import { useHistory } from "react-router-dom";
+import Footer from "../../../../component/Footer";
 import axios from "axios";
+import {
+  useHistory,
+  useParams,
+} from "react-router-dom/cjs/react-router-dom.min";
 import { API_DUMMY } from "../../../../utils/base_URL";
 import Swal from "sweetalert2";
-import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 
-function AdminPengumuman() {
-  const [list, setList] = useState([]);
+function Index() {
+  const [menuRegulasi, setMenuRegulasi] = useState([]);
 
-  const getAll = async () => {
+  const param = useParams();
+  const history = useHistory();
+
+  const getMenuRegulasi = async () => {
     try {
-      const response = await axios.get(`${API_DUMMY}/bawaslu/api/pengumuman`);
-      setList(response.data.data);
+      const response = await axios.get(
+        `${API_DUMMY}/bawaslu/api/menu-regulasi/get-by-jenis-regulasi?id-jenis-regulasi=` + param.id,
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
+      );
+     setMenuRegulasi(response.data.data);
       console.log(response.data.data);
     } catch (error) {
       console.error("Terjadi Kesalahan", error);
@@ -21,7 +34,7 @@ function AdminPengumuman() {
   };
 
   useEffect(() => {
-    getAll();
+    getMenuRegulasi();
   }, []);
 
   const deleteData = async (id) => {
@@ -35,7 +48,7 @@ function AdminPengumuman() {
       cancelButtonText: "Cencel",
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.delete(`${API_DUMMY}/bawaslu/api/pengumuman/` + id, {
+        axios.delete(`${API_DUMMY}/bawaslu/api/jenis-keterangan/` + id, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
@@ -51,7 +64,7 @@ function AdminPengumuman() {
       }, 1500);
     });
   };
-
+  
   return (
     <div>
       <Header />
@@ -59,17 +72,16 @@ function AdminPengumuman() {
         <Sidebar />
         <div className="container mt-3 app-main__outer">
           <div class="main-card mb-3 card">
-            <div class="card-header">
-              Pengumuman
-              <div class="btn-actions-pane-right">
+            <div class="card-header">Regulasi {}
+            <div class="btn-actions-pane-right">
                 <div role="group" class="btn-group-sm btn-group">
                   <button class="active btn-focus p-2 rounded">
                     <a
-                      href="/add-pengumuman"
+                      href="/tambah-jenis-keterangan"
                       className="text-light"
                       style={{ textDecoration: "none" }}>
                       {" "}
-                      Tambah Pengumuman
+                      Tambah Dataaa
                     </a>
                   </button>
                 </div>
@@ -79,52 +91,42 @@ function AdminPengumuman() {
               <table class="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
                   <tr>
-                    <th className="text-center">No</th>
-                    <th className="text-center">Author</th>
-                    <th className="text-center">Isi pengumuman</th>
-                    <th className="text-center">Image</th>
-
-                    <th className="text-center">Judul Pengumuan</th>
-                    <th className="text-center">Tags</th>
-
+                    <th className="text-left">No</th>
+                    <th className="text-left">Menu Regulasi  </th>
                     <th className="text-center">Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {list.map((pengumuman, index) => {
-                    return (
-                      <tr key={index}>
-                        <td class="text-center text-muted">{pengumuman.id}</td>
-                        <td className="text-center">{pengumuman.author}</td>
-                        <td class="text-center">{pengumuman.isiPengumuman}</td>
-                        <td class="text-center">
-                          <img src={pengumuman.image} />
-                        </td>
-                        <td class="text-center">
-                          {pengumuman.judulPengumuman}
-                        </td>
-                        <td class="text-center">{pengumuman.tags}</td>
-
-                        <td class="text-center">
+                    {menuRegulasi.map((jenis, index) => { 
+                      return (
+                    <tr key={index}>
+                      <td className="text-left">{index + 1}
+                      </td>
+                      <td className="text-left">{jenis.menuRegulasi}
+                      </td>
+                      <td class="text-center">
                           <button type="button" class="btn-primary btn-sm mr-2">
-                           <a style={{color:"white", textDecoration:"none"}} href={"/edit-pengumuman/" + pengumuman.id}> <i class="fa-solid fa-pen-to-square"></i></a>
+                            <a style={{color:"white", textDecoration:"none"}} href={"/edit/" + jenis.keterangan + "/" + jenis.id}><i class="fa-solid fa-pen-to-square"></i></a>
                           </button>
-
-                          <button type="button" onClick={() => deleteData(pengumuman.id)} class="btn-danger btn-sm">
+                          <button onClick={() => deleteData(jenis.id)} type="button" class="btn-danger btn-sm mr-2">
                             <i class="fa-solid fa-trash"></i>
                           </button>
+                          <button type="button" class="btn-info btn-sm">
+                          <a style={{color:"white", textDecoration:"none"}} href={"/isi-keterangan/" + jenis.keterangan + "/" + jenis.id}><i class="fas fa-plus"></i></a>
+                          </button>
                         </td>
-                      </tr>
-                    );
-                  })}
+                    </tr>
+                    )
+                    })}
                 </tbody>
               </table>
             </div>
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
 
-export default AdminPengumuman;
+export default Index;

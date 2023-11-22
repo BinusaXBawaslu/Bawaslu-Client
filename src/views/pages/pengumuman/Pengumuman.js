@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
 import axios from "axios";
+import { API_DUMMY } from "../../../utils/base_URL";
 
 function Pengumuman() {
   const [pengumuman, setPengumuman] = useState([]);
   const getAll = async () => {
     await axios
-      .get("http://localhost:3030/bawaslu/api/pengumuman")
+      .get(`${API_DUMMY}/bawaslu/api/pengumuman`)
       .then((res) => {
         setPengumuman(res.data.data);
       })

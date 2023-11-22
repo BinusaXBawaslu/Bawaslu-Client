@@ -14,16 +14,17 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
 
+    const data = {
+      username: username,
+      password: password
+    };
     try {
-      const response = await axios.post(`${API_DUMMY}/login`, {
-        username: username,
-        password: password,
-      });
+      const response = await axios.post(`${API_DUMMY}/login`, data);
 
       if (response.status === 200) {
         Swal.fire({
           icon: "success",
-          title: "Berhasil Login Sebagai Admin",
+          title: "Berhasil Login Sebagai Adminn",
           showConfirmButton: false,
           timer: 1500,
         });
@@ -81,13 +82,13 @@ function Login() {
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
               />
-              <input
+              {/* <input
                 type="hidden"
                 className="form-control form-control-lg bg-light fs-6"
                 required
                 placeholder="Username"
                 value="admin"
-              />
+              /> */}
             </div>
             <div className="input-group mb-1">
               <input
@@ -124,8 +125,7 @@ function Login() {
             </div>
             <div className="row">
               <small>
-                Belum Memiliki Akun ? Silahkan{" "}
-                <a href="/absensi/auth/register">Register</a>
+                Belum Memiliki Akun ? Silahkan <a href="/register">Register</a>
               </small>
             </div>
           </form>
