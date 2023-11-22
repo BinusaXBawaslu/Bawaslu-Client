@@ -15,11 +15,10 @@
 }
 
 .wrap-img1 {
-    background-image: url("https://mediacenter.slemankab.go.id/wp-content/uploads/2023/09/sosialisasi-pemilu-di-SMK.jpg");
+    background-image: url("https://boyolali.bawaslu.go.id/cepogo/2023/10/Picture1-1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 500px;
-    /* border: 1px solid red; */
 }
 
 .wrap-opacity1 {
@@ -29,7 +28,7 @@
     height: inherit;
 }
 
-.wrap-text1 {
+#wrap-text1-berkategori {
     color: white;
     font-size: 20px;
     padding: 50px;
@@ -39,7 +38,7 @@
 }
 
 .wrap-img2 {
-    background-image: url("https://koran-jakarta.com/images/article/sosialisasi-pemilu-2024-230921020434-0.jpg");
+    background-image: url("https://pusdem.lppm.uns.ac.id/wp-content/uploads/sites/22/2022/12/Azhima-2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 500px;
@@ -71,8 +70,8 @@
    
 }
 
-.wrap-img3 {
-    background-image: url("https://bangunharjo.bantulkab.go.id/assets/files/artikel/sedang_1695396441IMG20230922WA0023.jpg");
+#wrap-img3-berkategori {
+    background-image: url("https://awsimages.detik.net.id/community/media/visual/2022/09/26/panwascam_169.jpeg?w=1200");
     background-size: cover;
     background-repeat: no-repeat;
     height: 250px;
@@ -86,20 +85,26 @@
     height: inherit;
 }
 
-.wrap-text3 {
+#wrap-text3-berkategori{
     color: white;
     font-size: 20px;
-    padding: 50px;
-    padding-left: 140px;
+    padding: 10px;
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-.wrap-img4 {
-    background-image: url("https://cdn.medcom.id/dynamic/content/2022/07/19/1452766/EPxb7AgR0p.jpg?w=480");
+#wrap-img4-berkategori {
+    background-image: url("https://grobogan.bawaslu.go.id/wp-content/uploads/2023/10/IMG_3149-scaled.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 250px;
+    height: 235px;
 }
+.wrap-opacity4 {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
+    display: flex;
+    align-items: end;
+    height: inherit;
+}
+
 
 .wrap-opacity3 {
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
@@ -108,14 +113,7 @@
     height: inherit;
 }
 
-.wrap-text3 {
-    color: white;
-    font-size: 20px;
-    padding: 50px;
-    padding-left: 140px;
-    text-align: center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
+
 .a-href{
     display: flex;
     gap: 100px; 
@@ -145,12 +143,136 @@
 .logo{
     padding: 50px;
 }
-.span-txt{
-    font-size: 10px;
+@media screen and (max-width: 768px) {
+    .pmbngks-img2-berkategori{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }  
+#pmbngks-img-berkategori {
+        display: flex;
+        gap: 10px;
+        padding: 20px;
+    }  
+    #wrapper1-berkategori{
+        width: 300px;
+    }
+    #wrapper2-berkategori{
+        width: 230px;
+    }
+    #wrapper3-berkategori{
+        width: 180px;
+    }
+    #wrapper3-berkategori{
+        width: 180px;
+    }
+    #wrap-img4-berkategori{
+        height: 235px;
+    }
+    #wrap-text1-berkategori{
+        text-align: center;
+        padding: 10px 20px;
+        font-size: 15px;
+
+    }
+    #wrap-text2-berkategori{
+        text-align: center;
+        padding: 5px;
+        font-size: 15px;
+
+    }
+    #wrap-text3-berkategori{
+        text-align: center;
+        padding: 2px;
+        font-size: 15px;
+    }
+    #bg-gray-berkategori{
+        width: 350px;
+        height: 50px;
+    }
+    #hr-berkategori{
+        width: 250px;
+    }
+    #text-logo-berkategori{
+        display: flex;
+        gap: 10px;
+    }
+    #txt-berkategori{
+        padding: 30px;
+    }
+    #logo-berkategori{
+        padding: 10px 30px;
+    }
+    #h3-berkategori{
+        font-size: 20px;
+    }
 }
-.wrap-img-penangan-1{
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 500px;
-    background-image: url("https://boyolali.bawaslu.go.id/cepogo/2023/09/20230330094921.jpeg");
+@media screen and (max-width: 320px) {
+    #pmbngks-img-berkategori {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 20px;
+    }   
+    #wrapper1-berkategori{
+        width: 280px;
+        height: 600px;
+    }
+    #wrapper2-berkategori{
+        width: 280px;
+        height: 500px;
+        padding-top: 5px;
+
+    }
+    #wrapper3-berkategori{
+        width: 280px;
+        padding-top: 5px;
+
+    }
+    #wrapper3-berkategori{
+        width: 280px;
+    }
+    #wrap-img4-berkategori{
+        height: 235px;
+    }
+    #wrap-text3-berkategori{
+        text-align: center;
+        padding: 4.5px;
+        font-size: 15px;
+    }
+    #a-href-berkategori{
+        gap: 25px;
+    }
+    #txt-berkategori{
+        width: 300px;
+        font-size: 15px;
+    }
+    #bg-gray-berkategori{
+        width: 255px;
+    }
+    #text-logo-berkategori{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    #hr-berkategori{
+        text-align: center;
+        width: 250px;
+    }
+    #logo-sosisalisasi{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #img-logo-berkategori{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    #h3-berkategori{
+        text-align: center;
+    }
+   
 }

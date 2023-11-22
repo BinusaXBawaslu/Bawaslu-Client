@@ -41,6 +41,8 @@ import Sosialisasi from "./views/pages/informasi/Sosialisasi";
 import PenangananPelanggaran from "./views/pages/informasi/PenangananPelanggaran";
 import TakBerkategori from "./views/pages/informasi/TakBerkategori,";
 import OSDMdanDiklat from "./views/pages/informasi/OSDMdanDiklat";
+import PengumumanFooter from "./views/pages/informasi/PengumumanFooter";
+import BeritaFooter from "./views/pages/informasi/BeritaFooter";
 
 function App() {
   const [rekapData, setRekapData] = useState([]);
@@ -132,6 +134,8 @@ function App() {
           <Route path="/penanganan-pelanggaran" component={PenangananPelanggaran} exact />
           <Route path="/tak-berkategori" component={TakBerkategori} exact />
           <Route path="/OSDM-dan-Diklat" component={OSDMdanDiklat} exact />
+          <Route path="/pengumuman-footer" component={PengumumanFooter} exact />
+          <Route path="/berita-footer" component={BeritaFooter} exact />
         </Switch>
       </main>
     </BrowserRouter>

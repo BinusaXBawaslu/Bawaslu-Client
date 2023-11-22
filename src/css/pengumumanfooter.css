@@ -15,15 +15,15 @@
     padding-top: 100px;
 }
 
-#awrap-img1 {
-    background-image: url("https://boyolali.bawaslu.go.id/cepogo/2023/09/20230803014724.jpeg");
+#awrap-img1-footer {
+    background-image: url("https://boyolali.bawaslu.go.id/cepogo/2023/09/20230819093248.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 500px;
 }
 
-#awrap-opacity1 {
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
+#awrap-opacity1-footer {
+    background-image: linear-gradient(to top, rgb(0, 0, 0), rgba(255, 255, 255, 0));
     display: flex;
     background-repeat: no-repeat;
     background-size: cover;
@@ -35,26 +35,25 @@
     color: white;
     font-size: 20px;
     padding: 50px;
-    padding-left: 100px;
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-#awrap-img2 {
-    background-image: url("https://boyolali.bawaslu.go.id/cepogo/2023/09/20230718120146.jpeg");
+#awrap-img2-footer {
+    background-image: url("https://boyolali.bawaslu.go.id/cepogo/2023/09/20230801113457.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 500px;
 }
 
-#awrap-opacity2 {
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
+#awrap-opacity2-footer {
+    background-image: linear-gradient(to top, rgb(0, 0, 0), rgba(255, 255, 255, 0));
     display: flex;
     align-items: end;
     height: inherit;
 }
 
-#awrap-text2 {
+#awrap-text2-footer {
     color: white;
     font-size: 20px;
     padding: 30px;
@@ -73,22 +72,22 @@
 
 }
 
-#awrap-img3 {
-    background-image: url("https://boyolali.bawaslu.go.id/cepogo/2023/09/20230718121531-350x250.jpeg");
+#awrap-img3-footer {
+    background-image: url("https://boyolali.bawaslu.go.id/cepogo/2023/09/20230716035010-350x250.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 250px;
 
 }
 
-#awrap-opacity3 {
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
+#awrap-opacity3-footer {
+    background-image: linear-gradient(to top, rgb(0, 0, 0), rgba(255, 255, 255, 0));
     display: flex;
     align-items: end;
     height: inherit;
 }
 
-#awrap-text3 {
+#awrap-text3-footer {
     color: white;
     font-size: 15px;
     padding: 5px 5px 5px 5px;
@@ -96,21 +95,21 @@
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-#awrap-img4 {
-    background-image: url("https://boyolali.bawaslu.go.id/cepogo/2023/09/20230713014836-350x250.jpeg");
+#awrap-img4-footer {
+    background-image: url("https://boyolali.bawaslu.go.id/cepogo/2023/09/20230714121845-350x250.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 235px;
 }
 
-#awrap-opacity4 {
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
+#awrap-opacity4-footer {
+    background-image: linear-gradient(to top, rgb(0, 0, 0), rgba(255, 255, 255, 0));
     display: flex;
     align-items: end;
     height: inherit;
 }
 
-#awrap-text4 {
+#awrap-text4-footer {
     color: white;
     font-size: 15px;
     padding: 5px 5px 5px 5px;
@@ -195,64 +194,102 @@
 .button{
     border: 1px solid gray;
 }
+#awrap-img5-footer {
+    width: 800px;
+}
+
+#awrap-img6-footer {
+    width: 600px;
+}
+#awrap-img7-footer{
+    width: 600px;
+}
+#awrap-img8-footer{
+    width: 575px;
+    height: 100px;
+}
+
+#img-awrap-footer{
+    height: 200px;
+    width: 500px;
+}
 
 @media screen and (max-width: 768px) {
 
-    #awrapper1 {
+    #awrapper1-footer {
         width: 300px;
     }
+    .wrap-text1{
+        font-size: 15px;
+        padding: 10px;
+    }
+    #awrap-text2-footer{
+        font-size: 15px;
+        padding: 10px;
+    }
+    #awrap-text3-footer{
+        font-size: 15px;
+    }
+    #awrap-text4-footer{
+        font-size: 15px;
+    }
 
-    #awrapper2 {
+    #awrapper2-footer {
         width: 250px;
     }
 
-    #awrap-img5 {
+    #awrap-img5-footer {
         width: 300px;
     }
 
-    #awrap-img6 {
+    #awrap-img6-footer {
         width: 300px;
     }
-
-    #a-bold {
+    #awrap-img8-footer {
+        width: 700px;
+        height: 70px;
+    }
+   
+    #a-bold-footer {
         font-size: 17px;
         width: 10px;
     }
 
-    #p-info {
+    #p-info-footer {
         width: 400px;
 
     }
-
-    #text {
+#bg-img-footer{
+}
+    #text-footer {
         width: 400px;
     }
 
-    #bg-img {
+    #bg-img-footer {
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    #pmbngkos-txt-logo{
+    #pembngkos-txt-logo{
         display: flex;
         flex-direction: column;
     }
-    #logo-img{
+    #logo-img-footer{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 10px 20px 10px 100px;
+        padding: 50px 20px 10px 100px;
         width: 700px;
     }
-    #awrep-img-src{
+    #awrep-img-src-footer{
         width: 700px;
         height: 70px;
     }
-   #h3{
+   #h3-footer{
     text-align: center;
    }
-   #img-logoo{
+   #img-logoo-footer{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -264,55 +301,55 @@
 }
 
 @media screen and (max-width: 320px) {
-    #img-pmbngks{
+    #img-pmbngks-footer{
         display: flex;
         flex-direction: column;
     }
-    #awrapper1 {
+    #awrapper1-footer {
         width: 280px;
         padding-top: 100px;
     }
 
-    #awrapper2 {
+    #awrapper2-footer {
         width: 280px;
         padding-top: 5px;
         
     }
-    #wrapper {
+    #wrapper-footer {
         width: 280px;
         padding-top: 5px;
     }
 
-    #awrap-img5 {
+    #awrap-img5-footer {
         width: 280px;
     }
 
-    #awrap-img6 {
+    #awrap-img6-footer {
         width: 300px;
     }
-    #aa-href{
+    #aa-href-footer{
         gap: 30px;
     }
-    #bg-img{
+    #bg-img-footer{
         display: flex;
         flex-direction: column;
         padding-right: 480px;
     }
 
-    #a-bold {
+    #a-bold-footer {
         font-size: 15px;
         width: 2px;
     }
 
-    #p-info {
+    #p-info-footer {
         width: 230px;
 
     }
 
-    #text {
+    #text-footer {
         width: 200px;
     }
-    #logo-img{
+    #logo-img-footer{
         
         padding: 10px 10px 10px 130px;
         width: 200px;
@@ -321,27 +358,56 @@
         align-items: center;
         justify-content: center;
     }
-    #awrep-img-src{
+    #awrep-img-src-footer{
         width: 200px;
         height: 50px;
     }
-    #img-logoo{
+    #img-logoo-footer{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
     
-    #wrap-text1 {
-        color: white;
-        font-size: 18px;
-        padding: 10px;
-        text-align: center;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    }
     .button{
         width: 80px;
         height: 20px;
         border: 1px solid rgb(30, 28, 28);
+    }
+}
+@media screen and ( max-width: 320px) {
+    #awrapper1-footer {
+        width: 280px;
+        padding-top: 100px;
+    }
+
+    #awrapper2-footer {
+        width: 280px;
+        padding-top: 5px;
+        
+    }
+    #awrapper-footer {
+        width: 280px;
+        padding-top: 5px;
+    }
+
+    #awrap-img5-footer {
+        width: 280px;
+    }
+
+    #awrap-img6-footer {
+        width: 300px;
+    }
+    #awrap-img5-footer{
+        width: 250px;
+    }
+    #awrap-img6-footer{
+        width: 250px;
+    }
+    #awrap-img7-footer{
+        width: 250px;
+    }
+    #awrap-img8-footer{
+        width: 250px;
     }
 }

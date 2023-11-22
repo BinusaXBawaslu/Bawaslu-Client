@@ -20,9 +20,9 @@ const Pencegahan = () => {
             <div style={{
                 backgroundImage: `url('https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg')`, backgroundRepeat: "no-repeat", backgroundSize: "cover"
             }}>
-                <div className="pmbngks-img">
+                <div id="img-pmbngks" className="pmbngks-img">
                     <a href="https://boyolali.bawaslu.go.id/dialog-interaktif-isu-pemilu-di-sosial-media/#">
-                        <div id="wrapper1" className="wrapper1">
+                        <div id="awrapper1" className="wrapper1">
                             <div id="awrap-img1" className="wrap-img1">
                                 <div id="awrap-opacity" className="wrap-opacity1">
                                     <div id="wrap-text1" className="wrap-text1">
@@ -119,7 +119,7 @@ const Pencegahan = () => {
 
 
                 </div>
-                <div className="a-href">
+                <div id="aa-href" className="a-href">
                     <div >
                         <a href="/">Home  </a>
                     </div>
@@ -130,19 +130,20 @@ const Pencegahan = () => {
                         <a href="/pencegahan">Pencegahan  </a>
                     </div>
                 </div>
-                <div className="pmbngks-txt-logo">
+                <div id="pmbngkos-txt-logo" className="pmbngks-txt-logo">
                     <div className="txt-kehumasan">
                         <a href=""></a>
                         <div>
-                            <h1>KEHUMASAN</h1>
+                            <h1>PENCEGAHAN</h1>
                             <p>Kumpulan Artikel Berita mengenai Pencegahan Pelanggaran yang dilakukan oleh Bawaslu Kab. Boyolali</p>
-                            <div className="bg-img" style={{ display: "flex" }}>
-                                <div className="wrap-img5">
-                                    <img src="https://www.infopublik.id/assets/upload/headline//109b0(10).jpeg" alt="" />
+                            <div id="bg-img" className="bg-img" style={{ display: "flex" }}>
+                                <div id="awrap-img5" className="wrap-img5">
+                                    <img id="img-awrap" src="https://www.infopublik.id/assets/upload/headline//109b0(10).jpeg" alt="" />
                                 </div>
-                                <div>
-                                    <a href="" className="a-bold" style={{ color: "gray" }}>Bawaslu Boyolali Lakukan Supervisi Pemutakhiran Data Pemilih ke Kecamatan Selo</a>
-                                    <p className="p-info"> <a href=""></a> by <span className="txt-bold"> <a href="https://boyolali.bawaslu.go.id/author/pelanpaksopir932/" style={{ color: "gray" }}>BAWASLU BOYOLALI</a>  {" "}
+                                <div id="text">
+                                    <a href="" id="a-bold" className="a-bold" style={{ color: "gray" }}>Bawaslu Boyolali Lakukan Supervisi Pemutakhiran Data Pemilih ke Kecamatan Selo</a>
+                                    <p id="p-info" className="p-info">
+                                         <a href=""></a> by <span className="txt-bold"> <a href="https://boyolali.bawaslu.go.id/author/pelanpaksopir932/" style={{ color: "gray" }}>BAWASLU BOYOLALI</a>  {" "}
                                         <a href="https://boyolali.bawaslu.go.id/bawaslu-boyolali-lakukan-supervisi-pemutakhiran-data-pemilih-ke-kecamatan-selo/" style={{ color: "gray" }}>
                                             <span>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
@@ -159,21 +160,21 @@ const Pencegahan = () => {
 
                                         <p className="txt-p" >Boyolali -Pemutakhiran data pemilih selalu menjadi salah satu tahapan yang banyak diperbincangkan di setiap pemilu....</p>
                                         <a href="https://boyolali.bawaslu.go.id/bawaslu-boyolali-lakukan-supervisi-pemutakhiran-data-pemilih-ke-kecamatan-selo/">
-                                            <button className="button" style={{ border: "1px" }} type="submit">Read More</button>
+                                            <button className="button" id="button-more" type="submit">Read More</button>
 
                                         </a>
                                     </span></p>
                                 </div>
 
                             </div>
-                            <div className="bg-img" style={{ display: "flex" }}>
-                                <div className="wrap-img5">
-                                    <img src="https://asset.kompas.com/crops/OYKzEpI44E93_4rxH2el4d2l2Vc=/642x348:4318x2799/750x500/data/photo/2019/04/09/1408859922.jpg" alt="" />
+                            <div id="bg-img" className="bg-img" style={{ display: "flex" }}>
+                                <div id="awrap-img6" className="wrap-img5">
+                                    <img id="img-awrap" src="https://asset.kompas.com/crops/OYKzEpI44E93_4rxH2el4d2l2Vc=/642x348:4318x2799/750x500/data/photo/2019/04/09/1408859922.jpg" alt="" />
                                 </div>
-                                <div>
-                                    <a href="" className="a-bold" style={{ color: "gray" }}>Pesta Demokrasi Semakin Dekat, Bawaslu Diminta Menjadi Narasumber Sosialisasi Pemilu 2024
+                                <div id="text">
+                                    <a id="a-bold" href="" className="a-bold" style={{ color: "gray" }}>Pesta Demokrasi Semakin Dekat, Bawaslu Diminta Menjadi Narasumber Sosialisasi Pemilu 2024
                                     </a>
-                                    <p className="p-info"> <a href=""></a> by <span className="txt-bold"> <a href="https://boyolali.bawaslu.go.id/author/pelanpaksopir932/" style={{ color: "gray" }}>BAWASLU BOYOLALI</a>  {" "}
+                                    <p id="p-info" className="p-info"> <a href=""></a> by <span className="txt-bold"> <a href="https://boyolali.bawaslu.go.id/author/pelanpaksopir932/" style={{ color: "gray" }}>BAWASLU BOYOLALI</a>  {" "}
                                         <a href="https://boyolali.bawaslu.go.id/pesta-demokrasi-semakin-dekat-bawaslu-diminta-menjadi-narasumber-sosialisasi-pemilu-2024/" style={{ color: "gray" }}>
                                             <span>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
@@ -190,7 +191,7 @@ const Pencegahan = () => {
 
                                         <p className="txt-p" >Boyolali - Pemilu 2024 yang kian hari semakin mendekat, kini Badan Kesbangpol Kabupaten Boyolali menggelar...</p>
                                         <a href="https://boyolali.bawaslu.go.id/pesta-demokrasi-semakin-dekat-bawaslu-diminta-menjadi-narasumber-sosialisasi-pemilu-2024/">
-                                            <button className="button" style={{ border: "1px" }} type="submit">Read More</button>
+                                            <button className="button" id="button-more"  type="submit">Read More</button>
 
                                         </a>
                                     </span></p>
@@ -199,37 +200,37 @@ const Pencegahan = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="logo">
+                    <div id="logo-img" className="logo">
                         <div className="h3">
-                            <h3>
+                            <h3 id="h3">
                                 TAUTAN <span className="span" >LEMBAGA</span>
                             </h3>
-                            <hr />
-                            <div className="img-logo">
+                            <hr id="hhrr" />
+                            <div id="img-logoo" className="img-logo">
                                 <div>
                                     <a href="">
-                                        <img className="img-src" src={RI} />
+                                        <img id="awrep-img-src" className="img-src" src={RI} />
                                     </a>
                                 </div>
                                 <div>
                                     {" "}
                                     <a href="">
-                                        <img className="img-src" src={dkpp} />
+                                        <img id="awrep-img-src" className="img-src" src={dkpp} />
                                     </a>
                                 </div>
                                 <div>
                                     <a href="">
-                                        <img className="img-src" src={MAHKAMAH} />
+                                        <img id="awrep-img-src" className="img-src" src={MAHKAMAH} />
                                     </a>
                                 </div>
                                 <div>
                                     <a href="">
-                                        <img className="img-src" src={KPU} />
+                                        <img id="awrep-img-src" className="img-src" src={KPU} />
                                     </a>
                                 </div>
                                 <div>
                                     <a href="">
-                                        <img className="img-src" src={jateng} />
+                                        <img id="awrep-img-src" className="img-src" src={jateng} />
                                     </a>
                                 </div>
                             </div>

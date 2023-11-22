@@ -51,7 +51,7 @@ function Footer() {
                 <h4 class="widget-title">Kategori</h4>
                 <ul>
                   <li>
-                    <a href="/berita" >Berita</a>
+                    <a href="/berita-footer" >Berita</a>
                   </li>
                   <li>
                     <a href="/kehumasan">Kehumasan</a>
@@ -66,7 +66,7 @@ function Footer() {
                     <a href="/pencegahan">Pencegahan</a>
                   </li>
                   <li>
-                    <a href="/pengumuman">Pengumuman</a>
+                    <a href="/pengumuman-footer">Pengumuman</a>
                   </li>
                 </ul>
               </div>
