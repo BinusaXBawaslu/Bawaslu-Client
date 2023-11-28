@@ -70,7 +70,7 @@ function AdminBerita() {
   const getAll1 = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/category-berita`
+        `${API_DUMMY}/bawaslu/api/category-berita/all`
       );
       setList1(response.data.data);
       console.log(response.data.data);
@@ -126,7 +126,7 @@ function AdminBerita() {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`${API_DUMMY}/bawaslu/api/category-berita/delete/` + id, {
+          .delete(`${API_DUMMY}/bawaslu/api/category-berita/delete/${id}`, {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
@@ -138,14 +138,23 @@ function AdminBerita() {
               showConfirmButton: false,
               timer: 1500,
             });
-
+  
             setTimeout(() => {
               window.location.reload();
             }, 1500);
+          })
+          .catch((error) => {
+            console.error('Error deleting berita:', error);
+            Swal.fire({
+              icon: "error",
+              title: "Gagal Menghapus Berita",
+              text: error.message || "Terjadi kesalahan pada server",
+            });
           });
       }
     });
   };
+  
 
   useEffect(() => {
     getAll(currentPage);
