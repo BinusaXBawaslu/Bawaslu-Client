@@ -19,11 +19,7 @@ function EditJenisKeterangan() {
 
   useEffect(() => {
     axios
-      .get(`${API_DUMMY}/bawaslu/api/jenis-keterangan/getBy/` + param.id, {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      })
+      .get(`${API_DUMMY}/bawaslu/api/jenis-keterangan/getBy/` + param.id)
       .then((ress) => {
         const response = ress.data.data;
         setKeterangan(response.keterangan);
@@ -101,7 +97,7 @@ function EditJenisKeterangan() {
                       Jenis Informasi
                     </label>
                     <select
-                      class="form-select form-select-sm"
+                      className="form-select form-select-sm"
                       aria-label="Small select example"
                       onChange={(e) => setJenisInformasi(e.target.value)}>
                       <option selected>PIlih Jenis Informasi</option>

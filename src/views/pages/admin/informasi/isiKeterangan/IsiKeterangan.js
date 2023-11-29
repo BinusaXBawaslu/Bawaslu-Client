@@ -145,6 +145,7 @@ function IsiKeterangan() {
                   {Array.isArray(jenisKeteranganIsiInformasi) &&
                     jenisKeteranganIsiInformasi.map((isiInformasi, index) => (
                       <tr key={index}>
+
                         <td data-label="No : " className="text-left">
                           {index + 1}
                         </td>
@@ -161,6 +162,11 @@ function IsiKeterangan() {
                             </a>
                           </button>
                         </td>
+
+
+
+                        <td  data-label="No : " className="text-left">{index + 1}</td>
+                        <td  data-label="dokumen : " className="text-left">{isiInformasi.dokumen}</td>
 
                         <td className="text-left">{index + 1}</td>
                         <td className="text-left">{isiInformasi.dokumen}</td>

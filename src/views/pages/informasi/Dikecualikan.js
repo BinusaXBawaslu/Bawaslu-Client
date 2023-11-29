@@ -8,24 +8,24 @@ function Dikecualikan() {
   return (
     <div>
       <Navbar />
-      <div class="breadcrumb-area bg-black bg-relative">
+      <div className="breadcrumb-area bg-black bg-relative">
         <div
-          class="banner-bg-img"
+          className="banner-bg-img"
           style={{
             backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp') `,
           }}
         ></div>
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-7 col-lg-8">
-              <div class="breadcrumb-inner text-center">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-xl-7 col-lg-8">
+              <div className="breadcrumb-inner text-center">
                 <h2
-                  class="judul"
+                  className="judul"
                   style={{ color: "white", fontWeight: 700, fontSize: 60 }}
                 >
                   Informasi Dikecualikan
                 </h2>
-                <ul class="page-list">
+                <ul className="page-list">
                   <li>
                     <a href="/" style={{ textDecoration: "none" }}>
                       Home
@@ -40,19 +40,19 @@ function Dikecualikan() {
       </div>
 
       <div
-        class=" d-flex about-area pd-bottom-10 service-area bg-relative pd-top-10 "
+        className=" d-flex about-area pd-bottom-10 service-area bg-relative pd-top-10 "
         style={{
           backgroundImage: `url('https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg?w=740&t=st=1698973959~exp=1698974559~hmac=418240e9f8d698b9b7f2c0907f5c8e0013885b44976fa36e713b8801491993db')`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
       >
-        <div class="kolom-image mx-4 my-4 d-flex  ">
-          <div class="d-flex flex-column">
-            <div class="section-title">
+        <div className="kolom-image mx-4 my-4 d-flex  ">
+          <div className="d-flex flex-column">
+            <div className="section-title">
             </div>
-            <div class=" text d-flex flex-column gap-3   bg-white shadow-lg p-3 mb-5 bg-body-tertiary rounded rounded-4 p-4">
-              <h2 class="title">Informasi Dikecualikan</h2>
+            <div className=" text d-flex flex-column gap-3   bg-white shadow-lg p-3 mb-5 bg-body-tertiary rounded rounded-4 p-4">
+              <h2 className="title">Informasi Dikecualikan</h2>
               <li>
                 <a clas="text-decoration-none text-light " href="#">
                   PENETAPAN PPID PENGECUALIAN INFORMASI PENYELESAIAN SENGKETA
@@ -115,8 +115,8 @@ function Dikecualikan() {
             </div>
           </div>
 
-          <div id="div-img" class=" w-50 d-flex align-item-center ">
-            <img id="img" class="w-100" src={informasi} alt="img" />
+          <div id="div-img" className=" w-50 d-flex align-item-center ">
+            <img id="img" className="w-100" src={informasi} alt="img" />
           </div>
         </div>
       </div>

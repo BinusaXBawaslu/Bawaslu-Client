@@ -5,7 +5,6 @@ import { useHistory } from "react-router-dom";
 import axios from "axios";
 import { API_DUMMY } from "../../../../utils/base_URL";
 import Swal from "sweetalert2";
-
 import "../../../../../src/css/adminBerita.css";
 
 import {
@@ -21,20 +20,6 @@ function AdminBerita() {
   const [list1, setList1] = useState([]);
 
   const [category, setCategory] = useState([""]);
-  const [createDate, setCreateDate] = useState([""]);
-  const [updateDate, setUpdateDate] = useState([""]);
-  const [author, setAuthor] = useState("");
-  const [isiBerita, setIsiBerita] = useState("");
-  const [judulBerita, setJudulBerita] = useState("");
-  const [tags, setTags] = useState("");
-  const [image, setImage] = useState("");
-  const [show, setShow] = useState(false);
-  const [showAdd, setShowAdd] = useState(false);
-  const [showEdit, setShowEdit] = useState(false);
-  const handleCloseAdd = () => setModalAdd(false);
-  const handleClosEdit = () => setModalEdit(false);
-  const handleShowAdd = () => setModalAdd(true);
-  const handleShowEdit = () => setModalEdit(true);
   const [modalAdd, setModalAdd] = useState(false);
   const [modalEdit, setModalEdit] = useState(false);
   const [id, setId] = useState(0);
@@ -179,7 +164,7 @@ function AdminBerita() {
                   </button>
                 </div>
               </div>
-            </div>  
+            </div>
             <div
               class="table-responsive"
               style={{ overflowY: "auto", maxHeight: "60vh" }}>

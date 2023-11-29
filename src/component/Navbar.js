@@ -69,11 +69,11 @@ function Navbar() {
   return (
     // <!-- navbar start -->
     <>
-      <div class="navbar-top style-2">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3 d-lg-inline-block d-none">
-              <div class="logo1">
+      <div className="navbar-top style-2">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-3 d-lg-inline-block d-none">
+              <div className="logo1">
                 <a href="/">
                   <img
                     src="https://boyolali.bawaslu.go.id/cepogo/2023/09/logo.png"
@@ -82,23 +82,23 @@ function Navbar() {
                 </a>
               </div>
             </div>
-            <div class="col-lg-3 col-md-5 align-self-center">
-              <div class="media">
-                <div class="media-left">
-                  <i class="fa-solid fa-phone"></i>
+            <div className="col-lg-3 col-md-5 align-self-center">
+              <div className="media">
+                <div className="media-left">
+                  <i className="fa-solid fa-phone"></i>
                 </div>
-                <div class="media-body">
+                <div className="media-body">
                   <h6>Telephone</h6>
                   <p>(0276) 320420</p>
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-5 align-self-center">
-              <div class="media">
-                <div class="media-left">
-                  <i class="far fa-envelope"></i>
+            <div className="col-lg-3 col-md-5 align-self-center">
+              <div className="media">
+                <div className="media-left">
+                  <i className="far fa-envelope"></i>
                 </div>
-                <div class="media-body">
+                <div className="media-body">
                   <h6>Email</h6>
                   <p>
                     <a href="mailto:set.boyolali@bawaslu.go.id">
@@ -108,28 +108,28 @@ function Navbar() {
                 </div>
               </div>
             </div>
-            <div class="col-lg-2 d-lg-block d-none align-self-center">
-              <div class="social-media-light text-md-end text-center">
+            <div className="col-lg-2 d-lg-block d-none align-self-center">
+              <div className="social-media-light text-md-end text-center">
                 <a
                   href="https://www.facebook.com/Bawaslu.Kabupaten.Boyolali"
                   target="_blank">
-                  <i class="fab fa-facebook"></i>
+                  <i className="fab fa-facebook"></i>
                 </a>
                 <a
                   href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbawasluboyolali"
                   target="_blank">
-                  <i class="fab fa-twitter" aria-hidden="true"></i>
+                  <i className="fab fa-twitter" aria-hidden="true"></i>
                 </a>
                 <a
                   href="https://www.instagram.com/bawaslu_boyolali/"
                   target="_blank">
-                  <i class="fab fa-instagram" aria-hidden="true"></i>
+                  <i className="fab fa-instagram" aria-hidden="true"></i>
                 </a>
                 <a
-                  class="youtube"
+                  className="youtube"
                   href="https://www.youtube.com/channel/UC-OZT-HT_Qg7cUmo-oHfkAw"
                   target="_blank">
-                  <i class="fab fa-youtube"></i>
+                  <i className="fab fa-youtube"></i>
                 </a>
               </div>
             </div>
@@ -140,41 +140,41 @@ function Navbar() {
         className={`navbar-area navbar-area-2 navbar-expand-lg ${
           isSticky ? "sticky-active" : ""
         }`}>
-        <div class="container nav-container">
-          <div class="responsive-mobile-menu">
+        <div className="container nav-container">
+          <div className="responsive-mobile-menu">
             <button
               class={`d-lg-none menu toggle-btn ${menuOpen ? "is-active" : ""}`}
               onClick={toggleMenu}
               data-target="#Iitechie_main_menu"
               aria-expanded="false"
               aria-label="Toggle navigation">
-              <span class="icon-left"></span>
-              <span class="icon-right"></span>
+              <span className="icon-left"></span>
+              <span className="icon-right"></span>
             </button>
           </div>
-          <div class="logo d-inline-block d-lg-none">
-           
+          <div className="logo d-inline-block d-lg-none">
+
           </div>
           <div
             class={`collapse navbar-collapse ${menuOpen ? "sopen" : ""}`}
             id="Iitechie_main_menu">
-            <ul class="navbar-nav menu-open text-lg-start">
-              <li class="">
+            <ul className="navbar-nav menu-open text-lg-start">
+              <li className="">
                 <a href="/">Home</a>
               </li>
-              <li class="">
+              <li className="">
                 <a href="/profil">Profile</a>
               </li>
-              <li class="">
+              <li className="">
                 <a href="/berita">Berita</a>
               </li>
-              <li class="">
+              <li className="">
                 <a href="/library">Library</a>
               </li>
-              <li class="">
+              <li className="">
                 <a href="/pengumuman">Pengumuman</a>
               </li>
-              <li class="menu-item-has-children">
+              <li className="menu-item-has-children">
                 <a
                   href="#submenu"
                   data-bs-toggle="collapse"
@@ -197,7 +197,7 @@ function Navbar() {
                   })}
                 </ul>
               </li>
-              <li class="menu-item-has-children">
+              <li className="menu-item-has-children">
                 <a
                   href="#submenu2"
                   data-bs-toggle="collapse"
@@ -228,7 +228,7 @@ function Navbar() {
                   </li>
                 </ul>
               </li>
-              <li class="menu-item-has-children">
+              <li className="menu-item-has-children">
                 <a
                   href="#submenu3"
                   data-bs-toggle="collapse"
@@ -259,7 +259,7 @@ function Navbar() {
                   </li>
                 </ul>
               </li>
-              <li class="menu-item-has-children">
+              <li className="menu-item-has-children">
                 <a
                   href="#submenu4"
                   data-bs-toggle="collapse"

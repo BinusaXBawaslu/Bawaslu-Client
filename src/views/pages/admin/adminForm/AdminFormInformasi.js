@@ -108,10 +108,7 @@ function AdminFormInformasi() {
     try {
       const response = await axios.put(
         `${API_DUMMY}/bawaslu/api/permohonan-keberatan/` + id,
-        formData,
-        {
-          headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
-        }
+        formData
       );
 
       if (response.status === 200) {
@@ -169,19 +166,19 @@ function AdminFormInformasi() {
     <div>
       <Navbar />
       <div
-        class="breadcrumb-area bg-relative"
+        className="breadcrumb-area bg-relative"
         style={{ background: "#151423" }}>
         <div
-          class="banner-bg-img"
+          className="banner-bg-img"
           style={{
             backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp')`,
           }}></div>
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-7 col-lg-8">
-              <div class="breadcrumb-inner text-center">
-                <h2 class="page-title">Form Permohonan Informasi</h2>
-                <ul class="page-list">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-xl-7 col-lg-8">
+              <div className="breadcrumb-inner text-center">
+                <h2 className="page-title">Form Permohonan Informasi</h2>
+                <ul className="page-list">
                   <li>
                     <a href="/">Home</a>
                   </li>
@@ -202,7 +199,7 @@ function AdminFormInformasi() {
             </div>
           </div>
           <div style={{overflowX:"scroll"}}>
-          <table class="table table-hover overflow-x-auto w-100">
+          <table className="table table-hover overflow-x-auto w-100">
             <thead>
               <tr>
                 <th scope="col">No</th>
@@ -285,7 +282,7 @@ function AdminFormInformasi() {
                             borderRadius: "5px",
                             marginRight: "10px",
                           }}>
-                          <i class="fas fa-edit"></i>
+                          <i className="fas fa-edit"></i>
                         </button>
                         <button
                           className="bg-danger text-light"
@@ -297,7 +294,7 @@ function AdminFormInformasi() {
                             borderRadius: "5px",
                             marginRight: "10px",
                           }}>
-                          <i class="fas fa-trash-alt"></i>
+                          <i className="fas fa-trash-alt"></i>
                         </button>
                       </div>
                     </td>
@@ -309,28 +306,28 @@ function AdminFormInformasi() {
           </div>
         </div>
       </div>
-    
+
 
       {/* <!-- Modal --> */}
       <div
             show={showEdit}
             onHide={!showEdit}
-            class="modal fade"
+            className="modal fade"
             id="staticBackdrop"
             data-bs-backdrop="static"
             data-bs-keyboard="false"
             tabindex="-1"
             aria-labelledby="staticBackdropLabel"
             aria-hidden="true">
-            <div class="modal-dialog">
-              <form onSUbmit={put} class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="staticBackdropLabel">
+            <div className="modal-dialog">
+              <form onSUbmit={put} className="modal-content">
+                <div className="modal-header">
+                  <h1 className="modal-title fs-5" id="staticBackdropLabel">
                     Modal Edit Data
                   </h1>
                   <button
                     type="button"
-                    class="btn-close"
+                    className="btn-close"
                     data-bs-dismiss="modal"
                     aria-label="Close"></button>
                 </div>
@@ -484,15 +481,15 @@ function AdminFormInformasi() {
                     />
                   </div>
                 </div>
-                <div class="modal-footer">
+                <div className="modal-footer">
                   <button
                     onClick={() => setShowEdit(false)}
                     type="button"
-                    class="btn btn-secondary"
+                    className="btn btn-secondary"
                     data-bs-dismiss="modal">
                     Batal
                   </button>
-                  <button type="submit" class="btn btn-primary">
+                  <button type="submit" className="btn btn-primary">
                     Simpan
                   </button>
                 </div>

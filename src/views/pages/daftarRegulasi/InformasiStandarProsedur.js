@@ -82,19 +82,19 @@ function InformasiStandarProsedur() {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
-        class="project-area pd-top-110 pd-bottom-90"
+        className="project-area pd-top-110 pd-bottom-90"
       >
         <div id="container"  className="container">
           <div id="display" className="d-flex gap-3">
-            <div id="display" class="row justify-content-center">
-              <div id="display" class="col-lg-12 ">
-                <div id="widht" class="isotope-filters project-isotope-btn text-left mb-5">
+            <div id="display" className="row justify-content-center">
+              <div id="display" className="col-lg-12 ">
+                <div id="widht" className="isotope-filters project-isotope-btn text-left mb-5">
                   {list.map((menu) => {
                     return (
                       <button
                       id="button-dik"
                         // style={{ width: "150px", textAlign: "left" }}
-                        class="button ml-0 active"
+                        className="button ml-0 active"
                         data-filter="*"
                         onClick={() => `${menu.menuRegulasi}`}
                       >
@@ -140,7 +140,7 @@ function InformasiStandarProsedur() {
                                 marginRight: "10px",
                               }}
                             >
-                              <i class="fa-solid fa-download"></i>
+                              <i className="fa-solid fa-download"></i>
                             </button>
                             <button
                               className="bg-warning text-light"
@@ -153,7 +153,7 @@ function InformasiStandarProsedur() {
                                 marginRight: "10px",
                               }}
                             >
-                              <i class="fa-solid fa-circle-info"></i>
+                              <i className="fa-solid fa-circle-info"></i>
                             </button>
                           </td>
                         </tr>
@@ -166,7 +166,7 @@ function InformasiStandarProsedur() {
             </div>
           </div>
         </div>
-      
+
       </div>
       <Footer />
     </div>

@@ -88,21 +88,21 @@ function AdminBerita() {
       <div className="app-main">
         <Sidebar />
         <div className="container mt-3 app-main__outer">
-          <div class="main-card mb-3 card">
-            <div class="card-header">
+          <div className="main-card mb-3 card">
+            <div className="card-header">
               Berita
-              <div class="btn-actions-pane-right">
-                <div role="group" class="btn-group-sm btn-group">
-                  <button  class="active btn-focus p-2 rounded">
+              <div className="btn-actions-pane-right">
+                <div role="group" className="btn-group-sm btn-group">
+                  <button  className="active btn-focus p-2 rounded">
 
                   <a href="/add-berita-admin">  Tambah Berita</a>
                   </button>
                 </div>
               </div>
             </div>
-            <div class="table-responsive"
+            <div className="table-responsive"
               style={{ overflowY: "auto", maxHeight: "60vh" }}>
-              <table class="align-middle mb-0 table table-borderless table-striped table-hover">
+              <table className="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
                   <tr>
                     <th className="text-center">No</th>
@@ -120,10 +120,10 @@ function AdminBerita() {
                   {list.map((berita, index) => {
                     return (
                       <tr key={index}>
-                        <td class="text-center text-muted">{index + 1}</td>
+                        <td className="text-center text-muted">{index + 1}</td>
                         <td className="text-center">{berita.author}</td>
-                        <td class="text-center">{berita.createdDate}</td>
-                        <td class="text-center">
+                        <td className="text-center">{berita.createdDate}</td>
+                        <td className="text-center">
                           {berita.image ? (
                             <img
                               src={berita.image}
@@ -136,17 +136,17 @@ function AdminBerita() {
                             "No Image"
                           )}
                         </td>
-                        <td class="text-center">{berita.isiBerita}</td>
-                        <td class="text-center">{berita.judulBerita}</td>
-                        <td class="text-center">{berita.tags}</td>
-                        <td class="text-center">{berita.updateDate}</td>
-                        <td class="text-center">
-                          <button type="button" class="btn-primary btn-sm mr-2">
-                          <a href="/edit-berita-admin"> <i class="fa-solid fa-pen-to-square"></i></a>
+                        <td className="text-center">{berita.isiBerita}</td>
+                        <td className="text-center">{berita.judulBerita}</td>
+                        <td className="text-center">{berita.tags}</td>
+                        <td className="text-center">{berita.updateDate}</td>
+                        <td className="text-center">
+                          <button type="button" className="btn-primary btn-sm mr-2">
+                          <a href="/edit-berita-admin"> <i className="fa-solid fa-pen-to-square"></i></a>
                           </button>
 
-                          <button    onClick={() => deleteData(berita.id)} type="button" class="btn-danger btn-sm">
-                            <i class="fa-solid fa-trash"></i>
+                          <button    onClick={() => deleteData(berita.id)} type="button" className="btn-danger btn-sm">
+                            <i className="fa-solid fa-trash"></i>
                           </button>
                         </td>
                       </tr>
@@ -155,11 +155,11 @@ function AdminBerita() {
                 </tbody>
               </table>
             </div>
-            <div class="d-block text-center card-footer">
-              {/* <button class="mr-2 btn-icon btn-icon-only btn btn-outline-danger">
-                <i class="pe-7s-trash btn-icon-wrapper"> </i>
+            <div className="d-block text-center card-footer">
+              {/* <button className="mr-2 btn-icon btn-icon-only btn btn-outline-danger">
+                <i className="pe-7s-trash btn-icon-wrapper"> </i>
               </button>
-              <button class="btn-wide btn btn-success">Save</button> */}
+              <button className="btn-wide btn btn-success">Save</button> */}
             </div>
 
           </div>

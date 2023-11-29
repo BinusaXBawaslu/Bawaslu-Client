@@ -32,19 +32,19 @@ function RekapBerita() {
     <>
       <Navbar />
       <div
-        class="breadcrumb-area bg-relative"
+        className="breadcrumb-area bg-relative"
         style={{ background: "#151423" }}>
         <div
-          class="banner-bg-img"
+          className="banner-bg-img"
           style={{
             backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp')`,
           }}></div>
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-7 col-lg-8">
-              <div class="breadcrumb-inner text-center">
-                <h2 class="page-title">Rekap Data</h2>
-                <ul class="page-list">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-xl-7 col-lg-8">
+              <div className="breadcrumb-inner text-center">
+                <h2 className="page-title">Rekap Data</h2>
+                <ul className="page-list">
                   <li>
                     <a href="/">Home</a>
                   </li>
@@ -56,32 +56,32 @@ function RekapBerita() {
         </div>
       </div>
       <br />
-      <div class="blog-area pd-top-120 pd-bottom-120">
+      <div className="blog-area pd-top-120 pd-bottom-120">
         <div className="container">
           <div className="row">
-            <div class="col-lg-8 col-md-12 widget widget-recent-post pe-lg-5">
+            <div className="col-lg-8 col-md-12 widget widget-recent-post pe-lg-5">
               <ul>
               {rekap.length > 0 ? (
                 rekap.map((berita, index) => {
                   return (
                 <li>
-                  <div class="media">
-                    <div class="media-left">
+                  <div className="media">
+                    <div className="media-left">
                       <img
                         src="https://boyolali.bawaslu.go.id/cepogo/2023/11/WhatsApp-Image-2023-11-01-at-14.10.31.jpeg"
                         alt="blog"
                         style={{ width: "200px" }}
                       />
                     </div>
-                    <div class="media-body align-self-center">
-                      <h6 class="fs-4 title">
+                    <div className="media-body align-self-center">
+                      <h6 className="fs-4 title">
                         <a href={`/isi-rekap/${berita.judulBerita}/${berita.id}`}>
                           {berita.judulBerita}
                         </a>
                       </h6>
-                      <div class="post-info">
+                      <div className="post-info">
                         <span className="mr-3"> BY {berita.author}</span>
-                        <i class="far fa-calendar-alt"></i>
+                        <i className="far fa-calendar-alt"></i>
                         <span>{berita.createdDate}</span>
                       </div>
                       {/* <br /> */}
@@ -99,9 +99,9 @@ function RekapBerita() {
               )}
               </ul>
             </div>
-            <div class="col-lg-4 col-12">
+            <div className="col-lg-4 col-12">
               <div className="sidebar-container">
-                <div class="td-sidebar">
+                <div className="td-sidebar">
                   <Bawaslu />
                 </div>
               </div>

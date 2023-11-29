@@ -27,10 +27,7 @@ function AdminPermohonankeberatan() {
   const getAll = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/permohonan-keberatan`,
-        {
-          headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
-        }
+        `${API_DUMMY}/bawaslu/api/permohonan-keberatan`
       );
       setList(response.data.data);
       console.log(response.data.data);

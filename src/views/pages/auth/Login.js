@@ -8,6 +8,7 @@ import axios from "axios";
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [role, seRole] = useState("admin");
   const history = useHistory();
   const [showPassword, setShowPassword] = useState(false);
 
@@ -16,7 +17,8 @@ function Login() {
 
     const data = {
       username: username,
-      password: password
+      password: password,
+      role: role,
     };
     try {
       const response = await axios.post(`${API_DUMMY}/login`, data);

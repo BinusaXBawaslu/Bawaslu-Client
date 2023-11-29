@@ -28,11 +28,6 @@ function Index() {
       const response = await axios.get(
         `${API_DUMMY}/bawaslu/api/jenis-informasi/getByIdWithKeterangan/` +
           param.id,
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        }
       );
 
       // Pastikan bahwa response.data.data adalah array sebelum menggunakan map

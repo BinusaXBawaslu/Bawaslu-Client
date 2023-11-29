@@ -60,66 +60,66 @@ function AddPengumuman() {
               <hr />
               <form onSubmit={add}>
                 <div className="row">
-                  <div class="mb-3 col-6">
-                    <label for="exampleInputEmail1" class="form-label">
+                  <div className="mb-3 col-6">
+                    <label for="exampleInputEmail1" className="form-label">
                       Author
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       value={author}
                       onChange={(e) => setAuthor(e.target.value)}
                     />
                   </div>
-                  <div class="mb-3 col-6">
-                    <label for="exampleInputPassword1" class="form-label">
+                  <div className="mb-3 col-6">
+                    <label for="exampleInputPassword1" className="form-label">
                       Image
                     </label>
                     <input
                       onChange={(e) => setImage(e.target.files[0])}
                       type="file"
-                      class="form-control"
+                      className="form-control"
                       id="exampleInputPassword1"
                     />
                   </div>
-                  <div class="mb-3 col-6">
-                    <label for="exampleInputPassword1" class="form-label">
+                  <div className="mb-3 col-6">
+                    <label for="exampleInputPassword1" className="form-label">
                       Isi Pengumuman
                     </label>
                     <input
                       value={isiPengumuman}
                       onChange={(e) => setIsiPengumuman(e.target.value)}
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="exampleInputPassword1"
                     />
                   </div>
-                  <div class="mb-3 col-6">
-                    <label for="exampleInputPassword1" class="form-label">
+                  <div className="mb-3 col-6">
+                    <label for="exampleInputPassword1" className="form-label">
                       Judul Pengumuman
                     </label>
                     <input
                       value={judulPengumuman}
                       onChange={(e) => setJudulPengumuman(e.target.value)}
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="exampleInputPassword1"
                     />
                   </div>
-                  <div class="mb-3 col-6">
-                    <label for="exampleInputPassword1" class="form-label">
+                  <div className="mb-3 col-6">
+                    <label for="exampleInputPassword1" className="form-label">
                       Tags
                     </label>
                     <input
                       value={tags}
                       onChange={(e) => setTags(e.target.value)}
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="exampleInputPassword1"
                     />
                   </div>
                 </div>
-                <button type="submit" class="btn-danger mt-3 mr-3">
+                <button type="submit" className="btn-danger mt-3 mr-3">
                   <a
                     href="/admin-pengumuman"
                     style={{ color: "white", textDecoration: "none" }}>
@@ -127,7 +127,7 @@ function AddPengumuman() {
                     Batal
                   </a>
                 </button>
-                <button type="submit" class="btn-primary mt-3">
+                <button type="submit" className="btn-primary mt-3">
                   Simpan
                 </button>
               </form>

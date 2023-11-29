@@ -228,8 +228,8 @@ function PageBerita() {
                             <p>{category.judulBerita} </p>
                           </div>
                         </div>
-                      
-                    );
+  
+      );
                   })}
                             <a href="/bawaslu-boyolali-ajak-masyarakat-terlibat-dalam-pengawasan-pemilu-partisipatif">
                               {category.judulPengumuman}

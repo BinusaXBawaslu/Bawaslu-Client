@@ -9,21 +9,21 @@ function BiayaLayanan() {
     <>
       <Navbar />
       {/* <!-- page title start --> */}
-      <div class="breadcrumb-area bg-black bg-relative">
+      <div className="breadcrumb-area bg-black bg-relative">
         <div
-          class="banner-bg-img"
+          className="banner-bg-img"
           style={{
             backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp') `,
           }}
         ></div>
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-7 col-lg-8">
-              <div class="breadcrumb-inner text-center">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-xl-7 col-lg-8">
+              <div className="breadcrumb-inner text-center">
                 <h2 style={{ color: "white", fontWeight: 700, fontSize: 60 }}>
                   Biaya Layanan
                 </h2>
-                <ul class="page-list">
+                <ul className="page-list">
                   <li>
                     <a href="/" style={{ textDecoration: "none" }}>
                       Home
@@ -38,7 +38,7 @@ function BiayaLayanan() {
       </div>
       {/* <!-- page title end --> */}
       <div
-        class="team-details-page pd-top-120 service-area bg-relative pd-top-60 pd-bottom-90 "
+        className="team-details-page pd-top-120 service-area bg-relative pd-top-60 pd-bottom-90 "
         style={{
           backgroundImage: `url('https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg?w=740&t=st=1698973959~exp=1698974559~hmac=418240e9f8d698b9b7f2c0907f5c8e0013885b44976fa36e713b8801491993db')`,
           backgroundRepeat: "no-repeat",
@@ -46,56 +46,56 @@ function BiayaLayanan() {
         }}
       >
         <img
-          class="shape-left-top top_image_bounce"
+          className="shape-left-top top_image_bounce"
           src="https://www.solverwp.com/demo/html/itechie/assets/img/shape/3.webp"
           alt="img"
         />
         <img
-          class="shape-right-top top_image_bounce"
+          className="shape-right-top top_image_bounce"
           src="https://www.solverwp.com/demo/html/itechie/assets/img/shape/4.webp"
           alt="img"
         />
         {/* <!-- about area start --> */}
-        <div class="about-area ">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-6 col-md-9 mb-5 mb-lg-0">
-                <div class="about-mask-bg-wrap about-mask-bg-wrap-4">
-                  <div class="thumb">
+        <div className="about-area ">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-6 col-md-9 mb-5 mb-lg-0">
+                <div className="about-mask-bg-wrap about-mask-bg-wrap-4">
+                  <div className="thumb">
                     <img src={biaya} alt="img" />
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6 align-center">
-                <div class="section-title px-lg-5 mb-0">
-                  <h5 class="sub-title left-border">Bawaslu Boyolali</h5>
-                  <h2 class="title">Biaya Layanan </h2>
-                  <p class="content-strong mt-3">
+              <div className="col-lg-6 align-center">
+                <div className="section-title px-lg-5 mb-0">
+                  <h5 className="sub-title left-border">Bawaslu Boyolali</h5>
+                  <h2 className="title">Biaya Layanan </h2>
+                  <p className="content-strong mt-3">
                     {" "}
                     PPID Bawaslu RI menyediakan informasi secara GRATIS (tidak
                     dipungut biaya).
                   </p>
-                  <p class="content">
+                  <p className="content">
                     Sedangkan untuk penggandaan, pemohon informasi publik dapat
                     melakukan penggandaan/ foto copy sendiri di sekitar Kantor
                     Bawaslu atau biaya penggandaan ditanggung pemohon
                     sendiri,atau pemohon dapat menyediakan CD atau flashdisk
                     untuk merekam data atau informasi.
                   </p>
-                  <ul class="single-list-inner style-check mt-3">
+                  <ul className="single-list-inner style-check mt-3">
                     <li>
-                      <i class="fa fa-check"></i>Kebahagiaan klien
+                      <i className="fa fa-check"></i>Kebahagiaan klien
                     </li>
                     <li>
-                      <i class="fa fa-check"></i>Layanan kelas dunia
+                      <i className="fa fa-check"></i>Layanan kelas dunia
                     </li>
                     <li>
-                      <i class="fa fa-check"></i>Kebahagiaan klien
+                      <i className="fa fa-check"></i>Kebahagiaan klien
                     </li>
                   </ul>
                 </div>
                 <img
-                    class="shape-image-sm top_image_bounce"
+                    className="shape-image-sm top_image_bounce"
                     src="https://solverwp.com/demo/html/itechie/assets/img/about/4sm.webp"
                     alt="img"
                   />

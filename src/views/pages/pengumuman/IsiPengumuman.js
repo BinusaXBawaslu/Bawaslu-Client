@@ -16,21 +16,9 @@ function IsiPengumuman() {
   const [image, setImage] = useState("");
   const params = useParams();
   const [id, setId] = useState();
-  const [pengumuman, setPengumuman] = useState({
-    tags: "",
-    image: "",
-    isiPengumuman: "",
-    createdDate: "",
-    author: "",
-    judulPengumuman: "",
-  });
   useEffect(() => {
     axios
-      .get(`${API_DUMMY}/bawaslu/api/pengumuman/get/` + params.id, {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      })
+      .get(`${API_DUMMY}/bawaslu/api/pengumuman/get/` + params.id)
       .then((ress) => {
         const response = ress.data.data;
         setCreatedDate(response.createdDate);
@@ -52,12 +40,7 @@ function IsiPengumuman() {
     await axios
       .get(
         `${API_DUMMY}/bawaslu/api/pengumuman/related-pengumuman/by-id-pengumuman?id=` +
-          params.id,
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        }
+          params.id
       )
       .then((res) => {
         setPengumuman2(res.data.data);
@@ -77,14 +60,12 @@ function IsiPengumuman() {
       {/* <!-- page title start --> */}
       <div
         class="breadcrumb-area bg-relative"
-        style={{ background: "#151423" }}
-      >
+        style={{ background: "#151423" }}>
         <div
           class="banner-bg-img"
           style={{
             backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp')`,
-          }}
-        ></div>
+          }}></div>
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-xl-7 col-lg-8">
@@ -123,12 +104,11 @@ function IsiPengumuman() {
                         <i class="far fa-user"></i>By {author}
                       </li>
                       <li>
-                        <i class="far fa-calendar-alt"></i>{createdDate}
+                        <i class="far fa-calendar-alt"></i>
+                        {createdDate}
                       </li>
                     </ul>
-                    <p>
-                      {isiPengumuman}
-                    </p>
+                    <p>{isiPengumuman}</p>
                   </div>
                   <br />
                   <h4 className="pt-4 mb-4">Related Posts</h4>
@@ -144,7 +124,8 @@ function IsiPengumuman() {
                             </div>
                             <div class="media-body">
                               <p>
-                                <a href={`/isi-pengumuman/${isi.isiPengumuman}/${isi.id}`}>
+                                <a
+                                  href={`/isi-pengumuman/${isi.isiPengumuman}/${isi.id}`}>
                                   {isi.judulPengumuman}
                                 </a>
                               </p>
@@ -162,8 +143,7 @@ function IsiPengumuman() {
                 <Bawaslu />
                 <div
                   class="widget widget_tag_cloud mb-0"
-                  style={{ background: "#F1F6F9" }}
-                >
+                  style={{ background: "#F1F6F9" }}>
                   <h4 class="widget-title">Berbagi</h4>
                   <div class="tagcloud">
                     <a
@@ -174,8 +154,7 @@ function IsiPengumuman() {
                         alignItems: "center",
                         justifyContent: "center",
                         fontWeight: "bold",
-                      }}
-                    >
+                      }}>
                       <i class="fab fa-facebook"></i> Share To Facebook
                     </a>
                     <a
@@ -186,8 +165,7 @@ function IsiPengumuman() {
                         alignItems: "center",
                         justifyContent: "center",
                         fontWeight: "bold",
-                      }}
-                    >
+                      }}>
                       <i class="fab fa-twitter"></i> Share To Twitter
                     </a>
                   </div>

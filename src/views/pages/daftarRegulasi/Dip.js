@@ -60,25 +60,25 @@ function Dip() {
     <div id="awal">
       <Navbar />
       {/* <!-- page title start --> */}
-      <div class="breadcrumb-area bg-black bg-relative">
+      <div className="breadcrumb-area bg-black bg-relative">
         <div
           id="banner"
-          class="banner-bg-img"
+          className="banner-bg-img"
           style={{
             backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp') `,
           }}
         ></div>
         <div>
-          <div class="row justify-content-center">
-            <div class="col-xl-7 col-lg-8">
-              <div class="breadcrumb-inner text-center">
+          <div className="row justify-content-center">
+            <div className="col-xl-7 col-lg-8">
+              <div className="breadcrumb-inner text-center">
                 <h2
                   id="h2"
                   style={{ color: "white", fontWeight: 700, fontSize: 60 }}
                 >
                   Daftar Informasi Publik
                 </h2>
-                <ul class="page-list">
+                <ul className="page-list">
                   <li>
                     <a href="/" style={{ textDecoration: "none" }}>
                       Home
@@ -100,22 +100,22 @@ function Dip() {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
-        class="project-area pd-top-110 pd-bottom-90"
+        className="project-area pd-top-110 pd-bottom-90"
       >
         <div id="container" className="container">
           <div id="display" className="d-flex gap-3">
-            <div id="display" class="row justify-content-center">
-              <div id="display" class="col-lg-12 ">
+            <div id="display" className="row justify-content-center">
+              <div id="display" className="col-lg-12 ">
                 <div
                   id="widht"
-                  class="isotope-filters project-isotope-btn text-left mb-5"
+                  className="isotope-filters project-isotope-btn text-left mb-5"
                 >
                   {list.map((menu) => {
                     return (
                       <button
                         id="button-dik"
                         // style={{ width: "150px", textAlign: "left" }}
-                        class="button ml-0 active"
+                        className="button ml-0 active"
                         data-filter="*"
                         onClick={() => `${menu.menuRegulasi}`}
                       >
@@ -169,7 +169,7 @@ function Dip() {
                                 marginRight: "10px",
                               }}
                             >
-                              <i class="fa-solid fa-download"></i>
+                              <i className="fa-solid fa-download"></i>
                             </button>
                             <button
                               className="bg-warning text-light"
@@ -182,9 +182,9 @@ function Dip() {
                                 marginRight: "10px",
                               }}
                             >
-                              <i class="fa-solid fa-circle-info"></i>
+                              <i className="fa-solid fa-circle-info"></i>
                             </button>
-                            <a class="nt_btn" style={{color: 'rgba(255, 255, 255, 1)',backgroundColor: 'rgba(255, 146, 63, 1)',borderColor: 'rgba(200, 200, 200, 1)'}} href="https://drive.google.com/file/d/15joI7w8I1Q36UeD0EFVOYDsS6h-96WZp">Unduh / Lihat</a>
+                            <a className="nt_btn" style={{color: 'rgba(255, 255, 255, 1)',backgroundColor: 'rgba(255, 146, 63, 1)',borderColor: 'rgba(200, 200, 200, 1)'}} href="https://drive.google.com/file/d/15joI7w8I1Q36UeD0EFVOYDsS6h-96WZp">Unduh / Lihat</a>
                           </td>
                         </tr>
                       </tbody>

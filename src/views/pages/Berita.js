@@ -31,7 +31,6 @@ function Berita() {
           page - 1
         }&size=10&sortBy=id&sortOrder=asc`
       );
-
       setList(response.data.data.content);
       setPaginationInfo({
         totalPages: response.data.data.totalPages,

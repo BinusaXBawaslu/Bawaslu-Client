@@ -13,26 +13,26 @@ function eLibrary() {
       <Navbar />
       {/* <!-- banner area start --> */}
       <div
-        class="banner-area banner-area-2 bg-relative"
+        className="banner-area banner-area-2 bg-relative"
         style={{
           backgroundImage: `url('https://mmc.tirto.id/image/2019/06/20/ilustrasi-perpustakaan-istock_ratio-16x9.jpg') `,
         }}
       >
-        <div class="bg-overlay-gradient"></div>
-        <div class="container service-area bg-relative pd-top-60 pd-bottom-90 ">
-          <div class="row">
-            <div class="col-lg-6 col-md-9">
-              <div class="banner-inner">
-                <h4 class="sub-title">Kanal Literasi</h4>
-                <h2 class="title">
+        <div className="bg-overlay-gradient"></div>
+        <div className="container service-area bg-relative pd-top-60 pd-bottom-90 ">
+          <div className="row">
+            <div className="col-lg-6 col-md-9">
+              <div className="banner-inner">
+                <h4 className="sub-title">Kanal Literasi</h4>
+                <h2 className="title">
                   Perpustakaan Digital Bawaslu<span> Kabupaten Boyolali</span>
                 </h2>
-                <p class="content">
+                <p className="content">
                   Baca buku dan buletin tentang Kepemiluan, berbagi koleksi
                   bacaan dan bersosialisasi secara bersamaan. Di mana pun, kapan
                   pun dengan nyaman bersama setiap orang.
                 </p>
-                <div class="btn-wrap">
+                <div className="btn-wrap">
                   <a href="#buku" style={{ textDecoration: "none" }}>
                     LIHAT KOLEKSI
                   </a>
@@ -43,24 +43,24 @@ function eLibrary() {
         </div>
       </div>
       {/* <!-- service area start --> */}
-      <div class="service-area bg-relative pd-top-115 pd-bottom-90">
+      <div className="service-area bg-relative pd-top-115 pd-bottom-90">
         <img
-          class="shape-left-top top_image_bounce"
+          className="shape-left-top top_image_bounce"
           src="https://solverwp.com/demo/html/itechie/assets/img/shape/3.webp"
           alt="img"
         />
         <img
-          class="shape-right-top top_image_bounce"
+          className="shape-right-top top_image_bounce"
           src="https://solverwp.com/demo/html/itechie/assets/img/shape/4.webp"
           alt="img"
         />
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-6 col-lg-7">
-              <div class="section-title text-center">
-                <h5 class="sub-title double-line">Bawaslu Boyolali</h5>
-                <h2 class="title">Buku Bawaslu Kabupaten Boyolali</h2>
-                <p class="content">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-xl-6 col-lg-7">
+              <div className="section-title text-center">
+                <h5 className="sub-title double-line">Bawaslu Boyolali</h5>
+                <h2 className="title">Buku Bawaslu Kabupaten Boyolali</h2>
+                <p className="content">
                   Melalui website ini, Bawaslu Kabupaten Boyolali akan selalu
                   memperbaharui informasi terkait pengawasan dan pemantauan
                   pemilu.
@@ -68,123 +68,123 @@ function eLibrary() {
               </div>
             </div>
           </div>
-          <div class="row justify-content-center">
-            <div class="col-lg-4 col-md-6">
+          <div className="row justify-content-center">
+            <div className="col-lg-4 col-md-6">
               <div
-                class="single-service-inner style-2 text-center"
+                className="single-service-inner style-2 text-center"
                 style={{
                   backgroundImage: `url('https://solverwp.com/demo/html/itechie/assets/img/bg/01.webp')`,
                 }}
               >
-                <div class="icon-box">
-                  <i class="icomoon-application"></i>
+                <div className="icon-box">
+                  <i className="icomoon-application"></i>
                 </div>
-                <div class="details">
+                <div className="details">
                   <h3>
                     <a href="service-details.html">Buletin</a>
                   </h3>
                   <p>Buletin Bawaslu Kabupaten Boyolali Edisi 1</p>
-                  <a class="read-more-btn" href="service-details.html">
-                    <i class="fa fa-arrow-right"></i>
+                  <a className="read-more-btn" href="service-details.html">
+                    <i className="fa fa-arrow-right"></i>
                   </a>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
+            <div className="col-lg-4 col-md-6">
               <div
-                class="single-service-inner style-2 text-center"
+                className="single-service-inner style-2 text-center"
                 style={{
                   backgroundImage: `url('https://solverwp.com/demo/html/itechie/assets/img/bg/01.webp')`,
                 }}
               >
-                <div class="icon-box">
-                  <i class="icomoon-cloud-data"></i>
+                <div className="icon-box">
+                  <i className="icomoon-cloud-data"></i>
                 </div>
-                <div class="details">
+                <div className="details">
                   <h3>
                     <a href="service-details.html">Buletin</a>
                   </h3>
                   <p>Buletin Bawaslu Kabupaten Boyolali Edisi 2</p>
-                  <a class="read-more-btn" href="service-details.html">
-                    <i class="fa fa-arrow-right"></i>
+                  <a className="read-more-btn" href="service-details.html">
+                    <i className="fa fa-arrow-right"></i>
                   </a>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
+            <div className="col-lg-4 col-md-6">
               <div
-                class="single-service-inner style-2 text-center"
+                className="single-service-inner style-2 text-center"
                 style={{
                   backgroundImage: `url('https://solverwp.com/demo/html/itechie/assets/img/bg/01.webp')`,
                 }}
               >
-                <div class="icon-box">
-                  <i class="icomoon-megaphone"></i>
+                <div className="icon-box">
+                  <i className="icomoon-megaphone"></i>
                 </div>
-                <div class="details">
+                <div className="details">
                   <h3>
                     <a href="service-details.html">Buletin</a>
                   </h3>
                   <p>Buletin Bawaslu Kabupaten Boyolali Edisi 3</p>
-                  <a class="read-more-btn" href="service-details.html">
-                    <i class="fa fa-arrow-right"></i>
+                  <a className="read-more-btn" href="service-details.html">
+                    <i className="fa fa-arrow-right"></i>
                   </a>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
+            <div className="col-lg-4 col-md-6">
               <div
-                class="single-service-inner style-2 text-center"
+                className="single-service-inner style-2 text-center"
                 style={{
                   backgroundImage: `url('https://solverwp.com/demo/html/itechie/assets/img/bg/01.webp')`,
                 }}
               >
-                <div class="icon-box">
-                  <i class="icomoon-application"></i>
+                <div className="icon-box">
+                  <i className="icomoon-application"></i>
                 </div>
-                <div class="details">
+                <div className="details">
                   <h3>
                     <a href="service-details.html">Buletin</a>
                   </h3>
                   <p>Buletin Bawaslu Kabupaten Boyolali Edisi 4</p>
-                  <a class="read-more-btn" href="service-details.html">
-                    <i class="fa fa-arrow-right"></i>
+                  <a className="read-more-btn" href="service-details.html">
+                    <i className="fa fa-arrow-right"></i>
                   </a>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
+            <div className="col-lg-4 col-md-6">
               <div
-                class="single-service-inner style-2 text-center"
+                className="single-service-inner style-2 text-center"
                 style={{
                   backgroundImage: `url('https://solverwp.com/demo/html/itechie/assets/img/bg/01.webp')`,
                 }}
               >
-                <div class="icon-box">
-                  <i class="icomoon-application"></i>
+                <div className="icon-box">
+                  <i className="icomoon-application"></i>
                 </div>
-                <div class="details">
+                <div className="details">
                   <h3>
                     <a href="service-details.html">Buletin</a>
                   </h3>
                   <p>Jejak Pengawasan | Catatan Pengawas Pemilu 2019</p>
-                  <a class="read-more-btn" href="service-details.html">
-                    <i class="fa fa-arrow-right"></i>
+                  <a className="read-more-btn" href="service-details.html">
+                    <i className="fa fa-arrow-right"></i>
                   </a>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
+            <div className="col-lg-4 col-md-6">
               <div
-                class="single-service-inner style-2 text-center"
+                className="single-service-inner style-2 text-center"
                 style={{
                   backgroundImage: `url('https://solverwp.com/demo/html/itechie/assets/img/bg/01.webp')`,
                 }}
               >
-                <div class="icon-box">
-                  <i class="icomoon-application"></i>
+                <div className="icon-box">
+                  <i className="icomoon-application"></i>
                 </div>
-                <div class="details">
+                <div className="details">
                   <h3>
                     <a href="service-details.html">Buletin</a>
                   </h3>
@@ -192,8 +192,8 @@ function eLibrary() {
                     Napak Tilas | Sejarah Pengawasan Pemilihan Umum Kab.
                     Boyolali
                   </p>
-                  <a class="read-more-btn" href="service-details.html">
-                    <i class="fa fa-arrow-right"></i>
+                  <a className="read-more-btn" href="service-details.html">
+                    <i className="fa fa-arrow-right"></i>
                   </a>
                 </div>
               </div>
