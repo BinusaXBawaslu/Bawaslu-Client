@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Footer from "../../../component/Footer";
 import Navbar from "../../../component/Navbar";
+import "../../../css/regulasi.css"
 import axios from "axios";
+import { useParams } from "react-router-dom/cjs/react-router-dom";
 import { API_DUMMY } from "../../../utils/base_URL";
 
 function Regulasi() {
@@ -69,10 +71,11 @@ function Regulasi() {
   const [isi7, setIsi7] = useState([]);
   const [isi8, setIsi8] = useState([]);
 
+  const param = useParams();
   const getByMenu = async () => {
     await axios
       .get(
-        `${API_DUMMY}/bawaslu/api/menu-regulasi/get-by-jenis-regulasi?id-jenis-regulasi=1`
+        `${API_DUMMY}/bawaslu/api/menu-regulasi/get-by-jenis-regulasi?id-jenis-regulasi=`+param.id
       )
       .then((response) => {
         setList(response.data.data);
@@ -84,7 +87,7 @@ function Regulasi() {
   const getByIsi = async () => {
     await axios
       .get(
-        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=1`
+        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=`+param.id
       )
       .then((response) => {
         setIsi(response.data.data);
@@ -96,7 +99,7 @@ function Regulasi() {
   const getByIsi1 = async () => {
     await axios
       .get(
-        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=2`
+        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=`+param.id
       )
       .then((response) => {
         setIsi1(response.data.data);
@@ -193,14 +196,14 @@ function Regulasi() {
   useEffect(() => {
     getByMenu();
     getByIsi();
-    getByIsi1();
-    getByIsi2();
-    getByIsi3();
-    getByIsi4();
-    getByIsi5();
-    getByIsi6();
-    getByIsi7();
-    getByIsi8();
+    // getByIsi1();
+    // getByIsi2();
+    // getByIsi3();
+    // getByIsi4();
+    // getByIsi5();
+    // getByIsi6();
+    // getByIsi7();
+    // getByIsi8();
   }, []);
   return (
     <div>
@@ -248,7 +251,7 @@ function Regulasi() {
           }}
         >
           <div class="container">
-            <div className="d-flex gap-5">
+            <div id="display" className="d-flex gap-5">
               <div class="row justify-content-center">
                 <div class="col-lg-12 ">
                   <div class="isotope-filters project-isotope-btn text-left mb-5">
@@ -276,8 +279,8 @@ function Regulasi() {
                   width: "100%",
                 }}
               >
-                <div className="card-header bg-primary text-light">
-                  <div style={{ display: "flex" }}>
+                <div  className="card-header bg-primary text-light">
+                  <div id="display" >
                     <div className="">
                       <h4>Undang Undang</h4>
                     </div>
@@ -814,7 +817,7 @@ function Regulasi() {
               >
                 <div className="card-header bg-primary text-light">
                   <div style={{ display: "flex" }}>
-                    <div className="col">
+                    <div className="">
                       <h4>Intruksi Kabupaten</h4>
                     </div>
                     <div className="col">

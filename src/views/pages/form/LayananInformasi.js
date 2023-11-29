@@ -15,13 +15,13 @@ const LayananInformasi = () => {
 
           }}
         >
-          <div>
+          <div id="div-pembungkus">
             <h1 id="layanan" className="layanan-informasi">
               LAYANAN INFORMASI BERBASIS ANDROID
             </h1>
             <h1>_____</h1>
             <br></br>
-            <p className="download" >
+            <p id="download" className="download" >
               DOWNLOAD APLIKASI ANDROID PPID BAWASLU KAB. BOYOLALI Download
             </p>
           </div>
@@ -44,6 +44,7 @@ const LayananInformasi = () => {
             >
               <a href="https://drive.google.com/file/d/18EuKCzrZcA9yaPCVvGrtSo9ELaLUMJwC/view" target="_blank">
               <button
+              id="button"
               className="button"
                 style={{
                   display: "flex",

@@ -983,7 +983,7 @@ ul {
 }
 
 /*-----------------------------------------
-    ## video 
+    ## video
 ------------------------------------------*/
 .video-thumb {
   position: relative;
@@ -1053,7 +1053,7 @@ ul {
 }
 
 /*-----------------------------------------
-    ## Breadcumb 
+    ## Breadcumb
 ------------------------------------------*/
 .breadcrumb-area {
   padding: 205px 0 115px;
@@ -1932,7 +1932,7 @@ ul {
 }
 
 /*----------------------------------------------
-    # Nav bar 
+    # Nav bar
 ----------------------------------------------*/
 .navbar-top {
   background: #091d3e;
@@ -2512,7 +2512,7 @@ ul {
 
 .sidebar-container {
   position: sticky;
-  top: 20px; 
+  top: 20px;
 }
 
 .scrolling-container {
@@ -6167,12 +6167,12 @@ ul {
   color: var(--heading-color);
 }
 
-.align-self-center {
+/* .align-self-center {
   overflow: hidden !important;
   display: -webkit-box !important;
   -webkit-line-clamp: 3 !important;
   -webkit-box-orient: vertical;
-}
+} */
 
 .widget-recent-post ul li .media .media-body .post-info span {
   color: #3f517e;
@@ -9784,3 +9784,53 @@ ul {
   max-width: 900px; /* Atur lebar maksimum konten testimoni */
   margin: 0 auto; /* Pusatkan konten testimoni */
 }
+
+ .widget .widget-title:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 3px;
+  width: 100%;
+  background: #E1E1E1;
+}
+ .widget .widget-title:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 3px;
+  width: 60px;
+  background: var(--main-color);
+  z-index: 2;
+ }
+
+.details .titleee {
+  margin-bottom: 8px;
+  overflow: hidden !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3 !important;
+  -webkit-box-orient: vertical;
+
+}
+ .titleHome {
+  overflow: hidden !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3 !important;
+  -webkit-box-orient: vertical;
+
+}
+
+.details .isiPengumuman {
+  margin-bottom: 8px;
+  overflow: hidden !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3 !important;
+  -webkit-box-orient: vertical;
+}
+.isiBerita {
+  /* white-space: nowrap; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+

@@ -7,15 +7,19 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import { API_DUMMY } from "../../../../utils/base_URL";
 import { useEffect } from "react";
-import { useHistory, useParams } from "react-router-dom/cjs/react-router-dom.min";
+import {
+  useHistory,
+  useParams,
+} from "react-router-dom/cjs/react-router-dom.min";
 
 function AddJenisKeterangan() {
   const [keterangan, setKeterangan] = useState("");
-  const [idJenisInformasi, setIdJenisInformasi] = useState();
   const [jenisInformasi, setJenisInformasi] = useState();
   const [show, setShow] = useState(false);
   const [informasi, setInformasi] = useState([]);
   const param = useParams();
+  const {namaInformasi} = useParams();
+  const history = useHistory();
 
   const getInformasi = async () => {
     try {
@@ -35,22 +39,6 @@ function AddJenisKeterangan() {
   };
 
   useEffect(() => {
-    axios
-      .get(`${API_DUMMY}/bawaslu/api/jenis-informasi/getBy/` + param.id, {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      })
-      .then((ress) => {
-        const response = ress.data.data;
-        setJenisInformasi(response.keterangan);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, []);
-
-  useEffect(() => {
     getInformasi();
   }, []);
 
@@ -62,7 +50,7 @@ function AddJenisKeterangan() {
         `${API_DUMMY}/bawaslu/api/jenis-keterangan/add`,
         {
           keterangan: keterangan,
-          idJenisInformasi: idJenisInformasi,
+          jenisInformasi: jenisInformasi,
         },
         {
           headers: {
@@ -79,7 +67,7 @@ function AddJenisKeterangan() {
         timer: 1500,
       });
       // //console.log(data);
-      //   history.push("/admin-pengumuman");
+      history.push(`/admin/${namaInformasi}/${param.id}`);
       setTimeout(() => {
         window.location.reload();
       }, 1500);
@@ -87,6 +75,7 @@ function AddJenisKeterangan() {
       console.log(error);
     }
   };
+
   return (
     <div>
       <Header />
@@ -103,12 +92,13 @@ function AddJenisKeterangan() {
                     <label className="form-label">Jenis Informasi</label>
                     <select
                       class="form-select form-select-sm"
-                      aria-label="Small select example" onChange={(e) => setIdJenisInformasi(e.target.value)}>
+                      aria-label="Small select example"
+                      onChange={(e) => setJenisInformasi(e.target.value)}>
                       <option selected>PIlih Jenis Informasi</option>
                       {informasi.map((down) => {
-                        return(
-                            <option value={down.id}>{down.namaInformasi}</option>
-                        )
+                        return (
+                          <option value={down.id}>{down.namaInformasi}</option>
+                        );
                       })}
                     </select>
                   </div>

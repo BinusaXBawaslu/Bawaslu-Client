@@ -116,7 +116,7 @@ function Dikecualikan() {
           </div>
 
           <div id="div-img" class=" w-50 d-flex align-item-center ">
-            <img id="img" src={informasi} alt="img" />
+            <img id="img" class="w-100" src={informasi} alt="img" />
           </div>
         </div>
       </div>

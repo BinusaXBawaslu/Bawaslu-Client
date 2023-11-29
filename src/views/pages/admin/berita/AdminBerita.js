@@ -5,18 +5,18 @@ import { useHistory } from "react-router-dom";
 import axios from "axios";
 import { API_DUMMY } from "../../../../utils/base_URL";
 import Swal from "sweetalert2";
+import { IconButton, InputAdornment, Pagination, TextField } from "@mui/material";
 
 function AdminBerita() {
   const [list, setList] = useState([]);
   const [list1, setList1] = useState([]);
-
 
   const [category, setCategory] = useState([""]);
   const [createDate, setCreateDate] = useState([""]);
   const [updateDate, setUpdateDate] = useState([""]);
   const [author, setAuthor] = useState("");
   const [isiBerita, setIsiBerita] = useState("");
-  const [judulBerita, setJudulBerita] = useState(""); 
+  const [judulBerita, setJudulBerita] = useState("");
   const [tags, setTags] = useState("");
   const [image, setImage] = useState("");
   const [show, setShow] = useState(false);
@@ -29,29 +29,55 @@ function AdminBerita() {
   const [modalAdd, setModalAdd] = useState(false);
   const [modalEdit, setModalEdit] = useState(false);
   const [id, setId] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [paginationInfo, setPaginationInfo] = useState({
+    totalPages: 1,
+    totalElements: 0,
+  });
+  const [searchResults, setSearchResults] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
-
-  const getAll = async () => {
+  const getAll = async (page) => {
     try {
-      const response = await axios.get(`${API_DUMMY}/bawaslu/api/berita`);
-      setList(response.data.data);
-      console.log(response.data.data);
+      const response = await axios.get(
+        `${API_DUMMY}/bawaslu/api/berita?page=${
+          page - 1
+        }&size=10&sortBy=id&sortOrder=asc`
+      );
+
+      setList(response.data.data.content);
+      setPaginationInfo({
+        totalPages: response.data.data.totalPages,
+        totalElements: response.data.data.totalElements,
+      });
     } catch (error) {
       console.error("Terjadi Kesalahan", error);
     }
   };
+
+  const handleSearch = async () => {
+    try {
+      const response = await axios.get(
+        `${API_DUMMY}/bawaslu/api/berita/search?search=${searchTerm}`
+      );
+      setSearchResults(response.data.data);
+    } catch (error) {
+      console.error("Terjadi Kesalahan", error);
+    }
+  };
+
+
   const getAll1 = async () => {
     try {
-      const response = await axios.get(`${API_DUMMY}/bawaslu/api/category-berita`);
+      const response = await axios.get(
+        `${API_DUMMY}/bawaslu/api/category-berita`
+      );
       setList1(response.data.data);
       console.log(response.data.data);
     } catch (error) {
       console.error("Terjadi Kesalahan", error);
     }
   };
-
-
-
 
   const deleteData = async (id) => {
     Swal.fire({
@@ -122,9 +148,9 @@ function AdminBerita() {
   };
 
   useEffect(() => {
-    getAll();
+    getAll(currentPage);
     getAll1();
-  }, []);
+  }, [currentPage]);
   return (
     <div>
       <Header />
@@ -134,16 +160,36 @@ function AdminBerita() {
           <div class="main-card mb-3 card">
             <div class="card-header">
               Berita
+                  <TextField
+                    variant="outlined"
+                    placeholder="Search..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    InputProps={{
+                      endAdornment: (
+                        <InputAdornment position="end">
+                          <IconButton onClick={handleSearch}>
+                            {/* <SearchIcon /> */}
+                          </IconButton>
+                        </InputAdornment>
+                      ),
+                    }}
+                  />
               <div class="btn-actions-pane-right">
                 <div role="group" class="btn-group-sm btn-group">
-                  <button  class="active btn-focus p-2 rounded">
-                    
-                  <a href="/add-berita-admin">  Tambah Berita</a>
+                  <button class="active btn-focus p-2 rounded">
+                    <a
+                      style={{ color: "white", textDecoration: "none" }}
+                      href="/add-berita-admin">
+                      Tambah Berita
+                    </a>
                   </button>
                 </div>
               </div>
             </div>
-            <div class="table-responsive">
+            <div
+              class="table-responsive"
+              style={{ overflowY: "auto", maxHeight: "60vh" }}>
               <table class="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
                   <tr>
@@ -151,10 +197,9 @@ function AdminBerita() {
                     <th className="text-center">Author</th>
                     <th className="text-center">Tanggal Dibuat</th>
                     <th className="text-center">Image</th>
-                    <th className="text-center">Isi Berita</th>
+                    {/* <th className="text-center">Isi Berita</th> */}
                     <th className="text-center">Judul Berita</th>
-                    <th className="text-center">Tags</th>
-                    <th className="text-center">Upate</th>
+                    {/* <th className="text-center">Tags</th> */}
                     <th className="text-center">Aksi</th>
                   </tr>
                 </thead>
@@ -162,10 +207,10 @@ function AdminBerita() {
                   {list.map((berita, index) => {
                     return (
                       <tr key={index}>
-                        <td class="text-center text-muted">{index + 1}</td>
-                        <td className="text-center">{berita.author}</td>
-                        <td class="text-center">{berita.createdDate}</td>
-                        <td class="text-center">
+                        <td class="text-left text-muted">{index + 1}</td>
+                        <td className="text-left">{berita.author}</td>
+                        <td class="text-left">{berita.createdDate}</td>
+                        <td class="text-left">
                           {berita.image ? (
                             <img
                               src={berita.image}
@@ -178,16 +223,23 @@ function AdminBerita() {
                             "No Image"
                           )}
                         </td>
-                        <td class="text-center">{berita.isiBerita}</td>
-                        <td class="text-center">{berita.judulBerita}</td>
-                        <td class="text-center">{berita.tags}</td>
-                        <td class="text-center">{berita.updateDate}</td>
-                        <td class="text-center">
+                        {/* <td class="text-left isiBerita">{berita.isiBerita}</td> */}
+                        <td class="text-left">{berita.judulBerita}</td>
+                        {/* <td class="text-left">{berita.tags}</td> */}
+                        <td class="text-center d-flex">
                           <button type="button" class="btn-primary btn-sm mr-2">
-                          <a href="/edit-berita-admin"> <i class="fa-solid fa-pen-to-square"></i></a> 
+                            <a
+                              style={{ color: "white", textDecoration: "none" }}
+                              href="/edit-berita-admin">
+                              {" "}
+                              <i class="fa-solid fa-pen-to-square"></i>
+                            </a>
                           </button>
 
-                          <button    onClick={() => deleteData(berita.id)} type="button" class="btn-danger btn-sm">
+                          <button
+                            onClick={() => deleteData(berita.id)}
+                            type="button"
+                            class="btn-danger btn-sm">
                             <i class="fa-solid fa-trash"></i>
                           </button>
                         </td>
@@ -197,16 +249,16 @@ function AdminBerita() {
                 </tbody>
               </table>
             </div>
-            <div class="d-block text-center card-footer">
-              {/* <button class="mr-2 btn-icon btn-icon-only btn btn-outline-danger">
-                <i class="pe-7s-trash btn-icon-wrapper"> </i>
-              </button>
-              <button class="btn-wide btn btn-success">Save</button> */}
+            <div className="card-header">
+              <Pagination
+                className="mr-auto ml-auto"
+                count={paginationInfo.totalPages}
+                color="primary"
+                page={currentPage}
+                onChange={(event, value) => setCurrentPage(value)}
+              />
             </div>
-
           </div>
-
-
           <div class="main-card mb-3 card">
             <div class="card-header">
               Category
@@ -227,7 +279,6 @@ function AdminBerita() {
                     <th className="text-center">Create Date</th>
                     <th className="text-center">Update Date</th>
                     <th className="text-center">Aksi</th>
-
                   </tr>
                 </thead>
                 <tbody>
@@ -238,7 +289,6 @@ function AdminBerita() {
                         <td className="text-center">{kategory.category}</td>
                         <td class="text-center">{kategory.createDate}</td>
 
-
                         <td class="text-center">{kategory.updateDate}</td>
 
                         <td class="text-center">
@@ -246,8 +296,10 @@ function AdminBerita() {
                             <i class="fa-solid fa-pen-to-square"></i>
                           </button>
 
-                          <button 
-                           onClick={() => deleteData1(category.id)} type="button" class="btn-danger btn-sm">
+                          <button
+                            onClick={() => deleteData1(category.id)}
+                            type="button"
+                            class="btn-danger btn-sm">
                             <i class="fa-solid fa-trash"></i>
                           </button>
                         </td>
@@ -257,14 +309,11 @@ function AdminBerita() {
                 </tbody>
               </table>
             </div>
-            
-
           </div>
-
         </div>
       </div>
     </div>
   );
-  }
+}
 
-export default AdminBerita;    
+export default AdminBerita;

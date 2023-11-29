@@ -24,7 +24,7 @@ function CalonAnggotaBawaslu() {
                 <h2 class="page-title">Pengumuman</h2>
                 <ul class="page-list">
                   <li>
-                    <a href="/home">Home</a>
+                    <a href="/">Home</a>
                   </li>
                   <li>Pengumuman</li>
                 </ul>
@@ -45,7 +45,7 @@ function CalonAnggotaBawaslu() {
                   <div class="thumb">
                     <img
                       className="pengumuman"
-                      src="https://img.freepik.com/free-photo/hand-holding-megaphone-protest_23-2148296555.jpg?size=626&ext=jpg&ga=GA1.1.1464020286.1696819460&semt=sph"
+                      src="https://boyolali.bawaslu.go.id/cepogo/2023/09/20230819093248.jpg"
                       alt="img"
                     />
                   </div>
@@ -75,7 +75,7 @@ function CalonAnggotaBawaslu() {
                         </div>
                         <div class="media-body">
                           <p>
-                            <a href="">
+                            <a href="/pengumuman-hasil-tes-kesehatan-dan-tes-wawancara-serta-jadwal-uji-kelayakan-dan-kepatutan-calon-anggota-bawaslu-kab-kota-provinsi-jawa-tengah-zona-iii">
                               Pengumuman Hasil Tes Kesehatan dan Tes Wawancara
                               Serta Jadwal Uji Kelayakan dan Kepatutan Calon
                               Anggota Bawaslu Kab/Kota Provinsi Jawa Tengah Zona
@@ -91,7 +91,7 @@ function CalonAnggotaBawaslu() {
                           </div>
                         </div>
                         <div class="media-body">
-                          <a href="">
+                          <a href="/pengumuman-tes-wawancara-seleksi-calon-anggota-bawaslu-kab-kota-2023-provinsi-jawa-tengah-zona-iii">
                             Pengumuman Tes Wawancara Seleksi Calon Anggota
                             Bawaslu Kab/Kota 2023 Provinsi Jawa Tengah Zona III
                           </a>
@@ -106,7 +106,7 @@ function CalonAnggotaBawaslu() {
                           </div>
                         </div>
                         <div class="media-body">
-                          <a href="">
+                          <a href="/pengumuman-perpanjangan-hasil-tes-tertulis-dan-tes-psikologi-dan-perubahan-waktu-pelaksanaan-tes-kesehatan-calon-anggota-bawaslu-kab-kota">
                             Pengumuman Perpanjangan Hasil Tes Tertulis dan Tes
                             Psikologi dan Perubahan Waktu Pelaksanaan Tes
                             Kesehatan Calon Anggota Bawaslu Kab/Kota
@@ -134,8 +134,10 @@ function CalonAnggotaBawaslu() {
             </div>
             <div class="col-lg-4 col-12">
               <div class="td-sidebar">
-                <div class="widget widget_catagory"
-                    style={{ background: "#F1F6F9" }}>
+                <div
+                  class="widget widget_catagory"
+                  style={{ background: "#F1F6F9" }}
+                >
                   <h4 class="widget-title">Tautan Lembaga</h4>
                   <ul class="catagory-items">
                     <li>
@@ -200,12 +202,36 @@ function CalonAnggotaBawaslu() {
                     </li>
                   </ul>
                 </div>
-                <div class="widget widget_tag_cloud mb-0"
-                    style={{ background: "#F1F6F9" }}>
+                <div
+                  class="widget widget_tag_cloud mb-0"
+                  style={{ background: "#F1F6F9" }}
+                >
                   <h4 class="widget-title">Berbagi</h4>
                   <div class="tagcloud">
-                    <a href="#" style={{width:"100%", display:"flex", alignItems:"center", justifyContent:"center", fontWeight:"bold"}}><i class="fab fa-facebook"></i> Share To Facebook</a>
-                    <a href="#" style={{width:"100%", display:"flex", alignItems:"center", justifyContent:"center", fontWeight:"bold"}}><i class="fab fa-twitter"></i> Share To Twitter</a>
+                    <a
+                      href="#"
+                      style={{
+                        width: "100%",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        fontWeight: "bold",
+                      }}
+                    >
+                      <i class="fab fa-facebook"></i> Share To Facebook
+                    </a>
+                    <a
+                      href="#"
+                      style={{
+                        width: "100%",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        fontWeight: "bold",
+                      }}
+                    >
+                      <i class="fab fa-twitter"></i> Share To Twitter
+                    </a>
                   </div>
                 </div>
               </div>

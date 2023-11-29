@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
-import Footer from "../../../../component/Footer";
-import Sidebar from "../../../../component/Sidebar";
-import Header from "../../../../component/Header";
+import Footer from "../../../../../component/Footer";
+import Sidebar from "../../../../../component/Sidebar";
+import Header from "../../../../../component/Header";
 import axios from "axios";
-import { API_DUMMY } from "../../../../utils/base_URL";
+import { API_DUMMY } from "../../../../../utils/base_URL";
 import {
   useHistory,
   useParams,
 } from "react-router-dom/cjs/react-router-dom.min";
+import Swal from "sweetalert2";
 
 function IsiKeterangan() {
   const [jenisKeteranganIsiInformasi, setJenisKeteranganIsiInformasi] =
@@ -32,7 +33,35 @@ function IsiKeterangan() {
   useEffect(() => {
     getJenisKeteranganIsiInformasi();
   }, []);
-  
+
+  const deleteData = async (id) => {
+    Swal.fire({
+      title: "Anda Ingin Menghapus Data ?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Delete",
+      cancelButtonText: "Cencel",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axios.delete(`${API_DUMMY}/bawaslu/api/isi-keterangan-informasi/` + id, {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        });
+        Swal.fire({
+          icon: "success",
+          title: "Dihapus!",
+          showConfirmButton: false,
+        });
+      }
+      setTimeout(() => {
+        window.location.reload();
+      }, 1500);
+    });
+  };
+
   return (
     <div>
       <Header />
@@ -40,7 +69,22 @@ function IsiKeterangan() {
         <Sidebar />
         <div className="container mt-3 app-main__outer">
           <div class="main-card mb-3 card">
-            <div class="card-header">Informasi Serta Merta</div>
+          <div class="card-header">
+              Isi Keterangan {}
+              <div class="btn-actions-pane-right">
+                <div role="group" class="btn-group-sm btn-group">
+                  <button class="active btn-focus p-2 rounded">
+                    <a
+                      href={`/tambah-isi-keterangan/${param.id}`}
+                      className="text-light"
+                      style={{ textDecoration: "none" }}>
+                      {" "}
+                      Tambah Data
+                    </a>
+                  </button>
+                </div>
+              </div>
+            </div>
             <div class="table-responsive">
               <table class="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
@@ -57,10 +101,10 @@ function IsiKeterangan() {
                         <td className="text-left">{index + 1}</td>
                         <td className="text-left">{isiInformasi.dokumen}</td>
                         <td class="text-center">
-                          <button type="button" class="btn-primary btn-sm mr-2">
-                            <i class="fa-solid fa-pen-to-square"></i>
+                          <button type="button" class="btn-primary btn-sm mr-2"><a style={{color:"white", textDecoration:"none"}} href={`/edit-isi-keterangan/${isiInformasi.id}`}>
+                            <i class="fa-solid fa-pen-to-square"></i></a>
                           </button>
-                          <button type="button" class="btn-danger btn-sm">
+                          <button type="button" class="btn-danger btn-sm" onClick={() =>deleteData(isiInformasi.id)}>
                             <i class="fa-solid fa-trash"></i>
                           </button>
                         </td>

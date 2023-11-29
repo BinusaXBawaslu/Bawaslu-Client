@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "../../component/Navbar";
-import Footer from "../../component/Footer";
-import waktu from "../../aset/waktu.png";
+import waktu from "../../../aset/waktu.png";
+import Navbar from "../../../component/Navbar";
+import Footer from "../../../component/Footer";
 
 function WaktuLayanan() {
   return (

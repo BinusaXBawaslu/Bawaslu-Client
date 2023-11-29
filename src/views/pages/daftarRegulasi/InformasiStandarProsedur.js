@@ -1,23 +1,25 @@
 import React, { useEffect, useState } from "react";
-import OwlCarousel from "react-owl-carousel2";
-import "react-owl-carousel2/src/owl.carousel.css";
-import "react-owl-carousel2/src/owl.theme.default.css";
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
-import "../../../css/dip.css"
+import "../../../css/LayananInformasi.css";
+// import "react-owl-carousel2/src/owl.carousel.css";
+// import "react-owl-carousel2/src/owl.theme.default.css";
+import "../../../css/InformasiStandarProsedur.css";
 import axios from "axios";
 import { API_DUMMY } from "../../../utils/base_URL";
-function Dip() {
+
+function InformasiStandarProsedur() {
   const [list, setList] = useState([]);
   const [isi, setIsi] = useState([]);
 
   const getByMenu = async () => {
     await axios
       .get(
-        `${API_DUMMY}/bawaslu/api/menu-regulasi/get-by-jenis-regulasi?id-jenis-regulasi=2`
+        `${API_DUMMY}/bawaslu/api/menu-regulasi/get-by-jenis-regulasi?id-jenis-regulasi=3`
       )
       .then((response) => {
         setList(response.data.data);
+        console.log(response.data.data);
       })
       .catch((error) => {
         alert("Terjadi kesalahan" + error);
@@ -26,10 +28,10 @@ function Dip() {
   const getByIsi = async () => {
     await axios
       .get(
-        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=10`
+        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=1`
       )
       .then((response) => {
-        // console.log(response.data.data);
+        console.log(response.data.data);
         setIsi(response.data.data);
       })
       .catch((error) => {
@@ -42,39 +44,37 @@ function Dip() {
     getByIsi();
   }, []);
   return (
-    <div id="awal">
+    <div>
       <Navbar />
       {/* <!-- page title start --> */}
-      <div class="breadcrumb-area bg-black bg-relative">
+      <div className="breadcrumb-area bg-black bg-relative">
         <div
-        id="banner"
-          class="banner-bg-img"
+          className="banner-bg-img"
           style={{
             backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp') `,
           }}
         ></div>
-        <div>
-          <div class="row justify-content-center">
-            <div class="col-xl-7 col-lg-8">
-              <div class="breadcrumb-inner text-center">
-                <h2 id="h2" style={{ color: "white", fontWeight: 700, fontSize: 60 }}>
-                  Daftar Informasi Publik
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-xl-7 col-lg-8">
+              <div className="breadcrumb-inner text-center">
+                <h2 style={{ color: "white", fontWeight: 700, fontSize: 60 }}>
+                  SOP
                 </h2>
-                <ul class="page-list">
+                <ul className="page-list">
                   <li>
                     <a href="/" style={{ textDecoration: "none" }}>
                       Home
                     </a>
                   </li>
-                  <li>Daftar Informasi Publik</li>
+                  <li>SOP</li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
-      {/* <!-- page title end --> */}
-
+      {/* <!-- project area start --> */}
       <div
       id="container"
         style={{
@@ -109,7 +109,7 @@ function Dip() {
               <div className="card-header bg-primary text-light">
                 <div style={{ display: "flex" }}>
                   <div className="col">
-                    <h4>Daftar Informasi Publik</h4>
+                    <h4>Standar Operasional Prosedur</h4>
                   </div>
                 </div>
               </div>
@@ -172,5 +172,4 @@ function Dip() {
     </div>
   );
 }
-
-export default Dip;
+export default InformasiStandarProsedur;

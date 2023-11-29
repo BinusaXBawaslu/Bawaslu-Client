@@ -24,7 +24,7 @@ function Login() {
       if (response.status === 200) {
         Swal.fire({
           icon: "success",
-          title: "Berhasil Login Sebagai Admin",
+          title: "Berhasil Login Sebagai Adminn",
           showConfirmButton: false,
           timer: 1500,
         });

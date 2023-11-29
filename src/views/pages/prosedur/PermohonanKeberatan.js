@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "../../component/Navbar";
-import Footer from "../../component/Footer";
-import keberatan from "../../aset/patner.png"
+import keberatan from "../../../aset/patner.png"
+import Navbar from "../../../component/Navbar";
+import Footer from "../../../component/Footer";
 function PermohonanKeberatan() {
   return (
     //  how it work area start

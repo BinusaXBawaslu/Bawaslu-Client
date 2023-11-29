@@ -8,12 +8,15 @@ import Swal from "sweetalert2";
 import { History } from "swiper/modules";
 import { useState } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { List } from "@mui/material";
+import { useEffect } from "react";
 
 function AddBeritaAdmin() {
   const [author, setAuthor] = useState("");
   const [judulBerita, setJudulBerita] = useState("");
   const [image, setImage] = useState("");
-  const [category, setCategory] = useState(0);
+  const [categoryId, setCategoryId] = useState(0);
+  const [category, setCategory] = useState([]);
   const [isiBerita, setIsiBerita] = useState("");
   const [show, setShow] = useState(false);
   const history = useHistory();
@@ -23,11 +26,12 @@ function AddBeritaAdmin() {
     e.persist();
 
     const formData = new FormData();
-    formData.append("author", author);
-    formData.append("judulBerita", judulBerita);
-    formData.append("isiBerita", isiBerita);
-    formData.append("file", image);
-    formData.append("categoryBerita", category);
+formData.append("author", author);
+formData.append("judulBerita", judulBerita);
+formData.append("isiBerita", isiBerita);
+formData.append("categoryIdBerita", categoryId);
+formData.append("file", image, image.name); // Menambahkan nama file ke FormData
+
     try {
       await axios.post(`${API_DUMMY}/bawaslu/api/berita/add`, formData, {
         headers: {
@@ -52,6 +56,22 @@ function AddBeritaAdmin() {
     }
   };
 
+  const getAllCategoryId = async () => {
+    try {
+      const response = await axios.get(
+        `${API_DUMMY}/bawaslu/api/category-berita/all`
+      );
+      setCategory(response.data.data);
+      console.log(response.data.data);
+    } catch (error) {
+      console.error("Terjadi Kesalahan", error);
+    }
+  };
+
+  useEffect(() => {
+    getAllCategoryId();
+  }, []);
+
   return (
     <div>
       <Header />
@@ -64,6 +84,23 @@ function AddBeritaAdmin() {
               <hr />
               <form onSubmit={add}>
                 <div className="row">
+                  <div class="mb-3 col-6">
+                    <label for="exampleInputPassword1" class="form-label">
+                      Category
+                    </label>
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label="Small select example"
+                      onChange={(e) => setCategoryId(e.target.value)}
+                    >
+                      <option selected>PIlih Category</option>
+                      {category.map((down) => {
+                        return (
+                          <option value={down.id}>{down.category}</option>
+                        );
+                      })}
+                    </select>
+                  </div>
                   <div class="mb-3 col-6">
                     <label for="exampleInputEmail1" class="form-label">
                       Author
@@ -80,8 +117,7 @@ function AddBeritaAdmin() {
                       Image
                     </label>
                     <input
-                      value={image}
-                      onChange={(e) => setImage(e.target.value)}
+                      onChange={(e) => setImage(e.target.files[0])}
                       type="file"
                       class="form-control"
                       id="exampleInputPassword1"
@@ -95,18 +131,6 @@ function AddBeritaAdmin() {
                       value={judulBerita}
                       onChange={(e) => setJudulBerita(e.target.value)}
                       type="text"
-                      class="form-control"
-                      id="exampleInputPassword1"
-                    />
-                  </div>
-                  <div class="mb-3 col-6">
-                    <label for="exampleInputPassword1" class="form-label">
-                      Category
-                    </label>
-                    <input
-                      value={category}
-                      onChange={(e) => setCategory(e.target.value)}
-                      type="number"
                       class="form-control"
                       id="exampleInputPassword1"
                     />

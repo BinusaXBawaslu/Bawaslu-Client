@@ -10,8 +10,9 @@ import { useParams } from "react-router-dom/cjs/react-router-dom";
 
 function November() {
   const [november, setNovember] = useState([]);
-  const {tahun_bulan} = useParams()
-  const getAllRekapNovember = async (tahun_bulan) => {
+  const { tahun_bulan } = useParams();
+
+  const getAllRekapNovember = async () => {
     try {
       const response = await axios.get(
         `${API_DUMMY}/bawaslu/api/berita/arsip?bulan=${tahun_bulan}`
@@ -23,15 +24,9 @@ function November() {
     }
   };
 
-
-
   useEffect(() => {
     getAllRekapNovember();
-  }, []);
-
-  useEffect(() => {
-
-  }, [tahun_bulan])
+  }, [tahun_bulan]);
 
   return (
     <>
@@ -52,7 +47,7 @@ function November() {
                 <h2 class="page-title">Berita</h2>
                 <ul class="page-list">
                   <li>
-                    <a href="home">Home</a>
+                    <a href="/">Home</a>
                   </li>
                   <li>Berita</li>
                 </ul>
@@ -64,9 +59,11 @@ function November() {
       <br />
       <div class="blog-area pd-top-120 pd-bottom-120">
         <div class="container">
-          {/* {archivingMonths.map((monthData) => { */}
-            {/* <strong className="fs-4">Bulan {archivingMonths.month} {archivingMonths.year}</strong> */}
-          {/* // })} */}
+        <h1 style={{ fontWeight: "bold", fontSize: "45px" }}>
+                {november.length > 0
+                  ? november[0].createdDate
+                  : "Data Tidak Ditemukan"}
+              </h1>
           <div class="row">
             <div class="col-lg-8">
               {november.length > 0 ? (
@@ -239,110 +236,11 @@ function November() {
             <div class="col-lg-4 col-12">
               <div className="sidebar-container">
                 <div class="td-sidebar">
-                  {/* <div
-                    class={`widget widget-recent-post`}
-                    style={{ background: "#F1F6F9", overflow: "hidden" }}>
-                    <h4 class="widget-title">Berita Terbaru</h4>
-                    <ul>
-                      {listTerbaru.map((beritaTerbaru) => {
-                        return (
-                          <li>
-                            <div class="media">
-                              <div class="media-left">
-                                <img
-                                  src="https://jombang.bawaslu.go.id/wp-content/uploads/2019/04/Logo-Bawaslu-2018-Icon-PNG-HD.png"
-                                  style={{ width: "60px" }}
-                                  alt="blog"
-                                />
-                              </div>
-                              <div class="media-body align-self-center">
-                                <h6 class="title">
-                                  <a href="">{beritaTerbaru.judulBerita}</a>
-                                </h6>
-                                <div class="post-info">
-                                  <i class="far fa-calendar-alt"></i>
-                                  <span>{beritaTerbaru.createdDate}</span>
-                                </div>
-                              </div>
-                            </div>
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  </div>
-                  <div
-                    class="widget widget_catagory"
-                    style={{ background: "#F1F6F9" }}>
-                    <h4 class="widget-title">Arsip</h4>
-                    <ul class="catagory-items">
-                      <li>
-                        <a href="#">
-                          <i class="fa-solid fa-file"></i> Desember 2023 ()
-                        </a>
-                      </li>
-                      <li>
-                        <a href="/rekap-berita-november">
-                          <i class="fa-solid fa-file"></i> November 2023 (
-                          {november.length})
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fa-solid fa-file"></i> Oktober 2023 ()
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fa-solid fa-file"></i> Setember 2023 ()
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fa-solid fa-file"></i> Agustus 2023 ()
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fa-solid fa-file"></i> Juli 2023 ()
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fa-solid fa-file"></i> Juni 2023 ()
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fa-solid fa-file"></i> Mei 2023 ()
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fa-solid fa-file"></i> April 2023 ()
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fa-solid fa-file"></i> Maret 2023 ()
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fa-solid fa-file"></i> Februari 2023 ()
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fa-solid fa-file"></i> Januari 2023 ()
-                        </a>
-                      </li>
-                    </ul>
-                  </div> */}
                   <div
                     class="widget widget_catagory"
                     style={{ background: "#F1F6F9" }}>
                     <h4 class="widget-title">
-                      Tuatan{" "}
+                      Tautan{" "}
                       <span className="text-primary">
                         <strong>Lembaga</strong>
                       </span>
