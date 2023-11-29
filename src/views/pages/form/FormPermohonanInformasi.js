@@ -255,7 +255,7 @@ const Add = async (e) => {
               <br></br>
               <div id="div-button" className="div-button">
                 {" "}
-                <button className="submit">Kirim</button>
+                <button id="btn-kirim" className="submit">Kirim</button>
               </div>
             </div>
           </form>

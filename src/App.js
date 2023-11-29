@@ -317,6 +317,19 @@ function App() {
             exact
           />
           <Route
+
+            path="/isi-pengumuman/:judulPengumuman/:id"
+            component={IsiPengumuman}
+            exact
+          />
+          <Route
+            path="/page-berita/:judulBerita/:id"
+            component={PageBerita}
+            exact
+          />
+          <Route
+
+
             path="/penyelesaian-sengketa-footer"
             component={PenyelesaianSengketaFooter}
             exact

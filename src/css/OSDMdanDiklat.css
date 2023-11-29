@@ -156,6 +156,9 @@
 #al-txt{
     font-size: 20px;
 }
+#tautan{
+    text-align: center;
+}
 @media screen and (max-width: 1024px) {
     #warappper3 {
         width: 300px;

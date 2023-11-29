@@ -58,6 +58,54 @@ const PenangananPelanggaran = () => {
                 <div id="waraper-opacity2" className="wrap-opacity2">
                   <div id="wrap-text2" className="wrap-text2"></div>
                 </div>
+                <div id="pmbngks-txt-logo" className="pmbngks-txt-logo">
+                    <div id="txt-kehumasan" className="txt-kehumasan">
+                        <div>
+                            <h1>Penanganan Pelanggaran</h1>
+                            <p>Artikel Mengenai Penanganan Pelanggaran di Bawaslu Boyolali Kabupaten Boyolali</p>
+                            <div id="bg-gray" className="bg-gray">
+                                <div id="txt-gray" className="txt-gray">
+                                    No Content Available
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="logo" className="logo">
+                        <div id="h3" className="h3">
+                            <h3 id="tautan">
+                                TAUTAN <span className="span" >LEMBAGA</span>
+                            </h3>
+                            <hr id="hr" />
+                            <div id="img-logo" className="img-logo">
+                                <div>
+                                    <a href="">
+                                        <img id="img-src" className="img-src" src={RI} />
+                                    </a>
+                                </div>
+                                <div>
+                                    {" "}
+                                    <a href="">
+                                        <img id="img-src" className="img-src" src={dkpp} />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="">
+                                        <img id="img-src" className="img-src" src={MAHKAMAH} />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="">
+                                        <img id="img-src" className="img-src" src={KPU} />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="">
+                                        <img id="img-src" className="img-src" src={jateng} />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
               </div>
             </div>
           </a>
@@ -69,6 +117,7 @@ const PenangananPelanggaran = () => {
                   <div id="wraper-img3" className="wrap-img3">
                     <div id="wrap-opacitry3" className="wrap-opacity3">
                       <div id="wrap-text3" className="wrap-text3"></div>
+
                     </div>
                   </div>
                 </div>

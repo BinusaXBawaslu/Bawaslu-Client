@@ -148,7 +148,7 @@ const Sosialisasi = () => {
           </div>
           <div id="logo-sosialisasi" className="logo">
             <div id="h3-sosialisasi" className="h3">
-              <h3>
+              <h3 id="h3">
                 TAUTAN <span className="span">LEMBAGA</span>
               </h3>
               <hr id="hr-sosialisasi" />

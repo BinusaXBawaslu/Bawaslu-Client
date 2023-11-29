@@ -31,11 +31,11 @@
     height: inherit;
 }
 
-.wrap-text1 {
+#wirap-text1 {
     color: white;
     font-size: 20px;
     padding: 50px;
-    padding-left: 100px;
+    padding-left: 110px;
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
@@ -223,6 +223,9 @@
         width: 400px;
 
     }
+    #wirap-text1{
+padding-left: 50px;
+    }
 
     #text {
         width: 400px;
@@ -332,7 +335,7 @@
         align-items: center;
     }
     
-    #wrap-text1 {
+    #wirap-text1 {
         color: white;
         font-size: 18px;
         padding: 10px;

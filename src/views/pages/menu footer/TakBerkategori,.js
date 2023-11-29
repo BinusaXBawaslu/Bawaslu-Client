@@ -109,7 +109,7 @@ const TakBerkategori = () => {
           </div>
           <div id="logo-berkategori" className="logo">
             <div id="h3-berkategori" className="h3">
-              <h3>
+              <h3 id="h3">
                 TAUTAN <span className="span">LEMBAGA</span>
               </h3>
               <hr id="hr-berkategori" />

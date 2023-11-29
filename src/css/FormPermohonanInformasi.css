@@ -60,8 +60,13 @@ padding: 0;
 .div-button {
   display: flex;
   align-items: center;
+  padding-left: 20px;
 }
-
+#btn-kirim{
+  border-radius:15px ;
+  width:80px ;
+  border: 1px solid black;
+}
 @media screen and (max-width: 1024px) {
   .form {
     padding-top: 100px;
