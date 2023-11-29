@@ -5,7 +5,17 @@ import { useHistory } from "react-router-dom";
 import axios from "axios";
 import { API_DUMMY } from "../../../../utils/base_URL";
 import Swal from "sweetalert2";
+
 import { IconButton, InputAdornment, Pagination, TextField } from "@mui/material";
+import "../../../../../src/css/adminBerita.css";
+
+import {
+  IconButton,
+  InputAdornment,
+  Pagination,
+  TextField,
+} from "@mui/material";
+
 
 function AdminBerita() {
   const [list, setList] = useState([]);
@@ -65,7 +75,6 @@ function AdminBerita() {
       console.error("Terjadi Kesalahan", error);
     }
   };
-
 
   const getAll1 = async () => {
     try {
@@ -160,21 +169,6 @@ function AdminBerita() {
           <div class="main-card mb-3 card">
             <div class="card-header">
               Berita
-                  <TextField
-                    variant="outlined"
-                    placeholder="Search..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    InputProps={{
-                      endAdornment: (
-                        <InputAdornment position="end">
-                          <IconButton onClick={handleSearch}>
-                            {/* <SearchIcon /> */}
-                          </IconButton>
-                        </InputAdornment>
-                      ),
-                    }}
-                  />
               <div class="btn-actions-pane-right">
                 <div role="group" class="btn-group-sm btn-group">
                   <button class="active btn-focus p-2 rounded">
@@ -186,31 +180,31 @@ function AdminBerita() {
                   </button>
                 </div>
               </div>
-            </div>
+            </div>  
             <div
               class="table-responsive"
               style={{ overflowY: "auto", maxHeight: "60vh" }}>
               <table class="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
                   <tr>
-                    <th className="text-center">No</th>
-                    <th className="text-center">Author</th>
-                    <th className="text-center">Tanggal Dibuat</th>
-                    <th className="text-center">Image</th>
-                    {/* <th className="text-center">Isi Berita</th> */}
-                    <th className="text-center">Judul Berita</th>
-                    {/* <th className="text-center">Tags</th> */}
-                    <th className="text-center">Aksi</th>
+                    <th scope="col" className="text-left">No</th>
+                    <th scope="col" className="text-left">Author</th>
+                    <th scope="col" className="text-left">Tanggal Dibuat</th>
+                    <th scope="col" className="text-left">Image</th>
+                    {/* <th scope="col" className="text-left">Isi Berita</th> */}
+                    <th scope="col" className="text-left">Judul Berita</th>
+                    {/* <th scope="col" className="text-left">Tags</th> */}
+                    <th scope="col" className="text-left">Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
                   {list.map((berita, index) => {
                     return (
                       <tr key={index}>
-                        <td class="text-left text-muted">{index + 1}</td>
-                        <td className="text-left">{berita.author}</td>
-                        <td class="text-left">{berita.createdDate}</td>
-                        <td class="text-left">
+                        <td data-label="No : " class=" text-muted">{index + 1}</td>
+                        <td data-label="Author : " >{berita.author}</td>
+                        <td data-label="Created Date : " >{berita.createdDate}</td>
+                        <td data-label="Gambar : " >
                           {berita.image ? (
                             <img
                               src={berita.image}
@@ -223,10 +217,10 @@ function AdminBerita() {
                             "No Image"
                           )}
                         </td>
-                        {/* <td class="text-left isiBerita">{berita.isiBerita}</td> */}
-                        <td class="text-left">{berita.judulBerita}</td>
-                        {/* <td class="text-left">{berita.tags}</td> */}
-                        <td class="text-center d-flex">
+                        {/* <td data-label="Account" class=" isiBerita">{berita.isiBerita}</td> */}
+                        <td data-label="Judul Berita : " class="">{berita.judulBerita}</td>
+                        {/* <td data-label="Account" class="">{berita.tags}</td> */}
+                        <td data-label="Aksi : " class="text-center d-flex">
                           <button type="button" class="btn-primary btn-sm mr-2">
                             <a
                               style={{ color: "white", textDecoration: "none" }}
@@ -237,7 +231,7 @@ function AdminBerita() {
                           </button>
 
                           <button
-                            onClick={() => deleteData(berita.id)}
+                             onClick={() => deleteData(berita.id)}
                             type="button"
                             class="btn-danger btn-sm">
                             <i class="fa-solid fa-trash"></i>
@@ -270,7 +264,9 @@ function AdminBerita() {
                 </div>
               </div>
             </div>
-            <div class="table-responsive">
+            <div
+              class="table-responsive"
+              style={{ overflowY: "auto", maxHeight: "60vh" }}>
               <table class="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
                   <tr>

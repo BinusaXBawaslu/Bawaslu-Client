@@ -9,6 +9,7 @@ import {
 } from "react-router-dom/cjs/react-router-dom.min";
 import { API_DUMMY } from "../../../../../utils/base_URL";
 import Swal from "sweetalert2";
+import "../../../../../css/menuRegulasi.css"
 
 function MenuRegulasi() {
   const [menuRegulasi, setMenuRegulasi] = useState([]);
@@ -88,24 +89,25 @@ function MenuRegulasi() {
                 </div>
               </div>
             </div>
-            <div class="table-responsive">
+            <div class="table-responsive"
+              style={{ overflowY: "auto", maxHeight: "60vh" }}>
               <table class="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
                   <tr>
-                    <th className="text-left">No</th>
-                    <th className="text-left">Menu Regulasi  </th>
-                    <th className="text-center">Aksi</th>
+                    <th  scope="col" className="text-left">No</th>
+                    <th  scope="col" className="text-left">Menu Regulasi  </th>
+                    <th  scope="col" className="text-center">Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
                     {menuRegulasi.map((jenis, index) => {
                       return (
                     <tr key={index}>
-                      <td className="text-left">{index + 1}
+                      <td data-label="No : " className="text-left">{index + 1}
                       </td>
-                      <td className="text-left">{jenis.menuRegulasi}
+                      <td data-label="jenis : " className="text-left">{jenis.menuRegulasi}
                       </td>
-                      <td class="text-center">
+                      <td data-label="Aksi : " class="text-center">
                           <button type="button" class="btn-primary btn-sm mr-2">
                             <a style={{color:"white", textDecoration:"none"}} href={"/edit/" + jenis.menuRegulasi + "/" + jenis.id}><i class="fa-solid fa-pen-to-square"></i></a>
                           </button>

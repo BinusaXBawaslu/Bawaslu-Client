@@ -1,9 +1,76 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
 import Bawaslu from "../../../component/Bawaslu";
+import { API_DUMMY } from "../../../utils/base_URL";
+import axios from "axios";
+import { useEffect } from "react";
+import { useParams } from "react-router-dom/cjs/react-router-dom";
 
 function IsiPengumuman() {
+  const [createdDate, setCreatedDate] = useState("");
+  const [judulPengumuman, setJudulPengumuman] = useState("");
+  const [author, setAuthor] = useState("");
+  const [tags, setTags] = useState("");
+  const [isiPengumuman, setIsiPengumuman] = useState("");
+  const [image, setImage] = useState("");
+  const params = useParams();
+  const [id, setId] = useState();
+  const [pengumuman, setPengumuman] = useState({
+    tags: "",
+    image: "",
+    isiPengumuman: "",
+    createdDate: "",
+    author: "",
+    judulPengumuman: "",
+  });
+  useEffect(() => {
+    axios
+      .get(`${API_DUMMY}/bawaslu/api/pengumuman/get/` + params.id, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      })
+      .then((ress) => {
+        const response = ress.data.data;
+        setCreatedDate(response.createdDate);
+        setId(response.id);
+        setIsiPengumuman(response.isiPengumuman);
+        setJudulPengumuman(response.judulPengumuman);
+        setTags(response.tags);
+        setImage(response.image);
+        setAuthor(response.author);
+        console.log(ress.data.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
+  const [pengumuman2, setPengumuman2] = useState([]);
+  const getAll = async () => {
+    await axios
+      .get(
+        `${API_DUMMY}/bawaslu/api/pengumuman/related-pengumuman/by-id-pengumuman?id=` +
+          params.id,
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
+      )
+      .then((res) => {
+        setPengumuman2(res.data.data);
+      })
+      .catch((error) => {
+        alert("Terjadi kesalahan" + error);
+      });
+  };
+  useEffect(() => {
+    //mengambil data, memperbarui DOM secara langsung,
+    getAll(0);
+  }, []);
+
   return (
     <div>
       <Navbar />
@@ -53,89 +120,46 @@ function IsiPengumuman() {
                   <div class="details">
                     <ul class="blog-meta">
                       <li>
-                        <i class="far fa-user"></i>By Bawaslu Boyolali
+                        <i class="far fa-user"></i>By {author}
                       </li>
                       <li>
-                        <i class="far fa-calendar-alt"></i>19 Agustus 2023
+                        <i class="far fa-calendar-alt"></i>{createdDate}
                       </li>
                     </ul>
                     <p>
-                      Pengumuman Calon Anggota Bawaslu Kabupaten/Kota Terpilih
-                      Masa Jabatan 2023-2028 Provinsi Jawa Tengah.
+                      {isiPengumuman}
                     </p>
                   </div>
                   <br />
                   <h4 className="pt-4 mb-4">Related Posts</h4>
                   <div class="row">
-                    <div class="col-md-6">
-                      <div class="media single-choose-inner">
-                        <div class="media-left">
-                          <div class="icon">
-                            <i class="fas fa-bullhorn"></i>
+                    {pengumuman2.map((isi) => {
+                      return (
+                        <div class="col-md-6">
+                          <div class="media single-choose-inner">
+                            <div class="media-left">
+                              <div class="icon">
+                                <i class="fas fa-bullhorn"></i>
+                              </div>
+                            </div>
+                            <div class="media-body">
+                              <p>
+                                <a href={`/isi-pengumuman/${isi.isiPengumuman}/${isi.id}`}>
+                                  {isi.judulPengumuman}
+                                </a>
+                              </p>
+                            </div>
                           </div>
                         </div>
-                        <div class="media-body">
-                          <p>
-                            <a href="/pengumuman-hasil-tes-kesehatan-dan-tes-wawancara-serta-jadwal-uji-kelayakan-dan-kepatutan-calon-anggota-bawaslu-kab-kota-provinsi-jawa-tengah-zona-iii">
-                              Pengumuman Hasil Tes Kesehatan dan Tes Wawancara
-                              Serta Jadwal Uji Kelayakan dan Kepatutan Calon
-                              Anggota Bawaslu Kab/Kota Provinsi Jawa Tengah Zona
-                              III.
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                      <div class="media single-choose-inner">
-                        <div class="media-left">
-                          <div class="icon">
-                            <i class="fas fa-bullhorn"></i>
-                          </div>
-                        </div>
-                        <div class="media-body">
-                          <a href="/pengumuman-tes-wawancara-seleksi-calon-anggota-bawaslu-kab-kota-2023-provinsi-jawa-tengah-zona-iii">
-                            Pengumuman Tes Wawancara Seleksi Calon Anggota
-                            Bawaslu Kab/Kota 2023 Provinsi Jawa Tengah Zona III
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="media single-choose-inner">
-                        <div class="media-left">
-                          <div class="icon">
-                            <i class="fas fa-bullhorn"></i>
-                          </div>
-                        </div>
-                        <div class="media-body">
-                          <a href="/pengumuman-perpanjangan-hasil-tes-tertulis-dan-tes-psikologi-dan-perubahan-waktu-pelaksanaan-tes-kesehatan-calon-anggota-bawaslu-kab-kota">
-                            Pengumuman Perpanjangan Hasil Tes Tertulis dan Tes
-                            Psikologi dan Perubahan Waktu Pelaksanaan Tes
-                            Kesehatan Calon Anggota Bawaslu Kab/Kota
-                          </a>
-                        </div>
-                      </div>
-                      <div class="media single-choose-inner">
-                        <div class="media-left">
-                          <div class="icon">
-                            <i class="fas fa-bullhorn"></i>
-                          </div>
-                        </div>
-                        <div class="media-body">
-                          <a href="">
-                            Pengumuman Hasil Tes Tertulis dan Tes Psikologi
-                            Calon Anggota Bawaslu Kab/Kota Provinsi Jawa Tengah
-                            Zona III
-                          </a>
-                        </div>
-                      </div>
-                    </div>
+                      );
+                    })}
                   </div>
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-12">
               <div class="td-sidebar">
-               <Bawaslu/>
+                <Bawaslu />
                 <div
                   class="widget widget_tag_cloud mb-0"
                   style={{ background: "#F1F6F9" }}

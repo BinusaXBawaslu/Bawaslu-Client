@@ -8,61 +8,122 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import { API_DUMMY } from "../../../utils/base_URL";
 import { useHistory } from "react-router-dom/cjs/react-router-dom";
+import { async } from "q";
+
+
+
 const FormPermohonanInformasi = () => {
-  const [show, setShow] = useState(false);
-  const history = useHistory();
-  const [email, setEmail] = useState("");
-  const [nama, setNama] = useState("");
-  const [alamatPermohonan, setAlamatPermohonan] = useState("");
-  const [pendidikan, setPendidikan] = useState("");
-  const [noHp, setNoHp] = useState("");
-  const [tandaPengenal, setTandaPengenal] = useState("");
-  const [tujuanInformasi, setTujuanInformasi] = useState("");
-  const [rincianInformasi, setRincianInformasi] = useState("");
-  const [pekerjaan, setPekerjaan] = useState("");
-  const [ditunjukanKepada, setdiTunjukanKepada] = useState("");
-  const [caraMemperolehInformasi, setCaraMemperolehInformasi] = useState("");
-  const [caraMendapatkanInformasi, setCaraMendapatkanInformasi] = useState("");
+  // const [show, setShow] = useState(false);
+  // const history = useHistory();
+  // const [email, setEmail] = useState("");
+  // const [nama, setNama] = useState("");
+  // const [alamatPermohonan, setAlamatPermohonan] = useState("");
+  // const [pendidikan, setPendidikan] = useState("");
+  // const [noHp, setNoHp] = useState("");
+  // const [tandaPengenal, setTandaPengenal] = useState("");
+  // const [tujuanInformasi, setTujuanInformasi] = useState("");
+  // const [rincianInformasi, setRincianInformasi] = useState("");
+  // const [pekerjaan, setPekerjaan] = useState("");
+  // const [ditunjukanKepada, setdiTunjukanKepada] = useState("");
+  // const [caraMemperolehInformasi, setCaraMemperolehInformasi] = useState("");
+  // const [caraMendapatkanInformasi, setCaraMendapatkanInformasi] = useState("");
 
-  const add = async (e) => {
-    e.preventDefault();
+  const [alamat, setAlamat] = useState("")
+  const [caraMendapatInformasi, setCaraMendapatkanInformasi] = useState("")
+  const [caraMemperolehInformasi, setCaraMemperolehnInformasi] = useState("")
+  const [createDate, setCreateDate] = useState("")
+  const [ditunjukanKepada, setDitunjukanKepada] = useState("")
+  const [email, setEmail] = useState("")
+  const [id, setID] = useState("")
+  const [nama, setNama] = useState("")
+  const [noHp, setNoHp] = useState("")
+  const [pekerjaan, setPekerjaan] = useState("")
+  const [pendidikan, setPendidikan] = useState("")
+  const [rincianInformasi, setRincianInformasi] = useState("")
+  const [tandaPengenal, setTandaPengenal] = useState("")
+  const [tujuanInformasi, setTujuanInformasi] = useState("")
+  const [updateDate, setUpdateDate] = useState("")
+  const [show, setShow] = useState(false)
 
-    const formData = new FormData();
-    formData.append("nama", nama);
-    formData.append("alamat", alamatPermohonan);
-    formData.append("pendidikan", pendidikan);
-    formData.append("noHp", noHp);
-    formData.append("tujuanInformasi", tujuanInformasi);
-    formData.append("rincianInformasi", rincianInformasi);
-    formData.append("pekerjaan", pekerjaan);
-    formData.append("ditunjukanKepada", ditunjukanKepada);
-    formData.append("caraMemperolehInformasi", caraMemperolehInformasi);
-    formData.append("caraMendapatkanInformasi", caraMendapatkanInformasi);
-    formData.append("file", tandaPengenal); // Upload gambar jika dipilih
+const Add = async (e) => {
+  e.preventDefault();
+  const formData = new FormData();
+  formData.append("nama",nama);
+  formData.append("alamat",alamat);
+  formData.append("pendidikan",pendidikan);
+  formData.append("email",email);
+  formData.append("noHp",noHp);
+  formData.append("tujuanInformasi",tujuanInformasi);
+  formData.append("rincianInformasi",rincianInformasi);
+  formData.append("pekerjaan",pekerjaan);
+  formData.append("ditunjukanKepada",ditunjukanKepada);
+  formData.append("caraMemperolehInformasi",caraMemperolehInformasi);
+  formData.append("caraMendapatkanInformasi",caraMendapatInformasi);
+  formData.append("file",tandaPengenal);
 
-    try {
-      await axios.post(
-        `${API_DUMMY}/bawaslu/api/permohonan-informasi/add`,
-        formData,
-        {
-          headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
-        }
+  try {
+    await axios.post(
+      `${API_DUMMY}/bawaslu/api/permohonan-informasi/add`,
+      formData,
+      // {
+      //   headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+      // }
       );
-
       setShow(false);
       Swal.fire({
-        icon: "success",
-        title: "Berhasil Ditambahkan",
-        showConfirmButton: false,
-        timer: 1500,
-      });
-      setTimeout(() => {
-        window.location.reload();
-      }, 1500);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+      icon: "success",
+      title: "Berhasil Ditambahkan",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+    setTimeout(() => {
+      window.location.reload();
+    }, 1500);
+  } catch (error) {
+    console.log(error);
+  }
+
+} 
+  
+  // const add = async (e) => {
+  //   e.preventDefault();
+
+  //   const formData = new FormData();
+  //   formData.append("nama", nama);
+  //   formData.append("alamat", alamatPermohonan);
+  //   formData.append("pendidikan", pendidikan);
+  //   formData.append("noHp", noHp);
+  //   formData.append("tujuanInformasi", tujuanInformasi);
+  //   formData.append("rincianInformasi", rincianInformasi);
+  //   formData.append("pekerjaan", pekerjaan);
+  //   formData.append("ditunjukanKepada", ditunjukanKepada);
+  //   formData.append("caraMemperolehInformasi", caraMemperolehInformasi);
+  //   formData.append("caraMendapatkanInformasi", caraMendapatkanInformasi);
+  //   formData.append("file", tandaPengenal); // Upload gambar jika dipilih
+
+  //   try {
+  //     await axios.post(
+  //       `${API_DUMMY}/bawaslu/api/permohonan-informasi/add`,
+  //       formData,
+  //       {
+  //         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+  //       }
+  //     );
+
+  //     setShow(false);
+  //     Swal.fire({
+  //       icon: "success",
+  //       title: "Berhasil Ditambahkan",
+  //       showConfirmButton: false,
+  //       timer: 1500,
+  //     });
+  //     setTimeout(() => {
+  //       window.location.reload();
+  //     }, 1500);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
   return (
     <>
@@ -79,7 +140,7 @@ const FormPermohonanInformasi = () => {
               <img src={info} className="img" id="img"/>
             </div>
           </div>
-          <form onSubmit={add} className="option" style={{}}>
+          <form onSubmit={Add} className="option" style={{}}>
             <div>
               <div>
                 <p style={{}}>Nama Pemohon:</p>
@@ -137,7 +198,7 @@ const FormPermohonanInformasi = () => {
               <p>Tujuan Penggunaan Informasi:</p>
               <textarea
                 value={ditunjukanKepada}
-                onChange={(e) => setdiTunjukanKepada(e.target.value)}
+                onChange={(e) => setDitunjukanKepada(e.target.value)}
                 className="textarea"
                 id="textarea"
 
@@ -152,7 +213,7 @@ const FormPermohonanInformasi = () => {
 
                 type="text"
                 value={caraMemperolehInformasi}
-                onChange={(e) => setCaraMemperolehInformasi(e.target.value)}
+                onChange={(e) => setCaraMemperolehnInformasi(e.target.value)}
               />
               <br></br>
               <br></br>

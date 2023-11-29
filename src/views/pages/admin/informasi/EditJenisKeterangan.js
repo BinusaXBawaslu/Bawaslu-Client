@@ -12,6 +12,8 @@ import Swal from "sweetalert2";
 
 function EditJenisKeterangan() {
   const [keterangan, setKeterangan] = useState("");
+  const [jenisInformasi, setJenisInformasi] = useState();
+  const [jenisInformasii, setJenisInformasii] = useState([]);
   const param = useParams();
   const history = useHistory();
 
@@ -31,11 +33,24 @@ function EditJenisKeterangan() {
       });
   }, [param.id]);
 
+  const getAllInformasi = async () => {
+    try {
+      const response = await axios.get(
+        `${API_DUMMY}/bawaslu/api/jenis-informasi/all?page=0&size=100&sortBy=id&sortOrder=asc`
+      );
+      setJenisInformasii(response.data.data);
+      console.log(response.data.data);
+    } catch (error) {
+      console.error("Terjadi Kesalahan", error);
+    }
+  };
+
   const update = async (e) => {
     e.preventDefault();
 
     const data = {
       keterangan: keterangan,
+      jenisInformasi: jenisInformasi,
     };
 
     try {
@@ -44,7 +59,7 @@ function EditJenisKeterangan() {
         data,
         {
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
         }
@@ -65,6 +80,9 @@ function EditJenisKeterangan() {
     }
   };
 
+  useEffect(() => {
+    getAllInformasi();
+  }, []);
 
   return (
     <div>
@@ -78,7 +96,24 @@ function EditJenisKeterangan() {
               <hr />
               <form onSubmit={update}>
                 <div className="row">
-                  <div className="mb-3">
+                  <div className="mb-3 col-lg-6">
+                     <label htmlFor="exampleInputEmail1" className="form-label">
+                      Jenis Informasi
+                    </label>
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label="Small select example"
+                      onChange={(e) => setJenisInformasi(e.target.value)}>
+                      <option selected>PIlih Jenis Informasi</option>
+                      {jenisInformasii.map((down) => {
+                        return (
+                          <option value={down.id}>{down.namaInformasi}</option>
+                        );
+                      })}
+                    </select>
+                  </div>
+
+                  <div className="mb-3 col-lg-6">
                     <label htmlFor="exampleInputEmail1" className="form-label">
                       Keterangan
                     </label>

@@ -14,7 +14,8 @@ import axios from "axios";
 import Swal from "sweetalert2";
 
 const FormPermohonaKeberatan = () => {
-  const [namaPermohonan, setNamaPermohonan] = useState("");
+
+  const [nama, setNamaPermohonan] = useState("");
   const [kasusPosisi, setKasusPosisi] = useState("");
   const [noHp, setNoHp] = useState("");
   const [email, setEmail] = useState("");
@@ -23,7 +24,7 @@ const FormPermohonaKeberatan = () => {
   const [alamat, setAlamat] = useState("");
   const [alasan, setAlasan] = useState("");
   const [nomorIdentitas, setNomorIdentitas] = useState("");
-  const [file, setFile] = useState("");
+  const [tandaPengenal, setFile] = useState("");
   const [tujuanPenggunaanInformasi, setTujuanPenggunaanInformasi] = useState("");
   const [show, setShow] = useState(false);
 
@@ -31,7 +32,7 @@ const FormPermohonaKeberatan = () => {
     e.preventDefault();
 
     const formData = new FormData();
-    formData.append("namaPermohonan", namaPermohonan);
+    formData.append("nama", nama);
     formData.append("kasusPolisi", kasusPosisi);
     formData.append("email", email);
     formData.append("noHp", noHp);
@@ -40,7 +41,7 @@ const FormPermohonaKeberatan = () => {
     formData.append("alamat", alamat);
     formData.append("alasan", alasan);
     formData.append("nomorIdentitas", nomorIdentitas);
-    formData.append("file", file); // Upload gambar jika dipilih
+    formData.append("file", tandaPengenal); // Upload gambar jika dipilih
 
     try {
       await axios.post(
@@ -88,7 +89,7 @@ const FormPermohonaKeberatan = () => {
             <div>
               <form onSubmit={add}>
                 <p >Nama Pemohon:</p>
-                <input className="input" type="text" value={namaPermohonan} onChange={(e) => setNamaPermohonan(e.target.value)} />
+                <input className="input" type="text" value={nama} onChange={(e) => setNamaPermohonan(e.target.value)} />
                 <p className="pp" >0 of 30 max characters</p>
                 <br></br>
                 <p>Alamat Pemohon:</p>

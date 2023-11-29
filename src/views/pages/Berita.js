@@ -171,21 +171,9 @@ function Berita() {
                   backgroundImage: `url(${gambarTerbaru})`,
                   minHeight:"93%"
                 }}>
-                <h2 class="title mt-4">
+                <h2 class="title title-berita mt-4">
                   {listTerbaru.length > 0 && listTerbaru[0].judulBerita}
                 </h2>
-                {/* <p class="content">
-                  {listTerbaru.length > 0 && listTerbaru[0].isiBerita}
-                </p> */}
-                {/* <div class="btn-wrap mt-4 pt-1 mb-4">
-                  <a
-                    class="btn-small btn-border-white mt-2">
-                    {listTerbaru.length > 0 && listTerbaru[0].author}
-                  </a>
-                  <a class="btn-small btn-black mt-2">
-                  {listTerbaru.length > 0 && listTerbaru[0].createdDate}
-                  </a>
-                </div> */}
               </div>
             </div>
             <div class="col-lg-8">
@@ -198,8 +186,7 @@ function Berita() {
                     </div>
                     <div class="details detailss">
                       <h3>
-                        <a >{berita.judulBerita}</a>
-                        <a>{berita.judulBerita}</a>
+                        <a class="isiBerita">{berita.judulBerita}</a>
                       </h3>
                     </div>
                   </div>
@@ -251,12 +238,12 @@ function Berita() {
                           <div class="col-sm-7"></div>
                           <div class="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
                             <div class="blog-share">
-                              <ul>
+                            <ul>
                                 <li>
                                   <a
                                     href="https://www.facebook.com/Bawaslu.Kabupaten.Boyolali"
                                     target="_blank">
-                                    <button className="border p-2">
+                                    <button style={{color:"white",backgroundColor:"#45629f"}}  className="border p-2">
                                       <i
                                         class="fab fa-facebook-f"
                                         aria-hidden="true"></i>{" "}
@@ -268,7 +255,7 @@ function Berita() {
                                   <a
                                     href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbawasluboyolali"
                                     target="_blank">
-                                    <button className="border p-2">
+                                    <button style={{color:"white",backgroundColor:"#5eb2ef"}}  className="border p-2">
                                       <i
                                         class="fab fa-twitter"
                                         aria-hidden="true"></i>{" "}
@@ -278,7 +265,7 @@ function Berita() {
                                 </li>
                                 <li>
                                   <a href="#">
-                                    <button className="border p-2">
+                                    <button style={{color:"white",backgroundColor:"#cf2830"}}  className="border p-2">
                                       <i class="fa-brands fa-pinterest"></i> Pin
                                     </button>
                                   </a>
@@ -416,7 +403,7 @@ function Berita() {
                               </div>
                               <div class="media-body align-self-center">
                                 <h6 class="title">
-                                  <a href="">{beritaTerbaru.judulBerita}</a>
+                                  <a href={`/page-berita/${beritaTerbaru.judulBerita}/${beritaTerbaru.id}`}>{beritaTerbaru.judulBerita}</a>
                                   {/* <a href="">
                                 tesssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
                               </a> */}

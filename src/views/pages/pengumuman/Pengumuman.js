@@ -79,7 +79,7 @@ function Pengumuman() {
                     </div>
                     <div class="details">
                       <h4 className="titleee" style={{cursor:"pointer"}}>
-                        <a>{isi.judulPengumuman}</a>
+                        <a href={`/isi-pengumuman/${isi.judulPengumuman}/${isi.id}`}>{isi.judulPengumuman}</a>
                       </h4>
                       <ul class="blog-meta">
                         <li>

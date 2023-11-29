@@ -6,6 +6,7 @@ import { API_DUMMY } from "../../../utils/base_URL";
 import Swal from "sweetalert2";
 //
 import { useEffect, useState } from "react";
+import "../../../../../src/css/adminBerita.css";
 
 function AdminPermohonankeberatan() {
   const [list, setList] = useState([]);
@@ -220,43 +221,43 @@ function AdminPermohonankeberatan() {
                 {list.map((informasi, index) => {
                   return (
                     <tr key={index}>
-                      <td>
+                      <td data-label="No : " className="text-llef">
                         <p>{index + 1} </p>
                       </td>
-                      <td>
+                      <td data-label="email : " className="text-llef">
                         <p>{informasi.email} </p>
                       </td>
-                      <td>
+                      <td data-label="nama : " className="text-llef">
                         <p>{informasi.nama}</p>
                       </td>
 
-                      <td>
+                      <td data-label="alamat : " className="text-llef">
                         <p>{informasi.alamat}</p>
                       </td>
-                      <td>
+                      <td data-label="No telp : " className="text-llef">
                         <p>{informasi.noTelp} </p>
                       </td>
 
-                      <td>
+                      <td data-label="Nomor identits : " className="text-llef">
                         <p>{informasi.nomorIndentitas} </p>
                       </td>
-                      <td>
+                      <td data-label="jenis identitas : " className="text-llef">
                         <p>{informasi.jenisIdentitas} </p>
                       </td>
-                      <td>
+                      <td data-label="kasus posisi : " className="text-llef">
                         <p>{informasi.kasusPosisi} </p>
                       </td>
-                      <td>
+                      <td data-label="tujuan penggunaan informasi : " className="text-llef">
                         <p>{informasi.tujuanPenggunaanInformasi}</p>
                       </td>
-                      <td>
+                      <td data-label="alasan : " className="text-llef">
                         <p>{informasi.alasan} </p>
                       </td>
-                      <td>
+                      <td data-label="tanda pengenal : " className="text-llef">
                         <p>{informasi.tandaPengenal} </p>
                       </td>
 
-                      <td>
+                      <td data-label="aksi : " className="text-llef">
                         <div className="d-flex">
                           <button
                             onClick={() => {

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Header from '../../../../component/Header'
 import Sidebar from '../../../../component/Sidebar'
 import Footer from '../../../../component/Footer'
+import "../../../../../src/css/adminBerita.css";
 
 function AdminSetiapSaat() {
   const [list, setList] = useState([]);
@@ -17,16 +18,16 @@ function AdminSetiapSaat() {
               <table class="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
                   <tr>
-                    <th className="text-center">
+                    <th scope="col" className="text-center">
                       No
                     </th>
-                    <th className="text-center">
+                    <th scope="col" className="text-center">
                       Dokumen
                     </th>
-                    <th className="text-center">
+                    <th scope="col" className="text-center">
                       Lihat / Download
                     </th>
-                    <th className="text-center">
+                    <th scope="col" className="text-center">
                       Aksi
                     </th>
                   </tr>

@@ -20,7 +20,7 @@ function DetailPermohonanInformasi() {
   const [rincianInformasi, setRincianInformasi] = useState("");
   const [diTunjukanKepada, setDiTunjukanKepada] = useState("");
   const [caraMemperolahInformasi, setCaraMemperolehInformasi] = useState("");
-  const [caraCaraMendapatkanInformasi, setCaraMendapatkanInformasi] =
+  const [caraMendapatInformasi, setCaraMendapatkanInformasi] =
     useState("");
   const [file, setFile] = useState("");
   const param = useParams();
@@ -43,6 +43,8 @@ function DetailPermohonanInformasi() {
         setDiTunjukanKepada(list_data.ditujukanKepada);
         setRincianInformasi(list_data.rincianInformasi);
         setTujuanInformasi(list_data.tujuanInformasi);
+        setCaraMemperolehInformasi(list_data.caraMemperolehInformasi);
+        setCaraMendapatkanInformasi(list_data.caraMendapatInformasi);
         setNoHp(list_data.noHp);
         setFile(list_data.tandaPengenal);
         console.log(res);
@@ -149,7 +151,7 @@ function DetailPermohonanInformasi() {
                   type="text"
                   class="form-control"
                   disabled
-                  value={caraCaraMendapatkanInformasi}
+                  value={caraMendapatInformasi}
                 />
               </div>
               <div class="mb-3">

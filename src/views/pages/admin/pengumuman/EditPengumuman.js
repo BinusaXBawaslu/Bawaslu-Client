@@ -19,7 +19,7 @@ function EditPengumuman() {
 
   useEffect(() => {
     axios
-      .get(`${API_DUMMY}/bawaslu/api/pengumuman`, {
+      .get(`${API_DUMMY}/bawaslu/api/pengumuman/get/` + param.id, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -28,10 +28,10 @@ function EditPengumuman() {
         const response = ress.data.data;
         setAuthor(response.author);
         setIsiPengumuman(response.isiPengumuman);
-        judulPengumuman(response.judulPengumuman);
+        setJudulPengumuman(response.judulPengumuman);
         setTags(response.tags);
         setFile(response.image);
-        console.log(ress.data.data);
+        console.log("pengumuman : ",ress.data.data);
       })
       .catch((error) => {
         console.log(error);

@@ -13,7 +13,7 @@ function AddIsiKeteranganInformasi() {
   const [dokumen, setDokumen] = useState("");
   const [jenisKeterangan, setJenisKeterangan] = useState();
   const [keterangan, setKeterangan] = useState([]);
-  const [upload, setUpload] = useState("");
+  const [pdfDokumen, setPdfDokumen] = useState("");
   const [show, setShow] = useState(false);
 
   const getKeterangan = async () => {
@@ -53,7 +53,7 @@ function AddIsiKeteranganInformasi() {
     const formData = new FormData();
     formData.append("dokumen", dokumen);
     formData.append("jenisKeterangan", jenisKeterangan);
-    formData.append("upload", upload);
+    formData.append("file", pdfDokumen);
 
     try {
       await axios.post(
@@ -125,7 +125,7 @@ function AddIsiKeteranganInformasi() {
                       File
                     </label>
                     <input
-                      onChange={(e) => setUpload(e.target.files[0])}
+                      onChange={(e) => setPdfDokumen(e.target.files[0])}
                       type="file"
                       class="form-control"
                     />

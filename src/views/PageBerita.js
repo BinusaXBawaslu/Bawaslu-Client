@@ -40,6 +40,8 @@ function PageBerita() {
   const getAll = async () => {
     try {
       const response = await axios.get(
+        `${API_DUMMY}/bawaslu/api/berita/related-berita/by-id-berita?id=` +
+          param.id
         `${API_DUMMY}/bawaslu/api/berita/related-berita/by-id-berita?id=` + param.id
       );
       setList(response.data.data);
@@ -198,6 +200,9 @@ function PageBerita() {
               <div class="jnews_inline_related_post">
                 <h4 className="pt-4 mb-4">Related Posts</h4>
                 <div class="row">
+                  {list.map((category) => {
+                    return (
+                      <div class="col-md-6">
                   <div class="col-md-6">
                     <div class="media single-choose-inner">
                       <div class="media-left">
@@ -220,8 +225,13 @@ function PageBerita() {
                             </div>
                           </div>
                           <div class="media-body">
+                            <p>{category.judulBerita} </p>
+                          </div>
+                        </div>
+                    );
+                  })}
                             <a href="/bawaslu-boyolali-ajak-masyarakat-terlibat-dalam-pengawasan-pemilu-partisipatif">
-                              {category.judulPengumuman}
+                              {category.judulBerita}
                             </a>
                           </div>
                         </div>
@@ -293,7 +303,6 @@ function PageBerita() {
             </div>
           </div>
         </div>
-      </div>
       {/* <!-- blog area end --> */}
       <Footer />
     </>
