@@ -10,8 +10,6 @@ function AdminBerita() {
   const [list, setList] = useState([]);
   const [list1, setList1] = useState([]);
 
-
-
   const [author, setAuthor] = useState("");
   const [isiBerita, setIsiBerita] = useState("");
   const [judulBerita, setJudulBerita] = useState("");
@@ -28,7 +26,6 @@ function AdminBerita() {
   const [modalEdit, setModalEdit] = useState(false);
   const [id, setId] = useState(0);
 
-
   const getAll = async () => {
     try {
       const response = await axios.get(`${API_DUMMY}/bawaslu/api/berita`);
@@ -38,9 +35,6 @@ function AdminBerita() {
       console.error("Terjadi Kesalahan", error);
     }
   };
-
-
-
 
   const deleteData = async (id) => {
     Swal.fire({
@@ -76,11 +70,8 @@ function AdminBerita() {
     });
   };
 
-
-
   useEffect(() => {
     getAll();
-
   }, []);
   return (
     <div>
@@ -93,15 +84,13 @@ function AdminBerita() {
               Berita
               <div class="btn-actions-pane-right">
                 <div role="group" class="btn-group-sm btn-group">
-                  <button  class="active btn-focus p-2 rounded">
-
-                  <a href="/add-berita-admin">  Tambah Berita</a>
+                  <button class="active btn-focus p-2 rounded">
+                    <a href="/add-berita-admin"> Tambah Berita</a>
                   </button>
                 </div>
               </div>
             </div>
-            <div class="table-responsive"
-              style={{ overflowY: "auto", maxHeight: "60vh" }}>
+            <div class="table-responsive">
               <table class="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
                   <tr>
@@ -142,10 +131,17 @@ function AdminBerita() {
                         <td class="text-center">{berita.updateDate}</td>
                         <td class="text-center">
                           <button type="button" class="btn-primary btn-sm mr-2">
-                          <a href="/edit-berita-admin"> <i class="fa-solid fa-pen-to-square"></i></a>
+                            <a href="/edit-berita-admin">
+                              {" "}
+                              <i class="fa-solid fa-pen-to-square"></i>
+                            </a>
                           </button>
 
-                          <button    onClick={() => deleteData(berita.id)} type="button" class="btn-danger btn-sm">
+                          <button
+                            onClick={() => deleteData(berita.id)}
+                            type="button"
+                            class="btn-danger btn-sm"
+                          >
                             <i class="fa-solid fa-trash"></i>
                           </button>
                         </td>
@@ -161,16 +157,11 @@ function AdminBerita() {
               </button>
               <button class="btn-wide btn btn-success">Save</button> */}
             </div>
-
           </div>
-
-
-
-
         </div>
       </div>
     </div>
   );
-  }
+}
 
 export default AdminBerita;
