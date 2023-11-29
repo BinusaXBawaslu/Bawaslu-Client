@@ -558,21 +558,21 @@ function InformasiBerkala() {
     <div>
       <Navbar />
       <div
-        class="breadcrumb-area bg-relative"
+        className="breadcrumb-area bg-relative"
         style={{ background: "#151423" }}
       >
         <div
-          class="banner-bg-img"
+          className="banner-bg-img"
           style={{
             backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp')`,
           }}
         ></div>
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-7 col-lg-8">
-              <div class="breadcrumb-inner text-center">
-                <h4 class="page-title">Informasi Berkala</h4>
-                <ul class="page-list">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-xl-7 col-lg-8">
+              <div className="breadcrumb-inner text-center">
+                <h4 className="page-title">Informasi Berkala</h4>
+                <ul className="page-list">
                   <li>
                     <a href="/">Home</a>
                   </li>
@@ -590,28 +590,28 @@ function InformasiBerkala() {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
-        class="project-area pd-top-115 pd-bottom-90"
+        className="project-area pd-top-115 pd-bottom-90"
       >
         <div>
-          <div class="section-title text-center">
-            <h5 class="sub-title double-line">Bawaslu Boyolali</h5>
-            <h2 class="title">Informasi Berkala Kepemiluan</h2>
-            <p class="content">
+          <div className="section-title text-center">
+            <h5 className="sub-title double-line">Bawaslu Boyolali</h5>
+            <h2 className="title">Informasi Berkala Kepemiluan</h2>
+            <p className="content">
               informasi yang diterbitkan atau disampaikan secara berkala,
               seringkali terkait dengan proses pemilihan umum atau pemilu.
               Informasi ini bisa mencakup berbagai aspek pemilu
             </p>
           </div>
-          <div class="container">
+          <div className="container">
             <div className="d-flex gap-5">
-              <div class="row justify-content-center">
-                <div class="col-lg-12 ">
-                  <div class="isotope-filters project-isotope-btn text-center mb-5">
+              <div className="row justify-content-center">
+                <div className="col-lg-12 ">
+                  <div className="isotope-filters project-isotope-btn text-center mb-5">
                     {listt.map((menu) => {
                       return (
                         <button
                           style={{ width: "250px", textAlign: "left" }}
-                          class="button ml-0"
+                          className="button ml-0"
                           data-filter="*"
                           onClick={() => showTable(`${menu.keterangan}`)}
                         >
@@ -669,7 +669,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-download"></i>
+                                <i className="fa-solid fa-download"></i>
                               </button>
                               <button
                                 className="bg-warning text-light"
@@ -682,7 +682,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-circle-info"></i>
+                                <i className="fa-solid fa-circle-info"></i>
                               </button>
                             </td>
                           </tr>
@@ -740,7 +740,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-download"></i>
+                                <i className="fa-solid fa-download"></i>
                               </button>
                               <button
                                 className="bg-warning text-light"
@@ -753,7 +753,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-circle-info"></i>
+                                <i className="fa-solid fa-circle-info"></i>
                               </button>
                             </td>
                           </tr>
@@ -811,7 +811,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-download"></i>
+                                <i className="fa-solid fa-download"></i>
                               </button>
                               <button
                                 className="bg-warning text-light"
@@ -824,7 +824,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-circle-info"></i>
+                                <i className="fa-solid fa-circle-info"></i>
                               </button>
                             </td>
                           </tr>
@@ -882,7 +882,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-download"></i>
+                                <i className="fa-solid fa-download"></i>
                               </button>
                               <button
                                 className="bg-warning text-light"
@@ -895,7 +895,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-circle-info"></i>
+                                <i className="fa-solid fa-circle-info"></i>
                               </button>
                             </td>
                           </tr>
@@ -953,7 +953,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-download"></i>
+                                <i className="fa-solid fa-download"></i>
                               </button>
                               <button
                                 className="bg-warning text-light"
@@ -966,7 +966,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-circle-info"></i>
+                                <i className="fa-solid fa-circle-info"></i>
                               </button>
                             </td>
                           </tr>
@@ -1024,7 +1024,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-download"></i>
+                                <i className="fa-solid fa-download"></i>
                               </button>
                               <button
                                 className="bg-warning text-light"
@@ -1037,7 +1037,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-circle-info"></i>
+                                <i className="fa-solid fa-circle-info"></i>
                               </button>
                             </td>
                           </tr>
@@ -1095,7 +1095,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-download"></i>
+                                <i className="fa-solid fa-download"></i>
                               </button>
                               <button
                                 className="bg-warning text-light"
@@ -1108,7 +1108,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-circle-info"></i>
+                                <i className="fa-solid fa-circle-info"></i>
                               </button>
                             </td>
                           </tr>
@@ -1124,17 +1124,17 @@ function InformasiBerkala() {
           <br />
           <br />
           <div
-            class="service-area bg-overlay pd-top-120 pd-bottom-90"
+            className="service-area bg-overlay pd-top-120 pd-bottom-90"
             style={{
               backgroundImage: `url("https://boyolali.bawaslu.go.id/cepogo/2023/11/WhatsApp-Image-2023-11-01-at-14.10.31-1140x570.jpeg")`,
             }}
           >
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-4">
-                  <div class="section-title border-radius-5 p-35 bg-base style-white mb-lg-0">
-                    <h2 class="title mt-4">Informasi Berkala</h2>
-                    <p class="content">
+            <div className="container">
+              <div className="row">
+                <div className="col-lg-4">
+                  <div className="section-title border-radius-5 p-35 bg-base style-white mb-lg-0">
+                    <h2 className="title mt-4">Informasi Berkala</h2>
+                    <p className="content">
                       Informasi berkala adalah tulang punggung yang mendukung
                       transparansi, akuntabilitas, dan partisipasi publik dalam
                       berbagai institusi dan organisasi. Istilah ini merujuk
@@ -1147,14 +1147,14 @@ function InformasiBerkala() {
                     </p>
                   </div>
                 </div>
-                <div class="col-lg-8">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="single-service-inner style-white text-center">
-                        <div class="icon-box">
-                          <i class="icomoon-layer"></i>
+                <div className="col-lg-8">
+                  <div className="row">
+                    <div className="col-md-6">
+                      <div className="single-service-inner style-white text-center">
+                        <div className="icon-box">
+                          <i className="icomoon-layer"></i>
                         </div>
-                        <div class="details">
+                        <div className="details">
                           <h3>
                             <a href="service-details.html">
                               Informasi Berkala Kepemiluan
@@ -1170,12 +1170,12 @@ function InformasiBerkala() {
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-6">
-                      <div class="single-service-inner style-white text-center">
-                        <div class="icon-box">
-                          <i class="icomoon-application"></i>
+                    <div className="col-md-6">
+                      <div className="single-service-inner style-white text-center">
+                        <div className="icon-box">
+                          <i className="icomoon-application"></i>
                         </div>
-                        <div class="details">
+                        <div className="details">
                           <h3>
                             <a href="service-details.html">
                               Pemahaman Politik yang Lebih Baik
@@ -1190,12 +1190,12 @@ function InformasiBerkala() {
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-6">
-                      <div class="single-service-inner style-white text-center">
-                        <div class="icon-box">
-                          <i class="icomoon-cloud-data"></i>
+                    <div className="col-md-6">
+                      <div className="single-service-inner style-white text-center">
+                        <div className="icon-box">
+                          <i className="icomoon-cloud-data"></i>
                         </div>
-                        <div class="details">
+                        <div className="details">
                           <h3>
                             <a href="service-details.html">
                               Informasi Berkala Kelembagaan
@@ -1211,12 +1211,12 @@ function InformasiBerkala() {
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-6">
-                      <div class="single-service-inner style-white text-center">
-                        <div class="icon-box">
-                          <i class="icomoon-megaphone"></i>
+                    <div className="col-md-6">
+                      <div className="single-service-inner style-white text-center">
+                        <div className="icon-box">
+                          <i className="icomoon-megaphone"></i>
                         </div>
-                        <div class="details">
+                        <div className="details">
                           <h3>
                             <a href="service-details.html">
                               Contoh Informasi Berkala Kelembagaan:
@@ -1240,24 +1240,24 @@ function InformasiBerkala() {
           </div>
           <br />
           <br />
-          <div class="section-title text-center">
-            <h5 class="sub-title double-line">Bawaslu Boyolali</h5>
-            <h2 class="title">Informasi Berkala Kelembagaan</h2>
-            <p class="content">
+          <div className="section-title text-center">
+            <h5 className="sub-title double-line">Bawaslu Boyolali</h5>
+            <h2 className="title">Informasi Berkala Kelembagaan</h2>
+            <p className="content">
               informasi yang secara teratur diterbitkan atau diperbarui oleh
               suatu lembaga atau organisasi dalam interval waktu tertentu.
             </p>
           </div>
           <div className="container">
             <div className="d-flex gap-5">
-              <div class="row justify-content-center">
-                <div class="col-lg-12 ">
-                  <div class="isotope-filters project-isotope-btn text-center mb-5">
+              <div className="row justify-content-center">
+                <div className="col-lg-12 ">
+                  <div className="isotope-filters project-isotope-btn text-center mb-5">
                     {list.map((menu) => {
                       return (
                         <button
                           style={{ width: "250px", textAlign: "left" }}
-                          class="button ml-0"
+                          className="button ml-0"
                           data-filter="*"
                           onClick={() => showTable(`${menu.keterangan}`)}
                         >
@@ -1315,7 +1315,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-download"></i>
+                                <i className="fa-solid fa-download"></i>
                               </button>
                               <button
                                 className="bg-warning text-light"
@@ -1328,7 +1328,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-circle-info"></i>
+                                <i className="fa-solid fa-circle-info"></i>
                               </button>
                             </td>
                           </tr>
@@ -1387,7 +1387,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-download"></i>
+                                <i className="fa-solid fa-download"></i>
                               </button>
                               <button
                                 className="bg-warning text-light"
@@ -1400,7 +1400,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-circle-info"></i>
+                                <i className="fa-solid fa-circle-info"></i>
                               </button>
                             </td>
                           </tr>
@@ -1458,7 +1458,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-download"></i>
+                                <i className="fa-solid fa-download"></i>
                               </button>
                               <button
                                 className="bg-warning text-light"
@@ -1471,7 +1471,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-circle-info"></i>
+                                <i className="fa-solid fa-circle-info"></i>
                               </button>
                             </td>
                           </tr>
@@ -1529,7 +1529,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-download"></i>
+                                <i className="fa-solid fa-download"></i>
                               </button>
                               <button
                                 className="bg-warning text-light"
@@ -1542,7 +1542,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-circle-info"></i>
+                                <i className="fa-solid fa-circle-info"></i>
                               </button>
                             </td>
                           </tr>
@@ -1600,7 +1600,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-download"></i>
+                                <i className="fa-solid fa-download"></i>
                               </button>
                               <button
                                 className="bg-warning text-light"
@@ -1613,7 +1613,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-circle-info"></i>
+                                <i className="fa-solid fa-circle-info"></i>
                               </button>
                             </td>
                           </tr>
@@ -1671,7 +1671,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-download"></i>
+                                <i className="fa-solid fa-download"></i>
                               </button>
                               <button
                                 className="bg-warning text-light"
@@ -1684,7 +1684,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-circle-info"></i>
+                                <i className="fa-solid fa-circle-info"></i>
                               </button>
                             </td>
                           </tr>
@@ -1742,7 +1742,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-download"></i>
+                                <i className="fa-solid fa-download"></i>
                               </button>
                               <button
                                 className="bg-warning text-light"
@@ -1755,7 +1755,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-circle-info"></i>
+                                <i className="fa-solid fa-circle-info"></i>
                               </button>
                             </td>
                           </tr>
@@ -1813,7 +1813,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-download"></i>
+                                <i className="fa-solid fa-download"></i>
                               </button>
                               <button
                                 className="bg-warning text-light"
@@ -1826,7 +1826,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-circle-info"></i>
+                                <i className="fa-solid fa-circle-info"></i>
                               </button>
                             </td>
                           </tr>
@@ -1884,7 +1884,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-download"></i>
+                                <i className="fa-solid fa-download"></i>
                               </button>
                               <button
                                 className="bg-warning text-light"
@@ -1897,7 +1897,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-circle-info"></i>
+                                <i className="fa-solid fa-circle-info"></i>
                               </button>
                             </td>
                           </tr>
@@ -1955,7 +1955,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-download"></i>
+                                <i className="fa-solid fa-download"></i>
                               </button>
                               <button
                                 className="bg-warning text-light"
@@ -1968,7 +1968,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-circle-info"></i>
+                                <i className="fa-solid fa-circle-info"></i>
                               </button>
                             </td>
                           </tr>
@@ -2026,7 +2026,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-download"></i>
+                                <i className="fa-solid fa-download"></i>
                               </button>
                               <button
                                 className="bg-warning text-light"
@@ -2039,7 +2039,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-circle-info"></i>
+                                <i className="fa-solid fa-circle-info"></i>
                               </button>
                             </td>
                           </tr>
@@ -2097,7 +2097,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-download"></i>
+                                <i className="fa-solid fa-download"></i>
                               </button>
                               <button
                                 className="bg-warning text-light"
@@ -2110,7 +2110,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-circle-info"></i>
+                                <i className="fa-solid fa-circle-info"></i>
                               </button>
                             </td>
                           </tr>
@@ -2168,7 +2168,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-download"></i>
+                                <i className="fa-solid fa-download"></i>
                               </button>
                               <button
                                 className="bg-warning text-light"
@@ -2181,7 +2181,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-circle-info"></i>
+                                <i className="fa-solid fa-circle-info"></i>
                               </button>
                             </td>
                           </tr>
@@ -2239,7 +2239,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-download"></i>
+                                <i className="fa-solid fa-download"></i>
                               </button>
                               <button
                                 className="bg-warning text-light"
@@ -2252,7 +2252,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-circle-info"></i>
+                                <i className="fa-solid fa-circle-info"></i>
                               </button>
                             </td>
                           </tr>
@@ -2310,7 +2310,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-download"></i>
+                                <i className="fa-solid fa-download"></i>
                               </button>
                               <button
                                 className="bg-warning text-light"
@@ -2323,7 +2323,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-circle-info"></i>
+                                <i className="fa-solid fa-circle-info"></i>
                               </button>
                             </td>
                           </tr>
@@ -2381,7 +2381,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-download"></i>
+                                <i className="fa-solid fa-download"></i>
                               </button>
                               <button
                                 className="bg-warning text-light"
@@ -2394,7 +2394,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-circle-info"></i>
+                                <i className="fa-solid fa-circle-info"></i>
                               </button>
                             </td>
                           </tr>
@@ -2452,7 +2452,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-download"></i>
+                                <i className="fa-solid fa-download"></i>
                               </button>
                               <button
                                 className="bg-warning text-light"
@@ -2465,7 +2465,7 @@ function InformasiBerkala() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i class="fa-solid fa-circle-info"></i>
+                                <i className="fa-solid fa-circle-info"></i>
                               </button>
                             </td>
                           </tr>

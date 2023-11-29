@@ -91,21 +91,21 @@ function SertaMerta() {
     <div>
       <Navbar />
       <div
-        class="breadcrumb-area bg-relative"
+        className="breadcrumb-area bg-relative"
         style={{ background: "#151423" }}
       >
         <div
-          class="banner-bg-img"
+          className="banner-bg-img"
           style={{
             backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp')`,
           }}
         ></div>
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-7 col-lg-8">
-              <div class="breadcrumb-inner text-center">
-                <h4 class="page-title">Serta Merta</h4>
-                <ul class="page-list">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-xl-7 col-lg-8">
+              <div className="breadcrumb-inner text-center">
+                <h4 className="page-title">Serta Merta</h4>
+                <ul className="page-list">
                   <li>
                     <a href="/">Home</a>
                   </li>
@@ -122,16 +122,16 @@ function SertaMerta() {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
-        class="project-area pd-top-115 pd-bottom-90"
+        className="project-area pd-top-115 pd-bottom-90"
       >
         <div className="container">
           <div className="d-flex gap-5">
-            <div class="isotope-filters project-isotope-btn text-left mb-5">
+            <div className="isotope-filters project-isotope-btn text-left mb-5">
               {list.map((menu) => {
                 return (
                   <button
                     style={{ width: "250px", textAlign: "left" }}
-                    class="button ml-0"
+                    className="button ml-0"
                     data-filter="*"
                     onClick={() => showTable(`${menu.keterangan}`)}
                   >
@@ -168,7 +168,8 @@ function SertaMerta() {
                       <th scope="col"> Unduh / Lihat</th>
                     </tr>
                   </thead>
-                  {isi.map((isi) => {
+                  {isi &&
+                  isi.map((isi) => {
                     return (
                       <tbody>
                         <tr>
@@ -187,7 +188,7 @@ function SertaMerta() {
                                 marginRight: "10px",
                               }}
                             >
-                              <i class="fa-solid fa-download"></i>
+                              <i className="fa-solid fa-download"></i>
                             </button>
                             <button
                               className="bg-warning text-light"
@@ -200,7 +201,7 @@ function SertaMerta() {
                                 marginRight: "10px",
                               }}
                             >
-                              <i class="fa-solid fa-circle-info"></i>
+                              <i className="fa-solid fa-circle-info"></i>
                             </button>
                           </td>
                         </tr>

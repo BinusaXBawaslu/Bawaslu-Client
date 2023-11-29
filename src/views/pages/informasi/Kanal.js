@@ -12,23 +12,23 @@ function Kanal() {
     <div>
       <Navbar />
       <div
-        class="breadcrumb-area bg-relative"
+        className="breadcrumb-area bg-relative"
         style={{ background: "#151423" }}
       >
         <div
-          class="banner-bg-img"
+          className="banner-bg-img"
           style={{
             backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp')`,
           }}
         ></div>
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-7 col-lg-8">
-              <div class="breadcrumb-inner text-center">
-                <h4 id="judul" class="page-title">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-xl-7 col-lg-8">
+              <div className="breadcrumb-inner text-center">
+                <h4 id="judul" className="page-title">
                   Kanal pengawasan Pemilu 2024
                 </h4>
-                <ul class="page-list">
+                <ul className="page-list">
                   <li>
                     <a href="/">Home</a>
                   </li>
@@ -46,37 +46,37 @@ function Kanal() {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
-        class="project-area pd-top-115 pd-bottom-90"
+        className="project-area pd-top-115 pd-bottom-90"
       >
         <div
           style={{
             backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp') `,
           }}
         >
-          <div class="container">
-            <div class="container">
-              <div class="row justify-content-center">
-                <div class="col-lg-12">
-                  <div class="isotope-filters project-isotope-btn text-center mb-5">
-                    <button class="btn btn-primary active ml-0" data-filter="*">
+          <div className="container">
+            <div className="container">
+              <div className="row justify-content-center">
+                <div className="col-lg-12">
+                  <div className="isotope-filters project-isotope-btn text-center mb-5">
+                    <button className="btn btn-primary active ml-0" data-filter="*">
                       Imbauan
                     </button>
-                    <button class="btn btn-primary" data-filter=".cat-1">
+                    <button className="btn btn-primary" data-filter=".cat-1">
                       Anggaran
                     </button>
-                    <button class="btn btn-primary" data-filter=".cat-2">
+                    <button className="btn btn-primary" data-filter=".cat-2">
                       Pencegahan & Penanganan
                     </button>
-                    <button class="btn btn-primary" data-filter=".cat-3">
+                    <button className="btn btn-primary" data-filter=".cat-3">
                       SDM pengawasan pemilu
                     </button>
-                    <button class="btn btn-primary" data-filter=".cat-3">
+                    <button className="btn btn-primary" data-filter=".cat-3">
                       Hasil Pengawasan
                     </button>
-                    <button class="btn btn-primary" data-filter=".cat-3">
+                    <button className="btn btn-primary" data-filter=".cat-3">
                       Siaran Pers
                     </button>
-                    <button class="btn btn-primary" data-filter=".cat-3">
+                    <button className="btn btn-primary" data-filter=".cat-3">
                       Putusan
                     </button>
                   </div>
@@ -117,7 +117,7 @@ function Kanal() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-download"></i>
+                          <i className="fa-solid fa-download"></i>
                         </button>
                         <button
                           className="bg-warning text-light"
@@ -130,7 +130,7 @@ function Kanal() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-circle-info"></i>
+                          <i className="fa-solid fa-circle-info"></i>
                         </button>
                       </td>
                     </tr>
@@ -154,7 +154,7 @@ function Kanal() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-download"></i>
+                          <i className="fa-solid fa-download"></i>
                         </button>
                         <button
                           className="bg-warning text-light"
@@ -167,7 +167,7 @@ function Kanal() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-circle-info"></i>
+                          <i className="fa-solid fa-circle-info"></i>
                         </button>
                       </td>
                     </tr>
@@ -187,7 +187,7 @@ function Kanal() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-download"></i>
+                          <i className="fa-solid fa-download"></i>
                         </button>
                         <button
                           className="bg-warning text-light"
@@ -200,7 +200,7 @@ function Kanal() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-circle-info"></i>
+                          <i className="fa-solid fa-circle-info"></i>
                         </button>
                       </td>
                     </tr>
@@ -220,7 +220,7 @@ function Kanal() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-download"></i>
+                          <i className="fa-solid fa-download"></i>
                         </button>
                         <button
                           className="bg-warning text-light"
@@ -233,7 +233,7 @@ function Kanal() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-circle-info"></i>
+                          <i className="fa-solid fa-circle-info"></i>
                         </button>
                       </td>
                     </tr>
@@ -253,7 +253,7 @@ function Kanal() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-download"></i>
+                          <i className="fa-solid fa-download"></i>
                         </button>
                         <button
                           className="bg-warning text-light"
@@ -266,7 +266,7 @@ function Kanal() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-circle-info"></i>
+                          <i className="fa-solid fa-circle-info"></i>
                         </button>
                       </td>
                     </tr>
@@ -286,7 +286,7 @@ function Kanal() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-download"></i>
+                          <i className="fa-solid fa-download"></i>
                         </button>
                         <button
                           className="bg-warning text-light"
@@ -299,7 +299,7 @@ function Kanal() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-circle-info"></i>
+                          <i className="fa-solid fa-circle-info"></i>
                         </button>
                       </td>
                     </tr>
@@ -319,7 +319,7 @@ function Kanal() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-download"></i>
+                          <i className="fa-solid fa-download"></i>
                         </button>
                         <button
                           className="bg-warning text-light"
@@ -332,7 +332,7 @@ function Kanal() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-circle-info"></i>
+                          <i className="fa-solid fa-circle-info"></i>
                         </button>
                       </td>
                     </tr>
@@ -352,7 +352,7 @@ function Kanal() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-download"></i>
+                          <i className="fa-solid fa-download"></i>
                         </button>
                         <button
                           className="bg-warning text-light"
@@ -365,7 +365,7 @@ function Kanal() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-circle-info"></i>
+                          <i className="fa-solid fa-circle-info"></i>
                         </button>
                       </td>
                     </tr>
@@ -385,7 +385,7 @@ function Kanal() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-download"></i>
+                          <i className="fa-solid fa-download"></i>
                         </button>
                         <button
                           className="bg-warning text-light"
@@ -398,7 +398,7 @@ function Kanal() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-circle-info"></i>
+                          <i className="fa-solid fa-circle-info"></i>
                         </button>
                       </td>
                     </tr>
@@ -418,7 +418,7 @@ function Kanal() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-download"></i>
+                          <i className="fa-solid fa-download"></i>
                         </button>
                         <button
                           className="bg-warning text-light"
@@ -431,7 +431,7 @@ function Kanal() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-circle-info"></i>
+                          <i className="fa-solid fa-circle-info"></i>
                         </button>
                       </td>
                     </tr>
@@ -451,7 +451,7 @@ function Kanal() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-download"></i>
+                          <i className="fa-solid fa-download"></i>
                         </button>
                         <button
                           className="bg-warning text-light"
@@ -464,7 +464,7 @@ function Kanal() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-circle-info"></i>
+                          <i className="fa-solid fa-circle-info"></i>
                         </button>
                       </td>
                     </tr>
@@ -484,7 +484,7 @@ function Kanal() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-download"></i>
+                          <i className="fa-solid fa-download"></i>
                         </button>
                         <button
                           className="bg-warning text-light"
@@ -497,7 +497,7 @@ function Kanal() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-circle-info"></i>
+                          <i className="fa-solid fa-circle-info"></i>
                         </button>
                       </td>
                     </tr>
@@ -520,7 +520,7 @@ function Kanal() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-download"></i>
+                          <i className="fa-solid fa-download"></i>
                         </button>
                         <button
                           className="bg-warning text-light"
@@ -533,7 +533,7 @@ function Kanal() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-circle-info"></i>
+                          <i className="fa-solid fa-circle-info"></i>
                         </button>
                       </td>
                     </tr>

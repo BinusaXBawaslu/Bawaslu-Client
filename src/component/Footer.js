@@ -5,53 +5,64 @@ function Footer() {
     <>
       {/* <!-- footer area start --> */}
       <footer
-        class="footer-area bg-cover"
+        className="footer-area bg-cover"
         style={{
           backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/2.webp')`,
-        }}
-      >
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3 col-md-6">
-              <div class="widget widget_about">
-                <h4 class="widget-title">Bawaslu Boyolali</h4>
-                <div class="details">
+        }}>
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-3 col-md-6">
+              <div className="widget widget_about">
+                <h4 className="widget-title">Bawaslu Boyolali</h4>
+                <div className="details">
                   <p>
                     Melalui website ini, Bawaslu Kabupaten Boyolali akan selalu
                     memperbaharui informasi terkait pengawasan dan pemantauan
                     pemilu.
                   </p>
-                  <ul class="social-media">
+                  <ul className="social-media">
                     <li>
-                      <a class="facebook" href="https://www.facebook.com/Bawaslu.Kabupaten.Boyolali" target="_blank">
-                        <i class="fab fa-facebook-f"></i>
+                      <a
+                        className="facebook"
+                        href="https://www.facebook.com/Bawaslu.Kabupaten.Boyolali"
+                        target="_blank">
+                        <i className="fab fa-facebook-f"></i>
                       </a>
                     </li>
                     <li>
-                      <a class="twitter"  href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbawasluboyolali" target="_blank">
-                        <i class="fab fa-twitter"></i>
+                      <a
+                        className="twitter"
+                        href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbawasluboyolali"
+                        target="_blank">
+                        <i className="fab fa-twitter"></i>
                       </a>
                     </li>
                     <li>
-                      <a class="instagram" href="https://www.instagram.com/bawaslu_boyolali/" target="_blank">
-                        <i class="fab fa-instagram"></i>
+                      <a
+                        className="instagram"
+                        href="https://www.instagram.com/bawaslu_boyolali/"
+                        target="_blank">
+                        <i className="fab fa-instagram"></i>
                       </a>
                     </li>
                     <li>
-                      <a class="youtube" href="https://www.youtube.com/channel/UC-OZT-HT_Qg7cUmo-oHfkAw" target="_blank">
-                        <i class="fab fa-youtube"></i>
+                      <a
+                        className="youtube"
+                        href="https://www.youtube.com/channel/UC-OZT-HT_Qg7cUmo-oHfkAw"
+                        target="_blank">
+                        <i className="fab fa-youtube"></i>
                       </a>
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6">
-              <div class="widget widget_nav_menu">
-                <h4 class="widget-title">Kategori</h4>
+            <div className="col-lg-3 col-md-6">
+              <div className="widget widget_nav_menu">
+                <h4 className="widget-title">Kategori</h4>
                 <ul>
                   <li>
-                    <a href="/berita" >Berita</a>
+                    <a href="/berita">Berita</a>
                   </li>
                   <li>
                     <a href="/kehumasan">Kehumasan</a>
@@ -71,14 +82,16 @@ function Footer() {
                 </ul>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6">
-            <br />
-            <br />
-              <div class="widget widget_nav_menu">
-                {/* <h4 class="widget-title">Useful link</h4> */}
+            <div className="col-lg-3 col-md-6">
+              <br />
+              <br />
+              <div className="widget widget_nav_menu">
+                {/* <h4 className="widget-title">Useful link</h4> */}
                 <ul>
                   <li>
-                    <a href="/penyelesaian-sengketa-footer">Penyelesaian Sengketa</a>
+                    <a href="/penyelesaian-sengketa-footer">
+                      Penyelesaian Sengketa
+                    </a>
                   </li>
                   <li>
                     <a href="/sosialisasi">Sosialisasi</a>
@@ -89,10 +102,10 @@ function Footer() {
                 </ul>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6">
-              <div class="widget widget_subscribe">
-                <h4 class="widget-title">Alamat</h4>
-                <div class="details">
+            <div className="col-lg-3 col-md-6">
+              <div className="widget widget_subscribe">
+                <h4 className="widget-title">Alamat</h4>
+                <div className="details">
                   <p style={{ color: "white" }}>
                     Jl. Garuda No. 01, Banaran, Boyolali, 57313
                   </p>
@@ -107,10 +120,10 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div class="footer-bottom text-center">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12 align-self-center">
+        <div className="footer-bottom text-center">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-12 align-self-center">
                 <p>© 2023. Bawaslu Kabupaten Boyolali.</p>
               </div>
             </div>

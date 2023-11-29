@@ -9,6 +9,7 @@ import {
 } from "react-router-dom/cjs/react-router-dom.min";
 import { API_DUMMY } from "../../../../../utils/base_URL";
 import Swal from "sweetalert2";
+import "../../../../../css/adminBerita.css";
 
 function Regulasi() {
   const [regulasi, setRegulasi] = useState([]);
@@ -18,12 +19,7 @@ function Regulasi() {
   const getRegulasi = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/menu-regulasi/get-by-jenis-regulasi?id-jenis-regulasi=` + param.id,
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        }
+        `${API_DUMMY}/bawaslu/api/menu-regulasi/get-by-jenis-regulasi?id-jenis-regulasi=` + param.id
       );
      setRegulasi(response.data.data);
       console.log(response.data.data);
@@ -72,7 +68,7 @@ function Regulasi() {
         <Sidebar />
         <div className="container mt-3 app-main__outer">
           <div class="main-card mb-3 card">
-            <div class="card-header">Menu Regulasi {}
+            <div class="card-header">Menu kjbdjewvjwvjb {}
             <div class="btn-actions-pane-right">
                 <div role="group" class="btn-group-sm btn-group">
                   <button class="active btn-focus p-2 rounded">
@@ -87,27 +83,28 @@ function Regulasi() {
                 </div>
               </div>
             </div>
-            <div class="table-responsive">
+            <div class="table-responsive"
+              style={{ overflowY: "auto", maxHeight: "60vh" }}>
               <table class="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
                   <tr>
-                    <th className="text-left">No</th>
-                    <th className="text-left">Dokumen</th>
-                    <th className="text-left">Gambar</th>
-                    <th className="text-center">Aksi</th>
+                    <th scope="" className="text-left">No</th>
+                    <th scope="" className="text-left">Dokumen</th>
+                    <th scope="" className="text-left">Gambar</th>
+                    <th scope="" className="text-center">Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
                     {regulasi.map((jenis, index) => {
                       return (
                     <tr key={index}>
-                      <td className="text-left">{index + 1}
+                      <td  data-label="No : " className="text-left">{index + 1}
                       </td>
-                      <td className="text-left">{jenis.dokumen}
+                      <td  data-label="dokumen : " className="text-left">{jenis.dokumen}
                       </td>
-                      <td className="text-left"><img src={jenis.pdfDokumen} alt="" />
+                      <td  data-label="gambar : " className="text-left"><img src={jenis.pdfDokumen} alt="" />
                       </td>
-                      <td class="text-center">
+                      <td data-label="Aksi : " class="text-center">
                           <button type="button" class="btn-primary btn-sm mr-2">
                             <a style={{color:"white", textDecoration:"none"}} href={"/edit/" + jenis.regulasi + "/" + jenis.id}><i class="fa-solid fa-pen-to-square"></i></a>
                           </button>

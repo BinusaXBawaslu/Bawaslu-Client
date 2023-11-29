@@ -24,12 +24,7 @@ function AddJenisKeterangan() {
   const getInformasi = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/jenis-informasi/all`,
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        }
+        `${API_DUMMY}/bawaslu/api/jenis-informasi/all`
       );
       setInformasi(response.data.data);
       console.log(response.data.data);
@@ -91,7 +86,7 @@ function AddJenisKeterangan() {
                   <div className="col-6">
                     <label className="form-label">Jenis Informasi</label>
                     <select
-                      class="form-select form-select-sm"
+                      className="form-select form-select-sm"
                       aria-label="Small select example"
                       onChange={(e) => setJenisInformasi(e.target.value)}>
                       <option selected>PIlih Jenis Informasi</option>
@@ -102,26 +97,26 @@ function AddJenisKeterangan() {
                       })}
                     </select>
                   </div>
-                  <div class="mb-3 col-6">
-                    <label for="exampleInputEmail1" class="form-label">
+                  <div className="mb-3 col-6">
+                    <label for="exampleInputEmail1" className="form-label">
                       Keterangan
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       value={keterangan}
                       onChange={(e) => setKeterangan(e.target.value)}
                     />
                   </div>
                 </div>
-                <button type="button" class="btn-danger mt-3 mr-3">
+                <button type="button" className="btn-danger mt-3 mr-3">
                   <a
                     href="/admin-pengumuman"
                     style={{ color: "white", textDecoration: "none" }}>
                     Batal
                   </a>
                 </button>
-                <button type="submit" class="btn-primary mt-3">
+                <button type="submit" className="btn-primary mt-3">
                   Simpan
                 </button>
               </form>

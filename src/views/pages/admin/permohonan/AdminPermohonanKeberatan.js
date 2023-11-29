@@ -6,6 +6,7 @@ import { useState } from "react";
 import { API_DUMMY } from "../../../../utils/base_URL";
 import axios from "axios";
 import { useEffect } from "react";
+import "../../../../../src/css/adminBerita.css";
 
 function AdminPermohonanKeberatan() {
   const [list, setList] = useState([]);
@@ -40,30 +41,30 @@ function AdminPermohonanKeberatan() {
               <table class="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
                   <tr>
-                    <th className="text-left">No</th>
-                    <th className="text-left">Email</th>
-                    <th className="text-left">Alamat</th>
-                    <th className="text-left">No Telp</th>
-                    <th className="text-left">Tags</th>
-                    <th className="text-left">Nomor identitas</th>
-                    <th className="text-left">Jenis identitas</th>
-                    <th className="text-left">Aksi</th>
+                    <th scope="col" className="text-left">No</th>
+                    <th scope="col" className="text-left">Email</th>
+                    <th scope="col" className="text-left">Alamat</th>
+                    <th scope="col" className="text-left">No Telp</th>
+                    <th scope="col" className="text-left">Tags</th>
+                    <th scope="col" className="text-left">Nomor identitas</th>
+                    <th scope="col" className="text-left">Jenis identitas</th>
+                    <th scope="col" className="text-left">Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
                   {list.map((informasi, index) => {
                     return (
                       <tr key={index}>
-                        <td className="text-llef">{index + 1}</td>
-                        <td className="text-llef">{informasi.email}</td>
-                        <td className="text-llef">{informasi.nama}</td>
+                        <td  data-label="No : " className="text-llef">{index + 1}</td>
+                        <td  data-label="email : " className="text-llef">{informasi.email}</td>
+                        <td  data-label="nama : " className="text-llef">{informasi.nama}</td>
 
-                        <td className="text-llef">{informasi.alamat}</td>
-                        <td className="text-llef">{informasi.noTelp}</td>
+                        <td  data-label="alamat : " className="text-llef">{informasi.alamat}</td>
+                        <td  data-label="no telp : " className="text-llef">{informasi.noTelp}</td>
 
-                        <td className="text-llef">{informasi.nomorIndentitas}</td>
-                        <td className="text-llef">{informasi.jenisIdentitas}</td>
-                        <td>
+                        <td  data-label="Nomor identitas : " className="text-llef">{informasi.nomorIndentitas}</td>
+                        <td  data-label="jenis identitas : " className="text-llef">{informasi.jenisIdentitas}</td>
+                        <td  data-label="Aksi : " class="text-center">
                           <button  type="button" class="btn-primary mr-2 btn-sm">
                             <a className="text-light" href={"/detail-permohonan-keberatan/" + informasi.id}><i class="fas fa-info-circle"></i></a>
                           </button>

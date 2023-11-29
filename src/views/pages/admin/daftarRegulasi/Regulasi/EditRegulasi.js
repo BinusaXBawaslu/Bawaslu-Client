@@ -22,12 +22,7 @@ function EditRegulasi() {
     try {
       const response = await axios.get(
         `${API_DUMMY}/bawaslu/api/get-by-menu-regulasi?id-menu-regulasi=` +
-          param.id,
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        }
+          param.id
       );
       setRegulasi(response.data.data);
       //   console.log(response.data.data);
@@ -97,12 +92,12 @@ function EditRegulasi() {
               <hr />
               <form onSubmit={update}>
                 <div className="row">
-                  <div class="mb-3 col-6">
-                    <label for="exampleInputPassword1" class="form-label">
+                  <div className="mb-3 col-6">
+                    <label for="exampleInputPassword1" className="form-label">
                       Jenis Regulas
                     </label>
                     <select
-                      class="form-select form-select-sm"
+                      className="form-select form-select-sm"
                       aria-label="Small select example"
                       onChange={(e) => setIdMenuRegulasi(e.target.value)}>
                       <option selected>PIlih Jenis Regulasi</option>
@@ -114,37 +109,37 @@ function EditRegulasi() {
                     </select>
                   </div>
 
-                  <div class="mb-3 col-6">
-                    <label for="exampleInputPassword1" class="form-label">
+                  <div className="mb-3 col-6">
+                    <label for="exampleInputPassword1" className="form-label">
                       Dokumen
                     </label>
                     <input
                       value={dokumen}
                       onChange={(e) => setDokumen(e.target.value)}
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="exampleInputPassword1"
                     />
                   </div>
-                  <div class="mb-3 col-6">
-                    <label for="exampleInputPassword1" class="form-label">
+                  <div className="mb-3 col-6">
+                    <label for="exampleInputPassword1" className="form-label">
                       Gambar Dokumen
                     </label>
                     <input
                       onChange={(e) => setPdfDokumen(e.target.files[0])}
                       type="file"
-                      class="form-control"
+                      className="form-control"
                       id="exampleInputPassword1"
                     />
                   </div>
                 </div>
-                <button type="submit" class="btn-danger mt-3 mr-3">
+                <button type="submit" className="btn-danger mt-3 mr-3">
                   <a href="" style={{ color: "white", textDecoration: "none" }}>
                     {" "}
                     Batal
                   </a>
                 </button>
-                <button type="submit" class="btn-primary mt-3">
+                <button type="submit" className="btn-primary mt-3">
                   Simpan
                 </button>
               </form>

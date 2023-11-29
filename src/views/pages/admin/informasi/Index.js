@@ -10,6 +10,7 @@ import {
 import { API_DUMMY } from "../../../../utils/base_URL";
 import Swal from "sweetalert2";
 import { Pagination, TablePagination } from "@mui/material";
+import "../../../../../src/css/adminBerita.css";
 
 function Index() {
   const [jenisInformasi, setJenisInformasi] = useState([]);
@@ -27,11 +28,6 @@ function Index() {
       const response = await axios.get(
         `${API_DUMMY}/bawaslu/api/jenis-informasi/getByIdWithKeterangan/` +
           param.id,
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        }
       );
 
       // Pastikan bahwa response.data.data adalah array sebelum menggunakan map
@@ -128,7 +124,8 @@ function Index() {
                 </div>
               </div>
             </div>
-            <div class="table-responsive">
+            <div class="table-responsive"
+              style={{ overflowY: "auto", maxHeight: "60vh" }}>
               <table class="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
                   <tr>

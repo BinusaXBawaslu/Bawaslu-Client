@@ -6,6 +6,7 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 function Register() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [role, setRole] = useState("admin");
   const [errorMessage, setErrorMessage] = useState("");
   const [show, setShow] = useState(false);
   const history = useHistory();
@@ -38,6 +39,7 @@ function Register() {
       const response = await axios.post(`${API_DUMMY}/register`, {
         username,
         password,
+        role,
       });
 
       if (response.data === "Username already taken") {
@@ -74,19 +76,19 @@ function Register() {
 
   return (
     <>
-      <div class="container d-flex justify-content-center align-items-center min-vh-100">
+      <div className="container d-flex justify-content-center align-items-center min-vh-100">
         {/* <!----------------------- Login Container --------------------------> */}
 
-        <div class="row border rounded-5 p-3 bg-white shadow box-area">
+        <div className="row border rounded-5 p-3 bg-white shadow box-area">
           {/* <!--------------------------- Left Box -----------------------------> */}
 
           <div
-            class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box"
+            className="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box"
             style={{ background: "#103cbe" }}>
-            <div class="featured-image mb-3">
+            <div className="featured-image mb-3">
               <img
                 src="https://cdn3d.iconscout.com/3d/premium/thumb/form-4721284-3927997.png"
-                class="img-fluid"
+                className="img-fluid"
                 style={{ width: "250px" }}
               />
             </div>
@@ -94,9 +96,9 @@ function Register() {
 
           {/* <!-------------------- ------ Right Box ----------------------------> */}
 
-          <div class="col-md-6 right-box max-h-screen">
-            <form onSubmit={handleSubmit} class="row align-items-center">
-              <div class="header-text">
+          <div className="col-md-6 right-box max-h-screen">
+            <form onSubmit={handleSubmit} className="row align-items-center">
+              <div className="header-text">
                 <h2>
                   <img
                     style={{ width: "40px" }}
@@ -107,10 +109,10 @@ function Register() {
                 </h2>
                 <p>Buat Akun Sekarang Agar Bisa Login</p>
               </div>
-              <div class="form-group mb-3">
+              <div className="form-group mb-3">
                 <input
                   type="text"
-                  class="form-control form-control-lg bg-light fs-6"
+                  className="form-control form-control-lg bg-light fs-6"
                   name="Username"
                   placeholder="Username"
                   required
@@ -118,11 +120,11 @@ function Register() {
                   onChange={(e) => setUsername(e.target.value)}
                 />
               </div>
-              <div class="form-group mb-3">
+              <div className="form-group mb-3">
                 <input
                   type={showPassword ? "text" : "password"} // Menampilkan atau menyembunyikan password berdasarkan nilai showPassword
                   id="password"
-                  class="form-control form-control-lg bg-light fs-6"
+                  className="form-control form-control-lg bg-light fs-6"
                   name="Password"
                   placeholder="Password"
                   required
@@ -131,7 +133,7 @@ function Register() {
                 />
                 <input
                   type="hidden"
-                  class="form-control form-control-lg bg-light fs-6"
+                  className="form-control form-control-lg bg-light fs-6"
                   required
                   value="admin"
                 />
@@ -140,11 +142,11 @@ function Register() {
                 * Password Harus Minimal 8 Karakter Dan Ada Huruf Besar Dan
                 Kecil
               </p>
-              <div class="form-group mb-3 d-flex justify-content-between">
-                <div class="form-check">
+              <div className="form-group mb-3 d-flex justify-content-between">
+                <div className="form-check">
                   <input
                     type="checkbox"
-                    class="form-check-input"
+                    className="form-check-input"
                     id="showPassword"
                     onChange={() => setShowPassword(!showPassword)}
                   />
@@ -155,15 +157,15 @@ function Register() {
                   </label>
                 </div>
               </div>
-              <div class="input-group mb-3">
+              <div className="input-group mb-3">
                 <button
                   type="submit"
                   name="submit"
-                  class="btn btn-lg btn-primary w-100 fs-6">
+                  className="btn btn-lg btn-primary w-100 fs-6">
                   Register
                 </button>
               </div>
-              <div class="row">
+              <div className="row">
                 <small>
                   Sudah Memiliki Akun Silahkan{" "}
                   <a href="/login">Login</a>

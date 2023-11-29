@@ -8,21 +8,21 @@ function CalonAnggotaBawaslu() {
       <Navbar />
       {/* <!-- page title start --> */}
       <div
-        class="breadcrumb-area bg-relative"
+        className="breadcrumb-area bg-relative"
         style={{ background: "#151423" }}
       >
         <div
-          class="banner-bg-img"
+          className="banner-bg-img"
           style={{
             backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp')`,
           }}
         ></div>
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-7 col-lg-8">
-              <div class="breadcrumb-inner text-center">
-                <h2 class="page-title">Pengumuman</h2>
-                <ul class="page-list">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-xl-7 col-lg-8">
+              <div className="breadcrumb-inner text-center">
+                <h2 className="page-title">Pengumuman</h2>
+                <ul className="page-list">
                   <li>
                     <a href="/">Home</a>
                   </li>
@@ -36,26 +36,26 @@ function CalonAnggotaBawaslu() {
       {/* <!-- page title end --> */}
 
       {/* <!-- blog area start --> */}
-      <div class="blog-area pd-top-120 pd-bottom-120">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8">
-              <div class="blog-details-page-content">
-                <div class="single-blog-inner">
-                  <div class="thumb">
+      <div className="blog-area pd-top-120 pd-bottom-120">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-8">
+              <div className="blog-details-page-content">
+                <div className="single-blog-inner">
+                  <div className="thumb">
                     <img
                       className="pengumuman"
                       src="https://boyolali.bawaslu.go.id/cepogo/2023/09/20230819093248.jpg"
                       alt="img"
                     />
                   </div>
-                  <div class="details">
-                    <ul class="blog-meta">
+                  <div className="details">
+                    <ul className="blog-meta">
                       <li>
-                        <i class="far fa-user"></i>By Bawaslu Boyolali
+                        <i className="far fa-user"></i>By Bawaslu Boyolali
                       </li>
                       <li>
-                        <i class="far fa-calendar-alt"></i>19 Agustus 2023
+                        <i className="far fa-calendar-alt"></i>19 Agustus 2023
                       </li>
                     </ul>
                     <p>
@@ -65,15 +65,15 @@ function CalonAnggotaBawaslu() {
                   </div>
                   <br />
                   <h4 className="pt-4 mb-4">Related Posts</h4>
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="media single-choose-inner">
-                        <div class="media-left">
-                          <div class="icon">
-                            <i class="fas fa-bullhorn"></i>
+                  <div className="row">
+                    <div className="col-md-6">
+                      <div className="media single-choose-inner">
+                        <div className="media-left">
+                          <div className="icon">
+                            <i className="fas fa-bullhorn"></i>
                           </div>
                         </div>
-                        <div class="media-body">
+                        <div className="media-body">
                           <p>
                             <a href="/pengumuman-hasil-tes-kesehatan-dan-tes-wawancara-serta-jadwal-uji-kelayakan-dan-kepatutan-calon-anggota-bawaslu-kab-kota-provinsi-jawa-tengah-zona-iii">
                               Pengumuman Hasil Tes Kesehatan dan Tes Wawancara
@@ -84,13 +84,13 @@ function CalonAnggotaBawaslu() {
                           </p>
                         </div>
                       </div>
-                      <div class="media single-choose-inner">
-                        <div class="media-left">
-                          <div class="icon">
-                            <i class="fas fa-bullhorn"></i>
+                      <div className="media single-choose-inner">
+                        <div className="media-left">
+                          <div className="icon">
+                            <i className="fas fa-bullhorn"></i>
                           </div>
                         </div>
-                        <div class="media-body">
+                        <div className="media-body">
                           <a href="/pengumuman-tes-wawancara-seleksi-calon-anggota-bawaslu-kab-kota-2023-provinsi-jawa-tengah-zona-iii">
                             Pengumuman Tes Wawancara Seleksi Calon Anggota
                             Bawaslu Kab/Kota 2023 Provinsi Jawa Tengah Zona III
@@ -98,14 +98,14 @@ function CalonAnggotaBawaslu() {
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-6">
-                      <div class="media single-choose-inner">
-                        <div class="media-left">
-                          <div class="icon">
-                            <i class="fas fa-bullhorn"></i>
+                    <div className="col-md-6">
+                      <div className="media single-choose-inner">
+                        <div className="media-left">
+                          <div className="icon">
+                            <i className="fas fa-bullhorn"></i>
                           </div>
                         </div>
-                        <div class="media-body">
+                        <div className="media-body">
                           <a href="/pengumuman-perpanjangan-hasil-tes-tertulis-dan-tes-psikologi-dan-perubahan-waktu-pelaksanaan-tes-kesehatan-calon-anggota-bawaslu-kab-kota">
                             Pengumuman Perpanjangan Hasil Tes Tertulis dan Tes
                             Psikologi dan Perubahan Waktu Pelaksanaan Tes
@@ -113,13 +113,13 @@ function CalonAnggotaBawaslu() {
                           </a>
                         </div>
                       </div>
-                      <div class="media single-choose-inner">
-                        <div class="media-left">
-                          <div class="icon">
-                            <i class="fas fa-bullhorn"></i>
+                      <div className="media single-choose-inner">
+                        <div className="media-left">
+                          <div className="icon">
+                            <i className="fas fa-bullhorn"></i>
                           </div>
                         </div>
-                        <div class="media-body">
+                        <div className="media-body">
                           <a href="">
                             Pengumuman Hasil Tes Tertulis dan Tes Psikologi
                             Calon Anggota Bawaslu Kab/Kota Provinsi Jawa Tengah
@@ -132,14 +132,14 @@ function CalonAnggotaBawaslu() {
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-12">
-              <div class="td-sidebar">
+            <div className="col-lg-4 col-12">
+              <div className="td-sidebar">
                 <div
-                  class="widget widget_catagory"
+                  className="widget widget_catagory"
                   style={{ background: "#F1F6F9" }}
                 >
-                  <h4 class="widget-title">Tautan Lembaga</h4>
-                  <ul class="catagory-items">
+                  <h4 className="widget-title">Tautan Lembaga</h4>
+                  <ul className="catagory-items">
                     <li>
                       <a
                         href="https://bawaslu.go.id/"
@@ -203,11 +203,11 @@ function CalonAnggotaBawaslu() {
                   </ul>
                 </div>
                 <div
-                  class="widget widget_tag_cloud mb-0"
+                  className="widget widget_tag_cloud mb-0"
                   style={{ background: "#F1F6F9" }}
                 >
-                  <h4 class="widget-title">Berbagi</h4>
-                  <div class="tagcloud">
+                  <h4 className="widget-title">Berbagi</h4>
+                  <div className="tagcloud">
                     <a
                       href="#"
                       style={{
@@ -218,7 +218,7 @@ function CalonAnggotaBawaslu() {
                         fontWeight: "bold",
                       }}
                     >
-                      <i class="fab fa-facebook"></i> Share To Facebook
+                      <i className="fab fa-facebook"></i> Share To Facebook
                     </a>
                     <a
                       href="#"
@@ -230,7 +230,7 @@ function CalonAnggotaBawaslu() {
                         fontWeight: "bold",
                       }}
                     >
-                      <i class="fab fa-twitter"></i> Share To Twitter
+                      <i className="fab fa-twitter"></i> Share To Twitter
                     </a>
                   </div>
                 </div>

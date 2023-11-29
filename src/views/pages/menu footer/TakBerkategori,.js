@@ -21,19 +21,19 @@ const TakBerkategori = () => {
         }}
       >
         <div id="pmbngks-img-berkategori" className="pmbngks-img">
-          <a href="https://boyolali.bawaslu.go.id/dialog-interaktif-isu-pemilu-di-sosial-media/#">
+          <a href="/panwaslu-kecamatan-karanggede-lakukan-kegiatan-sosialisasi-denga-pemilih-pemula">
             <div id="wrapper1-berkategori" className="wrapper1">
               <div id="wrap-img-berkategori" className="wrap-img1">
                 <div id="wrap-opacity1-berkategori" className="wrap-opacity1">
                   <div id="wrap-text1-berkategori" className="wrap-text1">
-                   Panwaslu Kecamatan Karanggede Lakukan Kegiatan Sosialisasi Dengan Pemilih Pemula
-                    <br /> <span>by </span> <span>BAWASLU BOYOLALI</span>
+                   Panwaslu Kecamatan Karanggede Lakukan Kegiatan Sosialisasi Dengan Pemilih Pemulaa
+                    <br /> <span>by </span> <span>BAWASLU BOYOLALI </span>
                     <p className="span-txt" style={{ color: "white" }}>
                       <span>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="13"
-                          height="13"
+                          height="13"  
                           fill="currentColor"
                           class="bi bi-clock"
                           viewBox="0 0 16 16"

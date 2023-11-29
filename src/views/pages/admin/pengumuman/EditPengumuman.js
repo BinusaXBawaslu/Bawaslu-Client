@@ -19,7 +19,7 @@ function EditPengumuman() {
 
   useEffect(() => {
     axios
-      .get(`${API_DUMMY}/bawaslu/api/pengumuman`, {
+      .get(`${API_DUMMY}/bawaslu/api/pengumuman/get/` + param.id, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -28,10 +28,10 @@ function EditPengumuman() {
         const response = ress.data.data;
         setAuthor(response.author);
         setIsiPengumuman(response.isiPengumuman);
-        judulPengumuman(response.judulPengumuman);
+        setJudulPengumuman(response.judulPengumuman);
         setTags(response.tags);
         setFile(response.image);
-        console.log(ress.data.data);
+        console.log("pengumuman : ",ress.data.data);
       })
       .catch((error) => {
         console.log(error);
@@ -83,73 +83,73 @@ function EditPengumuman() {
               <hr />
               <form onSubmit={update}>
                 <div className="row">
-                  <div class="mb-3 col-6">
-                    <label for="exampleInputEmail1" class="form-label">
+                  <div className="mb-3 col-6">
+                    <label for="exampleInputEmail1" className="form-label">
                       Author
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       value={author}
                       onChange={(e) => setAuthor(e.target.value)}
                     />
                   </div>
-                  <div class="mb-3 col-6">
-                    <label for="exampleInputPassword1" class="form-label">
+                  <div className="mb-3 col-6">
+                    <label for="exampleInputPassword1" className="form-label">
                       Image
                     </label>
                     <input
                       type="file"
                       onChange={(e) => setFile(e.target.files[0])}
-                      class="form-control"
+                      className="form-control"
                       id="exampleInputPassword1"
                     />
                   </div>
-                  <div class="mb-3 col-6">
-                    <label for="exampleInputPassword1" class="form-label">
+                  <div className="mb-3 col-6">
+                    <label for="exampleInputPassword1" className="form-label">
                       Isi Pengumuman
                     </label>
                     <input
                       value={isiPengumuman}
                       onChange={(e) => setIsiPengumuman(e.target.value)}
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="exampleInputPassword1"
                     />
                   </div>
-                  <div class="mb-3 col-6">
-                    <label for="exampleInputPassword1" class="form-label">
+                  <div className="mb-3 col-6">
+                    <label for="exampleInputPassword1" className="form-label">
                       Judul Pengumuman
                     </label>
                     <input
                       value={judulPengumuman}
                       onChange={(e) => setJudulPengumuman(e.target.value)}
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="exampleInputPassword1"
                     />
                   </div>
-                  <div class="mb-3 col-6">
-                    <label for="exampleInputPassword1" class="form-label">
+                  <div className="mb-3 col-6">
+                    <label for="exampleInputPassword1" className="form-label">
                       Tags
                     </label>
                     <input
                       value={tags}
                       onChange={(e) => setTags(e.target.value)}
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="exampleInputPassword1"
                     />
                   </div>
                 </div>
-                <button type="button" class="btn-danger mt-3 mr-3">
+                <button type="button" className="btn-danger mt-3 mr-3">
                   <a
                     href="/admin-pengumuman"
                     style={{ color: "white", textDecoration: "none" }}>
                     Batal
                   </a>
                 </button>
-                <button type="submit" class="btn-primary mt-3">
+                <button type="submit" className="btn-primary mt-3">
                   Simpan
                 </button>
               </form>

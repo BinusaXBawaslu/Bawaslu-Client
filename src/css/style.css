@@ -9829,8 +9829,9 @@ ul {
   -webkit-box-orient: vertical;
 }
 .isiBerita {
-  /* white-space: nowrap; */
-  overflow: hidden;
-  text-overflow: ellipsis;
+  overflow: hidden !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3 !important;
+  -webkit-box-orient: vertical;
 }
 

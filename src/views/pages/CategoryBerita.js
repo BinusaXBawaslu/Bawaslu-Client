@@ -30,45 +30,45 @@ function CategoryBerita() {
     <>
       <Navbar />
       <div
-        class="service-area bg-overlay pd-top-120 pd-bottom-90"
+        className="service-area bg-overlay pd-top-120 pd-bottom-90"
         style={{
           backgroundImage: `url('https://boyolali.bawaslu.go.id/cepogo/2023/11/WhatsApp-Image-2023-11-01-at-14.10.31.jpeg')`,
         }}>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-4">
-              <div class="section-title border-radius-5 p-35 bg-base style-white mb-lg-0">
-                <h2 class="title mt-4">We provide the best IT solution</h2>
-                <p class="content">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-4">
+              <div className="section-title border-radius-5 p-35 bg-base style-white mb-lg-0">
+                <h2 className="title mt-4">We provide the best IT solution</h2>
+                <p className="content">
                   Vestibulum ante ipsum primis ibus orci luctus etultrices
                   posuebilia rae Sed aliquam nisi quis porttitor gue elitrat
                   euismod oplacer{" "}
                 </p>
-                <p class="content">
+                <p className="content">
                   Rae Sed aliquam nisi quis aliquam Vestibulum ante ipsum primis
                   ibus orci luctus etultrices posuebilia rae Sed aliquam nisi
                   quis porttitor gue elitrat oplacer{" "}
                 </p>
-                <div class="btn-wrap mt-4 pt-1 mb-4">
+                <div className="btn-wrap mt-4 pt-1 mb-4">
                   <a
-                    class="btn btn-small btn-border-white mt-2"
+                    className="btn btn-small btn-border-white mt-2"
                     href="contact.html">
                     Contact Us
                   </a>
-                  <a class="btn btn-small btn-black mt-2" href="service.html">
+                  <a className="btn btn-small btn-black mt-2" href="service.html">
                     All Service
                   </a>
                 </div>
               </div>
             </div>
-            <div class="col-lg-8">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="single-service-inner style-white text-center">
-                    <div class="icon-box">
-                      <i class="icomoon-layer"></i>
+            <div className="col-lg-8">
+              <div className="row">
+                <div className="col-md-6">
+                  <div className="single-service-inner style-white text-center">
+                    <div className="icon-box">
+                      <i className="icomoon-layer"></i>
                     </div>
-                    <div class="details">
+                    <div className="details">
                       <h3>
                         <a href="service-details.html">Web design</a>
                       </h3>
@@ -79,12 +79,12 @@ function CategoryBerita() {
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <div class="single-service-inner style-white text-center">
-                    <div class="icon-box">
-                      <i class="icomoon-application"></i>
+                <div className="col-md-6">
+                  <div className="single-service-inner style-white text-center">
+                    <div className="icon-box">
+                      <i className="icomoon-application"></i>
                     </div>
-                    <div class="details">
+                    <div className="details">
                       <h3>
                         <a href="service-details.html">App development</a>
                       </h3>
@@ -95,12 +95,12 @@ function CategoryBerita() {
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <div class="single-service-inner style-white text-center">
-                    <div class="icon-box">
-                      <i class="icomoon-cloud-data"></i>
+                <div className="col-md-6">
+                  <div className="single-service-inner style-white text-center">
+                    <div className="icon-box">
+                      <i className="icomoon-cloud-data"></i>
                     </div>
-                    <div class="details">
+                    <div className="details">
                       <h3>
                         <a href="service-details.html">Cloud Service</a>
                       </h3>
@@ -111,12 +111,12 @@ function CategoryBerita() {
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <div class="single-service-inner style-white text-center">
-                    <div class="icon-box">
-                      <i class="icomoon-megaphone"></i>
+                <div className="col-md-6">
+                  <div className="single-service-inner style-white text-center">
+                    <div className="icon-box">
+                      <i className="icomoon-megaphone"></i>
                     </div>
-                    <div class="details">
+                    <div className="details">
                       <h3>
                         <a href="service-details.html">It mangement</a>
                       </h3>
@@ -132,10 +132,10 @@ function CategoryBerita() {
           </div>
         </div>
       </div>
-      <div class="blog-area pd-top-120 pd-bottom-120">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8">
+      <div className="blog-area pd-top-120 pd-bottom-120">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-8">
               <h1 style={{ fontWeight: "bold", fontSize: "45px" }}>
                 {list.length > 0
                   ? list[0].categoryBerita.category
@@ -144,21 +144,21 @@ function CategoryBerita() {
               <br />
               {list.map((category) => {
                 return (
-                  <div class="single-blog-inner">
-                    <div class="tag-and-share">
-                      <div class="row">
-                        <div class="col-sm-7">
-                          <div class="tags d-inline-block">
+                  <div className="single-blog-inner">
+                    <div className="tag-and-share">
+                      <div className="row">
+                        <div className="col-sm-7">
+                          <div className="tags d-inline-block">
                             <button className="border">
-                              <i class="fa-regular fa-thumbs-up"></i>
+                              <i className="fa-regular fa-thumbs-up"></i>
                             </button>
                             <button className="border">
-                              <i class="fa-regular fa-thumbs-down"></i>
+                              <i className="fa-regular fa-thumbs-down"></i>
                             </button>
                           </div>
                         </div>
-                        <div class="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
-                          <div class="blog-share">
+                        <div className="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
+                          <div className="blog-share">
                             <ul>
                               <li>
                                 <a
@@ -166,7 +166,7 @@ function CategoryBerita() {
                                   target="_blank">
                                   <button className="border p-2">
                                     <i
-                                      class="fab fa-facebook-f"
+                                      className="fab fa-facebook-f"
                                       aria-hidden="true"></i>{" "}
                                     Facebook
                                   </button>
@@ -178,7 +178,7 @@ function CategoryBerita() {
                                   target="_blank">
                                   <button className="border p-2">
                                     <i
-                                      class="fab fa-twitter"
+                                      className="fab fa-twitter"
                                       aria-hidden="true"></i>{" "}
                                     Twitter
                                   </button>
@@ -187,7 +187,7 @@ function CategoryBerita() {
                               <li>
                                 <a href="#">
                                   <button className="border p-2">
-                                    <i class="fa-brands fa-pinterest"></i> Pin
+                                    <i className="fa-brands fa-pinterest"></i> Pin
                                   </button>
                                 </a>
                               </li>
@@ -196,22 +196,22 @@ function CategoryBerita() {
                         </div>
                       </div>
                     </div>
-                    <div class="thumb">
+                    <div className="thumb">
                       <img
                         style={{ height: "450px" }}
                         src="https://boyolali.bawaslu.go.id/cepogo/2023/09/20230718121531.jpeg"
                         alt="img"
                       />
                     </div>
-                    <div class="details">
+                    <div className="details">
                       <h2>{category.judulBerita}</h2>
-                      <ul class="blog-meta">
+                      <ul className="blog-meta">
                         <li>
-                          <i class="far fa-user"></i>
+                          <i className="far fa-user"></i>
                           {category.author}
                         </li>
                         <li>
-                          <i class="far fa-calendar-alt"></i>
+                          <i className="far fa-calendar-alt"></i>
                           {category.createdDate}
                         </li>
                       </ul>
@@ -221,9 +221,9 @@ function CategoryBerita() {
                 );
               })}
             </div>
-            <div class="col-lg-4 col-12">
+            <div className="col-lg-4 col-12">
               <div className="sidebar-container">
-                <div class="td-sidebar">
+                <div className="td-sidebar">
                     <Bawaslu/>
                 </div>
               </div>

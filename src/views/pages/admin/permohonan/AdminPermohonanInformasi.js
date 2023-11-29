@@ -4,6 +4,7 @@ import Sidebar from "../../../../component/Sidebar";
 import Footer from "../../../../component/Footer";
 import { API_DUMMY } from "../../../../utils/base_URL";
 import axios from "axios";
+import "../../../../../src/css/adminBerita.css";
 import Swal from "sweetalert2";
 
 function AdminPermohonanInformasi() {
@@ -44,31 +45,31 @@ function AdminPermohonanInformasi() {
                 style={{minWidth: "100%" }}>
                 <thead>
                   <tr>
-                    <th className="text-center">
+                    <th scope="col" className="text-center">
                       No
                     </th>
-                    <th className="text-center">
+                    <th scope="col" className="text-center">
                       Nama
                     </th>
-                    <th className="text-center">
+                    <th scope="col" className="text-center">
                       No Hp
                     </th>
-                    <th className="text-center">
+                    <th scope="col" className="text-center">
                       Pekerjaan
                     </th>
-                    <th className="text-center">
+                    <th scope="col" className="text-center">
                       Rincian Informasi
                     </th>
-                    <th className="text-center">
+                    <th scope="col" className="text-center">
                       Tujuan Informasa
                     </th>
-                    <th className="text-center">
+                    <th scope="col" className="text-center">
                       Almat
                     </th>
-                    <th className="text-center">
+                    <th scope="col" className="text-center">
                       Email
                     </th>
-                    <th className="text-center">
+                    <th scope="col" className="text-center">
                       Aksi
                     </th>
                   </tr>
@@ -77,31 +78,31 @@ function AdminPermohonanInformasi() {
                   {list.map((informasi, index) => {
                     return (
                       <tr key={index}>
-                        <td className="text-left">
+                        <td  data-label="No : " className="text-left">
                           <p>{index + 1}</p>
                         </td>
-                        <td className="text-left">
+                        <td  data-label="Nama : " className="text-left">
                           <p>{informasi.nama}</p>
                         </td>
-                        <td className="text-left">
+                        <td  data-label="No hp : " className="text-left">
                           <p>{informasi.noHp}</p>
                         </td>
-                        <td className="text-left">
+                        <td  data-label="pekerjaan : " className="text-left">
                           <p>{informasi.pekerjaan}</p>
                         </td>
-                        <td className="text-left">
+                        <td  data-label="rincian informasi : " className="text-left">
                           <p>{informasi.rincianInformasi}</p>
                         </td>
-                        <td className="text-left">
+                        <td  data-label="tujuan informasi : " className="text-left">
                           <p>{informasi.tujuanInformasi}</p>
                         </td>
-                        <td className="text-left">
+                        <td  data-label="alamat : " className="text-left">
                           <p>{informasi.alamat}</p>
                         </td>
-                        <td className="text-left">
+                        <td  data-label="email : " className="text-left">
                           <p>{informasi.email}</p>
                         </td>
-                        <td class="text-center">
+                        <td data-label="Aksi : " class="text-center">
                           <button  type="button" class="btn-primary mr-2 btn-sm">
                             <a className="text-light" href={"/detail-permohonan-informasi/" + informasi.id}><i class="fas fa-info-circle"></i></a>
                           </button>

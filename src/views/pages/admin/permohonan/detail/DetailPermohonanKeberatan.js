@@ -67,29 +67,29 @@ function DetailPermohonanKeberatan() {
                 <p className="text-center">{nama}</p>
               </form>
               <form className="card card-body shadow p-2 mt-3">
-                <div class="mb-3">
-                  <label class="form-label">Email</label>
+                <div className="mb-3">
+                  <label className="form-label">Email</label>
                   <input
                     type="email"
-                    class="form-control"
+                    className="form-control"
                     disabled
                     value={email}
                   />
                 </div>
-                <div class="mb-3">
-                  <label class="form-label">Alamat</label>
+                <div className="mb-3">
+                  <label className="form-label">Alamat</label>
                   <input
                     type="text"
-                    class="form-control"
+                    className="form-control"
                     disabled
                     value={alamat}
                   />
                 </div>
-                <div class="mb-3">
-                  <label class="form-label">No Handphone</label>
+                <div className="mb-3">
+                  <label className="form-label">No Handphone</label>
                   <input
                     type="number"
-                    class="form-control"
+                    className="form-control"
                     disabled
                     value={noTelp}
                   />
@@ -97,47 +97,47 @@ function DetailPermohonanKeberatan() {
               </form>
             </div>
             <form className="card card-body p-2" style={{ width: "100%" }}>
-              <div class="mb-3">
-                <label class="form-label">Nomor Identitas</label>
+              <div className="mb-3">
+                <label className="form-label">Nomor Identitas</label>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   disabled
                   value={nomorIdentitas}
                 />
               </div>
-              <div class="mb-3">
-                <label class="form-label">Tujuan Pengguna Informasi</label>
+              <div className="mb-3">
+                <label className="form-label">Tujuan Pengguna Informasi</label>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   disabled
                   value={tujuanPenggunaanInformasi}
                 />
               </div>
-              <div class="mb-3">
-                <label class="form-label">Jenis Indentitas</label>
+              <div className="mb-3">
+                <label className="form-label">Jenis Indentitas</label>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   disabled
                   value={jenisIdentitas}
                 />
               </div>
-              <div class="mb-3">
-                <label class="form-label">Kasus Posisi</label>
+              <div className="mb-3">
+                <label className="form-label">Kasus Posisi</label>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   disabled
                   value={kasusPosisi}
                 />
               </div>
-              <div class="mb-3">
-                <label class="form-label">Alasan</label>
+              <div className="mb-3">
+                <label className="form-label">Alasan</label>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   disabled
                   value={alasan}
                 />

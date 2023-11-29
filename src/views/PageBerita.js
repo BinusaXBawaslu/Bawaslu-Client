@@ -228,7 +228,9 @@ function PageBerita() {
                             <p>{category.judulBerita} </p>
                           </div>
                         </div>
+
                       
+
                     );
                   })}
                             <a href="/bawaslu-boyolali-ajak-masyarakat-terlibat-dalam-pengawasan-pemilu-partisipatif">
@@ -304,7 +306,7 @@ function PageBerita() {
             </div>
           </div>
         </div>
-      
+
       {/* <!-- blog area end --> */}
       <Footer />
     </>

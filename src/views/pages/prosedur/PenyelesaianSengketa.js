@@ -8,21 +8,21 @@ function PenyelesaianSengketa() {
     <>
       <Navbar />
       {/* <!-- page title start --> */}
-      <div class="breadcrumb-area bg-black bg-relative ">
+      <div className="breadcrumb-area bg-black bg-relative ">
         <div
-          class="banner-bg-img"
+          className="banner-bg-img"
           style={{
             backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp') `,
           }}
         ></div>
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-7 col-lg-8">
-              <div class="breadcrumb-inner text-center">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-xl-7 col-lg-8">
+              <div className="breadcrumb-inner text-center">
                 <h2 style={{ color: "white", fontWeight: 700, fontSize: 60 }}>
                   Penyelesaian Sengketa Informasi
                 </h2>
-                <ul class="page-list">
+                <ul className="page-list">
                   <li>
                     <a href="/" style={{ textDecoration: "none" }}>
                       Home
@@ -37,7 +37,7 @@ function PenyelesaianSengketa() {
       </div>
       {/* <!-- page title end --> */}
       <div
-        class="service-area-5 pd-top-120 pd-bottom-120 service-area bg-relative pd-top-60 pd-bottom-90"
+        className="service-area-5 pd-top-120 pd-bottom-120 service-area bg-relative pd-top-60 pd-bottom-90"
         style={{
           backgroundColor: "#F8F9FE;",
           backgroundImage: `url('https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg?w=740&t=st=1698973959~exp=1698974559~hmac=418240e9f8d698b9b7f2c0907f5c8e0013885b44976fa36e713b8801491993db')`,
@@ -46,44 +46,44 @@ function PenyelesaianSengketa() {
         }}
       >
         <img
-          class="shape-left-top top_image_bounce"
+          className="shape-left-top top_image_bounce"
           src="https://www.solverwp.com/demo/html/itechie/assets/img/shape/3.webp"
           alt="img"
         />
         <img
-          class="shape-right-top top_image_bounce"
+          className="shape-right-top top_image_bounce"
           src="https://www.solverwp.com/demo/html/itechie/assets/img/shape/4.webp"
           alt="img"
         />
-        <div class="container">
-          <div class="section-title">
-            <div class="row justify-content-center">
-              <div class="col-lg-6 col-md-8">
-                <h5 class="sub-title double-line" style={{ marginLeft: "35%" }}>
+        <div className="container">
+          <div className="section-title">
+            <div className="row justify-content-center">
+              <div className="col-lg-6 col-md-8">
+                <h5 className="sub-title double-line" style={{ marginLeft: "35%" }}>
                   Bawaslu Boyolali
                 </h5>
-                <h2 class="title text-center">Tata Cara Pengajuan Keberatan</h2>
-                <p class="content text-center">
+                <h2 className="title text-center">Tata Cara Pengajuan Keberatan</h2>
+                <p className="content text-center">
                   dan Permohonan Penyelesaian Sengketa Informasi
                 </p>
               </div>
             </div>
           </div>
-          <div class="row justify-content-center">
-            <div class="col-lg-4 col-md-6">
-              <div class="single-service-inner style-5 text-center">
-                <div class="thumb">
+          <div className="row justify-content-center">
+            <div className="col-lg-4 col-md-6">
+              <div className="single-service-inner style-5 text-center">
+                <div className="thumb">
                   <img
                     src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/service/service-01.webp"
                     alt="img"
                   />
                   <img
-                    class="icon"
+                    className="icon"
                     src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/service/service-001.webp"
                     alt="img"
                   />
                 </div>
-                <div class="details-wrap">
+                <div className="details-wrap">
                   <h4>
                     <a
                       href="service-details.html"
@@ -100,20 +100,20 @@ function PenyelesaianSengketa() {
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="single-service-inner style-5 text-center">
-                <div class="thumb">
+            <div className="col-lg-4 col-md-6">
+              <div className="single-service-inner style-5 text-center">
+                <div className="thumb">
                   <img
                     src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/service/service-05.webp"
                     alt="img"
                   />
                   <img
-                    class="icon"
+                    className="icon"
                     src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/service/service-005.webp"
                     alt="img"
                   />
                 </div>
-                <div class="details-wrap">
+                <div className="details-wrap">
                   <h4>
                     <a
                       href="service-details.html"
@@ -130,20 +130,20 @@ function PenyelesaianSengketa() {
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="single-service-inner style-5 text-center">
-                <div class="thumb">
+            <div className="col-lg-4 col-md-6">
+              <div className="single-service-inner style-5 text-center">
+                <div className="thumb">
                   <img
                     src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/service/service-04.webp"
                     alt="img"
                   />
                   <img
-                    class="icon"
+                    className="icon"
                     src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/service/service-004.webp"
                     alt="img"
                   />
                 </div>
-                <div class="details-wrap">
+                <div className="details-wrap">
                   <h4>
                     <a
                       href="service-details.html"
@@ -160,20 +160,20 @@ function PenyelesaianSengketa() {
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="single-service-inner style-5 text-center">
-                <div class="thumb">
+            <div className="col-lg-4 col-md-6">
+              <div className="single-service-inner style-5 text-center">
+                <div className="thumb">
                   <img
                     src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/service/3.webp"
                     alt="img"
                   />
                   <img
-                    class="icon"
+                    className="icon"
                     src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/service/03.webp"
                     alt="img"
                   />
                 </div>
-                <div class="details-wrap" style={{ height: "150px" }}>
+                <div className="details-wrap" style={{ height: "150px" }}>
                   <h4>
                     <a
                       href="service-details.html"
@@ -193,20 +193,20 @@ function PenyelesaianSengketa() {
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="single-service-inner style-5 text-center">
-                <div class="thumb">
+            <div className="col-lg-4 col-md-6">
+              <div className="single-service-inner style-5 text-center">
+                <div className="thumb">
                   <img
                     src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/service/2.webp"
                     alt="img"
                   />
                   <img
-                    class="icon"
+                    className="icon"
                     src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/service/02.webp"
                     alt="img"
                   />
                 </div>
-                <div class="details-wrap" style={{ height: "150px" }}>
+                <div className="details-wrap" style={{ height: "150px" }}>
                   <h4>
                     <a
                       href="service-details.html"
