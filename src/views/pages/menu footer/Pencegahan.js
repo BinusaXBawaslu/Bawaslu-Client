@@ -10,6 +10,113 @@ import MAHKAMAH from "../../../aset/MAHKAMAKONSTITUSI-300x73-1.png";
 import "../../../css/pencegahan.css";
 
 const Pencegahan = () => {
+
+
+
+    return (
+        <div>
+            <Navbar />
+            <div style={{
+                backgroundImage: `url('https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg')`, backgroundRepeat: "no-repeat", backgroundSize: "cover"
+            }}>
+                <div id="img-pmbngks" className="pmbngks-img">
+                    <a href="https://boyolali.bawaslu.go.id/dialog-interaktif-isu-pemilu-di-sosial-media/#">
+                        <div id="awrapper1" className="wrapper1">
+                            <div id="awrap-img1"  className="wrap-img1" style={{backgroundImage: `url('https://boyolali.bawaslu.go.id/cepogo/2023/09/20230803014724.jpeg')`}}>
+                                <div id="awrap-opacity" className="wrap-opacity1">
+                                    <div id="wirap-text1" className="wrap-text1">
+                                        Dialog Interaktif Isu Pemilu di Sosial Media
+                                        <br />
+                                        <span>by </span> <span>BAWASLU BOYOLALI</span>
+                                        <p className="span-txt" style={{ color: "white" }}>
+                                            <span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                                                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                                                </svg>
+                                            </span> {"  "}
+                                            3 Agustus 2023</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </a>
+                    <a href="https://boyolali.bawaslu.go.id/bawaslu-mengawasi-verifikasi-administrasi-perbaikan-dokumen-persyaratan-bakal-calon-dprd-kab-kota/">
+                         <div id="awrapper2" className="wrapper2">
+                        <div id="awrap-img2" style={{backgroundImage: `url('https://boyolali.bawaslu.go.id/cepogo/2023/09/20230718120146.jpeg')`}} className="wrap-img2">
+                            <div id="awrap-opacity" className="wrap-opacity2">
+                                <div id="awrap-text2" className="wrap-text2">
+                                    Pesta Demokrasi Semakin Dekat, Bawaslu Diminta
+                                    Menjadi Narasumber Sosialisasi Pemilu 2024
+                                    <br />
+                                    <span>by </span> <span>BAWASLU BOYOLALI</span>
+                                    <br />
+                                    <p className="span-txt" style={{ color: "white" }}>
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                                                <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                                            </svg>
+                                        </span> {"  "}
+                                        18 Juli 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div></a>
+
+                    <div id="wrapper" className="wrapper3">
+                        <div id="pembngkus-img2" className="pmbngks-img2">
+                            <a href="https://boyolali.bawaslu.go.id/bawaslu-boyolali-bersama-uns-lakukan-penandatanganan-mou/"> 
+                            <div id="awrap-img3" className="wrap-img3" style={{backgroundImage: `url('https://boyolali.bawaslu.go.id/cepogo/2023/09/20230718121531-350x250.jpeg')`}}>
+                                <div id="awrap-opacity3" className="wrap-opacity3">
+                                    <div id="awrap-text3" className="wrap-text3">
+                                        Bawaslu Boyolali UNS Lakukan Penandatanganan MoU
+                                        <br />
+
+                                        <span>by </span> <span>BAWASLU BOYOLALI</span>
+                                        <p className="span-txt" style={{ color: "white" }}>
+                                            <span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                                                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                                                </svg>
+                                            </span> {"  "}
+                                            18 Juli 2023</p>
+                                    </div>
+                                </div>
+                            </div></a>
+
+                            <div>
+                                <a href="https://boyolali.bawaslu.go.id/bawaslu-provinsi-jawa-tengah-lakukan-supervisi-pemetaan-potensi-pelanggaran-tahapan-kampanye-pemilu-2024/">
+                                    <div id="awrap-img4" className="wrap-img4" style={{backgroundImage:`url('https://boyolali.bawaslu.go.id/cepogo/2023/09/20230713014836-350x250.jpeg')`}}>
+                                        <div id="awrap-opacity4" className="wrap-opacity3">
+                                            <div id="awrap-text4" className="wrap-text3">
+                                                Bawaslu Provinsi Jawa Tengah Lakukan Supervisi Pemetaan Potensi Pelanggaran Tahapan Kampanye Pemilu 2024
+                                                <br />
+                                                <span>by </span> <span>BAWASLU BOYOLALI</span>
+
+                                                <p className="span-txt" style={{ color: "white" }}>
+                                                    <span>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                                                            <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                                                        </svg>
+                                                    </span> {"  "}
+                                                    13 Juli 2023</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
   return (
     <div>
       <Navbar />
@@ -46,6 +153,7 @@ const Pencegahan = () => {
                       {"  "}3 Agustus 2023
                     </p>
                   </div>
+
                 </div>
               </div>
             </div>
@@ -372,6 +480,10 @@ const Pencegahan = () => {
           </div>
         </div>
       </div>
+      </div>
+      </div>
+      </div>
+      
 
       <Footer />
     </div>

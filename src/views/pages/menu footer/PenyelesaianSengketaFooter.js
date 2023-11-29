@@ -9,7 +9,7 @@ import dkpp from "../../../aset/dkpp-300x73-1.png";
 import KPU from "../../../aset/KPU-300x73-1.png";
 import MAHKAMAH from "../../../aset/MAHKAMAKONSTITUSI-300x73-1.png";
 
-const TakBerkategori = () => {
+const PenyelesaianSengketaFooter = () => {
   return (
     <div>
       <Navbar />
@@ -127,7 +127,7 @@ const TakBerkategori = () => {
           </div>
           <div id="logo-berkategori" className="logo">
             <div id="h3-berkategori" className="h3">
-              <h3>
+              <h3 id="h3" >
                 TAUTAN <span className="span">LEMBAGA</span>
               </h3>
               <hr id="hr-berkategori" />
@@ -189,4 +189,4 @@ const TakBerkategori = () => {
   );
 };
 
-export default TakBerkategori;
+export default PenyelesaianSengketaFooter;

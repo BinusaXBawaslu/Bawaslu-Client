@@ -10,6 +10,14 @@ import KPU from "../../../aset/KPU-300x73-1.png";
 import MAHKAMAH from "../../../aset/MAHKAMAKONSTITUSI-300x73-1.png";
 
 const Kehumasan = () => {
+
+
+
+   
+    
+              
+
+
   return (
     <div>
       <Navbar />
@@ -182,6 +190,7 @@ const Kehumasan = () => {
 
       <Footer />
     </div>
+    
   );
 };
 

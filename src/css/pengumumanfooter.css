@@ -213,6 +213,9 @@
     height: 200px;
     width: 500px;
 }
+#h3-footer{
+    text-align: center;
+}
 
 @media screen and (max-width: 768px) {
 

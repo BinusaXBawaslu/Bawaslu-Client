@@ -158,7 +158,7 @@ const FormPermohonaKeberatan = () => {
             <div>
               <div className="h3">
                 <h3>
-                  TAUTAN <span className="span" >LEMBAGA</span>
+                  TAUTAN <span className="span">LEMBAGA</span>
                 </h3>
                 <div className="img-logo">
                   <div>

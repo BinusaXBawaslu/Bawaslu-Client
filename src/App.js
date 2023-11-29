@@ -83,6 +83,7 @@ import EditRegulasi from "./views/pages/admin/daftarRegulasi/MenuRegulasi/MenuEd
 import MenuRegulasi from "./views/pages/admin/daftarRegulasi/Regulasi/Regulasi";
 import PaswasluKecamatan from "./views/pages/menu footer/PaswasluKecamatan";
 import Kanal from "./views/pages/informasi/Kanal";
+import PageBerita from "./views/PageBerita";
 import Informasii from "./views/pages/informasi/Informasii";
 // test
 function App() {
@@ -314,6 +315,17 @@ function App() {
           <Route
             path="/pengumuman-lowongan-pekerjaan-satpam"
             component={PengumumanLowonganSatpam}
+            exact
+          />
+          {/* <Route
+
+            path="/isi-pengumuman/:judulPengumuman/:id"
+            component={IsiPengumuman}
+            exact
+          /> */}
+          <Route
+            path="/page-berita/:judulBerita/:id"
+            component={PageBerita}
             exact
           />
           <Route
