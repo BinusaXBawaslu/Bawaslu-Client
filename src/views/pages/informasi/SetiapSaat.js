@@ -239,7 +239,7 @@ function SetiapSaat() {
                 <h4 class="page-title">Informasi Setiap Saat</h4>
                 <ul class="page-list">
                   <li>
-                    <a href="home">Home</a>
+                    <a href="/">Home</a>
                   </li>
                   <li>Informasi</li>
                 </ul>

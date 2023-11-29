@@ -154,7 +154,7 @@
     background-image: url("https://boyolali.bawaslu.go.id/cepogo/2023/09/20230330094921.jpeg");
 }
 #al-txt{
-    font-size: 23px;
+    font-size: 20px;
 }
 @media screen and (max-width: 1024px) {
     #warappper3 {
@@ -240,9 +240,19 @@
     .hrr{
         width: 200px;
         display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
     #al-txt{
         font-size: 18px;
+    }
+    #img-logo{
+        padding-right: 100px;
+    }
+   
+    #tautan{
+padding-right: 100px;
     }
 }
 @media screen and (max-width: 320px) {
@@ -288,4 +298,12 @@
         width: 300px;
         text-align: center;
     }
+    #tautan{
+        padding: 5px;
+       
+    }
+   
+    #img-logo{
+padding: 5px ;
+ }
 }

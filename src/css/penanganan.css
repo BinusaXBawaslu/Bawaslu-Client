@@ -91,7 +91,7 @@
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-#wraper-img4 {
+#wraper-img4-penanganan {
     background-image: url("https://jatengprov.go.id/wp-content/uploads/2023/02/IMG-20230210-WA0066.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -199,7 +199,7 @@
         text-align: center;
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     }
-    #wraper-img3 {
+    #wraper-img3-penanganan {
         height: 217px;
        
     }
@@ -211,7 +211,7 @@
         width: 200px;
         padding-top: 100px;
        }
-       #wraper-img4 {    
+       #wraper-img4-penanganan {    
         height: 217px;
     }
     #ay-txt{
@@ -292,7 +292,7 @@
         text-align: center;
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     }
-    #wraper-img3 {
+    #wraper-img3-penanganan {
         height: 170px;
        
     }
@@ -304,8 +304,8 @@
         width: 170px;
         padding-top: 100px;
        }
-       #wraper-img4 {    
-        height: 170px;
+       #wraper-img4-penanganan {    
+        height: 165px;
     }
     #pmbngks-img2{
         display: flex;
@@ -385,7 +385,7 @@
     }
    #pembungkusimg2{
    }
-    #wraper-img3 {
+    #wraper-img3-penanganan {
         height: 100px;
        
     }
@@ -397,7 +397,7 @@
         width: 280px;
         padding-top: 10px;
        }
-       #wraper-img4 {    
+       #wraper-img4-penanganan {    
         height: 100px;
     }
     

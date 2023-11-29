@@ -82,6 +82,7 @@ import RegulasiAdmin from "./views/pages/admin/daftarRegulasi/MenuRegulasi/MenuR
 import EditRegulasi from "./views/pages/admin/daftarRegulasi/MenuRegulasi/MenuEditRegulasi";
 import MenuRegulasi from "./views/pages/admin/daftarRegulasi/Regulasi/Regulasi";
 import PaswasluKecamatan from "./views/pages/menu footer/PaswasluKecamatan";
+import Kanal from "./views/pages/informasi/Kanal";
 // test
 function App() {
   return (
@@ -98,10 +99,11 @@ function App() {
           <Route path="/library" component={eLibrary} exact />
           <Route path="/berita" component={Berita} exact />
           {/* daftar informasi */}
-          <Route path="/informasi-serta-merta" component={SertaMerta} exact />
-          <Route path="/informasi-setiap-saat" component={SetiapSaat} exact />
-          <Route path="/informasi-berkala" component={InformasiBerkala} exact />
+          <Route path="/informasi/:namaInformasi/:id" component={SertaMerta} exact />
+          {/* <Route path="/informasi-setiap-saat" component={SetiapSaat} exact />
+          <Route path="/informasi-berkala" component={InformasiBerkala} exact /> */}
           <Route path="/informasi-dikecuali" component={Dikecualikan} exact />
+          <Route path="/informasi-kanal" component={Kanal} exact />
           {/* form online */}
           <Route
             path="/form-permohonan-keberatan"
@@ -143,13 +145,13 @@ function App() {
           />
           {/* daftar regulasi */}
           <Route path="/maklumat-pelayanan" component={Maklumat} exact />
-          <Route path="/regulasi" component={Regulasi} exact />
-          <Route path="/dip" component={Dip} exact />
+          <Route path="/regulasi/:jenisRegulasi/:id" component={Regulasi} exact />
+          {/* <Route path="/regulasi/:jenisRegulasi/:id" component={Dip} exact />
           <Route
             path="/standar-operasional-prosedur"
             component={InformasiStandarProsedur}
             exact
-          />
+          /> */}
           {/* admin */}
           <Route
             path="/admin-permohonan-informsi"

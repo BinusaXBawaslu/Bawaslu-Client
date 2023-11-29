@@ -3,20 +3,55 @@ import Footer from "../../component/Footer";
 import Navbar from "../../component/Navbar";
 import axios from "axios";
 import { API_DUMMY } from "../../utils/base_URL";
+import { Pagination } from "@mui/material";
+import Bawaslu from "../../component/Bawaslu";
 
 function Berita() {
   const [scroll, setScroll] = useState(false);
   const [list, setList] = useState([]);
   const [listTerbaru, setListTerbaru] = useState([]);
+  const [category, setCategory] = useState([]);
   const [november, setNovember] = useState([]);
   const currentYear = new Date().getFullYear();
   const [monthlyData, setMonthlyData] = useState({});
+  const [monthlyTotal, setMonthlyTotal] = useState({});
+  const [currentPage, setCurrentPage] = useState(1);
+  const [paginationInfo, setPaginationInfo] = useState({
+    totalPages: 1,
+    totalElements: 0,
+  });
+  const [searchResults, setSearchResults] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [gambarTerbaru, setGambarTerbaru] = useState("");
 
-  const getAll = async () => {
+  const getAll = async (page) => {
     try {
-      const response = await axios.get(`${API_DUMMY}/bawaslu/api/berita`);
-      setList(response.data.data);
+      const response = await axios.get(
+        `${API_DUMMY}/bawaslu/api/berita?page=${
+          page - 1
+        }&size=10&sortBy=id&sortOrder=asc`
+      );
+
+      setList(response.data.data.content);
+      setPaginationInfo({
+        totalPages: response.data.data.totalPages,
+        totalElements: response.data.data.totalElements,
+      });
+    } catch (error) {
+      console.error("Terjadi Kesalahan", error);
+    }
+  };
+
+  const getCategoryBerita = async () => {
+    try {
+      const response = await axios.get(
+        `${API_DUMMY}/bawaslu/api/category-berita/all`
+      );
+      setCategory(response.data.data);
       console.log(response.data.data);
+      if (response.data.data.length > 0) {
+        setGambarTerbaru(response.data.data[0].image);
+      }
     } catch (error) {
       console.error("Terjadi Kesalahan", error);
     }
@@ -39,7 +74,9 @@ function Berita() {
     return {
       month,
       year: currentYear,
-      label: new Date(currentYear, month - 1, 1).toLocaleString('id-ID', { month: 'long' }),
+      label: new Date(currentYear, month - 1, 1).toLocaleString("id-ID", {
+        month: "long",
+      }),
     };
   });
 
@@ -72,10 +109,15 @@ function Berita() {
   }, []);
 
   useEffect(() => {
-    getAll(0);
+    // getAll(0);
     getAllTerbaru(0);
+    getCategoryBerita(0);
     // getAllRekap();
   }, []);
+
+  useEffect(() => {
+    getAll(currentPage);
+  }, [currentPage]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -93,29 +135,76 @@ function Berita() {
     };
   }, []);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      const newData = {};
+      const newMonthlyTotal = {}; // State baru
+
+      for (const monthData of archivingMonths) {
+        const tahun_bulan = `${monthData.year}-${monthData.month}`;
+        const data = await getAllRekap(tahun_bulan);
+        newData[tahun_bulan] = data;
+        newMonthlyTotal[tahun_bulan] = data.length; // Menghitung total data berita
+      }
+
+      setMonthlyData(newData);
+      setMonthlyTotal(newMonthlyTotal); // Update state total data berita
+    };
+    fetchData();
+  }, []);
+
   return (
     <>
       <Navbar />
       {/* <!-- page title start --> */}
       <div
-        class="breadcrumb-area bg-relative"
-        style={{ background: "#151423" }}>
-        <div
-          class="banner-bg-img"
-          style={{
-            backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp')`,
-          }}></div>
+        class="service-area bg-overlay pd-top-120 pd-bottom-90"
+        style={{
+          backgroundImage: `url('https://boyolali.bawaslu.go.id/cepogo/2023/11/WhatsApp-Image-2023-11-01-at-14.10.31.jpeg')`,
+        }}>
         <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-7 col-lg-8">
-              <div class="breadcrumb-inner text-center">
-                <h2 class="page-title">Berita</h2>
-                <ul class="page-list">
-                  <li>
-                    <a href="/">Home</a>
-                  </li>
-                  <li>Berita</li>
-                </ul>
+          <div class="row">
+            <div class="col-lg-4">
+              <div
+                class="section-title single-service-inner border-radius-5 p-35 style-white mb-lg-0"
+                style={{
+                  backgroundImage: `url(${gambarTerbaru})`,
+                  minHeight:"93%"
+                }}>
+                <h2 class="title mt-4">
+                  {listTerbaru.length > 0 && listTerbaru[0].judulBerita}
+                </h2>
+                {/* <p class="content">
+                  {listTerbaru.length > 0 && listTerbaru[0].isiBerita}
+                </p> */}
+                {/* <div class="btn-wrap mt-4 pt-1 mb-4">
+                  <a
+                    class="btn-small btn-border-white mt-2">
+                    {listTerbaru.length > 0 && listTerbaru[0].author}
+                  </a>
+                  <a class="btn-small btn-black mt-2">
+                  {listTerbaru.length > 0 && listTerbaru[0].createdDate}
+                  </a>
+                </div> */}
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="row">
+              {listTerbaru.slice(1, 5).map((berita, index) => (
+                  <div class="col-md-6" key={index}>
+                  <div class="single-service-inner style-white text-left">
+                    <div class="icon-box">
+                      <i class="icomoon-layer"></i>
+                    </div>
+                    <div class="details detailss">
+                      <h3>
+                        <a >{berita.judulBerita}</a>
+                        <a>{berita.judulBerita}</a>
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              ))}
               </div>
             </div>
           </div>
@@ -128,41 +217,45 @@ function Berita() {
           <div class="row">
             <div class="col-lg-8">
               <div className="row">
-                <div className="col-3">
-                  <p>All</p>
-                </div>
-                <div className="col-3">
-                  <p>All</p>
-                </div>
-                <div className="col-3">
-                  <p>All</p>
-                </div>
-                <div className="col-3">
-                  <p>All</p>
+                <div class="widget widget_search">
+                  <h4>
+                    {" "}
+                    <strong>
+                      Berita{" "}
+                      <span style={{ color: "blue" }}>Bawaslu Boyolali</span>
+                    </strong>
+                  </h4>
+                  <div className="widget-title row">
+                    {category.map((cta, index) => {
+                      return (
+                        <div className="col-6">
+                          <a
+                            style={{ color: "black", textDecoration: "none" }}
+                            href={`category-berita/${cta.category}/${cta.id}`}>
+                            {cta.category}
+                          </a>
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
-              <hr className="mt-0" />
+              <br />
+              {/* <hr className="mt-0" /> */}
               {list.length > 0 ? (
                 list.map((berita) => {
                   return (
                     <div class="single-blog-inner">
                       <div class="tag-and-share">
                         <div class="row">
-                          <div class="col-sm-7">
-                            <div class="tags d-inline-block">
-                              <button className="border">
-                                <i class="fa-regular fa-thumbs-up"></i>
-                              </button>
-                              <button className="border">
-                                <i class="fa-regular fa-thumbs-down"></i>
-                              </button>
-                            </div>
-                          </div>
+                          <div class="col-sm-7"></div>
                           <div class="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
                             <div class="blog-share">
                               <ul>
                                 <li>
-                                  <a href="https://www.facebook.com/Bawaslu.Kabupaten.Boyolali" target="_blank">
+                                  <a
+                                    href="https://www.facebook.com/Bawaslu.Kabupaten.Boyolali"
+                                    target="_blank">
                                     <button className="border p-2">
                                       <i
                                         class="fab fa-facebook-f"
@@ -172,7 +265,9 @@ function Berita() {
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbawasluboyolali" target="_blank">
+                                  <a
+                                    href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbawasluboyolali"
+                                    target="_blank">
                                     <button className="border p-2">
                                       <i
                                         class="fab fa-twitter"
@@ -202,7 +297,9 @@ function Berita() {
                       </div>
                       <div class="details">
                         <h2>
-                          <a href="">{berita.isiBerita}</a>
+                          <a href={`/page-berita/${berita.judulBerita}/${berita.id}`}>{berita.judulBerita}</a>
+
+                          <a href="">{berita.judulBerita}</a>
                         </h2>
                         <ul class="blog-meta">
                           <li>
@@ -211,9 +308,6 @@ function Berita() {
                           <li>
                             <i class="far fa-calendar-alt"></i>{" "}
                             {berita.createdDate}
-                          </li>
-                          <li>
-                            <i class="far fa-comment-dots"></i> 22 Comment
                           </li>
                         </ul>
                       </div>
@@ -294,6 +388,12 @@ function Berita() {
                   </div>
                 </div>
               )}
+              <Pagination
+                count={paginationInfo.totalPages}
+                color="primary"
+                page={currentPage}
+                onChange={(event, value) => setCurrentPage(value)}
+              />
             </div>
             <div class="col-lg-4 col-12">
               <div className="sidebar-container">
@@ -303,8 +403,8 @@ function Berita() {
                     style={{ background: "#F1F6F9", overflow: "hidden" }}>
                     <h4 class="widget-title">Berita Terbaru</h4>
                     <ul>
-                      {/* {listTerbaru.map((beritaTerbaru) => {
-                        return ( */}
+                      {listTerbaru.map((beritaTerbaru) => {
+                        return (
                           <li>
                             <div class="media">
                               <div class="media-left">
@@ -316,18 +416,20 @@ function Berita() {
                               </div>
                               <div class="media-body align-self-center">
                                 <h6 class="title">
-                                  {/* <a href="">{beritaTerbaru.judulBerita}</a> */}
-                                  <a href="">tesssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</a>
+                                  <a href="">{beritaTerbaru.judulBerita}</a>
+                                  {/* <a href="">
+                                tesssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+                              </a> */}
                                 </h6>
                                 <div class="post-info">
                                   <i class="far fa-calendar-alt"></i>
-                                  {/* <span>{beritaTerbaru.createdDate}</span> */}
+                                  <span>{beritaTerbaru.createdDate}</span>
                                 </div>
                               </div>
                             </div>
                           </li>
-                        {/* );
-                      })} */}
+                        );
+                      })}
                     </ul>
                   </div>
                   <div
@@ -336,10 +438,8 @@ function Berita() {
                     <h4 class="widget-title">Arsip</h4>
                     <ul class="catagory-items">
                       {archivingMonths.map((monthData) => {
-                        const tahun_bulan = `${monthData.year}${monthData.month}`;
-                        const totalData = monthlyData[tahun_bulan]
-                          ? monthlyData[tahun_bulan].length
-                          : 0;
+                        const tahun_bulan = `${monthData.year}-${monthData.month}`;
+                        const totalData = monthlyTotal[tahun_bulan] || 0;
 
                         return (
                           <li key={`${tahun_bulan}`}>
@@ -352,58 +452,7 @@ function Berita() {
                       })}
                     </ul>
                   </div>
-                  <div
-                    class="widget widget_catagory"
-                    style={{ background: "#F1F6F9" }}>
-                    <h4 class="widget-title">
-                      Tautan{" "}
-                      <span className="text-primary">
-                        <strong>Lembaga</strong>
-                      </span>
-                    </h4>
-                    <ul class="catagory-items">
-                      <li>
-                        <a href="#">
-                          <img
-                            src="https://boyolali.bawaslu.go.id/cepogo/2023/09/bawaslu-jateng-300x73-1.png"
-                            alt=""
-                          />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <img
-                            src="https://boyolali.bawaslu.go.id/cepogo/2023/09/dkpp-300x73-1.png"
-                            alt=""
-                          />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <img
-                            src="https://boyolali.bawaslu.go.id/cepogo/2023/09/MAHKAMAKONSTITUSI-300x73-1.png"
-                            alt=""
-                          />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <img
-                            src="https://boyolali.bawaslu.go.id/cepogo/2023/09/KPU-300x73-1.png"
-                            alt=""
-                          />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <img
-                            src="https://boyolali.bawaslu.go.id/cepogo/2023/09/bawaslu-jateng-300x73-1.png"
-                            alt=""
-                          />
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                  <Bawaslu />
                 </div>
               </div>
             </div>

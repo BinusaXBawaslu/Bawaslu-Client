@@ -10,7 +10,7 @@ function Pengumuman() {
     await axios
       .get(`${API_DUMMY}/bawaslu/api/pengumuman`)
       .then((res) => {
-        setPengumuman(res.data.data);
+        setPengumuman(res.data.data.content);
       })
       .catch((error) => {
         alert("Terjadi kesalahan" + error);
@@ -41,7 +41,7 @@ function Pengumuman() {
                 <h2 class="page-title">Pengumuman</h2>
                 <ul class="page-list">
                   <li>
-                    <a href="home">Home</a>
+                    <a href="/">Home</a>
                   </li>
                   <li>Pengumuman</li>
                 </ul>
@@ -78,7 +78,7 @@ function Pengumuman() {
                       <img src={isi.image} alt="img" />
                     </div>
                     <div class="details">
-                      <h4>
+                      <h4 className="titleee" style={{cursor:"pointer"}}>
                         <a>{isi.judulPengumuman}</a>
                       </h4>
                       <ul class="blog-meta">
@@ -89,13 +89,7 @@ function Pengumuman() {
                           <i class="far fa-calendar-alt"></i> {isi.createdDate}
                         </li>
                       </ul>
-                      <p>{isi.isiPengumuman}</p>
-                      <a
-                        class="read-more-text"
-                        href="/pengumuman-calon-anggota-bawaslu-kabupaten-kota-terpilih-provinsi-jawa-tengah"
-                      >
-                        Detail<i class="fa fa-caret-right"></i>
-                      </a>
+                      <p className="isiPengumuman">{isi.isiPengumuman}</p>
                     </div>
                   </div>
                 </div>

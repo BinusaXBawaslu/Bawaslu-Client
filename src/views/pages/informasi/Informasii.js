@@ -4,64 +4,23 @@ import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
 import axios from "axios";
 import { API_DUMMY } from "../../../utils/base_URL";
-import {useParams } from "react-router-dom/cjs/react-router-dom.min";
+import {
+  useHistory,
+  useParams,
+} from "react-router-dom/cjs/react-router-dom.min";
 
-function SertaMerta() {
-  const [table1Visible, setTable1Visible] = useState(false);
-  const [table2Visible, setTable2Visible] = useState(false);
-  const [table3Visible, setTable3Visible] = useState(false);
-  const [table4Visible, setTable4Visible] = useState(false);
-  const [table5Visible, setTable5Visible] = useState(false);
-  const [table6Visible, setTable6Visible] = useState(false);
-  const [table7Visible, setTable7Visible] = useState(false);
-  const param = useParams()
-  const showTable = (tableNumber) => {
-    setTable1Visible(false);
-    setTable2Visible(false);
-    setTable3Visible(false);
-    setTable4Visible(false);
-    setTable5Visible(false);
-    setTable6Visible(false);
-    setTable7Visible(false);
-
-    switch (tableNumber) {
-      case "Putusan Pelanggaran":
-        setTable1Visible(true);
-        break;
-      case "Sengketa Proses Pemilu":
-        setTable2Visible(true);
-        break;
-      case "Pemungutan Suara Ulang & Susulan":
-        setTable3Visible(true);
-        break;
-      case "Organisasi Dan Administrasi":
-        setTable4Visible(true);
-        break;
-      case "Perselisihan Hasil Pemilihan Umum":
-        setTable5Visible(true);
-        break;
-      case "Sosialisasi":
-        setTable6Visible(true);
-        break;
-      case "Piagam Penghargaan":
-        setTable7Visible(true);
-        break;
-      default:
-        break;
-    }
-  };
+function Informasii() {
+  const param = useParams();
+  const [selectedTableId, setSelectedTableId] = useState(null);
   const [list, setList] = useState([]);
   const [isi, setIsi] = useState([]);
-  const [isi1, setIsi1] = useState([]);
-  const [isi2, setIsi2] = useState([]);
-  const [isi3, setIsi3] = useState([]);
-  const [isi4, setIsi4] = useState([]);
-  const [isi5, setIsi5] = useState([]);
-  const [isi6, setIsi6] = useState([]);
 
-  const getByMenu = async () => {
+  const getKeterangan = async () => {
     await axios
-      .get(`${API_DUMMY}/bawaslu/api/jenis-informasi/getByIdWithKeterangan/`+ param.id)
+      .get(
+        `${API_DUMMY}/bawaslu/api/jenis-informasi/getByIdWithKeterangan/` +
+          param.id
+      )
       .then((response) => {
         setList(response.data.data.jenisKeteranganInformasiDTOList);
       })
@@ -69,45 +28,64 @@ function SertaMerta() {
         alert("Terjadi kesalahan" + error);
       });
   };
-  const getByIsi = async () => {
+
+  const getIsiKeterangan = async (tableId) => {
     await axios
-      .get(`${API_DUMMY}/bawaslu/api/jenis-keterangan/${param.id}/isi-informasi`)
+      .get(`${API_DUMMY}/bawaslu/api/jenis-keterangan/${tableId}/isi-informasi`)
       .then((response) => {
-        // console.log(response.data.data);
         setIsi(response.data.data.isiInformasiKeteranganDTOList);
+        console.log(response.data.isiInformasiKeteranganDTOList
+          ); // Tambahkan log untuk memeriksa respons dari API
       })
       .catch((error) => {
         alert("Terjadi kesalahan" + error);
       });
   };
 
+  const showTable = async (tableId) => {
+    if (tableId !== selectedTableId) {
+      setSelectedTableId(tableId);
+
+      try {
+        // Panggil fungsi untuk mendapatkan data isi keterangan berdasarkan id keterangan yang dipilih
+        await getIsiKeterangan(tableId);
+      } catch (error) {
+        alert("Terjadi kesalahan" + error);
+      }
+    }
+  };
+
+
   useEffect(() => {
-    //mengambil data, memperbarui DOM secara langsung,
-    getByMenu();
-    getByIsi();
+    getKeterangan();
   }, []);
+
+  useEffect(() => {
+    // Pastikan selectedTableId tidak null sebelum memanggil getIsiKeterangan
+    if (selectedTableId !== null) {
+      getIsiKeterangan(selectedTableId);
+    }
+  }, []); // Tambahkan selectedTableId ke dalam dependency array
 
   return (
     <div>
       <Navbar />
       <div
         class="breadcrumb-area bg-relative"
-        style={{ background: "#151423" }}
-      >
+        style={{ background: "#151423" }}>
         <div
           class="banner-bg-img"
           style={{
-            backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp')`,
-          }}
-        ></div>
+            backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/. + param.idwebp')`,
+          }}></div>
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-xl-7 col-lg-8">
               <div class="breadcrumb-inner text-center">
-                <h4 class="page-title">Serta Merta</h4>
+                <h4 class="page-title">Informasi</h4>
                 <ul class="page-list">
                   <li>
-                    <a href="/">Home</a>
+                    <a href="home">Home</a>
                   </li>
                   <li>Informasi</li>
                 </ul>
@@ -122,38 +100,33 @@ function SertaMerta() {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
-        class="project-area pd-top-115 pd-bottom-90"
-      >
+        class="project-area pd-top-115 pd-bottom-90">
         <div className="container">
           <div className="d-flex gap-5">
             <div class="isotope-filters project-isotope-btn text-left mb-5">
-              {list.map((menu) => {
-                return (
-                  <button
-                    style={{ width: "250px", textAlign: "left" }}
-                    class="button ml-0"
-                    data-filter="*"
-                    onClick={() => showTable(`${menu.keterangan}`)}
-                  >
-                    {menu.keterangan}
-                  </button>
-                );
-              })}
+              {list.map((menu) => (
+                <button
+                  key={menu.id}
+                  style={{ width: "250px", textAlign: "left" }}
+                  className={`button ml-0 ${
+                    selectedTableId === menu.id ? "active" : ""
+                  }`}
+                  data-filter="*"
+                  onClick={() => showTable(menu.id)}>
+                  {menu.keterangan}
+                </button>
+              ))}
             </div>
-            {/* Putusan Pelanggaran */}
             <div
               className="card mb-4 shadow"
               id="table1"
               style={{
-                display: table1Visible ? "table" : "none",
+                display: selectedTableId === 1 ? "table" : "none",
                 width: "100%",
-              }}
-            >
+              }}>
               <div className="card-header bg-primary text-light">
                 <div style={{ display: "flex" }}>
-                  <div className="">
-                    <h4></h4>
-                  </div>
+                  <div className="">{/* <h4>Putusan Pelanggaran</h4> */}</div>
                   <div className="col">
                     {/* <button className="btn btn-primary float-end"> Tambah
                         </button> */}
@@ -168,8 +141,9 @@ function SertaMerta() {
                       <th scope="col"> Unduh / Lihat</th>
                     </tr>
                   </thead>
-                  {isi.map((isi) => {
-                    return (
+                  {isi &&
+                    isi.map((isi) => (
+                      // return (
                       <tbody>
                         <tr>
                           <td data-cell="dokumen" scope="row">
@@ -185,8 +159,7 @@ function SertaMerta() {
                                 paddingRight: "13px",
                                 borderRadius: "5px",
                                 marginRight: "10px",
-                              }}
-                            >
+                              }}>
                               <i class="fa-solid fa-download"></i>
                             </button>
                             <button
@@ -198,15 +171,14 @@ function SertaMerta() {
                                 paddingRight: "13px",
                                 borderRadius: "5px",
                                 marginRight: "10px",
-                              }}
-                            >
+                              }}>
                               <i class="fa-solid fa-circle-info"></i>
                             </button>
                           </td>
                         </tr>
                       </tbody>
-                    );
-                  })}
+                      // );
+                    ))}
                   <div></div>
                 </table>
               </div>
@@ -221,4 +193,4 @@ function SertaMerta() {
   );
 }
 
-export default SertaMerta;
+export default Informasii;

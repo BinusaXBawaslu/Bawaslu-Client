@@ -50,17 +50,25 @@
 .img-info{
     width: 550px;
 }
+#img-info{
+    width: 300px;
+    padding-top: 45px;
+}
 .info{
     /* border: 2px solid red; */
 }
 @media screen and (max-width: 1024px) {
     .form-txt-img{
     }
+    #img-info{
+        width: 300px;
+        padding-top: 45px;
+    }
 }
 @media screen and (max-width: 768px) {
     #img-info{
         width: 300px;
-        padding-top: 10px;
+        padding-top: 37px;
     }
     .img-logo{
         width: 300px;

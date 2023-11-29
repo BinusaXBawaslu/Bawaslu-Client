@@ -145,7 +145,7 @@ const FormPermohonanInformasi = () => {
               <p className="pp">0 of 100 max characters</p>
 
               <br></br>
-              <p>Cara Memproleh Infromasi:</p>
+              <p>Cara Memperoleh Informasi:</p>
               <input
                 className="input"
                 id="input"

@@ -75,7 +75,7 @@
     background-image: url("https://www.denpasarkota.go.id/public/uploads/berita/Berita_230608050837_walikota-jaya-negara-hadiri-serah-terima-kirab-bendera-parpol-pemilu-2024.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 250px;
+    height: 280px;
    
 }
 
@@ -94,11 +94,11 @@
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-#wrap-img4 {
+#wrap-immg4 {
     background-image: url("https://jatengprov.go.id/wp-content/uploads/2023/02/IMG-20230210-WA0066.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 236px;
+    height: 235px;
 }
 
 .wrap-opacity3 {
@@ -156,7 +156,7 @@
     background-image: url("https://boyolali.bawaslu.go.id/cepogo/2023/09/20230330094921.jpeg");
 }
 #a-txt{
-    font-size: 25px;
+    font-size: 20px;
 }
 @media screen and (max-width: 1024px) {
     #pmbngks-img {
@@ -218,7 +218,7 @@
         width: 200px;
         padding-top: 100px;
        }
-       #wrap-img4 {    
+       #wrap-immg4 {    
         height: 217px;
     }
     #a-txt{
@@ -306,7 +306,7 @@
         width: 180px;
         padding-top: 100px;
        }
-       #wrap-img4 {    
+       #wrap-immg4 {    
         height: 170px;
     }
     #pmbngks-img2{
@@ -357,7 +357,7 @@
         align-items: end;
         height: 150px;
     }
-    #wrap-text1 {
+    #wrap-txt1 {
         color: white;
         font-size: 8px;
         padding: 10px;
@@ -386,19 +386,23 @@
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     }
     #wrap-img3 {
-        height: 100px;
+        height: 200px;
        
     }
+    
     .wrap-opacity3 {
        
         height:80px;
+    }
+    #wrap-opacity3 {
+        height:200px;
     }
     #wrapper3 {
         width: 280px;
         padding-top: 10px;
        }
-       #wrap-img4 {    
-        height: 75px;
+       #wrap-immg4 {    
+        height: 200px;
     }
     #pmbngks-img2{
         display: flex;

@@ -49,7 +49,7 @@ function Sidebar() {
   return (
     <div
       class="app-sidebar sidebar-shadow"
-      style={{ height: "120vh", overflowY: "scroll" }}>
+      style={{ height: "120vh", overflowY: "scroll"}}>
       <div class="app-header__logo">
         <div class="logo-src"></div>
         <div class="header__pane ml-auto">

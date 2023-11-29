@@ -1,4 +1,5 @@
 import React from "react";
+import "../../../src/css/Profil.css";
 import Navbar from "../../component/Navbar";
 import Footer from "../../component/Footer";
 
@@ -23,7 +24,7 @@ function Profil() {
                 <h2 class="page-title">Profile</h2>
                 <ul class="page-list">
                   <li>
-                    <a href="home">Home</a>
+                    <a href="/">Home</a>
                   </li>
                   <li>Profile</li>
                 </ul>
@@ -38,6 +39,7 @@ function Profil() {
             <div class="col-lg-6 pe-xl-5 align-self-center">
               {/* <div class="section-title mb-0"> */}
                 <h2 class="title">Profile</h2>
+                <p id="content" class="content"></p>
                 <p class="overflow-ellipsis">
                   Badan Pengawas Pemilu adalah lembaga negara yang memiliki
                   tugas pokok dan fungsi melakukan pengawasan terhadap seluruh
@@ -144,7 +146,7 @@ function Profil() {
                       aria-controls="collapseThree"
                       fdprocessedid="44ky5w"
                     >
-                      Lainya
+                      Lainnya
                     </button>
                   </h2>
                   <div
@@ -208,7 +210,7 @@ function Profil() {
               <img src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png" alt="img" />
             </div>
             <div class="details">
-              <h5>Atasn PPID</h5>
+              <h5>Atasan PPID</h5>
               <p className="fs-4">Wiyanto, S.Sos., MM.</p>
               <p>Koordinator Seketariat Bawaslu Kabupaten Boyolali. </p>
             </div>
@@ -241,6 +243,7 @@ function Profil() {
           </div>
         </div>
       </div>
+      
       <div class="how-it-work-area pd-top-100 pd-bottom-90">
         <div class="container">
           <div class="row justify-content-center">
@@ -265,7 +268,7 @@ function Profil() {
                   </div>
                   <div class="details-wrap">
                     <div class="details-inner">
-                      <h4>Imformasi Serta Merta</h4>
+                      <h4>Informasi Serta Merta</h4>
                     </div>
                   </div>
                 </div>
@@ -277,7 +280,7 @@ function Profil() {
                   </div>
                   <div class="details-wrap">
                     <div class="details-inner">
-                      <h4>Infromasi Berkala</h4>
+                      <h4>Informasi Berkala</h4>
                     </div>
                   </div>
                 </div>
@@ -289,7 +292,7 @@ function Profil() {
                   </div>
                   <div class="details-wrap">
                     <div class="details-inner">
-                      <h4>Infromasi Setiap Saat</h4>
+                      <h4>Informasi Setiap Saat</h4>
                     </div>
                   </div>
                 </div>

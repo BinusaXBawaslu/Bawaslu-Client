@@ -180,10 +180,10 @@ function AdminFormInformasi() {
           <div class="row justify-content-center">
             <div class="col-xl-7 col-lg-8">
               <div class="breadcrumb-inner text-center">
-                <h2 class="page-title">Form Permohonan Inforamasi</h2>
+                <h2 class="page-title">Form Permohonan Informasi</h2>
                 <ul class="page-list">
                   <li>
-                    <a href="home">Home</a>
+                    <a href="/">Home</a>
                   </li>
                   <li>form</li>
                 </ul>
@@ -490,7 +490,7 @@ function AdminFormInformasi() {
                     type="button"
                     class="btn btn-secondary"
                     data-bs-dismiss="modal">
-                    Close
+                    Batal
                   </button>
                   <button type="submit" class="btn btn-primary">
                     Simpan

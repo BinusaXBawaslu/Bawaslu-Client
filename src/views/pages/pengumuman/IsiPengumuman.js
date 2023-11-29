@@ -1,8 +1,9 @@
 import React from "react";
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
+import Bawaslu from "../../../component/Bawaslu";
 
-function CalonAnggotaBawaslu() {
+function IsiPengumuman() {
   return (
     <div>
       <Navbar />
@@ -134,74 +135,7 @@ function CalonAnggotaBawaslu() {
             </div>
             <div class="col-lg-4 col-12">
               <div class="td-sidebar">
-                <div
-                  class="widget widget_catagory"
-                  style={{ background: "#F1F6F9" }}
-                >
-                  <h4 class="widget-title">Tautan Lembaga</h4>
-                  <ul class="catagory-items">
-                    <li>
-                      <a
-                        href="https://bawaslu.go.id/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <img
-                          src="https://boyolali.bawaslu.go.id/cepogo/2023/09/Bawaslu-RI-300x73-1.png"
-                          alt=""
-                        />
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://dkpp.go.id/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <img
-                          src="https://boyolali.bawaslu.go.id/cepogo/2023/09/dkpp-300x73-1.png"
-                          alt=""
-                        />
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.mkri.id/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <img
-                          src="https://boyolali.bawaslu.go.id/cepogo/2023/09/MAHKAMAKONSTITUSI-300x73-1.png"
-                          alt=""
-                        />
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.kpu.go.id/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <img
-                          src="https://boyolali.bawaslu.go.id/cepogo/2023/09/KPU-300x73-1.png"
-                          alt=""
-                        />
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://jateng.bawaslu.go.id/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <img
-                          src="https://boyolali.bawaslu.go.id/cepogo/2023/09/bawaslu-jateng-300x73-1.png"
-                          alt=""
-                        />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+               <Bawaslu/>
                 <div
                   class="widget widget_tag_cloud mb-0"
                   style={{ background: "#F1F6F9" }}
@@ -244,4 +178,4 @@ function CalonAnggotaBawaslu() {
   );
 }
 
-export default CalonAnggotaBawaslu;
+export default IsiPengumuman;
