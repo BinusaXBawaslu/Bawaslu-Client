@@ -10,8 +10,6 @@ import { API_DUMMY } from "../../../utils/base_URL";
 import { useHistory } from "react-router-dom/cjs/react-router-dom";
 import { async } from "q";
 
-
-
 const FormPermohonanInformasi = () => {
   // const [show, setShow] = useState(false);
   // const history = useHistory();
@@ -28,63 +26,62 @@ const FormPermohonanInformasi = () => {
   // const [caraMemperolehInformasi, setCaraMemperolehInformasi] = useState("");
   // const [caraMendapatkanInformasi, setCaraMendapatkanInformasi] = useState("");
 
-  const [alamat, setAlamat] = useState("")
-  const [caraMendapatInformasi, setCaraMendapatkanInformasi] = useState("")
-  const [caraMemperolehInformasi, setCaraMemperolehnInformasi] = useState("")
-  const [createDate, setCreateDate] = useState("")
-  const [ditunjukanKepada, setDitunjukanKepada] = useState("")
-  const [email, setEmail] = useState("")
-  const [id, setID] = useState("")
-  const [nama, setNama] = useState("")
-  const [noHp, setNoHp] = useState("")
-  const [pekerjaan, setPekerjaan] = useState("")
-  const [pendidikan, setPendidikan] = useState("")
-  const [rincianInformasi, setRincianInformasi] = useState("")
-  const [tandaPengenal, setTandaPengenal] = useState("")
-  const [tujuanInformasi, setTujuanInformasi] = useState("")
-  const [updateDate, setUpdateDate] = useState("")
-  const [show, setShow] = useState(false)
+  const [alamat, setAlamat] = useState("");
+  const [caraMendapatInformasi, setCaraMendapatkanInformasi] = useState("");
+  const [caraMemperolehInformasi, setCaraMemperolehnInformasi] = useState("");
+  const [createDate, setCreateDate] = useState("");
+  const [ditunjukanKepada, setDitunjukanKepada] = useState("");
+  const [email, setEmail] = useState("");
+  const [id, setID] = useState("");
+  const [nama, setNama] = useState("");
+  const [noHp, setNoHp] = useState("");
+  const [pekerjaan, setPekerjaan] = useState("");
+  const [pendidikan, setPendidikan] = useState("");
+  const [rincianInformasi, setRincianInformasi] = useState("");
+  const [tandaPengenal, setTandaPengenal] = useState("");
+  const [tujuanInformasi, setTujuanInformasi] = useState("");
+  const [updateDate, setUpdateDate] = useState("");
+  const [show, setShow] = useState(false);
 
-const Add = async (e) => {
-  e.preventDefault();
-  const formData = new FormData();
-  formData.append("nama",nama);
-  formData.append("alamat",alamat);
-  formData.append("pendidikan",pendidikan);
-  formData.append("email",email);
-  formData.append("noHp",noHp);
-  formData.append("tujuanInformasi",tujuanInformasi);
-  formData.append("rincianInformasi",rincianInformasi);
-  formData.append("pekerjaan",pekerjaan);
-  formData.append("ditunjukanKepada",ditunjukanKepada);
-  formData.append("caraMemperolehInformasi",caraMemperolehInformasi);
-  formData.append("caraMendapatkanInformasi",caraMendapatInformasi);
-  formData.append("file",tandaPengenal);
+  const Add = async (e) => {
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append("nama", nama);
+    formData.append("alamat", alamat);
+    formData.append("pendidikan", pendidikan);
+    formData.append("email", email);
+    formData.append("noHp", noHp);
+    formData.append("tujuanInformasi", tujuanInformasi);
+    formData.append("rincianInformasi", rincianInformasi);
+    formData.append("pekerjaan", pekerjaan);
+    formData.append("ditunjukanKepada", ditunjukanKepada);
+    formData.append("caraMemperolehInformasi", caraMemperolehInformasi);
+    formData.append("caraMendapatkanInformasi", caraMendapatInformasi);
+    formData.append("file", tandaPengenal);
 
-  try {
-    await axios.post(
-      `${API_DUMMY}/bawaslu/api/permohonan-informasi/add`,
-      formData,
-      // {
-      //   headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
-      // }
+    try {
+      await axios.post(
+        `${API_DUMMY}/bawaslu/api/permohonan-informasi/add`,
+        formData
+        // {
+        //   headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+        // }
       );
       setShow(false);
       Swal.fire({
-      icon: "success",
-      title: "Berhasil Ditambahkan",
-      showConfirmButton: false,
-      timer: 1500,
-    });
-    setTimeout(() => {
-      window.location.reload();
-    }, 1500);
-  } catch (error) {
-    console.log(error);
-  }
+        icon: "success",
+        title: "Berhasil Ditambahkan",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      setTimeout(() => {
+        window.location.reload();
+      }, 1500);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
-} 
-  
   // const add = async (e) => {
   //   e.preventDefault();
 
@@ -137,7 +134,7 @@ const Add = async (e) => {
               <h1>__________</h1>
             </div>
             <div className="info">
-              <img src={info} className="img" id="img"/>
+              <img src={info} className="img" id="img" />
             </div>
           </div>
           <form onSubmit={Add} className="option" style={{}}>
@@ -147,7 +144,6 @@ const Add = async (e) => {
                 <input
                   className="input"
                   id="input"
-
                   type="text"
                   value={nama}
                   onChange={(e) => setNama(e.target.value)}
@@ -155,11 +151,19 @@ const Add = async (e) => {
                 <p className="pp">0 of 30 max characters</p>
                 <br></br>
                 <p>Alamat Pemohon:</p>
-                <textarea className="textarea"
-                                  id="textarea"
-                                  />
+                <textarea
+                  className="textarea"
+                  id="textarea"
+                  value={alamat}
+                  onChange={(e) => setAlamat(e.target.value)}
+                />
+                <br />
+                <br />
+                <p>Pekerjaan:</p>
+                <input type="text" className="input" id="input" value={pekerjaan}
+                 onChange={(e) => setPekerjaan(e.target.value)}/>
                 <p className="pp">0 of 60 max characters</p>
-                <br></br>
+              
                 <br></br>
                 <br></br>
                 <p>Nomor Telp/HP:</p>
@@ -176,7 +180,6 @@ const Add = async (e) => {
                 <input
                   className="input"
                   id="input"
-
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -201,7 +204,6 @@ const Add = async (e) => {
                 onChange={(e) => setDitunjukanKepada(e.target.value)}
                 className="textarea"
                 id="textarea"
-
               />
               <p className="pp">0 of 100 max characters</p>
 
@@ -210,7 +212,6 @@ const Add = async (e) => {
               <input
                 className="input"
                 id="input"
-
                 type="text"
                 value={caraMemperolehInformasi}
                 onChange={(e) => setCaraMemperolehnInformasi(e.target.value)}
@@ -255,6 +256,9 @@ const Add = async (e) => {
               <br></br>
               <div id="div-button" className="div-button">
                 {" "}
+                <button id="btn-kirim" className="submit">
+                  Kirim
+                </button>
                 <button id="btn-kirim" className="submit">Kirim</button>
               </div>
             </div>

@@ -210,6 +210,7 @@ function PageBerita() {
                             </div>
                           </div>
                         </div>
+                      
                         <div class="col-md-6">
                           {list.map((category) => {
                             return (
@@ -296,6 +297,9 @@ function PageBerita() {
             </div>
           </div>
         </div>
+
+      
+
       </div>
 
       {/* <!-- blog area end --> */}

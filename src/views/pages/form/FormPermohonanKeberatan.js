@@ -59,6 +59,7 @@ const FormPermohonaKeberatan = () => {
         showConfirmButton: false,
         timer: 1500,
       });
+      console.log(formData);
       setTimeout(() => {
         window.location.reload();
       });
@@ -110,7 +111,6 @@ const FormPermohonaKeberatan = () => {
                   <option>SIM (Surat Izin Mengemudi)</option>
                   <option>KTM (Kartu Tanda Mahasiswa)</option>
                 </select> */}
-                <br></br>
                 <br></br>
                 <p>Nomor Telp/HP:</p>
                 <input className="input" type="number" value={noHp} onChange={(e) => setNoHp(e.target.value)}   />

@@ -113,6 +113,29 @@ function Index() {
       <Header />
       <div id="app-main" className="app-main">
         <Sidebar />
+        <div id="container" className="container mt-3 app-main__outer">
+          <div id="main-card" class="main-card mb-3 card">
+            <div id="card-header" class="card-header">
+              Jenis Informasi
+              <div className="d-flex ml-auto gap-3">
+                <input
+                  type="search"
+                  className="form-control widget-content-right w-75"
+                  placeholder="Search..."
+                  value={searchTerm}
+                  onChange={handleSearchChange}
+                />
+                <div class="btn-actions-pane-right">
+                  <div id="butoon" role="group" class="btn-group-sm btn-group">
+                    <button id="button" class="active btn-focus p-2 rounded">
+                      <a
+                        href="/add-pengumuman"
+                        className="text-light"
+                        style={{ textDecoration: "none" }}>
+                        {" "}
+                        Tambah Pengumuman
+                      </a>
+                    </button>
               <div className="container mt-3 app-main__outer">
                 <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
                   <div class="col-auto">

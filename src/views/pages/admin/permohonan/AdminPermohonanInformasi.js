@@ -178,7 +178,7 @@ function AdminPermohonanInformasi() {
                           Rincian Informasi
                         </th>
                         <th scope="col" className="text-center">
-                          Tujuan Informasa
+                          Tujuan Informasi
                         </th>
                         <th scope="col" className="text-center">
                           Almat
