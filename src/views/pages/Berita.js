@@ -44,9 +44,9 @@ function Berita() {
   const getCategoryBerita = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/category-berita/all`,
+        `${API_DUMMY}/bawaslu/api/category-berita/all-limit-7`
       );
-      setCategory(response.data.data);
+      setCategory(response.data.data.content);
       console.log(response.data.data);
       if (response.data.data.length > 0) {
         setGambarTerbaru(response.data.data[0].image);
@@ -59,7 +59,7 @@ function Berita() {
   const getAllTerbaru = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/berita-terbaru`,
+        `${API_DUMMY}/bawaslu/api/berita-terbaru`
       );
       setListTerbaru(response.data.data);
       console.log(response.data.data);
@@ -168,7 +168,7 @@ function Berita() {
                 class="section-title single-service-inner border-radius-5 p-35 style-white mb-lg-0"
                 style={{
                   backgroundImage: `url(${gambarTerbaru})`,
-                  minHeight:"93%"
+                  minHeight: "93%",
                 }}>
                 <h2 class="title title-berita mt-4">
                   {listTerbaru.length > 0 && listTerbaru[0].judulBerita}
@@ -177,20 +177,20 @@ function Berita() {
             </div>
             <div class="col-lg-8">
               <div class="row">
-              {listTerbaru.slice(1, 5).map((berita, index) => (
+                {listTerbaru.slice(1, 5).map((berita, index) => (
                   <div class="col-md-6" key={index}>
-                  <div class="single-service-inner style-white text-left">
-                    <div class="icon-box">
-                      <i class="icomoon-layer"></i>
-                    </div>
-                    <div class="details detailss">
-                      <h3>
-                        <a class="isiBerita">{berita.judulBerita}</a>
-                      </h3>
+                    <div class="single-service-inner style-white text-left">
+                      <div class="icon-box">
+                        <i class="icomoon-layer"></i>
+                      </div>
+                      <div class="details detailss">
+                        <h3>
+                          <a class="isiBerita">{berita.judulBerita}</a>
+                        </h3>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
               </div>
             </div>
           </div>
@@ -237,12 +237,17 @@ function Berita() {
                           <div class="col-sm-7"></div>
                           <div class="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
                             <div class="blog-share">
-                            <ul>
+                              <ul>
                                 <li>
                                   <a
                                     href="https://www.facebook.com/Bawaslu.Kabupaten.Boyolali"
                                     target="_blank">
-                                    <button style={{color:"white",backgroundColor:"#45629f"}}  className="border p-2">
+                                    <button
+                                      style={{
+                                        color: "white",
+                                        backgroundColor: "#45629f",
+                                      }}
+                                      className="border p-2">
                                       <i
                                         class="fab fa-facebook-f"
                                         aria-hidden="true"></i>{" "}
@@ -254,7 +259,12 @@ function Berita() {
                                   <a
                                     href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbawasluboyolali"
                                     target="_blank">
-                                    <button style={{color:"white",backgroundColor:"#5eb2ef"}}  className="border p-2">
+                                    <button
+                                      style={{
+                                        color: "white",
+                                        backgroundColor: "#5eb2ef",
+                                      }}
+                                      className="border p-2">
                                       <i
                                         class="fab fa-twitter"
                                         aria-hidden="true"></i>{" "}
@@ -264,7 +274,12 @@ function Berita() {
                                 </li>
                                 <li>
                                   <a href="#">
-                                    <button style={{color:"white",backgroundColor:"#cf2830"}}  className="border p-2">
+                                    <button
+                                      style={{
+                                        color: "white",
+                                        backgroundColor: "#cf2830",
+                                      }}
+                                      className="border p-2">
                                       <i class="fa-brands fa-pinterest"></i> Pin
                                     </button>
                                   </a>
@@ -283,7 +298,10 @@ function Berita() {
                       </div>
                       <div class="details">
                         <h2>
-                          <a href={`/page-berita/${berita.judulBerita}/${berita.id}`}>{berita.judulBerita}</a>
+                          <a
+                            href={`/page-berita/${berita.judulBerita}/${berita.id}`}>
+                            {berita.judulBerita}
+                          </a>
 
                           <a href="">{berita.judulBerita}</a>
                         </h2>

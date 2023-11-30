@@ -18,19 +18,12 @@ function AddRegulasi() {
   const [regulasi, setRegulasi] = useState([]);
   const param = useParams();
 
-
   const getByMenuRegulasi = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/get-by-menu-regulasi?id-menu-regulasi=` + param.id,
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        }
+        `${API_DUMMY}/bawaslu/api/menu-regulasi/all?page=0&size=50`
       );
       setRegulasi(response.data.data);
-    //   console.log(response.data.data);
     } catch (error) {
       console.error("Terjadi Kesalahan", error);
     }
@@ -45,12 +38,12 @@ function AddRegulasi() {
     formData.append("idMenuRegulasi", idMenuRegulasi);
     formData.append("dokumen", dokumen);
     formData.append("upload", pdfDokumen);
-
     try {
       await axios.post(
         `${API_DUMMY}/bawaslu/api/regulasi/add`,
         {
           headers: {
+            'Content-Type': 'application/json',
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
         }
@@ -64,7 +57,7 @@ function AddRegulasi() {
         timer: 1500,
       });
       // //console.log(data);
-      history.push("/admin/ ");
+      history.push("/rugulasi/:menuRegulasi/:id");
       setTimeout(() => {
         window.location.reload();
       }, 1500);
@@ -81,7 +74,7 @@ function AddRegulasi() {
       <Header />
       <div className="app-main">
         <Sidebar />
-        <div className="container mt-3">
+        <div className="container mt-3 app-main__outer">
           <div className="card shadow">
             <div className="card-body">
               <h1 className="fs-4">Form Tambah Data</h1>
@@ -90,7 +83,7 @@ function AddRegulasi() {
                 <div className="row">
                   <div className="mb-3 col-6">
                     <label for="exampleInputPassword1" className="form-label">
-                      Jenis Regulas
+                      Jenis Regulasi
                     </label>
                     <select
                       className="form-select form-select-sm"
@@ -99,7 +92,7 @@ function AddRegulasi() {
                       <option selected>PIlih Jenis Regulasi</option>
                       {regulasi.map((down) => {
                         return (
-                          <option value={down.id}>{down.MenuRegulasi}</option>
+                          <option value={down.id}>{down.menuRegulasi}</option>
                         );
                       })}
                     </select>
@@ -143,7 +136,6 @@ function AddRegulasi() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

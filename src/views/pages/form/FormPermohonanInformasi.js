@@ -259,6 +259,7 @@ const FormPermohonanInformasi = () => {
                 <button id="btn-kirim" className="submit">
                   Kirim
                 </button>
+                <button id="btn-kirim" className="submit">Kirim</button>
               </div>
             </div>
           </form>

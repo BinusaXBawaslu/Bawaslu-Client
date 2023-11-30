@@ -1,18 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../../../../../component/Header";
 import Sidebar from "../../../../../component/Sidebar";
-import Footer from "../../../../../component/Footer";
-import { API_DUMMY } from "../../../../../utils/base_URL";
-import axios from "axios";
-import Swal from "sweetalert2";
-import { History } from "swiper/modules";
-import { useState } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import { useEffect } from "react";
+import Swal from "sweetalert2";
+import axios from "axios";
+import { API_DUMMY } from "../../../../../utils/base_URL";
 
-function AddCategory() {
-  const [category, setCategory] = useState("");
-  const [idCategory, setidCategory] = useState([]);
+function AddJenisRegulasi() {
+  const [jenisRegulasi, setJenisRegulasi] = useState("");
   const [show, setShow] = useState(false);
   const history = useHistory();
 
@@ -21,8 +16,8 @@ function AddCategory() {
     e.persist();
 
     try {
-      await axios.post(`${API_DUMMY}/bawaslu/api/category-beriat/add`, {
-        category: category
+      await axios.post(`${API_DUMMY}/bawaslu/api/jenis-regulasi/add`, {
+        jenisRegulasi: jenisRegulasi
       }, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -37,7 +32,7 @@ function AddCategory() {
         timer: 1500,
       });
       // //console.log(data);
-      history.push("/admin-berita");
+      history.push("/jenis-regulasi");
       setTimeout(() => {
         window.location.reload();
       }, 1500);
@@ -60,18 +55,26 @@ function AddCategory() {
                 <div className="row">
                   <div className="mb-3 col-6">
                     <label for="exampleInputEmail1" className="form-label">
-                      Category
+                      Jenis Regulasi
                     </label>
                     <input
-                      value={category}
-                      onChange={(e) => setCategory(e.target.value)}
+                      value={jenisRegulasi}
+                      onChange={(e) => setJenisRegulasi(e.target.value)}
                       type="text"
                       className="form-control"
                     />
                   </div>
                 </div>
+                <button type="submit" className="btn-danger mt-3 mr-3">
+                  <a
+                    href="/jenis-regulasi"
+                    style={{ color: "white", textDecoration: "none" }}>
+                    {" "}
+                    Batal
+                  </a>
+                </button>
                 <button type="submit" className="btn-primary mt-3">
-                  Submit
+                  Simpan
                 </button>
               </form>
             </div>
@@ -82,4 +85,4 @@ function AddCategory() {
   );
 }
 
-export default AddCategory;
+export default AddJenisRegulasi;

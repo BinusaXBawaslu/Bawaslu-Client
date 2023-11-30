@@ -42,7 +42,6 @@ function PageBerita() {
       const response = await axios.get(
         `${API_DUMMY}/bawaslu/api/berita/related-berita/by-id-berita?id=` +
           param.id
-        `${API_DUMMY}/bawaslu/api/berita/related-berita/by-id-berita?id=` + param.id
       );
       setList(response.data.data);
       console.log(response.data.data);
@@ -129,13 +128,11 @@ function PageBerita() {
                           <li>
                             <a
                               href="https://www.facebook.com/Bawaslu.Kabupaten.Boyolali"
-                              target="_blank"
-                            >
+                              target="_blank">
                               <button className="border p-2">
                                 <i
                                   class="fab fa-facebook-f"
-                                  aria-hidden="true"
-                                ></i>{" "}
+                                  aria-hidden="true"></i>{" "}
                                 Facebook
                               </button>
                             </a>
@@ -143,13 +140,11 @@ function PageBerita() {
                           <li>
                             <a
                               href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbawasluboyolali"
-                              target="_blank"
-                            >
+                              target="_blank">
                               <button className="border p-2">
                                 <i
                                   class="fab fa-twitter"
-                                  aria-hidden="true"
-                                ></i>{" "}
+                                  aria-hidden="true"></i>{" "}
                                 Twitter
                               </button>
                             </a>
@@ -203,108 +198,110 @@ function PageBerita() {
                   {list.map((category) => {
                     return (
                       <div class="col-md-6">
-                  <div class="col-md-6">
-                    <div class="media single-choose-inner">
-                      <div class="media-left">
-                        <div class="icon">
-                          <i class="fas fa-bullhorn"></i>
-                        </div>
-                      </div>
-                      <div class="media-body">
-                        <p>{isiBerita} </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    {list.map((category) => {
-                      return (
-                        <div class="media single-choose-inner">
-                          <div class="media-left">
-                            <div class="icon">
-                              <i class="fas fa-bullhorn"></i>
+                        <div class="col-md-6">
+                          <div class="media single-choose-inner">
+                            <div class="media-left">
+                              <div class="icon">
+                                <i class="fas fa-bullhorn"></i>
+                              </div>
                             </div>
-                          </div>
-                          <div class="media-body">
-                            <p>{category.judulBerita} </p>
+                            <div class="media-body">
+                              <p>{isiBerita} </p>
+                            </div>
                           </div>
                         </div>
                       
+                        <div class="col-md-6">
+                          {list.map((category) => {
+                            return (
+                              <div class="media single-choose-inner">
+                                <div class="media-left">
+                                  <div class="icon">
+                                    <i class="fas fa-bullhorn"></i>
+                                  </div>
+                                </div>
+                                <div class="media-body">
+                                  <p>{category.judulBerita} </p>
+                                </div>
+                              </div>
+                            );
+                          })}
+                          <a href="/bawaslu-boyolali-ajak-masyarakat-terlibat-dalam-pengawasan-pemilu-partisipatif">
+                            {category.judulPengumuman}
+                          </a>
+                        </div>
+                      </div>
                     );
                   })}
-                            <a href="/bawaslu-boyolali-ajak-masyarakat-terlibat-dalam-pengawasan-pemilu-partisipatif">
-                              {category.judulPengumuman}
-                            </a>
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
                 </div>
-                <hr />
               </div>
+              <hr />
             </div>
-            <div class="col-lg-4 col-12">
-              <div className="sidebar-container">
-                <div class="td-sidebar">
-                  <div
-                    class="widget widget_catagory"
-                    style={{ background: "#F1F6F9" }}
-                  >
-                    <h4 class="widget-title">
-                      Tautan{" "}
-                      <span className="text-primary">
-                        <strong>Lembaga</strong>
-                      </span>
-                    </h4>
-                    <ul class="catagory-items">
-                      <li>
-                        <a href="#">
-                          <img
-                            src="https://boyolali.bawaslu.go.id/cepogo/2023/09/bawaslu-jateng-300x73-1.png"
-                            alt=""
-                          />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <img
-                            src="https://boyolali.bawaslu.go.id/cepogo/2023/09/dkpp-300x73-1.png"
-                            alt=""
-                          />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <img
-                            src="https://boyolali.bawaslu.go.id/cepogo/2023/09/MAHKAMAKONSTITUSI-300x73-1.png"
-                            alt=""
-                          />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <img
-                            src="https://boyolali.bawaslu.go.id/cepogo/2023/09/KPU-300x73-1.png"
-                            alt=""
-                          />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <img
-                            src="https://boyolali.bawaslu.go.id/cepogo/2023/09/bawaslu-jateng-300x73-1.png"
-                            alt=""
-                          />
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+          </div>
+          <div class="col-lg-4 col-12">
+            <div className="sidebar-container">
+              <div class="td-sidebar">
+                <div
+                  class="widget widget_catagory"
+                  style={{ background: "#F1F6F9" }}>
+                  <h4 class="widget-title">
+                    Tautan{" "}
+                    <span className="text-primary">
+                      <strong>Lembaga</strong>
+                    </span>
+                  </h4>
+                  <ul class="catagory-items">
+                    <li>
+                      <a href="#">
+                        <img
+                          src="https://boyolali.bawaslu.go.id/cepogo/2023/09/bawaslu-jateng-300x73-1.png"
+                          alt=""
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img
+                          src="https://boyolali.bawaslu.go.id/cepogo/2023/09/dkpp-300x73-1.png"
+                          alt=""
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img
+                          src="https://boyolali.bawaslu.go.id/cepogo/2023/09/MAHKAMAKONSTITUSI-300x73-1.png"
+                          alt=""
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img
+                          src="https://boyolali.bawaslu.go.id/cepogo/2023/09/KPU-300x73-1.png"
+                          alt=""
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img
+                          src="https://boyolali.bawaslu.go.id/cepogo/2023/09/bawaslu-jateng-300x73-1.png"
+                          alt=""
+                        />
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
       
+
+      </div>
+
       {/* <!-- blog area end --> */}
       <Footer />
     </>

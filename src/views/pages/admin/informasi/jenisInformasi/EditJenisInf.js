@@ -2,25 +2,26 @@ import React, { useEffect, useState } from 'react'
 import Header from '../../../../../component/Header'
 import Sidebar from '../../../../../component/Sidebar'
 import { API_DUMMY } from '../../../../../utils/base_URL';
-import axios from 'axios';
 import Swal from 'sweetalert2';
+import axios from 'axios';
 import { useHistory, useParams } from 'react-router-dom/cjs/react-router-dom.min';
 
-function EditCategory() {
-    const [category, setCategory] = useState("");
-    const param = useParams()
-    const history = useHistory()
+function EditJenisInf() {
+    const[jenisInformasi, setJenisInformasi] = useState("");
+    const param = useParams();
+    const history = useHistory();
 
     useEffect(() => {
         axios
-          .get(`${API_DUMMY}/bawaslu/api/category-berita/get/` + param.id, {
+          .get(`${API_DUMMY}/bawaslu/api/jenis-informasi/getby/` + param.id, {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
           })
           .then((ress) => {
             const response = ress.data.data;
-            setCategory(response.category);
+            setJenisInformasi(response.namaInformasi);
+            console.log(response.namaInformasi);
           })
           .catch((error) => {
             console.log(error);
@@ -29,11 +30,9 @@ function EditCategory() {
 
       const update = async (e) => {
         e.preventDefault();
-
-
         await axios
-          .put(`${API_DUMMY}/bawaslu/api/category-berita/put/` + param.id, {
-            category, category
+          .put(`${API_DUMMY}/bawaslu/api/jenis-informasi/` + param.id, {
+            jenisInformasi, jenisInformasi
           }, {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -46,7 +45,7 @@ function EditCategory() {
               showConfirmButton: false,
               timer: 1500,
             });
-            history.push("/admin-berita");
+            history.push("/jenis-informasi");
             setTimeout(() => {
               window.location.reload();
             }, 1500);
@@ -55,7 +54,6 @@ function EditCategory() {
             console.log(error);
           });
       };
-
   return (
     <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
     <Header />
@@ -64,25 +62,33 @@ function EditCategory() {
       <div className="container mt-3 app-main__outer">
         <div className="card shadow">
           <div className="card-body">
-            <h1 className="fs-4">Form Tambah Data</h1>
+            <h1 className="fs-4">Form Edit Data</h1>
             <hr />
             <form onSubmit={update}>
               <div className="row">
                 <div className="mb-3 col-6">
                   <label for="exampleInputEmail1" className="form-label">
-                    Category
+                    Jenis Informasi
                   </label>
                   <input
-                    value={category}
-                    onChange={(e) => setCategory(e.target.value)}
+                    value={jenisInformasi}
+                    onChange={(e) => setJenisInformasi(e.target.value)}
                     type="text"
                     className="form-control"
                   />
                 </div>
               </div>
-              <button type="submit" className="btn-primary mt-3">
-                Submit
-              </button>
+              <button type="submit" className="btn-danger mt-3 mr-3">
+                  <a
+                    href="/jenis-informasi"
+                    style={{ color: "white", textDecoration: "none" }}>
+                    {" "}
+                    Batal
+                  </a>
+                </button>
+                <button type="submit" className="btn-primary mt-3">
+                  Simpan
+                </button>
             </form>
           </div>
         </div>
@@ -92,4 +98,4 @@ function EditCategory() {
   )
 }
 
-export default EditCategory
+export default EditJenisInf

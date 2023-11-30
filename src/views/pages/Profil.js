@@ -180,7 +180,7 @@ function Profil() {
       </div>
       <div className="row pd-top-110"style={{ background: "#F1F6F9" }}>
         <div className="col-lg-6 col-md-9 px-xl-5 align-self-center">
-          <div className="thumb mb-4 mb-lg-0">
+          <div className="container thumb mb-4 mb-lg-0">
             <img style={{borderRadius:"10px"}}
               src="https://lp2m.uma.ac.id/wp-content/uploads/2022/02/OrganisasiUMA.jpg"
               alt="img"
@@ -188,14 +188,14 @@ function Profil() {
           </div>
         </div>
         <div className="col-lg-5 align-self-center">
-          <div className="section-title">
+          <div className="container section-title">
             <h2 className="title mb-4">Struktur Organisasi</h2>
             <p>
               Tim Pelaksana Pejabat Pengelola Informasi Dan Dokumentasi Bawaslu
               Kabupaten Boyolali.
             </p>
           </div>
-          <div className="single-security-wrap-2">
+          <div className="container single-security-wrap-2">
             <div className="thumb border-bottom">
               <img src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png" alt="img" />
             </div>
@@ -205,7 +205,7 @@ function Profil() {
               <p>Ketua Bawaslu Kabupaten Boyolali</p>
             </div>
           </div>
-          <div className="single-security-wrap-2">
+          <div className="container single-security-wrap-2">
             <div className="thumb border-bottom">
               <img src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png" alt="img" />
             </div>
@@ -215,7 +215,7 @@ function Profil() {
               <p>Koordinator Seketariat Bawaslu Kabupaten Boyolali. </p>
             </div>
           </div>
-          <div className="single-security-wrap-2">
+          <div className="container single-security-wrap-2">
             <div className="thumb border-bottom">
               <img src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png" alt="img" />
             </div>
@@ -228,7 +228,7 @@ function Profil() {
               <p>Anggota Bawaslu Kabupaten Boyolali</p>
             </div>
           </div>
-          <div className="single-security-wrap-2">
+          <div className="container single-security-wrap-2">
             <div className="thumb">
               <img src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png" alt="img" />
             </div>

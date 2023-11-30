@@ -4,7 +4,19 @@ table thead th {
 table thead td {
   text-align: left;
 }
+table tbody .aksi {
+  text-align: center;
+}
+table tbody .judulPengumuman {
+  max-width:100px;
+}
 @media screen and (max-width: 600px) {
+table tbody .aksi {
+text-align: right;
+}
+table tbody .judulPengumuman {
+  max-width: 100%;
+}
   table {
     border: 0;
   }

@@ -81,10 +81,10 @@ function eLibrary() {
                 </div>
                 <div className="details">
                   <h3>
-                    <a href="service-details.html">Buletin</a>
+                    <a href="https://boyolali.bawaslu.go.id/cepogo/2023/09/buletin-edisi-1-depan-212x300-1.jpg">Buletin</a>
                   </h3>
                   <p>Buletin Bawaslu Kabupaten Boyolali Edisi 1</p>
-                  <a className="read-more-btn" href="service-details.html">
+                  <a className="read-more-btn" href="https://boyolali.bawaslu.go.id/cepogo/2023/09/buletin-edisi-1-depan-212x300-1.jpg">
                     <i className="fa fa-arrow-right"></i>
                   </a>
                 </div>
@@ -102,10 +102,10 @@ function eLibrary() {
                 </div>
                 <div className="details">
                   <h3>
-                    <a href="service-details.html">Buletin</a>
+                    <a href="https://boyolali.bawaslu.go.id/cepogo/2023/09/buletin-edisi-2-depan-212x300-1.jpg">Buletin</a>
                   </h3>
                   <p>Buletin Bawaslu Kabupaten Boyolali Edisi 2</p>
-                  <a className="read-more-btn" href="service-details.html">
+                  <a className="read-more-btn" href="https://boyolali.bawaslu.go.id/cepogo/2023/09/buletin-edisi-2-depan-212x300-1.jpg">
                     <i className="fa fa-arrow-right"></i>
                   </a>
                 </div>
@@ -123,10 +123,10 @@ function eLibrary() {
                 </div>
                 <div className="details">
                   <h3>
-                    <a href="service-details.html">Buletin</a>
+                    <a href="https://boyolali.bawaslu.go.id/cepogo/2023/09/buletin-edisi-3-depan-212x300-1.jpg">Buletin</a>
                   </h3>
                   <p>Buletin Bawaslu Kabupaten Boyolali Edisi 3</p>
-                  <a className="read-more-btn" href="service-details.html">
+                  <a className="read-more-btn" href="https://boyolali.bawaslu.go.id/cepogo/2023/09/buletin-edisi-3-depan-212x300-1.jpg">
                     <i className="fa fa-arrow-right"></i>
                   </a>
                 </div>
@@ -144,10 +144,10 @@ function eLibrary() {
                 </div>
                 <div className="details">
                   <h3>
-                    <a href="service-details.html">Buletin</a>
+                    <a href="https://boyolali.bawaslu.go.id/cepogo/2023/09/buletin-edisi-4-depan-212x300-1.jpg">Buletin</a>
                   </h3>
                   <p>Buletin Bawaslu Kabupaten Boyolali Edisi 4</p>
-                  <a className="read-more-btn" href="service-details.html">
+                  <a className="read-more-btn" href="https://boyolali.bawaslu.go.id/cepogo/2023/09/buletin-edisi-4-depan-212x300-1.jpg">
                     <i className="fa fa-arrow-right"></i>
                   </a>
                 </div>
@@ -165,10 +165,10 @@ function eLibrary() {
                 </div>
                 <div className="details">
                   <h3>
-                    <a href="service-details.html">Buletin</a>
+                    <a href="https://boyolali.bawaslu.go.id/cepogo/2023/09/Jejak-Pengawasan-depan-212x300-1.jpg">Buletin</a>
                   </h3>
                   <p>Jejak Pengawasan | Catatan Pengawas Pemilu 2019</p>
-                  <a className="read-more-btn" href="service-details.html">
+                  <a className="read-more-btn" href="https://boyolali.bawaslu.go.id/cepogo/2023/09/Jejak-Pengawasan-depan-212x300-1.jpg">
                     <i className="fa fa-arrow-right"></i>
                   </a>
                 </div>
@@ -186,13 +186,13 @@ function eLibrary() {
                 </div>
                 <div className="details">
                   <h3>
-                    <a href="service-details.html">Buletin</a>
+                    <a href="https://boyolali.bawaslu.go.id/cepogo/2023/09/Napak-Tilas-Depan-212x300-1.jpg">Buletin</a>
                   </h3>
                   <p>
                     Napak Tilas | Sejarah Pengawasan Pemilihan Umum Kab.
                     Boyolali
                   </p>
-                  <a className="read-more-btn" href="service-details.html">
+                  <a className="read-more-btn" href="https://boyolali.bawaslu.go.id/cepogo/2023/09/Napak-Tilas-Depan-212x300-1.jpg">
                     <i className="fa fa-arrow-right"></i>
                   </a>
                 </div>

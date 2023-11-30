@@ -62,7 +62,7 @@ function AddJenisKeterangan() {
         timer: 1500,
       });
       // //console.log(data);
-      history.push(`/admin/${namaInformasi}/${param.id}`);
+      // history.push(`/admin/${namaInformasi}/${param.id}`);
       setTimeout(() => {
         window.location.reload();
       }, 1500);
@@ -72,11 +72,11 @@ function AddJenisKeterangan() {
   };
 
   return (
-    <div>
+    <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
       <Header />
       <div className="app-main">
         <Sidebar />
-        <div className="container mt-3">
+        <div className="container mt-3 app-main__outer">
           <div className="card shadow">
             <div className="card-body">
               <h1 className="fs-4">Form Tambah Data</h1>
@@ -111,7 +111,7 @@ function AddJenisKeterangan() {
                 </div>
                 <button type="button" className="btn-danger mt-3 mr-3">
                   <a
-                    href="/admin-pengumuman"
+                    href={``}
                     style={{ color: "white", textDecoration: "none" }}>
                     Batal
                   </a>

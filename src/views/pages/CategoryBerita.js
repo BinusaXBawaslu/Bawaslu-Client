@@ -8,15 +8,27 @@ import Bawaslu from "../../component/Bawaslu";
 
 function CategoryBerita() {
   const [list, setList] = useState([]);
+  const [related, setRelated] = useState([]);
+  const [listTerbaru, setListTerbaru] = useState([]);
   const param = useParams();
+  const [gambarTerbaru, setGambarTerbaru] = useState("");
 
   const getAll = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/berita/by-category?categoryId=` + param.id
+        `${API_DUMMY}/bawaslu/api/berita/by-category?categoryId=${param.id}&order=asc&page=0&size=10&sort=createdDate`
       );
-
-      setList(response.data.data);
+      setList(response.data.data.content);
+    } catch (error) {
+      console.error("Terjadi Kesalahan", error);
+    }
+  };
+  const getRelated = async () => {
+    try {
+      const response = await axios.get(
+        `${API_DUMMY}/bawaslu/api/berita/related-berita/by-id-berita?id=` + param.id
+      );
+      setRelated(response.data.data);
     } catch (error) {
       console.error("Terjadi Kesalahan", error);
     }
@@ -24,7 +36,21 @@ function CategoryBerita() {
 
   useEffect(() => {
     getAll();
+    getAllTerbaru();
+    getRelated()
   }, []);
+
+  const getAllTerbaru = async () => {
+    try {
+      const response = await axios.get(
+        `${API_DUMMY}/bawaslu/api/berita-terbaru`
+      );
+      setListTerbaru(response.data.data);
+      console.log(response.data.data);
+    } catch (error) {
+      console.error("Terjadi Kesalahan", error);
+    }
+  };
 
   return (
     <>
@@ -32,101 +58,38 @@ function CategoryBerita() {
       <div
         className="service-area bg-overlay pd-top-120 pd-bottom-90"
         style={{
-          backgroundImage: `url('https://boyolali.bawaslu.go.id/cepogo/2023/11/WhatsApp-Image-2023-11-01-at-14.10.31.jpeg')`,
+          backgroundImage: `url(${gambarTerbaru})`,
         }}>
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-4">
-              <div className="section-title border-radius-5 p-35 bg-base style-white mb-lg-0">
-                <h2 className="title mt-4">We provide the best IT solution</h2>
-                <p className="content">
-                  Vestibulum ante ipsum primis ibus orci luctus etultrices
-                  posuebilia rae Sed aliquam nisi quis porttitor gue elitrat
-                  euismod oplacer{" "}
-                </p>
-                <p className="content">
-                  Rae Sed aliquam nisi quis aliquam Vestibulum ante ipsum primis
-                  ibus orci luctus etultrices posuebilia rae Sed aliquam nisi
-                  quis porttitor gue elitrat oplacer{" "}
-                </p>
-                <div className="btn-wrap mt-4 pt-1 mb-4">
-                  <a
-                    className="btn btn-small btn-border-white mt-2"
-                    href="contact.html">
-                    Contact Us
-                  </a>
-                  <a className="btn btn-small btn-black mt-2" href="service.html">
-                    All Service
-                  </a>
-                </div>
+         <div class="container">
+          <div class="row">
+            <div class="col-lg-4">
+              <div
+                class="section-title single-service-inner border-radius-5 p-35 style-white mb-lg-0"
+                style={{
+                  backgroundImage: `url(${gambarTerbaru})`,
+                  minHeight: "93%",
+                }}>
+                <h2 class="title title-berita mt-4">
+                  {listTerbaru.length > 0 && listTerbaru[0].judulBerita}
+                </h2>
               </div>
             </div>
-            <div className="col-lg-8">
-              <div className="row">
-                <div className="col-md-6">
-                  <div className="single-service-inner style-white text-center">
-                    <div className="icon-box">
-                      <i className="icomoon-layer"></i>
-                    </div>
-                    <div className="details">
-                      <h3>
-                        <a href="service-details.html">Web design</a>
-                      </h3>
-                      <p>
-                        Curabitur ullamcorper ultricies nisiam tiamns rhoncus.
-                        Maecenas tempus tellus endimentum{" "}
-                      </p>
+            <div class="col-lg-8">
+              <div class="row">
+                {listTerbaru.slice(1, 5).map((berita, index) => (
+                  <div class="col-md-6" key={index}>
+                    <div class="single-service-inner style-white text-left">
+                      <div class="icon-box">
+                        <i class="icomoon-layer"></i>
+                      </div>
+                      <div class="details detailss">
+                        <h3>
+                          <a class="isiBerita">{berita.judulBerita}</a>
+                        </h3>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="col-md-6">
-                  <div className="single-service-inner style-white text-center">
-                    <div className="icon-box">
-                      <i className="icomoon-application"></i>
-                    </div>
-                    <div className="details">
-                      <h3>
-                        <a href="service-details.html">App development</a>
-                      </h3>
-                      <p>
-                        Curabitur ullamcorper ultricies nisiam tiamns rhoncus.
-                        Maecenas tempus tellus endimentum{" "}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-6">
-                  <div className="single-service-inner style-white text-center">
-                    <div className="icon-box">
-                      <i className="icomoon-cloud-data"></i>
-                    </div>
-                    <div className="details">
-                      <h3>
-                        <a href="service-details.html">Cloud Service</a>
-                      </h3>
-                      <p>
-                        Curabitur ullamcorper ultricies nisiam tiamns rhoncus.
-                        Maecenas tempus tellus endimentum{" "}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-6">
-                  <div className="single-service-inner style-white text-center">
-                    <div className="icon-box">
-                      <i className="icomoon-megaphone"></i>
-                    </div>
-                    <div className="details">
-                      <h3>
-                        <a href="service-details.html">It mangement</a>
-                      </h3>
-                      <p>
-                        Curabitur ullamcorper ultricies nisiam tiamns rhoncus.
-                        Maecenas tempus tellus endimentum{" "}
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
@@ -149,12 +112,7 @@ function CategoryBerita() {
                       <div className="row">
                         <div className="col-sm-7">
                           <div className="tags d-inline-block">
-                            <button className="border">
-                              <i className="fa-regular fa-thumbs-up"></i>
-                            </button>
-                            <button className="border">
-                              <i className="fa-regular fa-thumbs-down"></i>
-                            </button>
+
                           </div>
                         </div>
                         <div className="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
@@ -217,6 +175,27 @@ function CategoryBerita() {
                       </ul>
                     </div>
                     <p>{category.isiBerita}</p>
+                    {related.map((post) => {
+                      return (
+                        <div class="col-md-6">
+                          <div class="media single-choose-inner">
+                            <div class="media-left">
+                              <div class="icon">
+                                <i class="fas fa-bullhorn"></i>
+                              </div>
+                            </div>
+                            <div class="media-body">
+                              <p>
+                                <a
+                                  href={`/page-berita/${post.judulBerita}/${post.id}`}>
+                                  {post.judulPengumuman}
+                                </a>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
                   </div>
                 );
               })}

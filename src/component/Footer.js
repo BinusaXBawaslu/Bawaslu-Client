@@ -1,6 +1,26 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { API_DUMMY } from "../utils/base_URL";
 
 function Footer() {
+  const [category, setCategory] = useState([]);
+
+  const getCategoryBerita = async () => {
+    try {
+      const response = await axios.get(
+        `${API_DUMMY}/bawaslu/api/category-berita/all-limit-7`
+      );
+      setCategory(response.data.data);
+      console.log(response.data.data);
+    } catch (error) {
+      console.error("Terjadi Kesalahan", error);
+    }
+  };
+
+  useEffect(() => {
+    getCategoryBerita();
+  }, []);
+
   return (
     <>
       {/* <!-- footer area start --> */}
@@ -10,7 +30,7 @@ function Footer() {
           backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/2.webp')`,
         }}>
         <div className="container">
-          <div className="row">
+          <div className="row gap-5">
             <div className="col-lg-3 col-md-6">
               <div className="widget widget_about">
                 <h4 className="widget-title">Bawaslu Boyolali</h4>
@@ -57,49 +77,30 @@ function Footer() {
                 </div>
               </div>
             </div>
+            {/* {category.map(() => {
+              return(
+
+              )
+            })} */}
             <div className="col-lg-3 col-md-6">
-              <div className="widget widget_nav_menu">
+              <div className="widget widget_nav_menu row">
                 <h4 className="widget-title">Kategori</h4>
-                <ul>
-                  <li>
-                    <a href="/berita">Berita</a>
-                  </li>
-                  <li>
-                    <a href="/kehumasan">Kehumasan</a>
-                  </li>
-                  <li>
-                    <a href="/OSDM-dan-Diklat">OSDM & Diklat</a>
-                  </li>
-                  <li>
-                    <a href="/penanganan-pelanggaran">Penanganan Pelanggaran</a>
-                  </li>
-                  <li>
-                    <a href="/pencegahan">Pencegahan</a>
-                  </li>
-                  <li>
-                    <a href="/pengumuman-footer">Pengumuman</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6">
-              <br />
-              <br />
-              <div className="widget widget_nav_menu">
-                {/* <h4 className="widget-title">Useful link</h4> */}
-                <ul>
-                  <li>
-                    <a href="/penyelesaian-sengketa-footer">
-                      Penyelesaian Sengketa
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/sosialisasi">Sosialisasi</a>
-                  </li>
-                  <li>
-                    <a href="/tak-berkategori">Tak BerKatagori</a>
-                  </li>
-                </ul>
+                {category.map((cate) => {
+                  return (
+                    <div className="col-lg-6 col-md-6">
+                      {" "}
+                      <ul>
+                        <li>
+                          <a
+                            style={{ color: "white", textDecoration: "none" }}
+                            href={`category-berita/${cate.category}/${cate.id}`}>
+                            {cate.category}
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  );
+                })}
               </div>
             </div>
             <div className="col-lg-3 col-md-6">

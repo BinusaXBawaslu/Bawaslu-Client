@@ -55,15 +55,23 @@ function DetailPermohonanKeberatan() {
       <div className="app-main">
         <Sidebar />
         <div
-          className="container mt-3 mb-3 overflow-y-scroll"
+          className="container app-main__outer mt-3 mb-3 overflow-y-scroll"
           style={{ height: "100vh" }}>
           <div className="d-lg-flex gap-5">
             <div className="d-block">
               <form className="card card-body shadow p-2 w-100">
-                  <img
+                {tandaPengenal === null ? (
+                   <img
                   className="rounded-circle w-75 mr-auto ml-auto"
                   src="https://cdn.icon-icons.com/icons2/2506/PNG/512/user_icon_150670.png"
                 />
+                ):(
+                  <img style={{maxWidth:"400px", maxHeight:"400px"}}
+                  className="rounded-circle w-75 mr-auto ml-auto"
+                  src={tandaPengenal}
+                />
+                )}
+
                 <p className="text-center">{nama}</p>
               </form>
               <form className="card card-body shadow p-2 mt-3">
@@ -146,7 +154,6 @@ function DetailPermohonanKeberatan() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

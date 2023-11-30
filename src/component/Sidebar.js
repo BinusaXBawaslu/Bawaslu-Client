@@ -47,116 +47,141 @@ function Sidebar() {
   }, []);
 
   return (
-    <div class="app-sidebar sidebar-shadow" style={{height:"100vh"}}>
-          <div class="app-header__logo">
-            <div class="logo-src"></div>
-            <div class="header__pane ml-auto">
-              <div>
-                <button
-                  type="button"
-                  class="hamburger close-sidebar-btn hamburger--elastic"
-                  data-class="closed-sidebar">
-                  <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                  </span>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="app-header__mobile-menu">
+    <div className="app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
+      <div class="app-sidebar sidebar-shadow" style={{ height: "100vh" }}>
+        <div class="app-header__logo">
+          <div class="logo-src"></div>
+          <div class="header__pane ml-auto">
             <div>
               <button
                 type="button"
-                class="hamburger hamburger--elastic mobile-toggle-nav">
+                class="hamburger close-sidebar-btn hamburger--elastic"
+                data-class="closed-sidebar">
                 <span class="hamburger-box">
                   <span class="hamburger-inner"></span>
                 </span>
               </button>
             </div>
           </div>
-          <div class="app-header__menu">
-            <span>
-              <button
-                type="button"
-                class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
-                <span class="btn-icon-wrapper">
-                  <i class="fa fa-ellipsis-v fa-w-6"></i>
-                </span>
-              </button>
-            </span>
-          </div>{" "}
-          <div class="scrollbar-sidebar">
-            <div class="app-sidebar__inner">
-              <ul class="vertical-nav-menu">
-                <li class="app-sidebar__heading">Menu</li>
-                <li>
-                  <a href="/admin-berita" class="mm-active">
-                    <i class="metismenu-icon pe-7s-rocket"></i>
-                    Berita
-                  </a>
-                </li>
-                <li>
-                  <a href="/admin-pengumuman">
-                    <i class="metismenu-icon pe-7s-rocket"></i>
-                    Pengumuman
-                  </a>
-                </li>
-                <li class="app-sidebar__heading">Informasi</li>
-                <li>
-                  <a href="#">
-                    <i class="metismenu-icon pe-7s-diamond"></i>
-                    Informasi Publik
-                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
-                  </a>
-                  <ul>
-                    {informasi.map((inf) => {
-                      return (
-                         <li>
-                      <a href={`admin-informasi/${inf.namaInformasi}/${inf.id}`}>
-                        <i class="metismenu-icon"></i>
-                        {inf.namaInformasi}
-                      </a>
-                    </li>
-                      )
-                    })}
-
-                  </ul>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="metismenu-icon pe-7s-car"></i>
-                    Daftar Regulasi
-                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
-                  </a>
-                  <ul>
-                    {regulasi.map((reg) => {
-                      return (
-                        <li>
-                      <a href={`regulasi-admin/${reg.jenisRegulasi}/${reg.id}`}>
-                        <i class="metismenu-icon"></i>{reg.jenisRegulasi}
-                      </a>
-                    </li>
-                    )
-                    })}
-                  </ul>
-                </li>
-                <li class="app-sidebar__heading">Permohonan</li>
-                <li>
-                  <a href="/adminn-permohonan-informasi">
-                    <i class="metismenu-icon pe-7s-display2"></i>
-                    Permohonan Informasi
-                  </a>
-                </li>
-                <li>
-                  <a href="/admin-permohonan-keberatan">
-                    <i class="metismenu-icon pe-7s-display2"></i>
-                    Permohonan Keberatan
-                  </a>
-                </li>
-              </ul>
-            </div>
+        </div>
+        <div class="app-header__mobile-menu">
+          <div>
+            <button
+              type="button"
+              class="hamburger hamburger--elastic mobile-toggle-nav">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
           </div>
         </div>
+        <div class="app-header__menu">
+          <span>
+            <button
+              type="button"
+              class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+              <span class="btn-icon-wrapper">
+                <i class="fa fa-ellipsis-v fa-w-6"></i>
+              </span>
+            </button>
+          </span>
+        </div>{" "}
+        <div class="scrollbar-sidebar">
+          <div class="app-sidebar__inner">
+            <ul class="vertical-nav-menu">
+              <li class="app-sidebar__heading">Menu</li>
+              <li>
+                <a
+                  style={{ textDecoration: "none" }}
+                  href="/admin-berita"
+                  class="mm-active">
+                  <i class="metismenu-icon pe-7s-rocket"></i>
+                  Berita
+                </a>
+              </li>
+              <li>
+                <a style={{ textDecoration: "none" }} href="/admin-pengumuman">
+                  <i class="metismenu-icon pe-7s-rocket"></i>
+                  Pengumuman
+                </a>
+              </li>
+              <li class="app-sidebar__heading">Informasi</li>
+              <li>
+                <a style={{ textDecoration: "none" }} href="/jenis-informasi">
+                  <i class="metismenu-icon pe-7s-diamond"></i>
+                  Jenis Informasi
+                </a>
+              </li>
+              <li>
+                <a style={{ textDecoration: "none" }} href="#">
+                  <i class="metismenu-icon pe-7s-diamond"></i>
+                  Informasi Publik
+                  <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                </a>
+                <ul>
+                  {informasi.map((inf) => {
+                    return (
+                      <li key={inf.id}>
+                        <a
+                          style={{ textDecoration: "none" }}
+                          href={`./admin-informasi/${inf.namaInformasi}/${inf.id}`}>
+                          <i class="metismenu-icon"></i>
+                          {inf.namaInformasi}
+                        </a>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </li>
+              <li>
+                <a style={{textDecoration:"none"}} href="/jenis-regulasi">
+                  <i class="metismenu-icon pe-7s-car"></i>
+                  Jenis Regulasi
+                </a>
+              </li>
+              <li>
+                <a style={{ textDecoration: "none" }} href="#">
+                  <i class="metismenu-icon pe-7s-car"></i>
+                  Daftar Regulasi
+                  <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                </a>
+                <ul>
+                  {regulasi.map((reg) => {
+                    return (
+                      <li>
+                        <a
+                          style={{ textDecoration: "none" }}
+                          href={`./adminn/${reg.jenisRegulasi}/${reg.id}`}>
+                          <i class="metismenu-icon"></i>
+                          {reg.jenisRegulasi}
+                        </a>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </li>
+              <li class="app-sidebar__heading">Permohonan</li>
+              <li>
+                <a
+                  style={{ textDecoration: "none" }}
+                  href="/adminn-permohonan-informasi">
+                  <i class="metismenu-icon pe-7s-display2"></i>
+                  Permohonan Informasi
+                </a>
+              </li>
+              <li>
+                <a
+                  style={{ textDecoration: "none" }}
+                  href="/admin-permohonan-keberatan">
+                  <i class="metismenu-icon pe-7s-display2"></i>
+                  Permohonan Keberatan
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 
