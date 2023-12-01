@@ -169,9 +169,7 @@ function Navbar() {
               <span class="icon-right"></span>
             </button>
           </div>
-          <div className="logo d-inline-block d-lg-none">
-
-          </div>
+          <div className="logo d-inline-block d-lg-none"></div>
           <div
             class={`collapse navbar-collapse ${menuOpen ? "sopen" : ""}`}
             id="Iitechie_main_menu"
@@ -206,25 +204,27 @@ function Navbar() {
                 <ul
                   class={`${isMobile ? "collapse" : "sub-menu"}`}
                   id="submenu"
-                > {informasi.map((informasi) => {
-                  return (
-                    <li>
-                      <a
-                        href={
-                          "/informasi/" +
-                          informasi.namaInformasi +
-                          "/" +
-                          informasi.id
-                        }
-                        style={{ textDecoration: "none" }}
-                      >
-                        <i class="metismenu-icon"></i>
-                        {informasi.namaInformasi}
-                      </a>
-                      {/* <a href="/regulasi">Regulasi</a> */}
-                    </li>
-                  );
-                })}
+                >
+                  {" "}
+                  {informasi.map((informasi) => {
+                    return (
+                      <li>
+                        <a
+                          href={
+                            "/informasi/" +
+                            informasi.namaInformasi +
+                            "/" +
+                            informasi.id
+                          }
+                          style={{ textDecoration: "none" }}
+                        >
+                          <i class="metismenu-icon"></i>
+                          {informasi.namaInformasi}
+                        </a>
+                        {/* <a href="/regulasi">Regulasi</a> */}
+                      </li>
+                    );
+                  })}
                   {/* <li className="text-black"><a>Daftar Informasi Publik</a></li> */}
                   <li>
                     <a href="/informasi-dikecuali">Informasi DiKecualikan</a>
@@ -242,18 +242,18 @@ function Navbar() {
                 >
                   Daftar Regulasi
                 </a>
-                  {/* <li className="text-black"><a>Daftar Informasi Publik</a></li> */}
-                  <ul
-                    class={`${isMobile ? "collapse" : "sub-menu"}`}
-                    id="submenu2"
-                    data-bs-parent="#menu"
-                  >
+                {/* <li className="text-black"><a>Daftar Informasi Publik</a></li> */}
+                <ul
+                  class={`${isMobile ? "collapse" : "sub-menu"}`}
+                  id="submenu2"
+                  data-bs-parent="#menu"
+                >
                   {regulasi.map((regulasi) => {
                     return (
                       <li>
                         <a
                           href={
-                            "/regulasi/" +
+                            "/menu-regulasi/" +
                             regulasi.jenisRegulasi +
                             "/" +
                             regulasi.id
@@ -263,7 +263,6 @@ function Navbar() {
                           <i class="metismenu-icon"></i>
                           {regulasi.jenisRegulasi}
                         </a>
-                        {/* <a href="/regulasi">Regulasi</a> */}
                       </li>
                     );
                   })}

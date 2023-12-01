@@ -8,37 +8,26 @@ function Maklumat() {
     <>
       <Navbar />
       {/* <!-- page title start --> */}
-      <div className="breadcrumb-area bg-black bg-relative service-area bg-relative pd-top-60 pd-bottom-90 ">
-        <img
-          className="shape-left-top top_image_bounce"
-          src="https://www.solverwp.com/demo/html/itechie/assets/img/shape/3.webp"
-          alt="img"
-        />
-        <img
-          className="shape-right-top top_image_bounce"
-          src="https://www.solverwp.com/demo/html/itechie/assets/img/shape/4.webp"
-          alt="img"
-        />
+      <div
+        className="breadcrumb-area bg-relative"
+        style={{ background: "#151423" }}
+      >
         <div
           className="banner-bg-img"
           style={{
-            backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp') `,
+            backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp')`,
           }}
         ></div>
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-xl-7 col-lg-8">
               <div className="breadcrumb-inner text-center">
-                <h2 style={{ color: "white", fontWeight: 700, fontSize: 60 }}>
-                  Maklumat Pelayanan Informasi
-                </h2>
+                <h2 className="page-title">Maklumat Pelayanan</h2>
                 <ul className="page-list">
                   <li>
-                    <a href="/" style={{ textDecoration: "none" }}>
-                      Home
-                    </a>
+                    <a href="/">Home</a>
                   </li>
-                  <li>Maklumat Pelayanan Informasi</li>
+                  <li>Daftar Regulsi</li>
                 </ul>
               </div>
             </div>

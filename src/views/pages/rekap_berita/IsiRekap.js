@@ -7,6 +7,7 @@ import { API_DUMMY } from "../../../utils/base_URL";
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
 import { useParams } from "react-router-dom/cjs/react-router-dom";
+import { FacebookShareButton, PinterestShareButton, TwitterShareButton } from "react-share";
 
 function IsiRekap() {
   const [judulBerita, setJudulBerita] = useState("");
@@ -88,47 +89,57 @@ function IsiRekap() {
                       <div className="blog-share">
                         <ul>
                           <li>
-                            <a href="#">
-                              <button
-                                style={{
-                                  color: "white",
-                                  backgroundColor: "#45629f",
-                                }}
-                                className="border p-2">
-                                <i
-                                  className="fab fa-facebook-f"
-                                  aria-hidden="true"></i>{" "}
-                                Facebook
-                              </button>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#">
-                              <button
-                                style={{
-                                  color: "white",
-                                  backgroundColor: "#5eb2ef",
-                                }}
-                                className="border p-2">
-                                <i
-                                  className="fab fa-twitter"
-                                  aria-hidden="true"></i>{" "}
-                                Twitter
-                              </button>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#">
-                              <button
-                                style={{
-                                  color: "white",
-                                  backgroundColor: "#cf2830",
-                                }}
-                                className="border p-2">
-                                <i className="fa-brands fa-pinterest"></i> Pin
-                              </button>
-                            </a>
-                          </li>
+                        <FacebookShareButton
+                                  url={`https://bawaslu.excellentsistem.com/isi-rekap/${judulBerita}/${param.id}`}
+                                  media={image}
+                                  quote={judulBerita}>
+                                  <button
+                                    style={{
+                                      color: "white",
+                                      backgroundColor: "#45629f",
+                                    }}
+                                    className="border p-2">
+                                    <i
+                                      className="fab fa-facebook-f"
+                                      aria-hidden="true"></i>{" "}
+                                    Facebook
+                                  </button>
+                                </FacebookShareButton>
+                              </li>
+                              <li>
+                                <TwitterShareButton
+                                  url={`https://bawaslu.excellentsistem.com/isi-rekap/${judulBerita}/${param.id}`}
+                                  media={image}
+                                  quote={judulBerita}>
+                                  <button
+                                    style={{
+                                      color: "white",
+                                      backgroundColor: "#5eb2ef",
+                                    }}
+                                    className="border p-2">
+                                    <i
+                                      className="fab fa-twitter"
+                                      aria-hidden="true"></i>{" "}
+                                    Twitter
+                                  </button>
+                                </TwitterShareButton>
+                              </li>
+                              <li>
+                                <PinterestShareButton
+                                  url={`https://bawaslu.excellentsistem.com/isi-rekap/${judulBerita}/${param.id}`}
+                                  quote={judulBerita}
+                                  media={image}>
+                                  <button
+                                    style={{
+                                      color: "white",
+                                      backgroundColor: "#cf2830",
+                                    }}
+                                    className="border p-2">
+                                    <i className="fa-brands fa-pinterest"></i>{" "}
+                                    Pin
+                                  </button>
+                                </PinterestShareButton>
+                              </li>
                         </ul>
                       </div>
                     </div>
@@ -165,8 +176,8 @@ function IsiRekap() {
                               </div>
                             </div>
                             <div className="media-body">
-                              <a href="/bawaslu-boyolali-ajak-masyarakat-terlibat-dalam-pengawasan-pemilu-partisipatif">
-                                {category.judulBerita}
+                              <a href="/">
+                                {judulBerita}
                               </a>
                             </div>
                           </div>
@@ -174,20 +185,6 @@ function IsiRekap() {
                       );
                     })}
                   </div>
-                  {/* <ul className="blog-meta">
-                  <li>
-                  <button className="border p-2"><i className="fa-regular fa-thumbs-up"></i></button>
-                  </li>
-                  <li>
-                  <button className="border p-2"><i className="fa-regular fa-thumbs-down"></i></button>
-                  </li>
-                  <li>
-                    <button className="border">Facebook</button>
-                  </li>
-                  <li>
-                    <button className="border">Twitter</button>
-                  </li>
-                  </ul> */}
                 </div>
               </div>
             </div>

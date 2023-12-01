@@ -9,7 +9,7 @@ import {
 } from "react-router-dom/cjs/react-router-dom.min";
 import { API_DUMMY } from "../../../../../utils/base_URL";
 import Swal from "sweetalert2";
-import "../../../../../css/menuRegulasi.css"
+import "../../../../../css/menuRegulasi.css";
 
 function MenuRegulasi() {
   const [menuRegulasi, setMenuRegulasi] = useState([]);
@@ -20,9 +20,10 @@ function MenuRegulasi() {
   const getMenuRegulasi = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/menu-regulasi/get-by-jenis-regulasi?id-jenis-regulasi=` + param.id
+        `${API_DUMMY}/bawaslu/api/menu-regulasi/get-by-jenis-regulasi?id-jenis-regulasi=` +
+          param.id
       );
-     setMenuRegulasi(response.data.data);
+      setMenuRegulasi(response.data.data);
       console.log(response.data.data);
     } catch (error) {
       console.error("Terjadi Kesalahan", error);
@@ -32,7 +33,6 @@ function MenuRegulasi() {
   useEffect(() => {
     getMenuRegulasi();
   }, []);
-
 
   const deleteData = async (id) => {
     Swal.fire({
@@ -69,8 +69,9 @@ function MenuRegulasi() {
         <Sidebar />
         <div className="container mt-3 app-main__outer">
           <div class="main-card mb-3 card">
-            <div class="card-header">Menu Regulasi {}
-            <div class="btn-actions-pane-right">
+            <div class="card-header">
+            {menuRegulasi.length > 0 && menuRegulasi[0].jenisRegulasiId.jenisRegulasi}
+              <div class="btn-actions-pane-right">
                 <div role="group" class="btn-group-sm btn-group">
                   <button class="active btn-focus p-2 rounded">
                     <a
@@ -84,45 +85,71 @@ function MenuRegulasi() {
                 </div>
               </div>
             </div>
-            <div class="table-responsive"
+            <div
+              class="table-responsive"
               style={{ overflowY: "auto", maxHeight: "60vh" }}>
               <table class="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
                   <tr>
-                    <th  scope="col" className="text-left">No</th>
-                    <th  scope="col" className="text-left">Menu Regulasi  </th>
-                    <th  scope="col" className="text-center">Aksi</th>
+                    <th scope="col" className="text-left">
+                      No
+                    </th>
+                    <th scope="col" className="text-left">
+                      Menu Regulasi{" "}
+                    </th>
+                    <th scope="col" className="text-center">
+                      Aksi
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
-                    {menuRegulasi.map((jenis, index) => {
-                      return (
-                    <tr key={index}>
-                      <td data-label="No : " className="text-left">{index + 1}
-                      </td>
-                      <td data-label="jenis : " className="text-left">{jenis.menuRegulasi}
-                      </td>
-                      <td data-label="Aksi : " class="text-center">
+                  {menuRegulasi.map((jenis, index) => {
+                    return (
+                      <tr key={index}>
+                        <td data-label="No : " className="text-left">
+                          {index + 1}
+                        </td>
+                        <td data-label="jenis : " className="text-left">
+                          {jenis.menuRegulasi}
+                        </td>
+                        <td data-label="Aksi : " class="text-center">
                           <button type="button" class="btn-primary btn-sm mr-2">
-                            <a style={{color:"white", textDecoration:"none"}} href={"/edit/" + jenis.menuRegulasi + "/" + jenis.id}><i class="fa-solid fa-pen-to-square"></i></a>
+                            <a
+                              style={{ color: "white", textDecoration: "none" }}
+                              href={
+                                "/edit/" + jenis.menuRegulasi + "/" + jenis.id
+                              }>
+                              <i class="fa-solid fa-pen-to-square"></i>
+                            </a>
                           </button>
-                          <button onClick={() => deleteData(jenis.id)} type="button" class="btn-danger btn-sm mr-2">
+                          <button
+                            onClick={() => deleteData(jenis.id)}
+                            type="button"
+                            class="btn-danger btn-sm mr-2">
                             <i class="fa-solid fa-trash"></i>
                           </button>
                           <button type="button" class="btn-info btn-sm">
-                          <a style={{color:"white", textDecoration:"none"}} href={"/add/" + jenis.menuRegulasi + "/" + jenis.id}><i class="fas fa-plus"></i></a>
+                            <a
+                              style={{ color: "white", textDecoration: "none" }}
+                              href={
+                                "/regulasi/" +
+                                jenis.menuRegulasi +
+                                "/" +
+                                jenis.id
+                              }>
+                              <i class="fas fa-plus"></i>
+                            </a>
                           </button>
                         </td>
-                    </tr>
-                    )
-                    })}
+                      </tr>
+                    );
+                  })}
                 </tbody>
               </table>
             </div>
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

@@ -12,6 +12,11 @@ import {
   TablePagination,
 } from "@mui/material";
 
+import "../../../../../src/css/adminBerita.css";
+import { Pagination, TableContainer, TablePagination } from "@mui/material";
+import AddPengumuman from "./AddPengumuman";
+
+
 function AdminPengumuman() {
   const [list, setList] = useState([]);
   const [page, setPage] = useState(0);
@@ -21,7 +26,6 @@ function AdminPengumuman() {
     totalPages: 1,
     totalElements: 0,
   });
-  const [searchResults, setSearchResults] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
   const getAll = async (page) => {
@@ -94,43 +98,36 @@ function AdminPengumuman() {
 
   const totalPages = Math.ceil(filteredList.length / rowsPerPage);
 
-  const shouldShowPagination = totalPages > 0;
-
-  const slicedData = filteredList.slice(
-    page * rowsPerPage,
-    page * rowsPerPage + rowsPerPage
-  );
-
   return (
     <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
       <Header />
       <div className="app-main">
         <Sidebar />
         <div className="container mt-3 app-main__outer">
-        <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
-                <div class="col-auto">
-                  <label className="form-label mt-2">Rows per page:</label>
-                </div>
-                <div class="col-auto">
-                  <select
-                    className="form-select form-select-xl w-auto"
-                    onChange={handleRowsPerPageChange}
-                    value={rowsPerPage}>
-                    <option value={5}>5</option>
-                    <option value={10}>10</option>
-                    <option value={20}>20</option>
-                  </select>
-                </div>
-              </div>
-              <input
-                  type="search"
-                  className="form-control widget-content-right w-100 mt-2 md-2 d-lg-none d-md-block"
-                  placeholder="Search..."
-                  value={searchTerm}
-                  onChange={handleSearchChange}
-                />
+          <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
+            <div class="col-auto">
+              <label className="form-label mt-2">Rows per page:</label>
+            </div>
+            <div class="col-auto">
+              <select
+                className="form-select form-select-xl w-auto"
+                onChange={handleRowsPerPageChange}
+                value={rowsPerPage}>
+                <option value={5}>5</option>
+                <option value={10}>10</option>
+                <option value={20}>20</option>
+              </select>
+            </div>
+          </div>
+          <input
+            type="search"
+            className="form-control widget-content-right w-100 mt-2 mb-2 d-lg-none d-md-block"
+            placeholder="Search..."
+            value={searchTerm}
+            onChange={handleSearchChange}
+          />
           <div className="main-card mb-3 card">
-            <div className="card-header" style={{display:"flex"}}>
+            <div className="card-header" style={{ display: "flex" }}>
               <p className="mt-3">Pengumuman Keterangan</p>
               <div class="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
                 <div class="col-auto">
@@ -178,24 +175,14 @@ function AdminPengumuman() {
                 <table className="align-middle mb-0 table table-borderless table-striped table-hover">
                   <thead>
                     <tr>
-                      <th scope="col">
-                        No
-                      </th>
-                      <th scope="col">
-                        Author
-                      </th>
+                      <th scope="col">No</th>
+                      <th scope="col">Author</th>
                       {/* <th scope="col">
                         Isi Pengumuman
                       </th> */}
-                      <th scope="col">
-                        Image
-                      </th>
-                      <th scope="col">
-                        Judul Pengumuman
-                      </th>
-                      <th scope="col">
-                        Tags
-                      </th>
+                      <th scope="col">Image</th>
+                      <th scope="col">Judul Pengumuman</th>
+                      <th scope="col">Tags</th>
                       <th scope="col" className="text-center">
                         Aksi
                       </th>
@@ -206,13 +193,9 @@ function AdminPengumuman() {
                     {filteredList.map((pengumuman, index) => {
                       return (
                         <tr key={index}>
-                          <td data-label="No : ">
-                            {pengumuman.id}
-                          </td>
-                          <td data-label="author : ">
-                            {pengumuman.author}
-                          </td>
-                          <td>
+                          <td data-label="No : ">{index + 1}</td>
+                          <td data-label="author : ">{pengumuman.author}</td>
+                       
                             <img src={pengumuman.image} alt="pengumuman" />
                           </td>
                           <td
@@ -225,6 +208,21 @@ function AdminPengumuman() {
                             {pengumuman.tags}
                           </td>
                           <td data-label="Aksi : " className="pt-3 pb-3 d-flex aksi">
+
+                            <img
+                              style={{ width: "100px" }}
+                              src={pengumuman.image}
+                              alt="pengumuman"
+                            />
+                          </td>
+                          <td
+                            className="judulPengumuman"
+                            data-label="judulPengumuman : ">
+                            {pengumuman.judulPengumuman}
+                          </td>
+                          <td data-label="tags : ">{pengumuman.tags}</td>
+                          <td data-label="Aksi : " className="aksi">
+
                             <button
                               type="button"
                               className=".responsive-buttons btn-primary btn-sm mr-2">
@@ -239,7 +237,19 @@ function AdminPengumuman() {
                             </button>
                             <button
                               type="button"
+
                               className=".responsive-buttons btn-danger btn-sm"
+
+                              class="btn-warning mr-2 btn-sm">
+                              <a
+                                className="text-light"
+                                href={"/detail-pengumuman/" + pengumuman.id}>
+                                <i class="fas fa-info-circle"></i>
+                              </a>
+                            </button>
+                            <button
+                              type="button"
+                              className=" btn-danger btn-sm"
                               onClick={() => deleteData(pengumuman.id)}>
                               <i className="fa-solid fa-trash"></i>
                             </button>

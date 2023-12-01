@@ -75,7 +75,7 @@ function Pengumuman() {
                 <div className="col-lg-4 col-md-6">
                   <div className="single-blog-inner style-2">
                     <div className="thumb">
-                      <img src={isi.image} alt="img" />
+                      <img style={{maxHeight:"400px"}} src={isi.image} alt="img" />
                     </div>
                     <div className="details">
                       <h4 className="titleee" style={{cursor:"pointer"}}>

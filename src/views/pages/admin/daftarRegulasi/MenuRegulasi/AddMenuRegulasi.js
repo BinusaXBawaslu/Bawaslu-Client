@@ -44,7 +44,7 @@ function AddMenuRegulasi() {
         },
         {
           headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
+            "Authorization": `Bearer ${localStorage.getItem("token")}`,
           },
         }
       );
@@ -74,7 +74,7 @@ function AddMenuRegulasi() {
       <Header />
       <div className="app-main">
         <Sidebar />
-        <div className="container mt-3">
+        <div className="container mt-3 app-main__outer">
           <div className="card shadow">
             <div className="card-body">
               <h1 className="fs-4">Form Tambah Data</h1>
@@ -125,7 +125,6 @@ function AddMenuRegulasi() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

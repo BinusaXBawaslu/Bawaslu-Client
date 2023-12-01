@@ -47,7 +47,11 @@ function PengumumanCalonAnggota() {
                               href="https://www.facebook.com/Bawaslu.Kabupaten.Boyolali"
                               target="_blank"
                             >
-                              <button className="border p-2">
+                              <button
+                                    style={{
+                                      color: "white",
+                                      backgroundColor: "#45629f",
+                                    }}className="border p-2">
                                 <i
                                   className="fab fa-facebook-f"
                                   aria-hidden="true"
@@ -61,7 +65,11 @@ function PengumumanCalonAnggota() {
                               href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbawasluboyolali"
                               target="_blank"
                             >
-                              <button className="border p-2">
+                              <button
+                                    style={{
+                                      color: "white",
+                                      backgroundColor: "#45629f",
+                                    }}className="border p-2">
                                 <i
                                   className="fab fa-twitter"
                                   aria-hidden="true"
@@ -72,7 +80,11 @@ function PengumumanCalonAnggota() {
                           </li>
                           <li>
                             <a href="#">
-                              <button className="border p-2">
+                              <button
+                                    style={{
+                                      color: "white",
+                                      backgroundColor: "#45629f",
+                                    }}className="border p-2">
                                 <i className="fa-brands fa-pinterest"></i> Pin
                               </button>
                             </a>

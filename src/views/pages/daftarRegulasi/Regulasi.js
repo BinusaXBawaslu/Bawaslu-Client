@@ -6,103 +6,24 @@ import axios from "axios";
 import { useParams } from "react-router-dom/cjs/react-router-dom";
 import { API_DUMMY } from "../../../utils/base_URL";
 import { Pagination } from "@mui/material";
-import jsPDF from "jspdf";
 
-function Regulasi() {
-  // const [table1Visible, setTable1Visible] = useState(false);
-  // const [table2Visible, setTable2Visible] = useState(false);
-  // const [table3Visible, setTable3Visible] = useState(false);
-  // const [table4Visible, setTable4Visible] = useState(false);
-  // const [table5Visible, setTable5Visible] = useState(false);
-  // const [table6Visible, setTable6Visible] = useState(false);
-  // const [table7Visible, setTable7Visible] = useState(false);
-  // const [table8Visible, setTable8Visible] = useState(false);
-  // const [table9Visible, setTable9Visible] = useState(false);
+const Regulasi = ({ match }) => {
+  const { jenisRegulasi, id } = match.params;
 
-  // const showTable = (tableNumber) => {
-  //   setTable1Visible(false);
-  //   setTable2Visible(false);
-  //   setTable3Visible(false);
-  //   setTable4Visible(false);
-  //   setTable5Visible(false);
-  //   setTable6Visible(false);
-  //   setTable7Visible(false);
-  //   setTable8Visible(false);
-  //   setTable9Visible(false);
+  useEffect(() => {
+    const getKeterangan = async () => {
+      try {
+        const response = await axios.get(
+          `${API_DUMMY}/bawaslu/api/menu-regulasi/get-by-jenis-regulasi?id-jenis-regulasi=${id}`
+        );
+        setList(response.data.data);
+      } catch (error) {
+        console.log("Terjadi kesalahan" + error);
+      }
+    };
 
-  //   switch (tableNumber) {
-  //     case "Undang Undang":
-  //       setTable1Visible(true);
-  //       break;
-  //     case "Peraturan Pemerintah":
-  //       setTable2Visible(true);
-  //       break;
-  //     case "Peraturan Mahkamah Agung":
-  //       setTable3Visible(true);
-  //       break;
-  //     case "Peraturan Komisi Informasi":
-  //       setTable4Visible(true);
-  //       break;
-  //     case "Peraturan Menteri":
-  //       setTable5Visible(true);
-  //       break;
-  //     case "Perbawaslu":
-  //       setTable6Visible(true);
-  //       break;
-  //     case "Penetapan PPID":
-  //       setTable7Visible(true);
-  //       break;
-  //     case "Surat Edaran":
-  //       setTable8Visible(true);
-  //       break;
-  //     case "Intruksi Kabupaten":
-  //       setTable9Visible(true);
-  //       break;
-  //     default:
-  //       break;
-  //   }
-  // };
-  // const [list, setList] = useState([]);
-  // const [isi, setIsi] = useState([]);
-  // const [isi1, setIsi1] = useState([]);
-  // const [isi2, setIsi2] = useState([]);
-  // const [isi3, setIsi3] = useState([]);
-  // const [isi4, setIsi4] = useState([]);
-  // const [isi5, setIsi5] = useState([]);
-  // const [isi6, setIsi6] = useState([]);
-  // const [isi7, setIsi7] = useState([]);
-  // const [isi8, setIsi8] = useState([]);
-
-  // const param = useParams();
-  // const getByMenu = async () => {
-  //   await axios
-  //     .get(
-  //       `${API_DUMMY}/bawaslu/api/menu-regulasi/get-by-jenis-regulasi?id-jenis-regulasi=1&page=0&size=10`
-  //     )
-  //     .then((response) => {
-  //       setList(response.data.data);
-  //     })
-  //     .catch((error) => {
-  //       alert("Terjadi kesalahan" + error);
-  //     });
-  // };
-  // const getByIsi = async () => {
-  //   await axios
-  //     .get(
-  //       `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=`+param.id
-  //     )
-  //     .then((response) => {
-  //       setIsi(response.data.data);
-  //     })
-  //     .catch((error) => {
-  //       alert("Terjadi kesalahan" + error);
-  //     });
-  // };
-
-  // useEffect(() => {
-  //   getByMenu();
-  //   getByIsi();
-  // }, []);
+    getKeterangan();
+  }, [id]);
 
   const param = useParams();
   const [selectedTableId, setSelectedTableId] = useState(null);
@@ -118,59 +39,27 @@ function Regulasi() {
   const [searchResults, setSearchResults] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
-  const getKeterangan = async (tableId, page) => {
-    await axios
-      .get(
-        `${API_DUMMY}/${API_DUMMY}/bawaslu/api/menu-regulasi/get-by-jenis-regulasi?id-jenis-regulasi=${tableId}`
-        // {
-        //   headers: {
-        //     Authorization: `Bearer ${localStorage.getItem("token")}`,
-        //   },
-        // }
-      )
-      .then((response) => {
-        setList(response.data.data);
-      })
-      .catch((error) => {
-        alert("Terjadi kesalahan" + error);
-      });
+  const showTable = async (tableId) => {
+    setSelectedTableId(tableId);
+    setCurrentPage(1);
   };
 
-  const getIsiKeterangan = async (tableId, page) => {
+  const getIsiKeterangan = async (tableId) => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/menu-regulasi/get-by-jenis-regulasi?id-jenis-regulasi=${tableId}`,
-        // {
-        //   headers: {
-        //     Authorization: `Bearer ${localStorage.getItem("token")}`,
-        //   },
-        // }
+        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=${tableId}`
       );
 
-      setIsi(response.data.data);
+      setIsi(response.data.data.content);
       setPaginationInfo({
         totalPages: response.data.data.totalPages,
         totalElements: response.data.data.totalElements,
       });
+      console.log(response.data.data.content);
     } catch (error) {
-      alert("Terjadi kesalahan" + error);
+      console.log("Terjadi kesalahan" + error);
     }
   };
-
-  const showTable = async (tableId) => {
-    setSelectedTableId(tableId);
-    setCurrentPage(1);
-
-    try {
-      await getIsiKeterangan(tableId, 1);
-    } catch (error) {
-      alert("Terjadi kesalahan" + error);
-    }
-  };
-
-  useEffect(() => {
-    getKeterangan(currentPage);
-  }, [currentPage, rowsPerPage]);
 
   useEffect(() => {
     if (list.length > 0) {
@@ -205,27 +94,10 @@ function Regulasi() {
 
   const totalPages = Math.ceil(filteredList.length / rowsPerPage);
 
-  const downloadPdf = async (id) => {
-    try {
-      const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/jenis-regulasi/${selectedTableId}/isi-informasi?page=${
-          currentPage - 1
-        }&size=${rowsPerPage}&sortBy=id&sortOrder=asc`
-      );
-
-      const imageData = response.data.data.content;
-      console.log("postpdf", response.data.data.content);
-
-      const doc = new jsPDF();
-      doc.text("PDF Content Here", 10, 10);
-
-      doc.addImage(imageData, "JPEG", 10, 20, 180, 100);
-
-      doc.save(`document_${id}.pdf`);
-    } catch (error) {
-      alert("Terjadi kesalahan" + error);
-    }
+  const pdf = async (href) => {
+    window.open(href, "_blank");
   };
+
   return (
     <div>
       <Navbar />
@@ -282,7 +154,10 @@ function Regulasi() {
                       selectedTableId === menu.id ? "active" : ""
                     }`}
                     data-filter="*"
-                    onClick={() => showTable(menu.id)}
+                    onClick={() => {
+                      showTable(menu.id);
+                      getIsiKeterangan(menu.id);
+                    }}
                   >
                     {menu.menuRegulasi}
                   </button>
@@ -299,11 +174,8 @@ function Regulasi() {
                 >
                   <div className="card-header bg-primary text-light">
                     <div style={{ display: "flex" }}>
-                      <div className="">
-                        {" "}
-                        <h4>{menu.menuRegulasi}</h4>
-                      </div>
-                      <div className="col-auto">
+                      <h4>{menu.menuRegulasi}</h4>
+                      <div className="col-auto" style={{ paddingTop: "1rem" }}>
                         <select
                           className="form-select form-select-sm"
                           onChange={handleRowsPerPageChange}
@@ -320,6 +192,7 @@ function Regulasi() {
                         placeholder="Search..."
                         value={searchTerm}
                         onChange={handleSearchChange}
+                        style={{ marginTop: "0.8rem" }}
                       />
                     </div>
                   </div>
@@ -332,7 +205,6 @@ function Regulasi() {
                         </tr>
                       </thead>
                       {isi.map((item) => (
-                        // return (
                         <tbody>
                           <tr>
                             <td data-cell="dokumen" scope="row">
@@ -340,22 +212,8 @@ function Regulasi() {
                             </td>
                             <td>
                               <button
-                                onClick={() => downloadPdf(item.id)}
-                                className="bg-primary text-light"
-                                style={{
-                                  border: "none",
-                                  padding: "7px",
-                                  paddingLeft: "13px",
-                                  paddingRight: "13px",
-                                  borderRadius: "5px",
-                                  marginRight: "10px",
-                                }}
-                              >
-                                <i className="fa-solid fa-download"></i>{" "}
-                                Download Sebagai Pdf
-                              </button>
-                              <button
                                 className="bg-warning text-light"
+                                onClick={() => pdf(item.pdfDokumen)}
                                 style={{
                                   border: "none",
                                   padding: "7px",
@@ -365,12 +223,11 @@ function Regulasi() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i className="fa-solid fa-circle-info"></i>
+                                <i className="fa-solid fa-download"></i>
                               </button>
                             </td>
                           </tr>
                         </tbody>
-                        // );
                       ))}
                       <div></div>
                     </table>
@@ -392,10 +249,9 @@ function Regulasi() {
         </div>
       </div>
       {/* <!-- project area end --> */}
-
       <Footer />
     </div>
   );
-}
+};
 
 export default Regulasi;

@@ -180,14 +180,14 @@ function Profil() {
       </div>
       <div className="row pd-top-110"style={{ background: "#F1F6F9" }}>
         <div className="col-lg-6 col-md-9 px-xl-5 align-self-center">
-          <div className="thumb mb-4 mb-lg-0">
+          <div className="container thumb mb-4 mb-lg-0">
             <img style={{borderRadius:"10px"}}
               src="https://lp2m.uma.ac.id/wp-content/uploads/2022/02/OrganisasiUMA.jpg"
               alt="img"
             />
           </div>
         </div>
-        <div className="col-lg-5 align-self-center">
+        <div className="p-3 col-lg-5 align-self-center">
           <div className="section-title">
             <h2 className="title mb-4">Struktur Organisasi</h2>
             <p>
