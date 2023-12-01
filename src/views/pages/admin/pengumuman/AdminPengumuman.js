@@ -6,9 +6,16 @@ import axios from "axios";
 import { API_DUMMY } from "../../../../utils/base_URL";
 import Swal from "sweetalert2";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
+import {
+  Pagination,
+  TableContainer,
+  TablePagination,
+} from "@mui/material";
+
 import "../../../../../src/css/adminBerita.css";
 import { Pagination, TableContainer, TablePagination } from "@mui/material";
 import AddPengumuman from "./AddPengumuman";
+
 
 function AdminPengumuman() {
   const [list, setList] = useState([]);
@@ -188,7 +195,20 @@ function AdminPengumuman() {
                         <tr key={index}>
                           <td data-label="No : ">{index + 1}</td>
                           <td data-label="author : ">{pengumuman.author}</td>
-                          <td>
+                       
+                            <img src={pengumuman.image} alt="pengumuman" />
+                          </td>
+                          <td
+                            data-label="judulPengumuman : "
+                          >
+                            {pengumuman.judulPengumuman}
+                          </td>
+
+                          <td data-label="tags : ">
+                            {pengumuman.tags}
+                          </td>
+                          <td data-label="Aksi : " className="pt-3 pb-3 d-flex aksi">
+
                             <img
                               style={{ width: "100px" }}
                               src={pengumuman.image}
@@ -202,6 +222,7 @@ function AdminPengumuman() {
                           </td>
                           <td data-label="tags : ">{pengumuman.tags}</td>
                           <td data-label="Aksi : " className="aksi">
+
                             <button
                               type="button"
                               className=".responsive-buttons btn-primary btn-sm mr-2">
@@ -216,6 +237,9 @@ function AdminPengumuman() {
                             </button>
                             <button
                               type="button"
+
+                              className=".responsive-buttons btn-danger btn-sm"
+
                               class="btn-warning mr-2 btn-sm">
                               <a
                                 className="text-light"

@@ -5,15 +5,7 @@ import { useHistory } from "react-router-dom";
 import axios from "axios";
 import { API_DUMMY } from "../../../../utils/base_URL";
 import Swal from "sweetalert2";
-import "../../../../../src/css/adminBerita.css";
-
-import {
-  IconButton,
-  InputAdornment,
-  Pagination,
-  TextField,
-} from "@mui/material";
-
+import { IconButton, InputAdornment, Pagination, TextField } from "@mui/material";
 
 function AdminBerita() {
   const [list, setList] = useState([]);

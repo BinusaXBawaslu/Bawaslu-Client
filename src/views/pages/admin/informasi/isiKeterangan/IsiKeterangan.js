@@ -9,10 +9,7 @@ import {
   useParams,
 } from "react-router-dom/cjs/react-router-dom.min";
 import Swal from "sweetalert2";
-
-import "../../../../../../src/css/adminBerita.css";
-
-import Pagination from "@mui/material/Pagination";
+import { Pagination } from "@mui/material";
 
 function IsiKeterangan() {
   const [jenisKeteranganIsiInformasi, setJenisKeteranganIsiInformasi] =
@@ -224,11 +221,68 @@ function IsiKeterangan() {
                   </div>
                 </div>
               </div>
+
+            </div>
+            <div
+              className="table-responsive"
+              style={{ overflowY: "auto", maxHeight: "60vh" }}
+            >
+              <table className="align-middle mb-0 table table-borderless table-striped table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col" className="text-left">
+                      No
+                    </th>
+                    <th scope="col" className="text-left">
+                      Dokumen
+                    </th>
+                    <th scope="col" className="text-center">
+                      Aksi
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {Array.isArray(jenisKeteranganIsiInformasi) &&
+                    jenisKeteranganIsiInformasi.map((isiInformasi, index) => (
+                      <tr key={index}>
+                        <td className="text-left">{index + 1}</td>
+                        <td className="text-left">{isiInformasi.dokumen}</td>
+                        <td class="text-center">
+                          <button type="button" class="btn-primary btn-sm mr-2"><a style={{color:"white", textDecoration:"none"}} href={`/edit-isi-keterangan/${isiInformasi.id}`}>
+                            <i class="fa-solid fa-pen-to-square"></i></a>
+                          </button>
+                          <button
+                            type="button"
+                            className="btn-danger btn-sm"
+                            onClick={() => deleteData(isiInformasi.id)}
+                          >
+                            <i className="fa-solid fa-trash"></i>
+                          </button>
+                        </td>
+                      </tr>
+                    ))}
+                </tbody>
+              </table>
+              <div className="card-header mt-3 d-flex justify-content-center">
+                <Pagination
+                  count={paginationInfo.totalPages}
+                  page={currentPage}
+                  onChange={(event, value) => setCurrentPage(value)}
+                  showFirstButton
+                  showLastButton
+                  color="primary"
+                />
+                <div></div>
+              </div>
+
               <Footer />
+
             </div>
           </div>
         </div>
       </div>
+    </div>
+    </div>
     </div>
   );
 }
