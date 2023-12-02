@@ -8,7 +8,6 @@ import Swal from "sweetalert2";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import "../../../../../src/css/adminBerita.css";
 import { Pagination, TableContainer, TablePagination } from "@mui/material";
-import AddPengumuman from "./AddPengumuman";
 
 function AdminPengumuman() {
   const [list, setList] = useState([]);
@@ -184,6 +183,7 @@ function AdminPengumuman() {
                     </tr>
                   </thead>
                   <tbody>
+
                    
                      {filteredList.map((pengumuman, index) => {
                       return ( 

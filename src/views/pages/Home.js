@@ -12,6 +12,7 @@ import "swiper/css/pagination";
 import axios from "axios";
 import { API_DUMMY } from "../../utils/base_URL";
 import { Pagination } from "@mui/material";
+import "../../css/home.css";
 
 function Home() {
   const [list, setList] = useState([]);
