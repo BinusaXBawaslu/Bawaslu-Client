@@ -42,11 +42,15 @@
 .span{
     color: red;
 }
-.form-txt-img{
-     display: flex;  
-     justify-content: space-between; 
-     padding: 30px;
-}
+.form {
+    padding-top: 100px;
+    /* padding: 20px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+  
+  }
 .img-info{
     width: 550px;
 }
@@ -57,6 +61,17 @@
 .info{
     /* border: 2px solid red; */
 }
+.display-akhir{
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+}
+.optionn {
+    margin: 50px;
+    justify-content: center;
+    gap: 50px;
+    display: flex;
+  }
 @media screen and (max-width: 1024px) {
     .form-txt-img{
     }
@@ -79,12 +94,19 @@
         top: 0px;
     }
     .input{
-        width: 400px;
+        width: 350px;
     }
     .textarea{
-        width: 400px;
+        width: 350px;
+    }
+    .display-akhir{
+        gap: 20px;
+    }
+    .div-email{
+        
     }
 }
+
 @media screen and (max-width:320px) {
     .img-info{
 
@@ -112,10 +134,10 @@
         width: 100px;
     }
     .input{
-        width: 170px;
+        width: 280px;
     }
     .textarea{
-        width: 170px;
+        width: 280px;
     }
     .img-src{
         width: 170px;
@@ -127,5 +149,9 @@
     .input-type{
         width: 10%px;
         height: 20%px;
+    }
+    .display-akhir{
+        display: flex;
+        flex-direction: column;
     }
 }

@@ -84,57 +84,6 @@ function IsiKeterangan() {
               <div class="ml-2 row g-3 align-items-center">
                 <div class="col-auto">
                   <label className="form-label mt-2">Rows per page:</label>
-                  <div className="card-header" style={{ display: "flex" }}>
-                    <p className="mt-3">Isi Keterangan</p>
-                    <div class="ml-2 row g-3 align-items-center">
-                      <div class="col-auto">
-                        <label className="form-label mt-2">
-                          Rows per page:
-                        </label>
-                      </div>
-                      <div class="col-auto">
-                        <select
-                          className="form-select form-select-sm"
-                          onChange={handleRowsPerPageChange}
-                          value={rowsPerPage}>
-                          <option value={5}>5</option>
-                          <option value={10}>10</option>
-                          <option value={20}>20</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="col-auto">
-                      <select
-                        className="form-select form-select-sm"
-                        onChange={handleRowsPerPageChange}
-                        value={rowsPerPage}>
-                        <option value={5}>5</option>
-                        <option value={10}>10</option>
-                        <option value={20}>20</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div className="d-flex ml-auto gap-3">
-                    <input
-                      type="search"
-                      className="form-control widget-content-right w-75"
-                      placeholder="Search..."
-                      value={searchTerm}
-                      onChange={handleSearchChange}
-                    />
-                    <div className="btn-actions-pane-right">
-                      <div role="group" className="btn-group-sm btn-group">
-                        <button className="active btn-focus p-2 rounded">
-                          <a
-                            href={`/tambah-isi-keterangan/${param.id}`}
-                            className="text-light"
-                            style={{ textDecoration: "none" }}>
-                            Tambah Data
-                          </a>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
                 </div>
                 <div class="col-auto">
                   <select

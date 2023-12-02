@@ -83,34 +83,7 @@ function Kanal() {
   return (
     <div>
       <Navbar />
-      <div
-        className="breadcrumb-area bg-relative"
-        style={{ background: "#151423" }}
-      >
-        <div
-          className="banner-bg-img"
-          style={{
-            backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp')`,
-          }}
-        ></div>
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-xl-7 col-lg-8">
-              <div className="breadcrumb-inner text-center">
-                <h4 id="judul" className="page-title">
-                  Kanal pengawasan Pemilu 2024
-                </h4>
-                <ul className="page-list">
-                  <li>
-                    <a href="/">Home</a>
-                  </li>
-                  <li>Informasi</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      
 
       <div
         style={{

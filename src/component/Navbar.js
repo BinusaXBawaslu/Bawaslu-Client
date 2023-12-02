@@ -120,8 +120,8 @@ function Navbar() {
               </div>
             </div>
             <div className="col-lg-2 d-lg-block d-none align-self-center">
-              <div className="social-media-light text-md-end text-center">
-                <a
+              <div className="text-md-end text-center">
+                {/* <a
                   href="https://www.facebook.com/Bawaslu.Kabupaten.Boyolali"
                   target="_blank"
                 >
@@ -145,7 +145,41 @@ function Navbar() {
                   target="_blank"
                 >
                   <i class="fab fa-youtube"></i>
-                </a>
+                </a> */}
+                <ul className="social-media">
+                    <li>
+                      <a
+                        className="facebook"
+                        href="https://www.facebook.com/Bawaslu.Kabupaten.Boyolali"
+                        target="_blank">
+                        <i className="fab fa-facebook-f" ></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className="twitter"
+                        href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbawasluboyolali"
+                        target="_blank">
+                        <i className="fab fa-twitter"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className="instagram"
+                        href="https://www.instagram.com/bawaslu_boyolali/"
+                        target="_blank">
+                        <i className="fab fa-instagram"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className="youtube"
+                        href="https://www.youtube.com/channel/UC-OZT-HT_Qg7cUmo-oHfkAw"
+                        target="_blank">
+                        <i className="fab fa-youtube"></i>
+                      </a>
+                    </li>
+                  </ul>
               </div>
             </div>
           </div>
@@ -169,7 +203,9 @@ function Navbar() {
               <span class="icon-right"></span>
             </button>
           </div>
-          <div className="logo d-inline-block d-lg-none"></div>
+          <div className="logo d-inline-block d-lg-none">
+
+          </div>
           <div
             class={`collapse navbar-collapse ${menuOpen ? "sopen" : ""}`}
             id="Iitechie_main_menu"
@@ -201,33 +237,50 @@ function Navbar() {
                 >
                   Informasi Publik
                 </a>
-                <ul
+                {/* <ul
                   class={`${isMobile ? "collapse" : "sub-menu"}`}
                   id="submenu"
-                >
-                  {" "}
-                  {informasi.map((informasi) => {
-                    return (
-                      <li>
-                        <a
-                          href={
-                            "/informasi/" +
-                            informasi.namaInformasi +
-                            "/" +
-                            informasi.id
-                          }
-                          style={{ textDecoration: "none" }}
-                        >
-                          <i class="metismenu-icon"></i>
-                          {informasi.namaInformasi}
-                        </a>
-                        {/* <a href="/regulasi">Regulasi</a> */}
-                      </li>
-                    );
-                  })}
-                  {/* <li className="text-black"><a>Daftar Informasi Publik</a></li> */}
+                > {informasi.map((informasi) => {
+                  return (
+                    <li>
+                      <a
+                        href={
+                          "/informasi/" +
+                          informasi.namaInformasi +
+                          "/" +
+                          informasi.id
+                        }
+                        style={{ textDecoration: "none" }}
+                      >
+                        <i class="metismenu-icon"></i>
+                        {informasi.namaInformasi}
+                      </a>
+                    </li>
+                  );
+                })}
+                  <li className="text-black"><a>Daftar Informasi Publik</a></li>
                   <li>
                     <a href="/informasi-dikecuali">Informasi DiKecualikan</a>
+                  </li>
+                </ul> */}
+                <ul class="sub-menu">
+                  {/* <li className="text-black"><a>Daftar Informasi Publik</a></li> */}
+                  <li>
+                    <a href="/informasi-serta-merta">Informasi Serta Merta</a>
+                  </li>
+                  <li>
+                    <a href="/informasi-setiap-saat">Informasi Setiap Saat</a>
+                  </li>
+                  <li>
+                    <a href="/informasi-berkala">
+                      Informasi Berkala
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/informasi-dikecuali">Informasi DiKecualikan</a>
+                  </li>
+                  <li>
+                    <a href="/informasi-kanal">Kanal Pengawasan Pemilu</a>
                   </li>
                 </ul>
               </li>
@@ -242,18 +295,18 @@ function Navbar() {
                 >
                   Daftar Regulasi
                 </a>
-                {/* <li className="text-black"><a>Daftar Informasi Publik</a></li> */}
-                <ul
-                  class={`${isMobile ? "collapse" : "sub-menu"}`}
-                  id="submenu2"
-                  data-bs-parent="#menu"
-                >
+                  {/* <li className="text-black"><a>Daftar Informasi Publik</a></li> */}
+                  <ul
+                    class={`${isMobile ? "collapse" : "sub-menu"}`}
+                    id="submenu2"
+                    data-bs-parent="#menu"
+                  >
                   {regulasi.map((regulasi) => {
                     return (
                       <li>
                         <a
                           href={
-                            "/menu-regulasi/" +
+                            "/regulasi/" +
                             regulasi.jenisRegulasi +
                             "/" +
                             regulasi.id
@@ -263,6 +316,7 @@ function Navbar() {
                           <i class="metismenu-icon"></i>
                           {regulasi.jenisRegulasi}
                         </a>
+                        {/* <a href="/regulasi">Regulasi</a> */}
                       </li>
                     );
                   })}

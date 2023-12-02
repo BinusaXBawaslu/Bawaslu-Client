@@ -21,7 +21,7 @@ function AddCategory() {
     e.persist();
 
     try {
-      await axios.post(`${API_DUMMY}/bawaslu/api/category-beriat/add`, {
+      await axios.post(`${API_DUMMY}/bawaslu/api/category-berita/add`, {
         category: category
       }, {
         headers: {

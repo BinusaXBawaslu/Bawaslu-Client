@@ -175,7 +175,7 @@ const Sosialisasi = () => {
                   </a>
                 </div>
                 <div>
-                  <a href="">
+                  <a href="https://jateng.bawaslu.go.id/">
                     <img id="img-src-sosisalisasi" className="img-src" src={jateng} />
                   </a>
                 </div>

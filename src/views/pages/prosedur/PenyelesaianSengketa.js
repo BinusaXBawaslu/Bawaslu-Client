@@ -8,33 +8,7 @@ function PenyelesaianSengketa() {
     <>
       <Navbar />
       {/* <!-- page title start --> */}
-      <div className="breadcrumb-area bg-black bg-relative ">
-        <div
-          className="banner-bg-img"
-          style={{
-            backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp') `,
-          }}
-        ></div>
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-xl-7 col-lg-8">
-              <div className="breadcrumb-inner text-center">
-                <h2 style={{ color: "white", fontWeight: 700, fontSize: 60 }}>
-                  Penyelesaian Sengketa Informasi
-                </h2>
-                <ul className="page-list">
-                  <li>
-                    <a href="/" style={{ textDecoration: "none" }}>
-                      Home
-                    </a>
-                  </li>
-                  <li>Penyelesaian</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      
       {/* <!-- page title end --> */}
       <div
         className="service-area-5 pd-top-120 pd-bottom-120 service-area bg-relative pd-top-60 pd-bottom-90"
@@ -59,10 +33,10 @@ function PenyelesaianSengketa() {
           <div className="section-title">
             <div className="row justify-content-center">
               <div className="col-lg-6 col-md-8">
-                <h5 className="sub-title double-line" style={{ marginLeft: "35%" }}>
+                <h5 id="text1-gabung" className="sub-title double-line" style={{ marginLeft: "35%" }}>
                   Bawaslu Boyolali
                 </h5>
-                <h2 className="title text-center">Tata Cara Pengajuan Keberatan</h2>
+                <h2 id="text2-gabung" className="title text-center">Tata Cara Pengajuan Keberatan</h2>
                 <p className="content text-center">
                   dan Permohonan Penyelesaian Sengketa Informasi
                 </p>

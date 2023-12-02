@@ -60,18 +60,18 @@ function AddPengumuman() {
               <hr />
               <form onSubmit={add}>
                 <div className="row">
-                  <div className="mb-3 col-6">
+                  <div className="mb-3 col-lg-6">
                     <label for="exampleInputEmail1" className="form-label">
                       Author
                     </label>
                     <input
                       type="text"
-                      className="form-control"
+                      className="form-control "
                       value={author}
                       onChange={(e) => setAuthor(e.target.value)}
                     />
                   </div>
-                  <div className="mb-3 col-6">
+                  <div className="mb-3 col-lg-6">
                     <label for="exampleInputPassword1" className="form-label">
                       Image
                     </label>
@@ -82,7 +82,7 @@ function AddPengumuman() {
                       id="exampleInputPassword1"
                     />
                   </div>
-                  <div className="mb-3 col-6">
+                  <div className="mb-3 col-lg-6">
                     <label for="exampleInputPassword1" className="form-label">
                       Isi Pengumuman
                     </label>
@@ -94,7 +94,7 @@ function AddPengumuman() {
                       id="exampleInputPassword1"
                     />
                   </div>
-                  <div className="mb-3 col-6">
+                  <div className="mb-3 col-lg-6">
                     <label for="exampleInputPassword1" className="form-label">
                       Judul Pengumuman
                     </label>
@@ -106,7 +106,7 @@ function AddPengumuman() {
                       id="exampleInputPassword1"
                     />
                   </div>
-                  <div className="mb-3 col-6">
+                  <div className="mb-3 col-lg-6">
                     <label for="exampleInputPassword1" className="form-label">
                       Tags
                     </label>

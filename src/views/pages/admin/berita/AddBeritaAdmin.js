@@ -66,7 +66,7 @@ function AddBeritaAdmin() {
           },
         }
       );
-      setCategory(response.data.data);
+      setCategory(response.data.data.content);
       console.log(response.data.data);
     } catch (error) {
       console.error("Terjadi Kesalahan", error);
@@ -92,7 +92,7 @@ function AddBeritaAdmin() {
                     <hr />
                     <form onSubmit={add}>
                       <div className="row">
-                        <div className="mb-3 col-6">
+                        <div className="mb-3 col-lg-6">
                           <label
                             for="exampleInputPassword1"
                             className="form-label">
@@ -110,7 +110,7 @@ function AddBeritaAdmin() {
                             })}
                           </select>
                         </div>
-                        <div className="mb-3 col-6">
+                        <div className="mb-3 col-lg-6">
                           <label
                             for="exampleInputEmail1"
                             className="form-label">
@@ -123,7 +123,7 @@ function AddBeritaAdmin() {
                             className="form-control"
                           />
                         </div>
-                        <div className="mb-3 col-6">
+                        <div className="mb-3 co-lg-6">
                           <label
                             for="exampleInputPassword1"
                             className="form-label">
@@ -140,7 +140,7 @@ function AddBeritaAdmin() {
                             id="exampleInputPassword1"
                           />
                         </div>
-                        <div className="mb-3 col-6">
+                        <div className="mb-3 col-lg-6">
                           <label
                             for="exampleInputPassword1"
                             className="form-label">
@@ -154,13 +154,13 @@ function AddBeritaAdmin() {
                             id="exampleInputPassword1"
                           />
                         </div>
-                        <div className="col-6">
+                        <div className="col-lg-6">
                           <label
                             for="exampleInputPassword1"
                             className="form-label">
                             Isi Berita
                           </label>
-                          <div className="col-6">
+                          <div className="col-lg-6">
                             <textarea
                               value={isiBerita}
                               onChange={(e) => setIsiBerita(e.target.value)}

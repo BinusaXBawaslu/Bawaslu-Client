@@ -7,33 +7,7 @@ function PermintaanInformasi() {
     <>
       <Navbar />
       {/* <!-- page title start --> */}
-      <div className="breadcrumb-area bg-black bg-relative">
-        <div
-          className="banner-bg-img"
-          style={{
-            backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp') `,
-          }}
-        ></div>
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-xl-7 col-lg-8">
-              <div className="breadcrumb-inner text-center">
-                <h2 style={{ color: "white", fontWeight: 700, fontSize: 60 }}>
-                  Tata Cara Permohonan Informasi
-                </h2>
-                <ul className="page-list">
-                  <li>
-                    <a href="/" style={{ textDecoration: "none" }}>
-                      Home
-                    </a>
-                  </li>
-                  <li>Permintaan</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      
       {/* <!-- page title end --> */}
       <div
         className="blog-area pd-top-115 pd-bottom-60 service-area bg-relative pd-top-60 pd-bottom-90"
@@ -57,8 +31,8 @@ function PermintaanInformasi() {
           <div className="row justify-content-center">
             <div className="col-xl-6 col-lg-7 col-md-10">
               <div className="section-title text-center">
-                <h5 className="sub-title double-line">Bawaslu Boyolali</h5>
-                <h2 className="title">Tata Cara Permohonan Informasi</h2>
+                <h5 id="text1-gabung" className="sub-title double-line">Bawaslu Boyolali</h5>
+                <h2 id="text2-gabung" className="title">Tata Cara Permohonan Informasi</h2>
                 {/* <p className="content">Dcidunt eget semper nec quam. Sed hendrerit. acfelis Nunc egestas augue
                         atpellentesque laoreet</p> */}
               </div>

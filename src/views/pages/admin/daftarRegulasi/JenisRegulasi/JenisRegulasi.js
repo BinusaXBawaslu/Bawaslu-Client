@@ -112,7 +112,7 @@ const totalPages = Math.ceil(filteredList.length / rowsPerPage);
             </div>
         <div class="main-card mb-3 card">
           <div class="card-header" style={{ display: "flex" }}>
-          <p className="mt-3">Jenis Informasi</p>
+          <p className="mt-3">Jenis Regulasi</p>
             <div class="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
               <div class="col-auto">
                 <label className="form-label mt-2">Rows per page:</label>

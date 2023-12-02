@@ -83,7 +83,7 @@ function EditPengumuman() {
               <hr />
               <form onSubmit={update}>
                 <div className="row">
-                  <div className="mb-3 col-6">
+                  <div className="mb-3 col-lg-6">
                     <label for="exampleInputEmail1" className="form-label">
                       Author
                     </label>
@@ -94,7 +94,7 @@ function EditPengumuman() {
                       onChange={(e) => setAuthor(e.target.value)}
                     />
                   </div>
-                  <div className="mb-3 col-6">
+                  <div className="mb-3 col-lg-6">
                     <label for="exampleInputPassword1" className="form-label">
                       Image
                     </label>
@@ -105,7 +105,7 @@ function EditPengumuman() {
                       id="exampleInputPassword1"
                     />
                   </div>
-                  <div className="mb-3 col-6">
+                  <div className="mb-3 col-lg-6">
                     <label for="exampleInputPassword1" className="form-label">
                       Isi Pengumuman
                     </label>
@@ -117,7 +117,7 @@ function EditPengumuman() {
                       id="exampleInputPassword1"
                     />
                   </div>
-                  <div className="mb-3 col-6">
+                  <div className="mb-3 col-lg-6">
                     <label for="exampleInputPassword1" className="form-label">
                       Judul Pengumuman
                     </label>
@@ -129,7 +129,7 @@ function EditPengumuman() {
                       id="exampleInputPassword1"
                     />
                   </div>
-                  <div className="mb-3 col-6">
+                  <div className="mb-3 col-lg-6">
                     <label for="exampleInputPassword1" className="form-label">
                       Tags
                     </label>

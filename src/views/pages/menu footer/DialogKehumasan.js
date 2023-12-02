@@ -55,11 +55,7 @@ function DialogKehumasan() {
                               href="https://www.facebook.com/Bawaslu.Kabupaten.Boyolali"
                               target="_blank"
                             >
-                              <button
-                                    style={{
-                                      color: "white",
-                                      backgroundColor: "#45629f",
-                                    }}className="border p-2">
+                              <button className="border p-2">
                                 <i
                                   className="fab fa-facebook-f"
                                   aria-hidden="true"
@@ -73,11 +69,7 @@ function DialogKehumasan() {
                               href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbawasluboyolali"
                               target="_blank"
                             >
-                              <button
-                                    style={{
-                                      color: "white",
-                                      backgroundColor: "#45629f",
-                                    }}className="border p-2">
+                              <button className="border p-2">
                                 <i
                                   className="fab fa-twitter"
                                   aria-hidden="true"
@@ -88,11 +80,7 @@ function DialogKehumasan() {
                           </li>
                           <li>
                             <a href="#">
-                              <button
-                                    style={{
-                                      color: "white",
-                                      backgroundColor: "#45629f",
-                                    }}className="border p-2">
+                              <button className="border p-2">
                                 <i className="fa-brands fa-pinterest"></i> Pin
                               </button>
                             </a>
@@ -232,15 +220,15 @@ function DialogKehumasan() {
                     </h4>
                     <ul className="catagory-items">
                       <li>
-                        <a href="#">
+                        <a href="https://bawaslu.go.id/">
                           <img
-                            src="https://boyolali.bawaslu.go.id/cepogo/2023/09/bawaslu-jateng-300x73-1.png"
+                            src="https://boyolali.bawaslu.go.id/cepogo/2023/09/Bawaslu-RI-300x73-1.png"
                             alt=""
                           />
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="https://dkpp.go.id/">
                           <img
                             src="https://boyolali.bawaslu.go.id/cepogo/2023/09/dkpp-300x73-1.png"
                             alt=""
@@ -248,7 +236,7 @@ function DialogKehumasan() {
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="https://www.mkri.id/">
                           <img
                             src="https://boyolali.bawaslu.go.id/cepogo/2023/09/MAHKAMAKONSTITUSI-300x73-1.png"
                             alt=""
@@ -256,7 +244,7 @@ function DialogKehumasan() {
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="https://www.kpu.go.id/">
                           <img
                             src="https://boyolali.bawaslu.go.id/cepogo/2023/09/KPU-300x73-1.png"
                             alt=""
@@ -264,7 +252,7 @@ function DialogKehumasan() {
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="https://jateng.bawaslu.go.id/">
                           <img
                             src="https://boyolali.bawaslu.go.id/cepogo/2023/09/bawaslu-jateng-300x73-1.png"
                             alt=""

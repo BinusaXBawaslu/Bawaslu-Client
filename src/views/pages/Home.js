@@ -238,7 +238,7 @@ function Home() {
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                  <a href="https://jateng.bawaslu.go.id/">
                     <img
                       src="https://boyolali.bawaslu.go.id/cepogo/2023/09/bawaslu-jateng-300x73-1.png"
                       alt=""

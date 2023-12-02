@@ -29,7 +29,11 @@ function Berita() {
       const response = await axios.get(
         `${API_DUMMY}/bawaslu/api/berita?page=${
           page - 1
-        }&size=10&sortBy=id&sortOrder=asc`
+        }&size=10&sortBy=id&sortOrder=asc`, {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
       );
       setList(response.data.data.content);
       setPaginationInfo({
@@ -44,7 +48,11 @@ function Berita() {
   const getCategoryBerita = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/category-berita/all-limit-7`
+        `${API_DUMMY}/bawaslu/api/category-berita/all-limit-7`, {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
       );
       setCategory(response.data.data);
       console.log(response.data.data);
@@ -59,7 +67,11 @@ function Berita() {
   const getAllTerbaru = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/berita-terbaru`
+        `${API_DUMMY}/bawaslu/api/berita-terbaru`, {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
       );
       setListTerbaru(response.data.data);
       console.log(response.data.data);
@@ -82,7 +94,11 @@ function Berita() {
   const getAllRekap = async (tahun_bulan) => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/berita/arsip?bulan=${tahun_bulan}`
+        `${API_DUMMY}/bawaslu/api/berita/arsip?bulan=${tahun_bulan}`, {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
       );
       return response.data.data;
     } catch (error) {

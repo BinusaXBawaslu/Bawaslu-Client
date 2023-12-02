@@ -7,7 +7,7 @@ function CalonAnggotaBawaslu() {
     <div>
       <Navbar />
       {/* <!-- page title start --> */}
-      <div
+      {/* <div
         className="breadcrumb-area bg-relative"
         style={{ background: "#151423" }}
       >
@@ -32,7 +32,7 @@ function CalonAnggotaBawaslu() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* <!-- page title end --> */}
 
       {/* <!-- blog area start --> */}
@@ -129,6 +129,11 @@ function CalonAnggotaBawaslu() {
                       </div>
                     </div>
                   </div>
+                  <hr />
+                  <p>
+                    Untuk selengkapanya, silahkan Download pada Link di bawah
+                    ini.
+                  </p>{" "}
                 </div>
               </div>
             </div>

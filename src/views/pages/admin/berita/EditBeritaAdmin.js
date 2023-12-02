@@ -9,20 +9,20 @@ function EditBeritaAdmin() {
       <Header />
       <div className="app-main">
         <Sidebar />
-        <div className="container mt-3">
+        <div className="container mt-3 app-main__outer">
           <div className="card shadow">
             <div className="card-body">
               <h1 className="fs-4">Form Edit Data</h1>
               <hr />
               <form>
                 <div className="row">
-                <div className="mb-3 col-6">
+                <div className="mb-3 col-lg-6">
                   <label for="exampleInputEmail1" className="form-label">
                     Author
                   </label>
                   <input type="text" className="form-control" />
                 </div>
-                <div className="mb-3 col-6">
+                <div className="mb-3 col-lg-6">
                   <label for="exampleInputPassword1" className="form-label">
                     Image
                   </label>
@@ -32,7 +32,7 @@ function EditBeritaAdmin() {
                     id="exampleInputPassword1"
                   />
                 </div>
-                <div className="mb-3 col-6">
+                <div className="mb-3 col-lg-6">
                   <label for="exampleInputPassword1" className="form-label">
                     Judul Berita
                   </label>
@@ -42,7 +42,7 @@ function EditBeritaAdmin() {
                     id="exampleInputPassword1"
                   />
                 </div>
-                <div className="mb-3 col-6">
+                <div className="mb-3 col-lg-6">
                   <label for="exampleInputPassword1" className="form-label">
                     Tags
                   </label>
@@ -52,11 +52,11 @@ function EditBeritaAdmin() {
                     id="exampleInputPassword1"
                   />
                 </div>
-                <div className="col-6">
+                <div className="col-lg-6">
                   <label for="exampleInputPassword1" className="form-label">
                     Isi Berita
                   </label>
-                  <div className="col-6">
+                  <div className="col-lg-6">
                     <textarea
                       className="form-control"
                       placeholder="Leave a comment here"

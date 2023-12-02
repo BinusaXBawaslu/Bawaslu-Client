@@ -6,11 +6,11 @@
   padding-top: 100px;
 }
 .h1 {
-  width: 400px;
+  width: 500px;
   font-size: 57px;
 }
 .info{
-width: 450px;
+width: 500px;
 /* border: 2px solid red; */
 padding: 0;
 }
@@ -20,9 +20,12 @@ padding: 0;
 }
 .form {
   padding-top: 100px;
-  padding: 20px;
+  /* padding: 20px; */
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
+
 }
 .option {
   margin: 50px;
@@ -31,8 +34,9 @@ padding: 0;
   display: flex;
 }
 .form-txt {
-  padding-top: 100px;
+  padding-top: 150px;
 }
+
 .input {
   width: 500px;
 }
@@ -142,6 +146,9 @@ padding: 0;
   .button {
     width: 300px;
   }
+  .form-permohonan{
+    padding-top: 100px;
+  }
 }
 .info{
   width: 400px;
@@ -163,6 +170,9 @@ padding-top: 60px;
     display: flex;
     gap: 10px;
     flex-direction: column;
+  }
+  .form-permohonan{
+    padding-top: 100px;
   }
   .form-txt{
     padding-top: 100px;

@@ -471,7 +471,7 @@ const Pencegahan = () => {
                   </a>
                 </div>
                 <div>
-                  <a href="">
+                  <a href="https://jateng.bawaslu.go.id/">
                     <img id="awrep-img-src" className="img-src" src={jateng} />
                   </a>
                 </div>

@@ -198,11 +198,10 @@ function AdminPermohonankeberatan() {
                 <tr>
                   <th scope="col">No</th>
                   <th scope="col">Email</th>
-                  <th scope="col" style={{ width: "120px" }}>
+                  <th scope="col">
                     Nama
                   </th>
                   <th scope="col">Alamat</th>
-                  <th scope="col">alamat</th>
                   <th scope="col">No Telp</th>
                   <th scope="col">Tags</th>
                   <th scope="col">Nomor identitas</th>

@@ -9,33 +9,7 @@ function BiayaLayanan() {
     <>
       <Navbar />
       {/* <!-- page title start --> */}
-      <div className="breadcrumb-area bg-black bg-relative">
-        <div
-          className="banner-bg-img"
-          style={{
-            backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp') `,
-          }}
-        ></div>
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-xl-7 col-lg-8">
-              <div className="breadcrumb-inner text-center">
-                <h2 style={{ color: "white", fontWeight: 700, fontSize: 60 }}>
-                  Biaya Layanan
-                </h2>
-                <ul className="page-list">
-                  <li>
-                    <a href="/" style={{ textDecoration: "none" }}>
-                      Home
-                    </a>
-                  </li>
-                  <li>Biaya Layanan</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+     
       {/* <!-- page title end --> */}
       <div
         className="team-details-page pd-top-120 service-area bg-relative pd-top-60 pd-bottom-90 "

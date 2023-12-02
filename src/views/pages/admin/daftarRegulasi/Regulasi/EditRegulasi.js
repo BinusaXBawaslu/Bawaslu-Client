@@ -88,7 +88,7 @@ function EditRegulasi() {
               <hr />
               <form onSubmit={update}>
                 <div className="row">
-                  <div className="mb-3 col-6">
+                  <div className="mb-3 col-lg-6">
                     <label for="exampleInputPassword1" className="form-label">
                       Jenis Regulas
                     </label>
@@ -105,7 +105,7 @@ function EditRegulasi() {
                     </select>
                   </div>
 
-                  <div className="mb-3 col-6">
+                  <div className="mb-3 col-lg-6">
                     <label for="exampleInputPassword1" className="form-label">
                       Dokumen
                     </label>
@@ -117,7 +117,7 @@ function EditRegulasi() {
                       id="exampleInputPassword1"
                     />
                   </div>
-                  <div className="mb-3 col-6">
+                  <div className="mb-3 col-lg-6">
                     <label for="exampleInputPassword1" className="form-label">
                       Gambar Dokumen
                     </label>

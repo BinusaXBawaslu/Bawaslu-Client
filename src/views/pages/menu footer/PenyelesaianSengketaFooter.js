@@ -170,7 +170,7 @@ const PenyelesaianSengketaFooter = () => {
                   </a>
                 </div>
                 <div>
-                  <a href="">
+                  <a href="https://jateng.bawaslu.go.id/">
                     <img
                       id="img-src-penyelesian"
                       className="img-src"
