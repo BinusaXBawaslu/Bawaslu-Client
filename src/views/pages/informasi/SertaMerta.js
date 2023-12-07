@@ -6,7 +6,13 @@ import html2canvas from "html2canvas";
 import gambar from "../../../asset/img/bawaslu(berita).jpeg";
 import axios from "axios";
 import { API_DUMMY } from "../../../utils/base_URL";
-import PutusanPelanggaran from "./tabs/PutusanPelanggaran";
+import PutusanPelanggaran from "./tabs/SertaMerta/PutusanPelanggaran";
+import SengketaProsesPemilu from "./tabs/SertaMerta/SengketaProsesPemilu";
+import PemungutanSuaraUlang from "./tabs/SertaMerta/PemungutanSuaraUlang";
+import OrganisasiDanAdministrasi from "./tabs/SertaMerta/OrgaisasiDanAdministrasi";
+import PerselisihanHasilPemilu from "./tabs/SertaMerta/PerselisihanHasilPemilu";
+import Sosialisasi from "./tabs/SertaMerta/Sosialisasi";
+import PiagamPenghargaan from "./tabs/SertaMerta/PiagamPenghargaan";
 
 function SertaMerta() {
   return (
@@ -27,6 +33,10 @@ function SertaMerta() {
             backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp') `,
           }}
         >
+          <div className="section-title text-center">
+            <h5 className="sub-title double-line">Bawaslu Boyolali</h5>
+            <h2 className="title">Informasi Serta Merta</h2>
+          </div>
           <section>
             <div class="container">
               <div class="row">
@@ -142,7 +152,7 @@ function SertaMerta() {
                     <div className="card-header bg-primary text-light">
                       <div style={{ display: "flex" }}>
                         <div className="px-3">
-                          <h4>Putusan Pelanggaran</h4>
+                          <h4>Informasi Serta Merta</h4>
                         </div>
                       </div>
                     </div>
@@ -161,7 +171,7 @@ function SertaMerta() {
                       role="tabpanel"
                       aria-labelledby="v-pills-profile-tab"
                     >
-                      <PutusanPelanggaran />
+                      <SengketaProsesPemilu />
                     </div>
 
                     <div
@@ -170,7 +180,7 @@ function SertaMerta() {
                       role="tabpanel"
                       aria-labelledby="v-pills-messages-tab"
                     >
-                      <PutusanPelanggaran />
+                      <PemungutanSuaraUlang />
                     </div>
 
                     <div
@@ -179,7 +189,31 @@ function SertaMerta() {
                       role="tabpanel"
                       aria-labelledby="v-pills-settings-tab"
                     >
-                      <PutusanPelanggaran />
+                      <OrganisasiDanAdministrasi />
+                    </div>
+                    <div
+                      class="tab-pane fade shadow rounded bg-white p-5"
+                      id="v-pills-settings"
+                      role="tabpanel"
+                      aria-labelledby="v-pills-settings-tab"
+                    >
+                      <PerselisihanHasilPemilu />
+                    </div>
+                    <div
+                      class="tab-pane fade shadow rounded bg-white p-5"
+                      id="v-pills-settings"
+                      role="tabpanel"
+                      aria-labelledby="v-pills-settings-tab"
+                    >
+                      <Sosialisasi />
+                    </div>
+                    <div
+                      class="tab-pane fade shadow rounded bg-white p-5"
+                      id="v-pills-settings"
+                      role="tabpanel"
+                      aria-labelledby="v-pills-settings-tab"
+                    >
+                      <PiagamPenghargaan />
                     </div>
                   </div>
                 </div>
