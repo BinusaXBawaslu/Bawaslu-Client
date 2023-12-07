@@ -17,7 +17,9 @@ function Pengumuman() {
   const [searchTerm, setSearchTerm] = useState("");
   const getAll = async (page) => {
     await axios
-      .get(`${API_DUMMY}/bawaslu/api/pengumuman?page=${page - 1}&size=${9}&sortBy=id&sortOrder=desc`)
+      .get(
+        `${API_DUMMY}/bawaslu/api/pengumuman?page=0&size=10&sortBy=id&sortOrder=asc`
+      )
       .then((res) => {
         setPengumuman(res.data.data.content);
         setPaginationInfo({
@@ -71,20 +73,34 @@ function Pengumuman() {
             {filteredList.map((isi) => {
               return (
                 <div className="col-lg-4 col-md-6">
-                  <div className="single-blog-inner style-2" style={{maxHeight:"800px", minHeight:"300px"}}>
+                  <div
+                    className="single-blog-inner style-2"
+                    style={{ maxHeight: "800px", minHeight: "300px" }}
+                  >
                     <div className="thumb">
-                      <img style={{maxHeight:"400px", minHeight:"100px"}} src={isi.image} alt="img" />
+                      <img
+                        style={{ maxHeight: "400px", minHeight: "100px" }}
+                        src={isi.image}
+                        alt="img"
+                      />
                     </div>
                     <div className="details">
-                        <h4 className="titleee" style={{cursor:"pointer"}}>
-                        <a style={{color:"black", textDecoration:"none"}} href={`/pengumuman/${isi.id}`}>{isi.judulPengumuman}</a>
+                      <h4 className="titleee" style={{ cursor: "pointer" }}>
+                        <a
+                          style={{ color: "black", textDecoration: "none" }}
+                          href={`/pengumuman/${isi.judulPengumuman}/${isi.id}`}
+                        >
+                          {isi.judulPengumuman}
+                        </a>
                       </h4>
+
                       <ul className="blog-meta">
                         <li>
                           <i className="far fa-user"></i> {isi.author}
                         </li>
                         <li>
-                          <i className="far fa-calendar-alt"></i> {isi.createdDate}
+                          <i className="far fa-calendar-alt"></i>{" "}
+                          {isi.createdDate}
                         </li>
                       </ul>
                       <p className="isiPengumuman">{isi.isiPengumuman}</p>
@@ -95,15 +111,15 @@ function Pengumuman() {
             })}
           </div>
           <div className="card-header mt-3 d-flex justify-content-center">
-              <Pagination
-                count={totalPages}
-                page={currentPage}
-                onChange={(event, value) => setCurrentPage(value)}
-                showFirstButton
-                showLastButton
-                color="primary"
-              />
-            </div>
+            <Pagination
+              count={totalPages}
+              page={currentPage}
+              onChange={(event, value) => setCurrentPage(value)}
+              showFirstButton
+              showLastButton
+              color="primary"
+            />
+          </div>
         </div>
       </div>
       {/* <!-- blog area end --> */}

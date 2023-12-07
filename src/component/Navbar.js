@@ -262,8 +262,9 @@ function Navbar() {
                     <a href="/informasi-dikecuali">Informasi DiKecualikan</a>
                   </li>
                 </ul> */}
-                <ul class="sub-menu">
-                  {/* <li className="text-black"><a>Daftar Informasi Publik</a></li> */}
+                <ul  class={`${isMobile ? "collapse" : "sub-menu"}`}
+                  id="submenu"
+                  data-bs-parent="#menu">
                   <li>
                     <a href="/informasi-serta-merta">Informasi Serta Merta</a>
                   </li>

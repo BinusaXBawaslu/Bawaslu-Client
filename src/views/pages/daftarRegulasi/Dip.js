@@ -78,7 +78,6 @@ function Dip() {
                         <a
                           className="bg-warning text-light"
                           target="_blank"
-
                           style={{
                             border: "none",
                             padding: "7px",
@@ -106,7 +105,6 @@ function Dip() {
                         <a
                           className="bg-warning text-light"
                           target="_blank"
-
                           style={{
                             border: "none",
                             padding: "7px",
@@ -134,7 +132,6 @@ function Dip() {
                         <a
                           className="bg-warning text-light"
                           target="_blank"
-
                           style={{
                             border: "none",
                             padding: "7px",
@@ -162,7 +159,6 @@ function Dip() {
                         <a
                           className="bg-warning text-light"
                           target="_blank"
-
                           style={{
                             border: "none",
                             padding: "7px",
@@ -190,7 +186,6 @@ function Dip() {
                         <a
                           className="bg-warning text-light"
                           target="_blank"
-
                           style={{
                             border: "none",
                             padding: "7px",
@@ -218,7 +213,6 @@ function Dip() {
                         <a
                           className="bg-warning text-light"
                           target="_blank"
-
                           style={{
                             border: "none",
                             padding: "7px",
@@ -246,7 +240,6 @@ function Dip() {
                         <a
                           className="bg-warning text-light"
                           target="_blank"
-
                           style={{
                             border: "none",
                             padding: "7px",

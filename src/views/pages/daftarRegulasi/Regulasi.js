@@ -213,7 +213,7 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1Sf-vNEt4V5cQ6kg32WgxqlFlDkZxxAHO/view"
+                            href="https://drive.google.com/file/d/15joI7w8I1Q36UeD0EFVOYDsS6h-96WZp/edit"
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>
@@ -236,7 +236,7 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1-5_o8W3UTPODVzee4Z_E_bTioxXgFXs8/view"
+                            href="https://drive.google.com/file/d/10n8zLlzX2UATuwKrSr5rNzFpnHX4GsXr/edit"
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>
@@ -259,7 +259,7 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1fcYV1tFzHZZwg9g5tununbDqB4qOQvhr/view"
+                            href="https://drive.google.com/file/d/1n0GstVBvJUKZ_SSbhSiwAiHRS6rWuVB9/edit"
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>
@@ -305,7 +305,7 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1vgHG4BSL8egftdQYReQFExYc3vEdjdwh/view"
+                            href="https://drive.google.com/file/d/1hxwdpYKjEmN3QCbPphAtdVdK5qr6BW-s/view"
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>
@@ -358,7 +358,7 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1Sf-vNEt4V5cQ6kg32WgxqlFlDkZxxAHO/view"
+                            href="https://drive.google.com/file/d/1RqVRWj4GjhrfG21gWjfP6DKLmcvi3oFX/edit"
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>
@@ -381,7 +381,7 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1-5_o8W3UTPODVzee4Z_E_bTioxXgFXs8/view"
+                            href="https://drive.google.com/file/d/15Scqa1lG189JaJnL-sL9aEF4Piz-LeRz/edit"
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>
@@ -404,7 +404,7 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1fcYV1tFzHZZwg9g5tununbDqB4qOQvhr/view"
+                            href="https://drive.google.com/file/d/1gLZon0xZ3iX02ResYjc2w19_jgqiKm38/edit"
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>
@@ -457,36 +457,10 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1qsxnYjlYzzbdTObydL8m-eWKvuESAHqF/view"
+                            href="https://drive.google.com/file/d/1jq40qIOG84aFjfIWXvp7GVKftLEHLx8g/edit"
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>
-                          {/* <button
-                            className="bg-primary text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-download"></i>
-                          </button>
-                          <button
-                            className="bg-warning text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-circle-info"></i>
-                          </button> */}
                         </td>
                       </tr>
                     </tbody>
@@ -537,7 +511,7 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1Sf-vNEt4V5cQ6kg32WgxqlFlDkZxxAHO/view"
+                            href="https://drive.google.com/file/d/1L6adCShmR-7KX11qpvOIvoRrGqEOIpDd/edit"
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>
@@ -560,7 +534,7 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1-5_o8W3UTPODVzee4Z_E_bTioxXgFXs8/view"
+                            href="https://drive.google.com/file/d/1REDcEGrvbRR6Ld5sfmOXguH24PoUXAd2/edit"
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>
@@ -583,7 +557,7 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1fcYV1tFzHZZwg9g5tununbDqB4qOQvhr/view"
+                            href="https://drive.google.com/file/d/1Vs4RHcCAi9S01S9weh3AijYgVvwchYxp/edit"
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>
@@ -606,7 +580,7 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1YpeyQu3I7t9fmm1YOUKqIuSkBKAR08nd/view"
+                            href="https://drive.google.com/file/d/1Sn5ghDhcN4Nhi76c5B-yhJFfmsu2vs9n/edit"
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>
@@ -629,7 +603,7 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1vgHG4BSL8egftdQYReQFExYc3vEdjdwh/view"
+                            href="https://drive.google.com/file/d/1hxwdpYKjEmN3QCbPphAtdVdK5qr6BW-s/view"
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>
@@ -682,36 +656,10 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1qsxnYjlYzzbdTObydL8m-eWKvuESAHqF/view"
+                            href="https://drive.google.com/file/d/11DBKiFk_DnPg2yAmUEuSA6ZhzvxSSpEm/edit"
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>
-                          {/* <button
-                            className="bg-primary text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-download"></i>
-                          </button>
-                          <button
-                            className="bg-warning text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-circle-info"></i>
-                          </button> */}
                         </td>
                       </tr>
                     </tbody>
@@ -762,7 +710,7 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1Sf-vNEt4V5cQ6kg32WgxqlFlDkZxxAHO/view"
+                            href="https://drive.google.com/file/d/1BGRfYwKh6TTNe8cUCASAD1wM2JmsOzFg/edit"
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>
@@ -785,7 +733,7 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1-5_o8W3UTPODVzee4Z_E_bTioxXgFXs8/view"
+                            href="https://drive.google.com/file/d/1Tt14YRvncR7hkTQj-1oVQQzRYg4Z9r1S/edit"
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>
@@ -808,7 +756,7 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1fcYV1tFzHZZwg9g5tununbDqB4qOQvhr/view"
+                            href="https://drive.google.com/file/d/1Jch3NOVn2hi2v9C0IxHSml99GCE4f-U1/view"
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>
@@ -831,7 +779,7 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1YpeyQu3I7t9fmm1YOUKqIuSkBKAR08nd/view"
+                            href="https://drive.google.com/file/d/17cYkx3jXARL-oiFKVxRPdjhXdcrUgUiR/view"
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>
@@ -854,7 +802,7 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1vgHG4BSL8egftdQYReQFExYc3vEdjdwh/view"
+                            href="https://drive.google.com/file/d/1K_1o93kqGqrxFP50NSjaqqjtXT4vFd88/view"
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>
@@ -877,7 +825,7 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1m7GKabb_6OzxJgOBLceGH6K60Ax8NVTP/view"
+                            href="https://drive.google.com/file/d/1a-RhWVp_smdCLW3XCXoU3MYJdbK5qB5h/view"
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>
@@ -900,7 +848,7 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1qsxnYjlYzzbdTObydL8m-eWKvuESAHqF/view"
+                            href="https://drive.google.com/file/d/1XvFh0EerFwW7XvrBielpSpuOFB7BRKb3/view"
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>
@@ -923,7 +871,7 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1qsxnYjlYzzbdTObydL8m-eWKvuESAHqF/view"
+                            href="https://drive.google.com/file/d/1yFIL90baDOwBN-Mg33gi1fysroL2JDNF/view"
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>
@@ -946,7 +894,7 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1qsxnYjlYzzbdTObydL8m-eWKvuESAHqF/view"
+                            href="https://drive.google.com/file/d/1SXsHSCZZ46-CBLELDMw5WnbVdHy7_ee5/view"
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>
@@ -969,7 +917,7 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1qsxnYjlYzzbdTObydL8m-eWKvuESAHqF/view"
+                            href="https://drive.google.com/file/d/108MWcbgF-rDH_eddLfAhKzEiBYLIrYsx/view"
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>
@@ -992,7 +940,7 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1qsxnYjlYzzbdTObydL8m-eWKvuESAHqF/view"
+                            href="https://drive.google.com/file/d/1Sb3JtT2Rwns_ooT9Pva7XynjFmEyloDK/view"
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>
@@ -1015,7 +963,7 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1qsxnYjlYzzbdTObydL8m-eWKvuESAHqF/view"
+                            href="https://drive.google.com/file/d/1-xnvJ0Wi4cAoNBvshQvE0YjTyuAfUSAM/view"
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>
@@ -1038,7 +986,7 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1qsxnYjlYzzbdTObydL8m-eWKvuESAHqF/view"
+                            href="https://drive.google.com/file/d/1zGI-5hos52yWm_AwrX7OgXR_Nn_L7Ecs/view?usp=drive_link"
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>
@@ -1061,7 +1009,7 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1qsxnYjlYzzbdTObydL8m-eWKvuESAHqF/view"
+                            href="https://drive.google.com/file/d/15JCOXMEedcJ3QpQIPhbxnwHOns1aMy83/view?usp=drive_link"
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>
@@ -1084,7 +1032,7 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1qsxnYjlYzzbdTObydL8m-eWKvuESAHqF/view"
+                            href="https://drive.google.com/file/d/11Q6ICwi7hjREvmgOpnQOwoeX2S0oOH0K/view?usp=drive_link"
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>
@@ -1107,7 +1055,7 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1qsxnYjlYzzbdTObydL8m-eWKvuESAHqF/view"
+                            href="https://drive.google.com/file/d/1EwZMfvPKKzKsnaFbaVWjR68ywnzkHOCK/view?usp=drive_link"
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>
@@ -1130,7 +1078,7 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1qsxnYjlYzzbdTObydL8m-eWKvuESAHqF/view"
+                            href="https://drive.google.com/file/d/1eR12lnuOIvuS2wvO1YGWdjfGOE147By8/view?usp=drive_link"
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>
@@ -1186,7 +1134,7 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1qsxnYjlYzzbdTObydL8m-eWKvuESAHqF/view"
+                            href="https://drive.google.com/file/d/1mW-PRMO3mxAl5kWy9U_2cSjoFVTWyD8E/view"
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>
@@ -1212,7 +1160,7 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1qsxnYjlYzzbdTObydL8m-eWKvuESAHqF/view"
+                            href="https://drive.google.com/file/d/1xGVaZ2S5ocCsBpDYCd_uqG7KSKFpIwtX/view"
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>
@@ -1238,7 +1186,7 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1qsxnYjlYzzbdTObydL8m-eWKvuESAHqF/view"
+                            href="https://drive.google.com/file/d/1lUbJZ1XUAGgam2QS0xga9j78AkA1Vub6/view"
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>
@@ -1263,7 +1211,7 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1qsxnYjlYzzbdTObydL8m-eWKvuESAHqF/view"
+                            href="https://drive.google.com/file/d/1I-gJAi_gFSfNV8t8EoHpmpvgcUgzzyuJ/view"
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>
@@ -1289,7 +1237,7 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1qsxnYjlYzzbdTObydL8m-eWKvuESAHqF/view"
+                            href="https://drive.google.com/file/d/1446FsNHBT2FqZzhmHJH0jo6hARS4pSaD/view"
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>
@@ -1315,7 +1263,7 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1qsxnYjlYzzbdTObydL8m-eWKvuESAHqF/view"
+                            href="https://drive.google.com/file/d/1FYaGFbiBeo1CxrumV1Xp0vRlDv09JOat/view"
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>
@@ -1341,7 +1289,7 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1qsxnYjlYzzbdTObydL8m-eWKvuESAHqF/view"
+                            href="https://drive.google.com/file/d/1VEruZ10wBkatUPsL9fY-yxkQI8f6wr_C/view"
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>
@@ -1367,7 +1315,7 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1qsxnYjlYzzbdTObydL8m-eWKvuESAHqF/view"
+                            href="https://drive.google.com/file/d/15aapWDMSydJ_hlNUMqSXNAbjje_J3Hbz/view  "
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>
@@ -1393,7 +1341,7 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1qsxnYjlYzzbdTObydL8m-eWKvuESAHqF/view"
+                            href="https://drive.google.com/file/d/1446FsNHBT2FqZzhmHJH0jo6hARS4pSaD/view"
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>
@@ -1419,7 +1367,7 @@ function Regulasi() {
                               marginRight: "10px",
                               marginLeft: "30px",
                             }}
-                            href="https://drive.google.com/file/d/1qsxnYjlYzzbdTObydL8m-eWKvuESAHqF/view"
+                            href="https://drive.google.com/file/d/1I-gJAi_gFSfNV8t8EoHpmpvgcUgzzyuJ/view"
                           >
                             <i class="fa-solid fa-download"></i>
                           </a>

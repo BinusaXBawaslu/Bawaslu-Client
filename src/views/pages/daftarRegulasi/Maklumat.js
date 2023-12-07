@@ -1,8 +1,7 @@
 import React from "react";
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
-import maklumat from "../../../aset/maklumatinf.png"
-import "../../../css/gabung.css"
+import maklumat from "../../../aset/maklumatinf.png";
 
 function Maklumat() {
   return (
@@ -25,14 +24,10 @@ function Maklumat() {
         <div className="row">
           <div id="thumb" className="col-xl-5 col-lg-6 col-md-9">
             <div className="thumb">
-              <img
-                src={maklumat}
-                alt="img"
-                id="thumb"
-              />
+              <img src={maklumat} alt="img" />
             </div>
           </div>
-          <div className="col-xl-5 col-lg-6 " style={{marginTop:"100px"}}>
+          <div className="col-xl-5 col-lg-6 " style={{ marginTop: "100px" }}>
             <div className="section-title px-lg-5 mb-0">
               <h2 className="title mb-4">
                 <img
