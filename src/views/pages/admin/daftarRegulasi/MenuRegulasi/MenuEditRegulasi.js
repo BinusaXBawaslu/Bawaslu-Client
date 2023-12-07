@@ -103,7 +103,7 @@ function MenuEditRegulasi() {
                     >
                       <option selected>Pilih Jenis Regulasi</option>
                       value={idJenisRegulasi}>
-                      <option selected>PIlih Jenis Regulasi</option>
+                      <option selected>Pilih Jenis Regulasi</option>
                       {jenisRegulasi.map((down) => {
                         return (
                           <option value={down.id}>{down.jenisRegulasi}</option>
