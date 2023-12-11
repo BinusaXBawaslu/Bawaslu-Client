@@ -102,6 +102,9 @@ function MenuEditRegulasi() {
                       className="form-select form-select-sm"
                       aria-label="Small select example"
                       onChange={(e) => setIdJenisRegulasi(e.target.value)}
+                      value={idJenisRegulasi}
+                    >
+                      <option selected>Pilih Jenis Regulasi</option>
                       value={idJenisRegulasi}>
                       <option selected>Pilih Jenis Regulasi</option>
                       <option selected>PIlih Jenis Regulasi</option>

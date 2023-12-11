@@ -67,7 +67,8 @@ function Sidebar() {
         <div class="app-header__mobile-menu">
           <div>
             <button
-              type="button"
+              type="button"class="hamburger hamburger--elastic mobile-toggle-nav"
+            >
               class="hamburger hamburger--elastic mobile-toggle-nav">
               {/*  */}
               <span class="hamburger-box">

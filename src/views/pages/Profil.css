@@ -102,6 +102,31 @@ background-image: url(https://www.solverwp.com/demo/html/itechie/assets/img/bg/1
         width:100px ;
         height: 40px;
     }
+    @media screen and (max-width: 390px) {
+        #strukturOrganisasi{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #img-struktur{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        #singel-security{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+    }
     @media screen  and (max-width: 768px){
         .img-profil{
             display: flex;

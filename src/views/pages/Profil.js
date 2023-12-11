@@ -197,7 +197,7 @@ function Profil() {
           </div>
         </div>
       </div>
-      <div className="row pd-top-110" style={{ background: "#F1F6F9" }}>
+      <div id="strukturOrganisasi" className="row pd-top-110" style={{ background: "#F1F6F9" }}>
         <div className="col-lg-6 col-md-9 px-xl-5 align-self-center">
           <div className="container thumb mb-4 mb-lg-0 img-profil">
             <img
@@ -215,8 +215,8 @@ function Profil() {
               Kabupaten Boyolali.
             </p>
           </div>
-          <div className="single-security-wrap-2 keterangan">
-            <div className="thumb border-bottom">
+          <div id="singel-security" className="single-security-wrap-2 keterangan">
+            <div id="img-struktur" className="thumb border-bottom">
               <img
                 src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png"
                 alt="img"
@@ -228,8 +228,8 @@ function Profil() {
               <p>Ketua Bawaslu Kabupaten Boyolali</p>
             </div>
           </div>
-          <div className="single-security-wrap-2 keterangan">
-            <div className="thumb border-bottom">
+          <div id="singel-security" className="single-security-wrap-2 keterangan">
+            <div id="img-struktur" className="thumb border-bottom">
               <img
                 src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png"
                 alt="img"
@@ -241,8 +241,8 @@ function Profil() {
               <p>Koordinator Seketariat Bawaslu Kabupaten Boyolali. </p>
             </div>
           </div>
-          <div className="single-security-wrap-2 keterangan">
-            <div className="thumb border-bottom">
+          <div id="singel-security" className="single-security-wrap-2 keterangan">
+            <div id="img-struktur"  className="thumb border-bottom">
               <img
                 src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png"
                 alt="img"
@@ -257,8 +257,8 @@ function Profil() {
               <p>Anggota Bawaslu Kabupaten Boyolali</p>
             </div>
           </div>
-          <div className="single-security-wrap-2 keterangan">
-            <div className="thumb">
+          <div id="singel-security" className="single-security-wrap-2 keterangan">
+            <div  id="img-struktur"  className="thumb">
               <img
                 src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png"
                 alt="img"
