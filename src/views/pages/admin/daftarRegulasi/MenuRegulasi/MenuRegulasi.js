@@ -97,15 +97,16 @@ function MenuRegulasi() {
       <div className="app-main">
         <Sidebar />
         <div className="container mt-3 app-main__outer">
-          <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
-            <div class="col-auto">
+          <div className="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
+            <div className="col-auto">
               <label className="form-label mt-2">Rows per page:</label>
             </div>
-            <div class="col-auto">
+            <div className="col-auto">
               <select
                 className="form-select form-select-xl w-auto"
                 onChange={handleRowsPerPageChange}
-                value={rowsPerPage}>
+                value={rowsPerPage}
+              >
                 <option value={5}>5</option>
                 <option value={10}>10</option>
                 <option value={20}>20</option>
@@ -114,24 +115,32 @@ function MenuRegulasi() {
           </div>
           <input
             type="search"
-            className="form-control widget-content-right w-100 mt-2 md-2 d-lg-none d-md-block"
+            className="form-control widget-content-right container mt-2 md-2 d-lg-none d-md-block"
             placeholder="Search..."
             value={searchTerm}
             onChange={handleSearchChange}
+            style={{width:"330px"}}
           />
+<<<<<<< HEAD
+          <div className="main-card mb-3 card">
+            <div className="card-header" style={{ display: "flex" }}>
+=======
+          <br />
           <div class="main-card mb-3 card">
             <div class="card-header" style={{ display: "flex" }}>
+>>>>>>> 4940de67521dd7ea78441fc8a9987a9b6ab260f8
               {menuRegulasi.length > 0 &&
                 menuRegulasi[0].jenisRegulasiId.jenisRegulasi}
-              <div class="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
-                <div class="col-auto">
+              <div className="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
+                <div className="col-auto">
                   <label className="form-label mt-2">Rows per page:</label>
                 </div>
-                <div class="col-auto">
+                <div className="col-auto">
                   <select
                     className="form-select form-select-sm"
                     onChange={handleRowsPerPageChange}
-                    value={rowsPerPage}>
+                    value={rowsPerPage}
+                  >
                     <option value={5}>5</option>
                     <option value={10}>10</option>
                     <option value={20}>20</option>
@@ -146,13 +155,14 @@ function MenuRegulasi() {
                   value={searchTerm}
                   onChange={handleSearchChange}
                 />
-                <div class="btn-actions-pane-right">
-                  <div role="group" class="btn-group-sm btn-group">
-                    <button class="active btn-focus p-2 rounded">
+                <div className="btn-actions-pane-right">
+                  <div role="group" className="btn-group-sm btn-group">
+                    <button className="active btn-focus p-2 rounded">
                       <a
-                        href="/add-menu-regulasi"
+                        href={`/add-menu-regulasi/${param.id}`}
                         className="text-light"
-                        style={{ textDecoration: "none" }}>
+                        style={{ textDecoration: "none" }}
+                      >
                         {" "}
                         Tambah Data
                       </a>
@@ -162,9 +172,16 @@ function MenuRegulasi() {
               </div>
             </div>
             <div
-              class="table-responsive"
+<<<<<<< HEAD
+              className="table-responsive"
+              style={{ overflowY: "auto", maxHeight: "60vh" }}
+            >
+              <table className="align-middle mb-0 table table-borderless table-striped table-hover">
+=======
+              class=""
               style={{ overflowY: "auto", maxHeight: "60vh" }}>
               <table class="align-middle mb-0 table table-borderless table-striped table-hover">
+>>>>>>> 4940de67521dd7ea78441fc8a9987a9b6ab260f8
                 <thead>
                   <tr>
                     <th scope="col" className="text-left">
@@ -188,8 +205,11 @@ function MenuRegulasi() {
                         <td data-label="jenis : " className="">
                           {jenis.menuRegulasi}
                         </td>
-                        <td data-label="Aksi : " class="text-center">
-                          <button type="button" class="btn-primary btn-sm mr-2">
+                        <td data-label="Aksi : " className="text-center">
+                          <button
+                            type="button"
+                            className="btn-primary btn-sm mr-2"
+                          >
                             <a
                               style={{ color: "white", textDecoration: "none" }}
                               href={
@@ -197,21 +217,24 @@ function MenuRegulasi() {
                                 jenis.menuRegulasi +
                                 "/" +
                                 jenis.id
-                              }>
-                              <i class="fa-solid fa-pen-to-square"></i>
+                              }
+                            >
+                              <i className="fa-solid fa-pen-to-square"></i>
                             </a>
                           </button>
                           <button
                             onClick={() => deleteData(jenis.id)}
                             type="button"
-                            class="btn-danger btn-sm mr-2">
-                            <i class="fa-solid fa-trash"></i>
+                            className="btn-danger btn-sm mr-2"
+                          >
+                            <i className="fa-solid fa-trash"></i>
                           </button>
-                          <button type="button" class="btn-info btn-sm">
+                          <button type="button" className="btn-info btn-sm">
                             <a
                               style={{ color: "white", textDecoration: "none" }}
-                              href={"/" + jenis.menuRegulasi + "/" + jenis.id}>
-                              <i class="fas fa-plus"></i>
+                              href={"/" + jenis.menuRegulasi + "/" + jenis.id}
+                            >
+                              <i className="fas fa-plus"></i>
                             </a>
                           </button>
                         </td>

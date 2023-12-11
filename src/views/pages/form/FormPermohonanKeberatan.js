@@ -133,7 +133,7 @@ const FormPermohonaKeberatan = () => {
                     <select
                       onChange={(e) => setJenisIdentitas(e.target.value)}
                       value={jenisIdentitas}
-                      class="form-select"
+                      className="form-select"
                       aria-label="Default select example"
                     >
                       <option selected>Pilih Jenis Identitas</option>
@@ -228,7 +228,7 @@ const FormPermohonaKeberatan = () => {
                       onChange={(e) =>
                         setAlasanPengajuanKeberatan(e.target.value)
                       }
-                      class="form-select"
+                      className="form-select"
                       aria-label="Default select example"
                     >
                       <option selected>Pilih Pengajuan Keberatan</option>

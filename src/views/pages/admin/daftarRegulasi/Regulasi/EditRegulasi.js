@@ -8,6 +8,7 @@ import { API_DUMMY } from "../../../../../utils/base_URL";
 import axios from "axios";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
+import { menuClasses } from "@mui/material";
 
 function EditRegulasi() {
   const [idMenuRegulasi, setIdMenuRegulasi] = useState(0);
@@ -16,15 +17,28 @@ function EditRegulasi() {
   const history = useHistory();
   const [show, setShow] = useState(false);
   const [regulasi, setRegulasi] = useState([]);
+  const [regulasi1, setRegulasi1] = useState([]);
   const param = useParams();
 
-  const getByMenuRegulasi = async () => {
+  const getMenuRegulasi = async () => {
     try {
       const response = await axios.get(
         `${API_DUMMY}/bawaslu/api/menu-regulasi/all?page=0&size=50`
       );
       setRegulasi(response.data.data);
       //   console.log(response.data.data);
+    } catch (error) {
+      console.error("Terjadi Kesalahan", error);
+    }
+  };
+
+  const getRegulasi = async () => {
+    try {
+      const response = await axios.get(
+        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=${param.id}&page=0&size=100&sortBy=id&sortOrder=desc`
+      );
+      setRegulasi1(response.data.data.content);
+      console.log(response.data.data.content);
     } catch (error) {
       console.error("Terjadi Kesalahan", error);
     }
@@ -48,12 +62,14 @@ function EditRegulasi() {
   const update = async (e) => {
     e.preventDefault();
 
-    const formData = new FormData();
-    formData.append("file", upload);
-
     try {
       await axios.put(
-        `${API_DUMMY}/bawaslu/api/regulasi/put/${param.id}?dokumen=${dokumen}&menuRegulasi=${idMenuRegulasi}`,
+        `${API_DUMMY}/bawaslu/api/regulasi/put/${param.id}`,
+        {
+          menuRegulasi: idMenuRegulasi,
+          dokumen: dokumen,
+          pdfDokumen: upload,
+        },
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -63,13 +79,16 @@ function EditRegulasi() {
 
       Swal.fire({
         icon: "success",
-        title: "Berhasil Mengedit Data Pengumuman",
+        title: "Berhasil Mengedit Data Regulasi",
         showConfirmButton: false,
         timer: 1500,
       });
-
+      history.push(
+        `/${regulasi1.length > 0 && regulasi1[0].menuRegulasi.menuRegulasi}/${
+          param.id
+        }`
+      );
       setTimeout(() => {
-        history.push("/rugulasi/:menuRegulasi/:id");
         window.location.reload();
       }, 1500);
     } catch (error) {
@@ -78,7 +97,8 @@ function EditRegulasi() {
   };
 
   useEffect(() => {
-    getByMenuRegulasi();
+    getMenuRegulasi();
+    getRegulasi();
   }, []);
   return (
     <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
@@ -101,8 +121,7 @@ function EditRegulasi() {
                       className="form-select form-select-sm"
                       aria-label="Small select example"
                       onChange={(e) => setIdMenuRegulasi(e.target.value)}
-                      value={idMenuRegulasi}
-                    >
+                      value={idMenuRegulasi}>
                       <option selected>PIlih Jenis Regulasi</option>
                       {regulasi.map((down) => {
                         return (
@@ -126,11 +145,12 @@ function EditRegulasi() {
                   </div>
                   <div className="mb-3 col-lg-6">
                     <label for="exampleInputPassword1" className="form-label">
-                      Gambar Dokumen
+                      PDF Dokumen
                     </label>
                     <input
-                      onChange={(e) => setupload(e.target.files[0])}
-                      type="file"
+                      value={upload}
+                      onChange={(e) => setupload(e.target.value)}
+                      type="text"
                       className="form-control"
                       id="exampleInputPassword1"
                     />
@@ -138,9 +158,11 @@ function EditRegulasi() {
                 </div>
                 <button type="submit" className="btn-danger mt-3 mr-3">
                   <a
-                    href={"/regulasi/"}
-                    style={{ color: "white", textDecoration: "none" }}
-                  >
+                    href={`/${
+                      regulasi1.length > 0 &&
+                      regulasi1[0].menuRegulasi.menuRegulasi
+                    }/${param.id}`}
+                    style={{ color: "white", textDecoration: "none" }}>
                     {" "}
                     Batal
                   </a>

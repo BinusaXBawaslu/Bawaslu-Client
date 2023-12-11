@@ -7,13 +7,15 @@ import Swal from "sweetalert2";
 import { API_DUMMY } from "../../../../../utils/base_URL";
 import axios from "axios";
 import { useEffect } from "react";
+import { useParams } from "react-router-dom/cjs/react-router-dom";
 
 function AddMenuRegulasi() {
-  const [idJenisRegulasi, setIdJenisRegulasi] = useState();
+  const [idJenisRegulasi, setIdJenisRegulasi] = useState(0);
   const [menuRegulasi, setMenuRegulasi] = useState("");
   const history = useHistory();
   const [show, setShow] = useState(false);
   const [jenisRegulasi, setJenisRegulasi] = useState([]);
+  const param = useParams();
 
   const getJenisRegulasi = async () => {
     try {
@@ -27,13 +29,27 @@ function AddMenuRegulasi() {
     }
   };
 
+  useEffect(() => {
+    axios
+      .get(`${API_DUMMY}/bawaslu/api/jenis-regulasi/get-by-id/` + param.id, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      })
+      .then((ress) => {
+        const response = ress.data.data;
+        console.log(ress.data.data);
+        setIdJenisRegulasi(response.id);
+        console.log(response.jenisRegulasiId.id);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [param.id]);
+
   const addData = async (e) => {
     e.preventDefault();
     e.persist();
-
-    const formData = new FormData();
-    formData.append("idJenisRegulasi", idJenisRegulasi);
-    formData.append("menuRegulasi", menuRegulasi);
 
     try {
       await axios.post(
@@ -44,7 +60,7 @@ function AddMenuRegulasi() {
         },
         {
           headers: {
-            "Authorization": `Bearer ${localStorage.getItem("token")}`,
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
         }
       );
@@ -80,13 +96,17 @@ function AddMenuRegulasi() {
               <form onSubmit={addData}>
                 <div className="row">
                   <div className="mb-3 col-lg-6">
-                    <label for="exampleInputPassword1" className="form-label font-weight-bold">
+                    <label
+                      for="exampleInputPassword1"
+                      className="form-label font-weight-bold">
                       Jenis Regulasi
                     </label>
                     <select
+                      disabled
                       className="form-select form-select-sm"
                       aria-label="Small select example"
-                      onChange={(e) => setIdJenisRegulasi(e.target.value)}>
+                      onChange={(e) => setIdJenisRegulasi(e.target.value)}
+                      value={idJenisRegulasi}>
                       <option selected>PIlih Jenis Regulasi</option>
                       {jenisRegulasi.map((down) => {
                         return (
@@ -97,7 +117,9 @@ function AddMenuRegulasi() {
                   </div>
 
                   <div className="mb-3 col-lg-6">
-                    <label for="exampleInputPassword1" className="form-label font-weight-bold">
+                    <label
+                      for="exampleInputPassword1"
+                      className="form-label font-weight-bold">
                       Menu Regulasi
                     </label>
                     <input
@@ -110,7 +132,9 @@ function AddMenuRegulasi() {
                   </div>
                 </div>
                 <button type="submit" className="btn-danger mt-3 mr-3">
-                  <a href="" style={{ color: "white", textDecoration: "none" }}>
+                  <a
+                    href={`/admin-regulasi/${idJenisRegulasi}`}
+                    style={{ color: "white", textDecoration: "none" }}>
                     {" "}
                     Batal
                   </a>

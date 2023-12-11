@@ -89,7 +89,7 @@ function Dip() {
                           }}
                           href="https://drive.google.com/file/d/1Sf-vNEt4V5cQ6kg32WgxqlFlDkZxxAHO/view"
                         >
-                          <i class="fa-solid fa-download"></i>
+                          <i className="fa-solid fa-download"></i>
                         </a>
                       </td>
                     </tr>
@@ -116,7 +116,7 @@ function Dip() {
                           }}
                           href="https://drive.google.com/file/d/1-5_o8W3UTPODVzee4Z_E_bTioxXgFXs8/view"
                         >
-                          <i class="fa-solid fa-download"></i>
+                          <i className="fa-solid fa-download"></i>
                         </a>
                       </td>
                     </tr>
@@ -143,7 +143,7 @@ function Dip() {
                           }}
                           href="https://drive.google.com/file/d/1fcYV1tFzHZZwg9g5tununbDqB4qOQvhr/view"
                         >
-                          <i class="fa-solid fa-download"></i>
+                          <i className="fa-solid fa-download"></i>
                         </a>
                       </td>
                     </tr>
@@ -170,7 +170,7 @@ function Dip() {
                           }}
                           href="https://drive.google.com/file/d/1YpeyQu3I7t9fmm1YOUKqIuSkBKAR08nd/view"
                         >
-                          <i class="fa-solid fa-download"></i>
+                          <i className="fa-solid fa-download"></i>
                         </a>
                       </td>
                     </tr>
@@ -197,7 +197,7 @@ function Dip() {
                           }}
                           href="https://drive.google.com/file/d/1vgHG4BSL8egftdQYReQFExYc3vEdjdwh/view"
                         >
-                          <i class="fa-solid fa-download"></i>
+                          <i className="fa-solid fa-download"></i>
                         </a>
                       </td>
                     </tr>
@@ -224,7 +224,7 @@ function Dip() {
                           }}
                           href="https://drive.google.com/file/d/1m7GKabb_6OzxJgOBLceGH6K60Ax8NVTP/view"
                         >
-                          <i class="fa-solid fa-download"></i>
+                          <i className="fa-solid fa-download"></i>
                         </a>
                       </td>
                     </tr>
@@ -251,7 +251,7 @@ function Dip() {
                           }}
                           href="https://drive.google.com/file/d/1qsxnYjlYzzbdTObydL8m-eWKvuESAHqF/view"
                         >
-                          <i class="fa-solid fa-download"></i>
+                          <i className="fa-solid fa-download"></i>
                         </a>
                       </td>
                     </tr>

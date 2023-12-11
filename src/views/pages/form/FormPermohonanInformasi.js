@@ -192,7 +192,7 @@ const FormPermohonanInformasi = () => {
                 <select
                   value={jenisIdentitas}
                   onChange={(e) => setJenisIdentitasPemohon(e.target.value)}
-                  class="form-select"
+                  className="form-select"
                   aria-label="Default select example"
                 >
                   <option selected>Pilih Jenis Identitas </option>
@@ -278,7 +278,7 @@ const FormPermohonanInformasi = () => {
               <select
                 value={caraMemperolehInformasi}
                 onChange={(e) => setCaraMemperolehnInformasi(e.target.value)}
-                class="form-select"
+                className="form-select"
                 aria-label="Default select example"
               >
                 <option selected>Pilih Cara Memperoleh Informasi </option>
@@ -295,7 +295,7 @@ const FormPermohonanInformasi = () => {
               <select
                 value={caraMendapatSalinanInformasi}
                 onChange={(e) => setCaraMendapatSalinanInformasi(e.target.value)}
-                class="form-select"
+                className="form-select"
                 aria-label="Default select example"
               >
                 <option selected>Pilih Cara Mendapat Salinan Informasi</option>

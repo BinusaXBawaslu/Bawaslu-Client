@@ -4,6 +4,8 @@ import Footer from "../../../component/Footer";
 import axios from "axios";
 import { API_DUMMY } from "../../../utils/base_URL";
 import { Pagination } from "@mui/material";
+import { format } from "date-fns";
+import idLocale from "date-fns/locale/id";
 
 function Pengumuman() {
   const [pengumuman, setPengumuman] = useState([]);
@@ -88,7 +90,7 @@ function Pengumuman() {
                       <h4 className="titleee" style={{ cursor: "pointer" }}>
                         <a
                           style={{ color: "black", textDecoration: "none" }}
-                          href={`/pengumuman/${isi.judulPengumuman}/${isi.id}`}
+                          href={`/pengumuman/isi-pengumuman/${isi.id}`}
                         >
                           {isi.judulPengumuman}
                         </a>
@@ -100,7 +102,7 @@ function Pengumuman() {
                         </li>
                         <li>
                           <i className="far fa-calendar-alt"></i>{" "}
-                          {isi.createdDate}
+                          <span>{format(new Date(isi.createdDate), "dd MMMM yyyy", { locale: idLocale })}</span>
                         </li>
                       </ul>
                       <p className="isiPengumuman">{isi.isiPengumuman}</p>

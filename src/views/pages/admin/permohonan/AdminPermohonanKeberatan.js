@@ -174,21 +174,6 @@ function AdminPermohonanKeberatan() {
                       No Telp
                     </th>
                     <th scope="col" className="text-left">
-                      Kasus Posisi
-                    </th>
-                    <th scope="col" className="text-left">
-                      Nomor identitas
-                    </th>
-                    <th scope="col" className="text-left">
-                      Jenis identitas
-                    </th>
-                    <th scope="col" className="text-left">
-                      Alasan Pengajuan
-                    </th>
-                    <th scope="col" className="text-left">
-                      Tujuan Penggunaan Informasi
-                    </th>
-                    <th scope="col" className="text-left">
                       Foto Identitas{" "}
                     </th>
                     <th scope="col" className="text-left">
@@ -200,74 +185,54 @@ function AdminPermohonanKeberatan() {
                   {filteredList.map((informasi, index) => {
                     return (
                       <tr key={index}>
-                        <td data-label="No : " className="text-llef">
+                        <td data-label="No : " className="text-left">
                           {index + 1}
                         </td>
-                        <td data-label="email : " className="text-llef">
+                        <td data-label="email : " className="text-left">
                           {informasi.namaPemohon}
                         </td>
-                        <td data-label="nama : " className="text-llef">
+                        <td data-label="nama : " className="text-left">
                           {informasi.email}
                         </td>
-                        <td data-label="nama : " className="text-llef">
+                        <td data-label="nama : " className="text-left">
                           {informasi.alamatPemohon}
                         </td>
-
-                        <td data-label="alamat : " className="text-llef">
+                        <td data-label="nama : " className="text-left">
                           {informasi.noTlp}
                         </td>
-                        <td data-label="no telp : " className="text-llef">
-                          {informasi.kasusPosisi}
-                        </td>
-
-                        <td
-                          data-label="Nomor identitas : "
-                          className="text-llef"
-                        >
-                          {informasi.nomorIdentitasPemohon}
-                        </td>
                         <td
                           data-label="jenis identitas : "
-                          className="text-llef"
+                          className="text-left"
                         >
-                          {informasi.jenisIdentitas}
-                        </td>
-                        <td
-                          data-label="jenis identitas : "
-                          className="text-llef"
-                        >
-                          {informasi.alasanPengajuanKeberatan}
-                        </td>
-                        <td
-                          data-label="jenis identitas : "
-                          className="text-llef"
-                        >
-                          {informasi.tujuanPenggunaanInformasi}
-                        </td>
-                        <td
-                          data-label="jenis identitas : "
-                          className="text-llef"
-                        >
-                          {informasi.fotoIdentitas}
+                          <img
+                            style={{ width: "150px" }}
+                            src={informasi.fotoIdentitas}
+                            alt=""
+                          />
                         </td>
                         <td data-label="Aksi : " class="text-center">
-                          <button type="button" class="btn-warning mr-2 btn-sm">
-                            <a
-                              className="text-light"
-                              href={
-                                "/detail-permohonan-keberatan/" + informasi.id
-                              }
+                          <div className="d-flex">
+                            <button
+                              type="button"
+                              class="btn-warning mr-2 btn-sm"
                             >
-                              <i class="fas fa-info-circle"></i>
-                            </a>
-                          </button>
-                          <button
-                            onClick={() => deleteData(informasi.id)}
-                            type="button"
-                            className="bg-danger btn-sm text-light"
-                          >
-                            <i class="fas fa-trash-alt"></i>
-                          </button>
+                              <a
+                                className="text-light"
+                                href={
+                                  "/detail/permohonan-keberatan/" + informasi.id
+                                }
+                              >
+                                <i class="fas fa-info-circle"></i>
+                              </a>
+                            </button>
+                            <button
+                              onClick={() => deleteData(informasi.id)}
+                              type="button"
+                              className="bg-danger btn-sm text-light"
+                            >
+                              <i class="fas fa-trash-alt"></i>
+                            </button>
+                          </div>
                         </td>
                       </tr>
                     );

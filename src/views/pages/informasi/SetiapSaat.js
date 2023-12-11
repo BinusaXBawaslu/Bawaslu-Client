@@ -28,17 +28,17 @@ function SetiapSaat() {
           }}
         >
           <section>
-            <div class="container">
-              <div class="row">
-                <div class="col-md-3">
+            <div className="container">
+              <div className="row">
+                <div className="col-md-3">
                   <div
-                    class="nav flex-column nav-pills nav-pills-custom"
+                    className="nav flex-column nav-pills nav-pills-custom"
                     id="v-pills-tab"
                     role="tablist"
                     aria-orientation="vertical"
                   >
                     <a
-                      class="nav-link mb-3 p-3 shadow active"
+                      className="nav-link mb-3 p-3 shadow active"
                       id="v-pills-home-tab"
                       data-toggle="pill"
                       href="#v-pills-home"
@@ -52,7 +52,7 @@ function SetiapSaat() {
                     </a>
 
                     <a
-                      class="nav-link mb-3 p-3 shadow"
+                      className="nav-link mb-3 p-3 shadow"
                       id="v-pills-profile-tab"
                       data-toggle="pill"
                       href="#v-pills-profile"
@@ -60,13 +60,13 @@ function SetiapSaat() {
                       aria-controls="v-pills-profile"
                       aria-selected="false"
                     >
-                      <span class="font-weight-bold small text-uppercase">
+                      <span className="font-weight-bold small text-uppercase">
                         Peraturan Dan Kebijakan
                       </span>
                     </a>
 
                     <a
-                      class="nav-link mb-3 p-3 shadow"
+                      className="nav-link mb-3 p-3 shadow"
                       id="v-pills-messages-tab"
                       data-toggle="pill"
                       href="#v-pills-messages"
@@ -74,13 +74,13 @@ function SetiapSaat() {
                       aria-controls="v-pills-messages"
                       aria-selected="false"
                     >
-                      <span class="font-weight-bold small text-uppercase">
+                      <span className="font-weight-bold small text-uppercase">
                         MOU
                       </span>
                     </a>
 
                     <a
-                      class="nav-link mb-3 p-3 shadow"
+                      className="nav-link mb-3 p-3 shadow"
                       id="v-pills-settings-tab"
                       data-toggle="pill"
                       href="#v-pills-settings"
@@ -88,13 +88,13 @@ function SetiapSaat() {
                       aria-controls="v-pills-settings"
                       aria-selected="false"
                     >
-                      <span class="font-weight-bold small text-uppercase">
+                      <span className="font-weight-bold small text-uppercase">
                         Pemantau Pemilu
                       </span>
                     </a>
 
                     <a
-                      class="nav-link mb-3 p-3 shadow"
+                      className="nav-link mb-3 p-3 shadow"
                       id="v-pills-settings-tab"
                       data-toggle="pill"
                       href="#v-pills-settings"
@@ -102,13 +102,13 @@ function SetiapSaat() {
                       aria-controls="v-pills-settings"
                       aria-selected="false"
                     >
-                      <span class="font-weight-bold small text-uppercase">
+                      <span className="font-weight-bold small text-uppercase">
                         Rencana Strategi
                       </span>
                     </a>
 
                     <a
-                      class="nav-link mb-3 p-3 shadow"
+                      className="nav-link mb-3 p-3 shadow"
                       id="v-pills-settings-tab"
                       data-toggle="pill"
                       href="#v-pills-settings"
@@ -116,13 +116,13 @@ function SetiapSaat() {
                       aria-controls="v-pills-settings"
                       aria-selected="false"
                     >
-                      <span class="font-weight-bold small text-uppercase">
+                      <span className="font-weight-bold small text-uppercase">
                         Materi Rakor
                       </span>
                     </a>
 
                     <a
-                      class="nav-link mb-3 p-3 shadow"
+                      className="nav-link mb-3 p-3 shadow"
                       id="v-pills-settings-tab"
                       data-toggle="pill"
                       href="#v-pills-settings"
@@ -130,15 +130,15 @@ function SetiapSaat() {
                       aria-controls="v-pills-settings"
                       aria-selected="false"
                     >
-                      <span class="font-weight-bold small text-uppercase">
+                      <span className="font-weight-bold small text-uppercase">
                         Piagam Penghargaan
                       </span>
                     </a>
                   </div>
                 </div>
 
-                <div class="col-md-9">
-                  <div class="tab-content" id="v-pills-tabContent">
+                <div className="col-md-9">
+                  <div className="tab-content" id="v-pills-tabContent">
                     <div className="card-header bg-primary text-light">
                       <div style={{ display: "flex" }}>
                         <div className="px-3">
@@ -147,7 +147,7 @@ function SetiapSaat() {
                       </div>
                     </div>
                     <div
-                      class="tab-pane fade shadow rounded bg-white show active p-3"
+                      className="tab-pane fade shadow rounded bg-white show active p-3"
                       id="v-pills-home"
                       role="tabpanel"
                       aria-labelledby="v-pills-home-tab"
@@ -156,7 +156,7 @@ function SetiapSaat() {
                     </div>
 
                     <div
-                      class="tab-pane fade shadow rounded bg-white p-5"
+                      className="tab-pane fade shadow rounded bg-white p-5"
                       id="v-pills-profile"
                       role="tabpanel"
                       aria-labelledby="v-pills-profile-tab"
@@ -165,7 +165,7 @@ function SetiapSaat() {
                     </div>
 
                     <div
-                      class="tab-pane fade shadow rounded bg-white p-5"
+                      className="tab-pane fade shadow rounded bg-white p-5"
                       id="v-pills-messages"
                       role="tabpanel"
                       aria-labelledby="v-pills-messages-tab"
@@ -174,7 +174,7 @@ function SetiapSaat() {
                     </div>
 
                     <div
-                      class="tab-pane fade shadow rounded bg-white p-5"
+                      className="tab-pane fade shadow rounded bg-white p-5"
                       id="v-pills-settings"
                       role="tabpanel"
                       aria-labelledby="v-pills-settings-tab"

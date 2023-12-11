@@ -103,6 +103,7 @@ import MenuEditRegulasi from "./views/pages/admin/daftarRegulasi/MenuRegulasi/Me
 import RekapBerita from "./views/pages/rekap_berita/RekapBerita";
 import InformasiBerkalaKelembagaan from "./views/pages/informasi/InformasiBerkalaKelembagaan";
 import InformasiBerkalaKepemiluan from "./views/pages/informasi/InformasiBerkalaKepemiluan";
+
 // test
 function App() {
   return (
@@ -144,6 +145,19 @@ function App() {
           />
           <Route path="/informasi-dikecuali" component={Dikecualikan} exact />
           <Route path="/informasi-kanal" component={Kanal} exact />
+
+          {/* tambah dan ubah data informasi */}
+          <Route
+            path="/tambah-isi-informasi"
+            component={AddIsiInformasi}
+            exact
+          />
+          <Route
+            path="/ubah-isi-informasi/:id"
+            component={PutIsiInformasi}
+            exact
+          />
+
           {/* form online */}
           <Route
             path="/form-permohonan-keberatan"
@@ -305,6 +319,9 @@ function App() {
             exact
           />
           {/* admin informasi */}
+
+          <Route path="/admin-serta-merta" component={AdminSertaMerta} exact />
+
           <Route
             path="/admin-informasi/:namaInformasi/:id"
             component={Indexx}

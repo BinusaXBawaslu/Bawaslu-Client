@@ -178,7 +178,7 @@ function Home() {
                         BY {berita.author}
                         <h6 className="fs-6 title">
                           <a
-                            href={`/page-isi-berita/${berita.id}`}
+                            href={`/page-isi-berita/${berita.author}/${berita.id}`}
                           >
                             {berita.judulBerita}
                           </a>

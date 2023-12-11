@@ -67,7 +67,7 @@ function MenuEditRegulasi() {
         showConfirmButton: false,
         timer: 1500,
       });
-
+      history.push("/admin-regulasi/" + menuRegulasi);
       setTimeout(() => {
         history.push("/admin-regulasi/" + idJenisRegulasi);
 
@@ -102,8 +102,7 @@ function MenuEditRegulasi() {
                       className="form-select form-select-sm"
                       aria-label="Small select example"
                       onChange={(e) => setIdJenisRegulasi(e.target.value)}
-                      value={idJenisRegulasi}
-                    >
+                      value={idJenisRegulasi}>
                       <option selected>Pilih Jenis Regulasi</option>
                       {jenisRegulasi.map((down) => {
                         return (
@@ -127,7 +126,9 @@ function MenuEditRegulasi() {
                   </div>
                 </div>
                 <button type="submit" className="btn-danger mt-3 mr-3">
-                  <a href="" style={{ color: "white", textDecoration: "none" }}>
+                  <a
+                    href={`/admin-regulasi/${idJenisRegulasi}`}
+                    style={{ color: "white", textDecoration: "none" }}>
                     {" "}
                     Batal
                   </a>

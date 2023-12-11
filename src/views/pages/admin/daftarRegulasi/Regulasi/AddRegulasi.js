@@ -10,12 +10,13 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 
 function AddRegulasi() {
-  const [idMenuRegulasi, setIdMenuRegulasi] = useState(0);
+  const [idMenuRegulasi, setIdMenuRegulasi] = useState();
   const [dokumen, setDokumen] = useState("");
   const [pdfDokumen, setPdfDokumen] = useState("");
   const history = useHistory();
   const [show, setShow] = useState(false);
   const [regulasi, setRegulasi] = useState([]);
+  const [regulasi1, setRegulasi1] = useState([]);
   const param = useParams();
 
   const getByMenuRegulasi = async () => {
@@ -27,8 +28,20 @@ function AddRegulasi() {
     } catch (error) {
       console.error("Terjadi Kesalahan", error);
     }
-  }
+  };
 
+
+  const getRegulasi = async () => {
+    try {
+      const response = await axios.get(
+        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=${param.id}&page=0&size=100&sortBy=id&sortOrder=desc`
+      );
+      setRegulasi1(response.data.data.content);
+      console.log(response.data.data.content);
+    } catch (error) {
+      console.error("Terjadi Kesalahan", error);
+    }
+  };
 
   const addData = async (e) => {
     e.preventDefault();
@@ -41,6 +54,11 @@ function AddRegulasi() {
     try {
       await axios.post(
         `${API_DUMMY}/bawaslu/api/regulasi/add`,
+        {
+          dokumen: dokumen,
+          pdfDokumen: pdfDokumen,
+          menuRegulasi: idMenuRegulasi,
+        },
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -55,8 +73,7 @@ function AddRegulasi() {
         showConfirmButton: false,
         timer: 1500,
       });
-      // //console.log(data);
-      history.push("/rugulasi/:menuRegulasi/:id");
+      history.push(`/${regulasi1.length > 0 && regulasi1[0].menuRegulasi.menuRegulasi}`)
       setTimeout(() => {
         window.location.reload();
       }, 1500);
@@ -67,6 +84,7 @@ function AddRegulasi() {
 
   useEffect(() => {
     getByMenuRegulasi();
+    getRegulasi();
   }, []);
   return (
     <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
@@ -81,7 +99,9 @@ function AddRegulasi() {
               <form onSubmit={addData}>
                 <div className="row">
                   <div className="mb-3 col-lg-6">
-                    <label for="exampleInputPassword1" className="form-label font-weight-bold">
+                    <label
+                      for="exampleInputPassword1"
+                      className="form-label font-weight-bold">
                       Jenis Regulasi
                     </label>
                     <select
@@ -98,7 +118,9 @@ function AddRegulasi() {
                   </div>
 
                   <div className="mb-3 col-lg-6">
-                    <label for="exampleInputPassword1" className="form-label font-weight-bold">
+                    <label
+                      for="exampleInputPassword1"
+                      className="form-label font-weight-bold">
                       Dokumen
                     </label>
                     <input
@@ -110,12 +132,15 @@ function AddRegulasi() {
                     />
                   </div>
                   <div className="mb-3 col-lg-6">
-                    <label for="exampleInputPassword1" className="form-label font-weight-bold">
-                      Gambar Dokumen
+                    <label
+                      for="exampleInputPassword1"
+                      className="form-label font-weight-bold">
+                      PDF Dokumen
                     </label>
                     <input
-                      onChange={(e) => setPdfDokumen(e.target.files[0])}
-                      type="file"
+                      value={pdfDokumen}
+                      onChange={(e) => setPdfDokumen(e.target.value)}
+                      type="text"
                       className="form-control"
                       id="exampleInputPassword1"
                     />

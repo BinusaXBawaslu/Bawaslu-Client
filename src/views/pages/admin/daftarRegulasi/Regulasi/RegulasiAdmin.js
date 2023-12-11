@@ -102,15 +102,16 @@ function RegulasiAdmin() {
       <div className="app-main">
         <Sidebar />
         <div className="container mt-3 app-main__outer">
-          <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
-            <div class="col-auto">
+          <div className="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
+            <div className="col-auto">
               <label className="form-label mt-2">Rows per page:</label>
             </div>
-            <div class="col-auto">
+            <div className="col-auto">
               <select
                 className="form-select form-select-xl w-auto"
                 onChange={handleRowsPerPageChange}
-                value={rowsPerPage}>
+                value={rowsPerPage}
+              >
                 <option value={5}>5</option>
                 <option value={10}>10</option>
                 <option value={20}>20</option>
@@ -124,19 +125,20 @@ function RegulasiAdmin() {
             value={searchTerm}
             onChange={handleSearchChange}
           />
-          <div class="main-card mb-3 card">
+          <div className="main-card mb-3 card">
             <div className="card-header" style={{ display: "flex" }}>
-            {regulasi.length > 0 && regulasi[0].menuRegulasi.menuRegulasi}
+              {regulasi.length > 0 && regulasi[0].menuRegulasi.menuRegulasi}
               <p className="mt-3"></p>
-              <div class="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
-                <div class="col-auto">
+              <div className="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
+                <div className="col-auto">
                   <label className="form-label mt-2">Rows per page:</label>
                 </div>
-                <div class="col-auto">
+                <div className="col-auto">
                   <select
                     className="form-select form-select-sm"
                     onChange={handleRowsPerPageChange}
-                    value={rowsPerPage}>
+                    value={rowsPerPage}
+                  >
                     <option value={5}>5</option>
                     <option value={10}>10</option>
                     <option value={20}>20</option>
@@ -151,13 +153,14 @@ function RegulasiAdmin() {
                   value={searchTerm}
                   onChange={handleSearchChange}
                 />
-                <div class="btn-actions-pane-right">
-                  <div role="group" class="btn-group-sm btn-group">
-                    <button class="active btn-focus p-2 rounded">
+                <div className="btn-actions-pane-right">
+                  <div role="group" className="btn-group-sm btn-group">
+                    <button className="active btn-focus p-2 rounded">
                       <a
                         href="/add-regulasi"
                         className="text-light"
-                        style={{ textDecoration: "none" }}>
+                        style={{ textDecoration: "none" }}
+                      >
                         {" "}
                         Tambah Data
                       </a>
@@ -167,9 +170,10 @@ function RegulasiAdmin() {
               </div>
             </div>
             <div
-              class="table-responsive"
-              style={{ overflowY: "auto", maxHeight: "60vh" }}>
-              <table class="align-middle mb-0 table table-borderless table-striped table-hover">
+              className="table-responsive"
+              style={{ overflowY: "auto", maxHeight: "60vh" }}
+            >
+              <table className="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
                   <tr>
                     <th scope="" className="text-left">
@@ -177,9 +181,6 @@ function RegulasiAdmin() {
                     </th>
                     <th scope="" className="text-left">
                       Dokumen
-                    </th>
-                    <th scope="" className="text-left">
-                      Gambar
                     </th>
                     <th scope="" className="text-center">
                       Aksi
@@ -196,22 +197,36 @@ function RegulasiAdmin() {
                         <td data-label="dokumen : " className="text-left">
                           {jenis.dokumen}
                         </td>
+<<<<<<< HEAD
                         <td data-label="gambar : " className="text-left">
-                          <img style={{width:"150px"}} src={jenis.pdfDokumen} alt="" />
+                          <img
+                            style={{ width: "150px" }}
+                            src={jenis.pdfDokumen}
+                            alt=""
+                          />
                         </td>
+                        <td data-label="Aksi : " className="text-center">
+                          <button
+                            type="button"
+                            className="btn-primary btn-sm mr-2"
+                          >
+=======
                         <td data-label="Aksi : " class="text-center">
                           <button type="button" class="btn-primary btn-sm mr-2">
+>>>>>>> 4940de67521dd7ea78441fc8a9987a9b6ab260f8
                             <a
                               style={{ color: "white", textDecoration: "none" }}
-                              href={"/edit/" + jenis.dokumen + "/" + jenis.id}>
-                              <i class="fa-solid fa-pen-to-square"></i>
+                              href={"/edit/" + jenis.dokumen + "/" + jenis.id}
+                            >
+                              <i className="fa-solid fa-pen-to-square"></i>
                             </a>
                           </button>
                           <button
                             onClick={() => deleteData(jenis.id)}
                             type="button"
-                            class="btn-danger btn-sm mr-2">
-                            <i class="fa-solid fa-trash"></i>
+                            className="btn-danger btn-sm mr-2"
+                          >
+                            <i className="fa-solid fa-trash"></i>
                           </button>
                         </td>
                       </tr>

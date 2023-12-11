@@ -49,15 +49,18 @@ function Login() {
 
   return (
     <div className="containeriimg d-flex justify-content-center align-items-center min-vh-100">
-      <div id="responsive-login" className="row border rounded-5 p-3 bg-white shadow box-area padding-login">
+      <div
+        id="responsive-login"
+        className="row border rounded-5 p-3 bg-white shadow box-area padding-login"
+      >
         <div
           className="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box img-login"
-          style={{ background: "#103cbe" }}>
+          style={{ background: "#103cbe" }}
+        >
           <div className="featured-image mb-3 img-login">
             <img
               src="https://static.vecteezy.com/system/resources/previews/010/998/284/non_2x/3d-password-input-illustration-design-free-png.png"
               className="img-fluid img-login"
-              
               style={{ width: "250px" }}
               alt="Password Illustration"
             />
@@ -65,24 +68,17 @@ function Login() {
         </div>
         <div className="col-md-6 right-box">
           <form onSubmit={handleLogin} className="row align-items-center">
-          <div class="container">
-  <div class="row">
-    <div class="col-md-12 text-center">
-      <div class="header-text mb-4">
-        <h2>
-          <img
-            style={{ width: "40px", marginRight: "15px" }}
-            src="https://jombang.bawaslu.go.id/wp-content/uploads/2019/04/Logo-Bawaslu-2018-Icon-PNG-HD.png"
-            alt="Bawaslu Logo"
-          />
-          Login
-        </h2>
-        <p>Selamat Datang Kembali</p>
-      </div>
-    </div>
-  </div>
-</div>
-
+            <div className="header-text mb-4 text-center">
+              <h2>
+                <img
+                  style={{ width: "40px" }}
+                  src="https://jombang.bawaslu.go.id/wp-content/uploads/2019/04/Logo-Bawaslu-2018-Icon-PNG-HD.png"
+                  alt="Bawaslu Logo"
+                />
+                Login
+              </h2>
+              <p>Selamat Datang Kembali</p>
+            </div>
             <div className="input-group mb-3">
               <input
                 type="text"
@@ -121,7 +117,8 @@ function Login() {
                 />
                 <label
                   htmlFor="showPassword"
-                  className="form-check-label text-secondary">
+                  className="form-check-label text-secondary"
+                >
                   <small>Tampilkan Password</small>
                 </label>
               </div>
@@ -129,7 +126,8 @@ function Login() {
             <div className="input-group mb-3">
               <button
                 type="submit"
-                className="btn btn-lg btn-primary w-100 fs-6">
+                className="btn btn-lg btn-primary w-100 fs-6"
+              >
                 Login
               </button>
             </div>

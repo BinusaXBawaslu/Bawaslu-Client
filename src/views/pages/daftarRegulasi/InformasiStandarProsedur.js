@@ -94,7 +94,7 @@ function InformasiStandarProsedur() {
                           }}
                           href="https://drive.google.com/file/d/1N9ISO_fbxRySiuu6TjKRA_qwVS-mu8Nt/view"
                         >
-                          <i class="fa-solid fa-download"></i>
+                          <i className="fa-solid fa-download"></i>
                         </a>
                         {/* <button
                           className="bg-primary text-light"
@@ -107,7 +107,7 @@ function InformasiStandarProsedur() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-download"></i>
+                          <i className="fa-solid fa-download"></i>
                         </button>
                         <button
                           className="bg-warning text-light"
@@ -120,7 +120,7 @@ function InformasiStandarProsedur() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-circle-info"></i>
+                          <i className="fa-solid fa-circle-info"></i>
                         </button> */}
                       </td>
                     </tr>
@@ -143,7 +143,7 @@ function InformasiStandarProsedur() {
                           }}
                           href="https://drive.google.com/file/d/12yMeuaAhu0j_VkQILAY-GZb7CPTFSlMZ/view"
                         >
-                          <i class="fa-solid fa-download"></i>
+                          <i className="fa-solid fa-download"></i>
                         </a>
                         {/* <button
                           className="bg-primary text-light"
@@ -156,7 +156,7 @@ function InformasiStandarProsedur() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-download"></i>
+                          <i className="fa-solid fa-download"></i>
                         </button>
                         <button
                           className="bg-warning text-light"
@@ -169,7 +169,7 @@ function InformasiStandarProsedur() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-circle-info"></i>
+                          <i className="fa-solid fa-circle-info"></i>
                         </button> */}
                       </td>
                     </tr>
@@ -192,7 +192,7 @@ function InformasiStandarProsedur() {
                           }}
                           href="https://drive.google.com/file/d/1Hoqm6DTQUsttRHHVdBoi_b82y1XDl0kV/view"
                         >
-                          <i class="fa-solid fa-download"></i>
+                          <i className="fa-solid fa-download"></i>
                         </a>
                         {/* <button
                           className="bg-primary text-light"
@@ -205,7 +205,7 @@ function InformasiStandarProsedur() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-download"></i>
+                          <i className="fa-solid fa-download"></i>
                         </button>
                         <button
                           className="bg-warning text-light"
@@ -218,7 +218,7 @@ function InformasiStandarProsedur() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-circle-info"></i>
+                          <i className="fa-solid fa-circle-info"></i>
                         </button> */}
                       </td>
                     </tr>
@@ -241,7 +241,7 @@ function InformasiStandarProsedur() {
                           }}
                           href="https://drive.google.com/file/d/10qmgGvGlcaSlLIAfgZn_LR4MTqkxUTZW/view"
                         >
-                          <i class="fa-solid fa-download"></i>
+                          <i className="fa-solid fa-download"></i>
                         </a>
                         {/* <button
                           className="bg-primary text-light"
@@ -254,7 +254,7 @@ function InformasiStandarProsedur() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-download"></i>
+                          <i className="fa-solid fa-download"></i>
                         </button>
                         <button
                           className="bg-warning text-light"
@@ -267,7 +267,7 @@ function InformasiStandarProsedur() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-circle-info"></i>
+                          <i className="fa-solid fa-circle-info"></i>
                         </button> */}
                       </td>
                     </tr>
@@ -290,7 +290,7 @@ function InformasiStandarProsedur() {
                           }}
                           href="https://drive.google.com/file/d/1MQBJbuDdCR-zuEHBI4B-v41xSszkYhdv/view"
                         >
-                          <i class="fa-solid fa-download"></i>
+                          <i className="fa-solid fa-download"></i>
                         </a>
                         {/* <button
                           className="bg-primary text-light"
@@ -303,7 +303,7 @@ function InformasiStandarProsedur() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-download"></i>
+                          <i className="fa-solid fa-download"></i>
                         </button>
                         <button
                           className="bg-warning text-light"
@@ -316,7 +316,7 @@ function InformasiStandarProsedur() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-circle-info"></i>
+                          <i className="fa-solid fa-circle-info"></i>
                         </button> */}
                       </td>
                     </tr>
@@ -339,7 +339,7 @@ function InformasiStandarProsedur() {
                           }}
                           href="https://drive.google.com/file/d/1PRHtEzCttArf_l5oDBo9z9YzWkN9Sf57/view"
                         >
-                          <i class="fa-solid fa-download"></i>
+                          <i className="fa-solid fa-download"></i>
                         </a>
                         {/* <button
                           className="bg-primary text-light"
@@ -352,7 +352,7 @@ function InformasiStandarProsedur() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-download"></i>
+                          <i className="fa-solid fa-download"></i>
                         </button>
                         <button
                           className="bg-warning text-light"
@@ -365,7 +365,7 @@ function InformasiStandarProsedur() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-circle-info"></i>
+                          <i className="fa-solid fa-circle-info"></i>
                         </button> */}
                       </td>
                     </tr>
@@ -388,7 +388,7 @@ function InformasiStandarProsedur() {
                           }}
                           href="https://drive.google.com/file/d/1HpjCPHOVGa3Ik9x8iK64ETZL_D-C5xhD/view"
                         >
-                          <i class="fa-solid fa-download"></i>
+                          <i className="fa-solid fa-download"></i>
                         </a>
                         {/* <button
                           className="bg-primary text-light"
@@ -401,7 +401,7 @@ function InformasiStandarProsedur() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-download"></i>
+                          <i className="fa-solid fa-download"></i>
                         </button>
                         <button
                           className="bg-warning text-light"
@@ -414,7 +414,7 @@ function InformasiStandarProsedur() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-circle-info"></i>
+                          <i className="fa-solid fa-circle-info"></i>
                         </button> */}
                       </td>
                     </tr>
@@ -437,7 +437,7 @@ function InformasiStandarProsedur() {
                           }}
                           href="https://drive.google.com/file/d/1N9ISO_fbxRySiuu6TjKRA_qwVS-mu8Nt/view?usp=sharing"
                         >
-                          <i class="fa-solid fa-download"></i>
+                          <i className="fa-solid fa-download"></i>
                         </a>
                         {/* <button
                           className="bg-primary text-light"
@@ -450,7 +450,7 @@ function InformasiStandarProsedur() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-download"></i>
+                          <i className="fa-solid fa-download"></i>
                         </button>
                         <button
                           className="bg-warning text-light"
@@ -463,7 +463,7 @@ function InformasiStandarProsedur() {
                             marginRight: "10px",
                           }}
                         >
-                          <i class="fa-solid fa-circle-info"></i>
+                          <i className="fa-solid fa-circle-info"></i>
                         </button> */}
                       </td>
                     </tr>

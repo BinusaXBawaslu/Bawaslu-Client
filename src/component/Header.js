@@ -118,58 +118,62 @@ function Header() {
   };
   return (
     <>
-      <div class="app-header header-shadow">
-        <div class="app-header__logo">
-        <img
+      <div className="app-header header-shadow">
+        <div className="app-header__logo">
+          <img
             style={{ width: "60%" }}
             src="https://upload.wikimedia.org/wikipedia/commons/6/62/Logo_Bawaslu.png"
           />
-          <div class="header__pane ml-auto">
+          <div className="header__pane ml-auto">
             <div>
               <button
                 type="button"
-                class="hamburger close-sidebar-btn hamburger--elastic"
-                data-class="closed-sidebar">
-                <span class="hamburger-box">
-                  <span class="hamburger-inner"></span>
+                className="hamburger close-sidebar-btn hamburger--elastic"
+                data-className="closed-sidebar"
+              >
+                <span className="hamburger-box">
+                  <span className="hamburger-inner"></span>
                 </span>
               </button>
             </div>
           </div>
         </div>
-        <div class="app-header__mobile-menu">
+        <div className="app-header__mobile-menu">
           <div>
             <button
               type="button"
-              class="hamburger hamburger--elastic mobile-toggle-nav">
-              <span class="hamburger-box">
-                <span class="hamburger-inner"></span>
+              className="hamburger hamburger--elastic mobile-toggle-nav"
+            >
+              <span className="hamburger-box">
+                <span className="hamburger-inner"></span>
               </span>
             </button>
           </div>
         </div>
-        <div class="app-header__menu">
+        <div className="app-header__menu">
           <span>
             <button
               onClick={logout}
               type="button"
-              className="btn-shadow p-1 btn-danger btn-sm">
+              className="btn-shadow p-1 btn-danger btn-sm"
+            >
               <i className="fas fa-sign-out-alt"></i> Logout
             </button>
           </span>
         </div>{" "}
-        <div class="app-header__content">
-          <div class="app-header-right">
-          <button
+        <div className="app-header__content">
+          <div className="app-header-right">
+            <button
               onClick={logout}
               type="button"
-              className="btn-shadow p-1 btn-danger btn-sm">
+              className="btn-shadow p-1 btn-danger btn-sm"
+            >
               <i className="fas fa-sign-out-alt"></i> Logout
             </button>
-            <div class="header-btn-lg pr-0">
-              <div class="widget-content p-0">
-                <div class="widget-content-wrapper">
-                  <div class="widget-content-left"></div>
+            <div className="header-btn-lg pr-0">
+              <div className="widget-content p-0">
+                <div className="widget-content-wrapper">
+                  <div className="widget-content-left"></div>
                 </div>
               </div>
             </div>{" "}

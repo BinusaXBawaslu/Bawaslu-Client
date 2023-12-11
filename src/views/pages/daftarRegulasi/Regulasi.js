@@ -71,7 +71,7 @@ function Regulasi() {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
-        class="project-area pd-top-115 pd-bottom-90"
+        className="project-area pd-top-115 pd-bottom-90"
       >
         <div
           style={{
@@ -79,15 +79,18 @@ function Regulasi() {
           }}
         >
           <div className="container">
-            <div id="display" className="d-flex align-center justify-center gap-5">
-              <div class="row justify-content-center">
-                <div class="col-lg-12 ">
-                  <div class="isotope-filters project-isotope-btn text-left mb-5">
+            <div
+              id="display"
+              className="d-flex align-center justify-center gap-5"
+            >
+              <div className="row justify-content-center">
+                <div className="col-lg-12 ">
+                  <div className="isotope-filters project-isotope-btn text-left mb-5">
                     {/* {list.map((menu) => {
                       return (
                         <button
                           style={{ width: "250px", textAlign: "left" }}
-                          class="button ml-0"
+                          className="button ml-0"
                           data-filter="*"
                            onClick={() => showTable("Undang Undang")}
                           onClick={() => showTable(`${menu.menuRegulasi}`)}
@@ -215,7 +218,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/15joI7w8I1Q36UeD0EFVOYDsS6h-96WZp/edit"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -238,7 +241,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/10n8zLlzX2UATuwKrSr5rNzFpnHX4GsXr/edit"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -261,7 +264,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1n0GstVBvJUKZ_SSbhSiwAiHRS6rWuVB9/edit"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -284,7 +287,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1YpeyQu3I7t9fmm1YOUKqIuSkBKAR08nd/view"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -307,7 +310,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1hxwdpYKjEmN3QCbPphAtdVdK5qr6BW-s/view"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -360,7 +363,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1RqVRWj4GjhrfG21gWjfP6DKLmcvi3oFX/edit"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -383,7 +386,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/15Scqa1lG189JaJnL-sL9aEF4Piz-LeRz/edit"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -406,7 +409,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1gLZon0xZ3iX02ResYjc2w19_jgqiKm38/edit"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -459,7 +462,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1jq40qIOG84aFjfIWXvp7GVKftLEHLx8g/edit"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -513,7 +516,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1L6adCShmR-7KX11qpvOIvoRrGqEOIpDd/edit"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -536,7 +539,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1REDcEGrvbRR6Ld5sfmOXguH24PoUXAd2/edit"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -559,7 +562,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1Vs4RHcCAi9S01S9weh3AijYgVvwchYxp/edit"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -582,7 +585,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1Sn5ghDhcN4Nhi76c5B-yhJFfmsu2vs9n/edit"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -605,7 +608,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1hxwdpYKjEmN3QCbPphAtdVdK5qr6BW-s/view"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -658,7 +661,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/11DBKiFk_DnPg2yAmUEuSA6ZhzvxSSpEm/edit"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -712,7 +715,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1BGRfYwKh6TTNe8cUCASAD1wM2JmsOzFg/edit"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -735,7 +738,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1Tt14YRvncR7hkTQj-1oVQQzRYg4Z9r1S/edit"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -758,7 +761,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1Jch3NOVn2hi2v9C0IxHSml99GCE4f-U1/view"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -781,7 +784,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/17cYkx3jXARL-oiFKVxRPdjhXdcrUgUiR/view"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -804,7 +807,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1K_1o93kqGqrxFP50NSjaqqjtXT4vFd88/view"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -827,7 +830,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1a-RhWVp_smdCLW3XCXoU3MYJdbK5qB5h/view"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -850,7 +853,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1XvFh0EerFwW7XvrBielpSpuOFB7BRKb3/view"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -873,7 +876,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1yFIL90baDOwBN-Mg33gi1fysroL2JDNF/view"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -896,7 +899,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1SXsHSCZZ46-CBLELDMw5WnbVdHy7_ee5/view"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -919,7 +922,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/108MWcbgF-rDH_eddLfAhKzEiBYLIrYsx/view"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -942,7 +945,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1Sb3JtT2Rwns_ooT9Pva7XynjFmEyloDK/view"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -965,7 +968,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1-xnvJ0Wi4cAoNBvshQvE0YjTyuAfUSAM/view"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -988,7 +991,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1zGI-5hos52yWm_AwrX7OgXR_Nn_L7Ecs/view?usp=drive_link"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -1011,7 +1014,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/15JCOXMEedcJ3QpQIPhbxnwHOns1aMy83/view?usp=drive_link"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -1034,7 +1037,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/11Q6ICwi7hjREvmgOpnQOwoeX2S0oOH0K/view?usp=drive_link"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -1057,7 +1060,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1EwZMfvPKKzKsnaFbaVWjR68ywnzkHOCK/view?usp=drive_link"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -1080,7 +1083,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1eR12lnuOIvuS2wvO1YGWdjfGOE147By8/view?usp=drive_link"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -1136,7 +1139,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1mW-PRMO3mxAl5kWy9U_2cSjoFVTWyD8E/view"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -1162,7 +1165,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1xGVaZ2S5ocCsBpDYCd_uqG7KSKFpIwtX/view"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -1188,7 +1191,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1lUbJZ1XUAGgam2QS0xga9j78AkA1Vub6/view"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -1213,7 +1216,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1I-gJAi_gFSfNV8t8EoHpmpvgcUgzzyuJ/view"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -1239,7 +1242,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1446FsNHBT2FqZzhmHJH0jo6hARS4pSaD/view"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -1265,7 +1268,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1FYaGFbiBeo1CxrumV1Xp0vRlDv09JOat/view"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -1291,7 +1294,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1VEruZ10wBkatUPsL9fY-yxkQI8f6wr_C/view"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -1317,7 +1320,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/15aapWDMSydJ_hlNUMqSXNAbjje_J3Hbz/view  "
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -1343,7 +1346,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1446FsNHBT2FqZzhmHJH0jo6hARS4pSaD/view"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -1369,7 +1372,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1I-gJAi_gFSfNV8t8EoHpmpvgcUgzzyuJ/view"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -1425,7 +1428,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1ZXIWgJN3Rdu_nKQmLftusaXKxH6eOTC-/view"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -1448,7 +1451,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1gvaV1s1BMS9i507c5ttP1Jqgnh-vlG1f/view"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -1471,7 +1474,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1FeEUCLRRoxufkXiuHknHiLO_PakykxNA/view"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -1494,7 +1497,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1Q_asmdCWVJB_s07sYPcTcWD7VqknBkJ5/view"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -1517,7 +1520,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1BF7RgANS2Ah2ZXUGCLa_nb40_C42CVb4/view"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -1540,7 +1543,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1gDBHdRkuECLpIRqEAGbqcpntpuetfgid/view"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -1565,7 +1568,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1OWHgzT2gqVOTZz5SHlUuZmpX6NB_BhY6/view"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -1588,7 +1591,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1OWHgzT2gqVOTZz5SHlUuZmpX6NB_BhY6/view"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -1611,7 +1614,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1MJo5fT16noSNnJdBnajjh-u5Z16wDRyN/view"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -1637,7 +1640,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1s1R-sqrXo5lVQ8uQAGtfp9uhdN89HNmS/view"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -1663,7 +1666,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1iXu3P8GfgaiCwK-o2byh066xfriGFRy-/view"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -1721,7 +1724,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1Ejk1oPskX2yZ_-5eeMmSfyBv2SwVAz3B/view"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -1747,7 +1750,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1VLeU7W-KuWnMyK_GX_L6wFfkT-P6CD4l/view"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>
@@ -1770,7 +1773,7 @@ function Regulasi() {
                             }}
                             href="https://drive.google.com/file/d/1D3niXB8VaHhvi6g6l_zczyQHTzIBEpAj/view"
                           >
-                            <i class="fa-solid fa-download"></i>
+                            <i className="fa-solid fa-download"></i>
                           </a>
                         </td>
                       </tr>

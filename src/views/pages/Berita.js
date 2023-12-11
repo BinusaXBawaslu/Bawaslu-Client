@@ -5,7 +5,13 @@ import axios from "axios";
 import { API_DUMMY } from "../../utils/base_URL";
 import { Pagination } from "@mui/material";
 import Bawaslu from "../../component/Bawaslu";
-import { FacebookShareButton, PinterestShareButton, TwitterShareButton } from "react-share";
+import {
+  FacebookShareButton,
+  PinterestShareButton,
+  TwitterShareButton,
+} from "react-share";
+import { format } from "date-fns";
+import idLocale from "date-fns/locale/id";
 
 function Berita() {
   const [scroll, setScroll] = useState(false);
@@ -28,7 +34,9 @@ function Berita() {
   const getAll = async (page) => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/berita/all?page=${page-1}&size=10&sortBy=id&sortOrder=desc`
+        `${API_DUMMY}/bawaslu/api/berita/all?page=${
+          page - 1
+        }&size=10&sortBy=id&sortOrder=desc`
       );
       setList(response.data.data.content);
       setPaginationInfo({
@@ -47,7 +55,6 @@ function Berita() {
       );
       setCategory(response.data.data);
       console.log(response.data.data);
-
     } catch (error) {
       console.error("Terjadi Kesalahan", error);
     }
@@ -162,7 +169,8 @@ function Berita() {
         class="service-area bg-overlay pd-top-120 pd-bottom-90"
         style={{
           backgroundImage: `url(${gambarTerbaru})`,
-        }}>
+        }}
+      >
         <div class="container">
           <div class="row">
             <div class="col-lg-4">
@@ -171,7 +179,8 @@ function Berita() {
                 style={{
                   backgroundImage: `url(${gambarTerbaru})`,
                   minHeight: "93%",
-                }}>
+                }}
+              >
                 <h2 class="title title-berita mt-4">
                   {listTerbaru.length > 0 && listTerbaru[0].judulBerita}
                 </h2>
@@ -181,10 +190,13 @@ function Berita() {
               <div class="row">
                 {listTerbaru.slice(1, 5).map((berita, index) => (
                   <div class="col-md-6" key={index}>
-                    <div class="single-service-inner style-black text-left"  style={{
-                  backgroundImage: `url(${berita.image})`,
-                  minHeight: "93%",
-                }}>
+                    <div
+                      class="single-service-inner style-black text-left"
+                      style={{
+                        backgroundImage: `url(${berita.image})`,
+                        minHeight: "93%",
+                      }}
+                    >
                       <div class="icon-box">
                         <i class="icomoon-layer"></i>
                       </div>
@@ -222,7 +234,8 @@ function Berita() {
                         <div className="col-6">
                           <a
                             style={{ color: "black", textDecoration: "none" }}
-                            href={`category-berita/${cta.category}/${cta.id}`}>
+                            href={`category-berita/${cta.category}/${cta.id}`}
+                          >
                             {cta.category}
                           </a>
                         </div>
@@ -242,63 +255,72 @@ function Berita() {
                           <div class="col-sm-7"></div>
                           <div class="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
                             <div class="blog-share">
-                             <ul>
-                              <li>
-                                <FacebookShareButton
-                                  url={`https://bawaslu.excellentsistem.com/berita/${berita.judulBerita}/${berita.id}`}
-                                  media={berita.image}
-                                  description={berita.judulBerita}
-                                  quote={berita.judulBerita}>
-                                  <button
-                                    style={{
-                                      color: "white",
-                                      backgroundColor: "#45629f",
-                                    }}
-                                    className="border p-2">
-                                    <i
-                                      className="fab fa-facebook-f"
-                                      aria-hidden="true"></i>{" "}
-                                    Facebook
-                                  </button>
-                                </FacebookShareButton>
-                              </li>
-                              <li>
-                                <TwitterShareButton
-                                  url={`https://bawaslu.excellentsistem.com/berita/${berita.judulBerita}/${berita.id}`}
-                                  media={berita.image}
-                                  description={berita.judulBerita}
-                                  quote={berita.judulBerita}>
-                                  <button
-                                    style={{
-                                      color: "white",
-                                      backgroundColor: "#5eb2ef",
-                                    }}
-                                    className="border p-2">
-                                    <i
-                                      className="fab fa-twitter"
-                                      aria-hidden="true"></i>{" "}
-                                    Twitter
-                                  </button>
-                                </TwitterShareButton>
-                              </li>
-                              <li>
-                                <PinterestShareButton
-                                  url={`https://bawaslu.excellentsistem.com/berita/${berita.judulBerita}/${berita.id}`}
-                                  quote={berita.judulBerita}
-                                  media={berita.image}
-                                  description={berita.judulBerita}>
-                                  <button
-                                    style={{
-                                      color: "white",
-                                      backgroundColor: "#cf2830",
-                                    }}
-                                    className="border p-2">
-                                    <i className="fa-brands fa-pinterest"></i>{" "}
-                                    Pin
-                                  </button>
-                                </PinterestShareButton>
-                              </li>
-                            </ul>
+                              <ul>
+                                <li>
+                                  <FacebookShareButton
+                                    url={`https://bawaslu.excellentsistem.com/berita/${berita.judulBerita}/${berita.id}`}
+                                    media={berita.image}
+                                    description={berita.judulBerita}
+                                    quote={berita.judulBerita}
+                                  >
+                                    <button
+                                      style={{
+                                        color: "white",
+                                        backgroundColor: "#45629f",
+                                      }}
+                                      className="border p-2"
+                                    >
+                                      <i
+                                        className="fab fa-facebook-f"
+                                        aria-hidden="true"
+                                      ></i>{" "}
+                                      Facebook
+                                    </button>
+                                  </FacebookShareButton>
+                                </li>
+                                <li>
+                                  <TwitterShareButton
+                                    url={`https://bawaslu.excellentsistem.com/berita/${berita.judulBerita}/${berita.id}`}
+                                    media={berita.image}
+                                    description={berita.judulBerita}
+                                    quote={berita.judulBerita}
+                                  >
+                                    <button
+                                      style={{
+                                        color: "white",
+                                        backgroundColor: "#5eb2ef",
+                                      }}
+                                      className="border p-2"
+                                    >
+                                      <i
+                                        className="fab fa-twitter"
+                                        aria-hidden="true"
+                                      ></i>{" "}
+                                      Twitter
+                                    </button>
+                                  </TwitterShareButton>
+                                </li>
+                                <li>
+                                  <PinterestShareButton
+                                    url={`https://bawaslu.excellentsistem.com/berita/${berita.judulBerita}/${berita.id}`}
+                                    quote={berita.judulBerita}
+                                    media={berita.image}
+                                    description={berita.judulBerita}
+                                  >
+                                    <button
+                                      style={{
+                                        color: "white",
+                                        backgroundColor: "#cf2830",
+                                        width: "80px",
+                                      }}
+                                      className="border p-2"
+                                    >
+                                      <i className="fa-brands fa-pinterest"></i>{" "}
+                                      Pin
+                                    </button>
+                                  </PinterestShareButton>
+                                </li>
+                              </ul>
                             </div>
                           </div>
                         </div>
@@ -313,11 +335,10 @@ function Berita() {
                       <div class="details">
                         <h2>
                           <a
-                            href={`/page-isi-berita/${berita.judulBerita}/${berita.id}`}>
+                            href={`/page-isi-berita/${berita.author}/${berita.id}`}
+                          >
                             {berita.judulBerita}
                           </a>
-
-                          <a href="">{berita.judulBerita}</a>
                         </h2>
                         <ul class="blog-meta">
                           <li>
@@ -325,7 +346,13 @@ function Berita() {
                           </li>
                           <li>
                             <i class="far fa-calendar-alt"></i>{" "}
-                            {berita.createdDate}
+                            <span>
+                              {format(
+                                new Date(berita.createdDate),
+                                "dd MMMM yyyy",
+                                { locale: idLocale }
+                              )}
+                            </span>
                           </li>
                         </ul>
                       </div>
@@ -352,13 +379,16 @@ function Berita() {
                             <li>
                               <a href="#">
                                 <button
-                                    style={{
-                                      color: "white",
-                                      backgroundColor: "#45629f",
-                                    }}className="border p-2">
+                                  style={{
+                                    color: "white",
+                                    backgroundColor: "#45629f",
+                                  }}
+                                  className="border p-2"
+                                >
                                   <i
                                     class="fab fa-facebook-f"
-                                    aria-hidden="true"></i>{" "}
+                                    aria-hidden="true"
+                                  ></i>{" "}
                                   Facebook
                                 </button>
                               </a>
@@ -366,13 +396,16 @@ function Berita() {
                             <li>
                               <a href="#">
                                 <button
-                                    style={{
-                                      color: "white",
-                                      backgroundColor: "#5eb2ef",
-                                    }}className="border p-2">
+                                  style={{
+                                    color: "white",
+                                    backgroundColor: "#5eb2ef",
+                                  }}
+                                  className="border p-2"
+                                >
                                   <i
                                     class="fab fa-twitter"
-                                    aria-hidden="true"></i>{" "}
+                                    aria-hidden="true"
+                                  ></i>{" "}
                                   Twitter
                                 </button>
                               </a>
@@ -380,10 +413,12 @@ function Berita() {
                             <li>
                               <a href="#">
                                 <button
-                                    style={{
-                                      color: "white",
-                                      backgroundColor: "#cf2830",
-                                    }}className="border p-2">
+                                  style={{
+                                    color: "white",
+                                    backgroundColor: "#cf2830",
+                                  }}
+                                  className="border p-2"
+                                >
                                   <i class="fa-brands fa-pinterest"></i> Pin
                                 </button>
                               </a>
@@ -402,7 +437,7 @@ function Berita() {
                   </div>
                   <div class="details">
                     <h2>
-                      <a href="">COntoh Berita</a>
+                      <a href="">Contoh Berita</a>
                     </h2>
                     <ul class="blog-meta">
                       <li>
@@ -427,7 +462,8 @@ function Berita() {
                 <div class="td-sidebar">
                   <div
                     class={`widget widget-recent-post`}
-                    style={{ background: "#F1F6F9", overflow: "hidden" }}>
+                    style={{ background: "#F1F6F9", overflow: "hidden" }}
+                  >
                     <h4 class="widget-title">Berita Terbaru</h4>
                     <ul>
                       {listTerbaru.map((beritaTerbaru) => {
@@ -443,11 +479,21 @@ function Berita() {
                               </div>
                               <div class="media-body align-self-center">
                                 <h6 class="title">
-                                  <a href={`/Page-Berita/${beritaTerbaru.id}`}>{beritaTerbaru.judulBerita}</a>
+                                  <a
+                                    href={`/page-isi-berita/${beritaTerbaru.author}/${beritaTerbaru.id}`}
+                                  >
+                                    {beritaTerbaru.judulBerita}
+                                  </a>
                                 </h6>
                                 <div class="post-info">
                                   <i class="far fa-calendar-alt"></i>
-                                  <span>{beritaTerbaru.createdDate}</span>
+                                  <span>
+                                    {format(
+                                      new Date(beritaTerbaru.createdDate),
+                                      "dd MMMM yyyy",
+                                      { locale: idLocale }
+                                    )}
+                                  </span>
                                 </div>
                               </div>
                             </div>
@@ -458,7 +504,8 @@ function Berita() {
                   </div>
                   <div
                     class="widget widget_catagory"
-                    style={{ background: "#F1F6F9" }}>
+                    style={{ background: "#F1F6F9" }}
+                  >
                     <h4 class="widget-title">Arsip</h4>
                     <ul class="catagory-items">
                       {archivingMonths.map((monthData) => {

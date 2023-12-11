@@ -4,35 +4,38 @@ import { useParams } from "react-router-dom/cjs/react-router-dom";
 import { useEffect } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
-import { API_DUMMY } from "../../../../utils/base_URL";
-import Header from "../../../../component/Header";
-import Sidebar from "../../../../component/Sidebar";
 import { format } from "date-fns";
 import idLocale from "date-fns/locale/id";
+import Header from "../../../../component/Header";
+import Sidebar from "../../../../component/Sidebar";
+import { API_DUMMY } from "../../../../utils/base_URL";
 
-function DetailPengumuman() {
-  const [author, setAuthor] = useState("");
+function DetailBerita() {
+  const [judulBerita, setJudulBerita] = useState("");
   const [createdDate, setCreatedDate] = useState("");
   const [updateDate, setUpdateDate] = useState("");
-  const [judulPengumuman, setJudulPengumuman] = useState("");
-  const [tags, setTags] = useState("");
-  const [isiPengumuman, setIsiPengumuman] = useState("");
-  const [file, setFile] = useState("");
+  const [author, setAuthor] = useState("");
+  const [isiBerita, setIsiBerita] = useState("");
+  const [categoryBerita, setCategoryBerita] = useState("");
+  const [image, setImage] = useState("");
   const param = useParams();
 
   useEffect(() => {
     axios
-      .get(`${API_DUMMY}/bawaslu/api/pengumuman/get/` + param.id)
+      .get(`${API_DUMMY}/bawaslu/api/berita/get/` + param.id, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      })
       .then((res) => {
         const list_data = res.data.data;
-        setAuthor(list_data.author);
-        setJudulPengumuman(list_data.judulPengumuman);
-        setTags(list_data.tags);
-        setIsiPengumuman(list_data.isiPengumuman);
-        setFile(list_data.image);
         setCreatedDate(list_data.createdDate);
         setUpdateDate(list_data.updatedDate);
-        console.log(res.data.data);
+        setJudulBerita(list_data.judulBerita);
+        setAuthor(list_data.author);
+        setIsiBerita(list_data.isiBerita);
+        setImage(list_data.image);
+        setCategoryBerita(list_data.categoryBerita.category);
       })
       .catch((error) => {
         alert("Terjadi Kesalahan " + error);
@@ -44,33 +47,46 @@ function DetailPengumuman() {
       <Header />
       <div className="app-main">
         <Sidebar />
-        <div className="container mt-3 app-main__outer mb-3">
-          <div className="gap-5">
-            <form className="card shadow  w-100">
-              <h2 className="fs-3 text-center fw-bold card-header">Detail</h2>
+        <div className="container mt-3 mb-3 app-main__outer">
+          <div>
+            <form className="card shadow w-100">
+              <h1 className="title card-header fw-bold fs-3">Detail</h1>
               <br />
               <div className="card-body">
-                {file === null ? (
+                {image === null ? (
                   <img
-                    className="w-75 d-block mr-auto ml-auto"
+                    className="rounded-circle w-75 mr-auto ml-auto d-block"
                     src="https://cdn.icon-icons.com/icons2/2506/PNG/512/user_icon_150670.png"
                   />
                 ) : (
                   <img
-                    style={{
-                      maxWidth: "400px",
-                      maxHeight: "400px",
-                      minWidth: "350px",
-                      minHeight: "350px",
-                    }}
+                    style={{ maxWidth: "400px", maxHeight: "400px" }}
                     className="w-75 d-block mr-auto ml-auto"
-                    src={file}
+                    src={image}
                   />
                 )}
                 <br />
                 <br />
+                  <div class="mb-3">
+                    <label class="form-label fw-bold">Judul Berita</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      disabled
+                      value={judulBerita}
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label fw-bold">Author</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      disabled
+                      value={author}
+                    />
+                  </div>
                 <div class="mb-3">
-                  <label class="form-label">Tanggal Dibuat</label>
+                  <label class="form-label fw-bold">Tanggal Dibuat</label>
                   <input
                     type="text"
                     class="form-control"
@@ -83,7 +99,7 @@ function DetailPengumuman() {
                   />
                 </div>
                 <div class="mb-3">
-                  <label class="form-label">Tanggal Update</label>
+                  <label class="form-label fw-bold">Tanggal Update</label>
                   <input
                     type="text"
                     class="form-control"
@@ -96,40 +112,22 @@ function DetailPengumuman() {
                   />
                 </div>
                 <div class="mb-3">
-                  <label class="form-label">Penulis</label>
+                  <label class="form-label fw-bold">Category Berita</label>
                   <input
                     type="text"
                     class="form-control"
                     disabled
-                    value={author}
+                    value={categoryBerita}
                   />
                 </div>
                 <div class="mb-3">
-                  <label class="form-label">Judul Pengumuman</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    disabled
-                    value={judulPengumuman}
-                  />
-                </div>
-                <div class="mb-3">
-                  <label class="form-label">Isi Pengumuman</label>
+                  <label class="form-label fw-bold">Isi Berita</label>
                   <textarea
                     disabled
                     class="form-control"
-                    defaultValue={isiPengumuman}
+                    defaultValue={isiBerita}
                     rows="5"
                     readOnly
-                  />
-                </div>
-                <div class="mb-3">
-                  <label class="form-label">Tags</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    disabled
-                    value={tags}
                   />
                 </div>
               </div>
@@ -141,4 +139,4 @@ function DetailPengumuman() {
   );
 }
 
-export default DetailPengumuman;
+export default DetailBerita;

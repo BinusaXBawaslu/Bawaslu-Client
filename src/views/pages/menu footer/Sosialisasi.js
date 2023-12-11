@@ -35,7 +35,7 @@ const Sosialisasi = () => {
                           width="13"
                           height="13"
                           fill="currentColor"
-                          class="bi bi-clock"
+                          className="bi bi-clock"
                           viewBox="0 0 16 16"
                         >
                           <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
@@ -65,7 +65,7 @@ const Sosialisasi = () => {
                           width="13"
                           height="13"
                           fill="currentColor"
-                          class="bi bi-clock"
+                          className="bi bi-clock"
                           viewBox="0 0 16 16"
                         >
                           <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
@@ -98,7 +98,7 @@ const Sosialisasi = () => {
                             width="13"
                             height="13"
                             fill="currentColor"
-                            class="bi bi-clock"
+                            className="bi bi-clock"
                             viewBox="0 0 16 16"
                           >
                             <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
@@ -116,8 +116,14 @@ const Sosialisasi = () => {
               <div>
                 <a href="">
                   <div id="wrap-img4-sosialisasi" className="wrap-img4">
-                    <div id="wrap-opacity4-sosialisasi" className="wrap-opacity4">
-                      <div id="wrap-text3-sosialisasi" className="wrap-text3"></div>
+                    <div
+                      id="wrap-opacity4-sosialisasi"
+                      className="wrap-opacity4"
+                    >
+                      <div
+                        id="wrap-text3-sosialisasi"
+                        className="wrap-text3"
+                      ></div>
                     </div>
                   </div>
                 </a>
@@ -142,7 +148,9 @@ const Sosialisasi = () => {
               <h1>Sosialisasi</h1>
               <p>Kegitan Sosialisasi Bawaslu Kabupaten Boyolali</p>
               <div id="bg-gray-sosialisasi" className="bg-gray">
-                <div id="txt-gray-sosialisasi" className="txt-gray">No Content Available</div>
+                <div id="txt-gray-sosialisasi" className="txt-gray">
+                  No Content Available
+                </div>
               </div>
             </div>
           </div>
@@ -155,28 +163,48 @@ const Sosialisasi = () => {
               <div id="img-logo-sosialisasi" className="img-logo-sosialisasi">
                 <div>
                   <a href="">
-                    <img id="img-src-sosisalisasi" className="img-src" src={RI} />
+                    <img
+                      id="img-src-sosisalisasi"
+                      className="img-src"
+                      src={RI}
+                    />
                   </a>
                 </div>
                 <div>
                   {" "}
                   <a href="">
-                    <img id="img-src-sosisalisasi" className="img-src" src={dkpp} />
+                    <img
+                      id="img-src-sosisalisasi"
+                      className="img-src"
+                      src={dkpp}
+                    />
                   </a>
                 </div>
                 <div>
                   <a href="">
-                    <img id="img-src-sosisalisasi" className="img-src" src={MAHKAMAH} />
+                    <img
+                      id="img-src-sosisalisasi"
+                      className="img-src"
+                      src={MAHKAMAH}
+                    />
                   </a>
                 </div>
                 <div>
                   <a href="">
-                    <img id="img-src-sosisalisasi" className="img-src" src={KPU} />
+                    <img
+                      id="img-src-sosisalisasi"
+                      className="img-src"
+                      src={KPU}
+                    />
                   </a>
                 </div>
                 <div>
                   <a href="https://jateng.bawaslu.go.id/">
-                    <img id="img-src-sosisalisasi" className="img-src" src={jateng} />
+                    <img
+                      id="img-src-sosisalisasi"
+                      className="img-src"
+                      src={jateng}
+                    />
                   </a>
                 </div>
               </div>

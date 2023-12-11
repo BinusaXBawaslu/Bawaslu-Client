@@ -8,21 +8,25 @@ import { useEffect } from "react";
 import { API_DUMMY } from "../../../../../utils/base_URL";
 import axios from "axios";
 import Swal from "sweetalert2";
+import { format } from "date-fns";
+import idLocale from "date-fns/locale/id";
 
 function DetailPermohonanInformasi() {
-  const [nama, setNama] = useState("");
-  const [pekerjaan, setPekerjaan] = useState("");
-  const [pendidikan, setPendidikan] = useState("");
-  const [alamat, setAlamat] = useState("");
+  const [namaPemohon, setNamaPemohon] = useState("");
+  const [createdDate, setCreatedDate] = useState("");
+  const [updateDate, setUpdateDate] = useState("");
+  const [alamatPemohon, setAlamatPemohon] = useState("");
+  const [nomorIdentitas, setNomorIdentitasPemohon] = useState("");
+  const [jenisIdentitas, setJenisIdentitas] = useState("");
+  const [noTlp, setNoTlp] = useState("");
   const [email, setEmail] = useState("");
-  const [noHp, setNoHp] = useState("");
-  const [tujuanInformasi, setTujuanInformasi] = useState("");
-  const [rincianInformasi, setRincianInformasi] = useState("");
-  const [diTunjukanKepada, setDiTunjukanKepada] = useState("");
-  const [caraMemperolahInformasi, setCaraMemperolehInformasi] = useState("");
-  const [caraMendapatInformasi, setCaraMendapatkanInformasi] =
+  const [rincianYangDiButuhkan, setRincianYangDiButuhkan] = useState("");
+  const [tujuanPenggunaanInformasi, setTujuanPenggunaanInformasi] =
     useState("");
-  const [file, setFile] = useState("");
+  const [caraMemperolahInformasi, setCaraMemperolahInformasi] = useState("");
+  const [fotoIdentitas, setFotoIdentitas] = useState("");
+  const [caraMendapatSalinanInformasi, setCaraMendapatSalinanInformasi] =
+    useState("");
   const param = useParams();
 
   useEffect(() => {
@@ -34,20 +38,19 @@ function DetailPermohonanInformasi() {
       })
       .then((res) => {
         const list_data = res.data.data;
-        setNama(list_data.nama);
+        setCreatedDate(list_data.createdDate);
+        setUpdateDate(list_data.updatedDate);
+        setNamaPemohon(list_data.namaPemohon);
+        setAlamatPemohon(list_data.alamatPemohon);
+        setNomorIdentitasPemohon(list_data.nomorIdentitasPemohon);
+        setJenisIdentitas(list_data.jenisIdentitas);
+        setNoTlp(list_data.noTlp);
         setEmail(list_data.email);
-        setPendidikan(list_data.pendidikan);
-        setPekerjaan(list_data.pekerjaan);
-        setNoHp(list_data.noHp);
-        setAlamat(list_data.alamat);
-        setDiTunjukanKepada(list_data.ditujukanKepada);
-        setRincianInformasi(list_data.rincianInformasi);
-        setTujuanInformasi(list_data.tujuanInformasi);
-        setCaraMemperolehInformasi(list_data.caraMemperolehInformasi);
-        setCaraMendapatkanInformasi(list_data.caraMendapatInformasi);
-        setNoHp(list_data.noHp);
-        setFile(list_data.tandaPengenal);
-        console.log(res);
+        setRincianYangDiButuhkan(list_data.rincianYangDibutuhkan);
+        setTujuanPenggunaanInformasi(list_data.tujuanPenggunaanInformasi);
+        setCaraMemperolahInformasi(list_data.caraMemperolehInformasi);
+        setFotoIdentitas(list_data.fotoIdentitas);
+        setCaraMendapatSalinanInformasi(list_data.caraMendapatSalinanInformasi);
       })
       .catch((error) => {
         alert("Terjadi Kesalahan " + error);
@@ -59,28 +62,28 @@ function DetailPermohonanInformasi() {
       <Header />
       <div className="app-main">
         <Sidebar />
-        <div
-          className="container mt-3 mb-3 overflow-y-scroll app-main__outer"
-          style={{ height: "100vh" }}>
-          <div className="d-lg-flex gap-5">
-            <div className="d-block">
-              <form className="card card-body shadow p-2 w-100">
-              {file === null ? (
-                   <img
-                  className="rounded-circle w-75 mr-auto ml-auto"
-                  src="https://cdn.icon-icons.com/icons2/2506/PNG/512/user_icon_150670.png"
-                />
-                ):(
-                  <img style={{maxWidth:"400px", maxHeight:"400px"}}
-                  className="rounded-circle w-75 mr-auto ml-auto"
-                  src={file}
-                />
+        <div className="container mt-3 mb-3 app-main__outer">
+          <div className="">
+            <form className="card shadow w-100">
+              <h2 className="title fw-bold fs-3 card-header">Detail</h2>
+              <br />
+              <div className="card-body">
+                {fotoIdentitas === null ? (
+                  <img
+                    className="rounded d-block w-100 mr-auto ml-auto"
+                    src="https://cdn.icon-icons.com/icons2/2506/PNG/512/user_icon_150670.png"
+                  />
+                ) : (
+                  <img
+                    style={{ maxWidth: "400px", maxHeight: "400px" }}
+                    className="rounded d-block w-100 mr-auto ml-auto"
+                    src={fotoIdentitas}
+                  />
                 )}
-                <p className="text-center">Fatiya salsabila</p>
-              </form>
-              <form className="card card-body shadow p-2 mt-3">
+                <br />
+                <br />
                 <div class="mb-3">
-                  <label class="form-label font-weight-bold">Email</label>
+                  <label class="form-label fw-bold">Email</label>
                   <input
                     type="email"
                     class="form-control"
@@ -89,79 +92,141 @@ function DetailPermohonanInformasi() {
                   />
                 </div>
                 <div class="mb-3">
-                  <label class="form-label font-weight-bold">Alamat</label>
+                  <label class="form-label fw-bold">Alamat</label>
                   <input
                     type="text"
                     class="form-control"
                     disabled
-                    value={alamat}
+                    value={alamatPemohon}
                   />
                 </div>
                 <div class="mb-3">
-                  <label class="form-label font-weight-bold">No Handphone</label>
+                  <label class="form-label fw-bold">No Telphon</label>
                   <input
                     type="number"
                     class="form-control"
                     disabled
-                    value={noHp}
+                    value={noTlp}
                   />
                 </div>
-              </form>
-            </div>
-            <form className="card card-body p-2" style={{ width: "100%" }}>
-              <div class="mb-3">
-                <label class="form-label font-weight-bold">Pekerjaan</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  disabled
-                  value={pekerjaan}
-                />
-              </div>
-              <div class="mb-3">
-                <label class="form-label font-weight-bold">Rincian Informasi</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  disabled
-                  value={rincianInformasi}
-                />
-              </div>
-              <div class="mb-3">
-                <label class="form-label font-weight-bold">Tujuan Informasi</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  disabled
-                  value={tujuanInformasi}
-                />
-              </div>
-              <div class="mb-3">
-                <label class="form-label font-weight-bold">Cara Memperoleh Informasi</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  disabled
-                  value={caraMemperolahInformasi}
-                />
-              </div>
-              <div class="mb-3">
-                <label class="form-label font-weight-bold">Cara Mendapatkan Informasi</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  disabled
-                  value={caraMendapatInformasi}
-                />
-              </div>
-              <div class="mb-3">
-                <label class="form-label font-weight-bold">Di Tunjukan Kepada</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  disabled
-                  value={diTunjukanKepada}
-                />
+                <div class="mb-3">
+                  <label class="form-label fw-bold">Tanggal Dibuat</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    disabled
+                    value={format(
+                      new Date(createdDate || new Date()),
+                      "dd MMMM yyyy",
+                      { locale: idLocale }
+                    )}
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fw-bold">Tanggal Update</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    disabled
+                    value={format(
+                      new Date(updateDate || new Date()),
+                      "dd MMMM yyyy",
+                      { locale: idLocale }
+                    )}
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fw-bold">Nama Pemohon</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    disabled
+                    value={namaPemohon}
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fw-bold">Alamat Pemohon</label>
+                  <textarea
+                    disabled
+                    class="form-control"
+                    defaultValue={alamatPemohon}
+                    rows="5"
+                    readOnly
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fw-bold">
+                    Nomor Identitas Pemohon
+                  </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    disabled
+                    value={nomorIdentitas}
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fw-bold">Jenis Identitas</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    disabled
+                    value={jenisIdentitas}
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fw-bold">No Telephone</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    disabled
+                    value={noTlp}
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fw-bold">
+                    Rincian Yang Dibutukan
+                  </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    disabled
+                    value={rincianYangDiButuhkan}
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fw-bold">
+                    Tujuan Penggunaan Informasi
+                  </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    disabled
+                    value={tujuanPenggunaanInformasi}
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fw-bold">
+                    Cara Memperoleh Informasi
+                  </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    disabled
+                    value={caraMemperolahInformasi}
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fw-bold">
+                    Cara Mendapatkan Salinan
+                  </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    disabled
+                    value={caraMendapatSalinanInformasi}
+                  />
+                </div>
               </div>
             </form>
           </div>

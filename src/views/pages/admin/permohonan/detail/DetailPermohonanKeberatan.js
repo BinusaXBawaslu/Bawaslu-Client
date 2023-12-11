@@ -1,154 +1,190 @@
 import React from "react";
-import Sidebar from "../../../../../component/Sidebar";
 import Header from "../../../../../component/Header";
+import Sidebar from "../../../../../component/Sidebar";
 import Footer from "../../../../../component/Footer";
 import { useState } from "react";
-import { useEffect } from "react";
-import axios from "axios";
-import { API_DUMMY } from "../../../../../utils/base_URL";
 import { useParams } from "react-router-dom/cjs/react-router-dom";
+import { useEffect } from "react";
+import { API_DUMMY } from "../../../../../utils/base_URL";
+import axios from "axios";
+import Swal from "sweetalert2";
+import { format } from "date-fns";
+import idLocale from "date-fns/locale/id";
 
 function DetailPermohonanKeberatan() {
-    const [list, setList] = useState([]);
-    const [showEdit, setShowEdit] = useState(false);
-    const [id, setId] = useState(0);
-    const [email, setEmail] = useState("");
-    const [nama, setNama] = useState("");
-    const [alamat, setAlamat] = useState("");
-    const [noTelp, setNoTelp] = useState("");
-    const [nomorIdentitas, setNomorIdentitas] = useState("");
-    const [jenisIdentitas, setJenisIdentitas] = useState("");
-    const [kasusPosisi, setKasusPosisi] = useState("");
-    const [tujuanPenggunaanInformasi, setTujuanPenggunaanInformasi] =
-      useState("");
-    const [alasan, setAlasan] = useState("");
-    const [tandaPengenal, setTandaPengenal] = useState("");
-    const param = useParams();
+  const [namaPemohon, setNamaPemohon] = useState("");
+  const [createdDate, setCreatedDate] = useState("");
+  const [updateDate, setUpdateDate] = useState("");
+  const [alamatPemohon, setAlamatPemohon] = useState("");
+  const [nomorIdentitas, setNomorIdentitasPemohon] = useState("");
+  const [jenisIdentitas, setJenisIdentitas] = useState("");
+  const [noTlp, setNoTlp] = useState("");
+  const [email, setEmail] = useState("");
+  const [rincianYangDiButuhkan, setRincianYangDiButuhkan] = useState("");
+  const [tujuanPenggunaanInformasi, setTujuanPenggunaanInformasi] =
+    useState("");
+  const [caraMemperolahInformasi, setCaraMemperolahInformasi] = useState("");
+  const [fotoIdentitas, setFotoIdentitas] = useState("");
+  const [caraMendapatSalinanInformasi, setCaraMendapatSalinanInformasi] =
+    useState("");
+  const param = useParams();
 
-    useEffect(() =>{
-         axios
-          .get(`${API_DUMMY}/bawaslu/api/permohonan-keberatan/get/` + param.id, {
-            headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
-          })
-          .then((res) => {
-            setId(res.data.data.id);
-            setEmail(res.data.data.email);
-            setNama(res.data.data.nama);
-            setAlamat(res.data.data.alamat);
-            setNoTelp(res.data.data.noTelp);
-            setNomorIdentitas(res.data.data.nomorIndentitas);
-            setJenisIdentitas(res.data.data.jenisIdentitas);
-            setKasusPosisi(res.data.data.kasusPosisi);
-            setTujuanPenggunaanInformasi(res.data.data.tujuanPenggunaanInformasi);
-            setAlasan(res.data.data.alasan);
-            setTandaPengenal(res.data.data.tandaPengenal);
+  useEffect(() => {
+    axios
+      .get(`${API_DUMMY}/bawaslu/api/permohonan-keberatan/get/` + param.id, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      })
+      .then((res) => {
+        const list_data = res.data.data;
+        setCreatedDate(list_data.createdDate);
+        setUpdateDate(list_data.updatedDate);
+        setNamaPemohon(list_data.namaPemohon);
+        setAlamatPemohon(list_data.alamatPemohon);
+        setNomorIdentitasPemohon(list_data.nomorIdentitasPemohon);
+        setJenisIdentitas(list_data.jenisIdentitas);
+        setNoTlp(list_data.noTlp);
+        setEmail(list_data.email);
+        setRincianYangDiButuhkan(list_data.rincianYangDibutuhkan);
+        setTujuanPenggunaanInformasi(list_data.tujuanPenggunaanInformasi);
+        setCaraMemperolahInformasi(list_data.caraMemperolehInformasi);
+        setFotoIdentitas(list_data.fotoIdentitas);
+        setCaraMendapatSalinanInformasi(list_data.caraMendapatSalinanInformasi);
+      })
+      .catch((error) => {
+        alert("Terjadi Kesalahan " + error);
+      });
+  }, [param.id]);
 
-            console.log(res.data.data);
-          })
-          .catch((error) => {
-            alert("Terjadi Keslahan" + error);
-          });
-        }, param.id)
   return (
     <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
       <Header />
       <div className="app-main">
         <Sidebar />
-        <div
-          className="container mt-3 mb-3 overflow-y-scroll app-main__outer"
-          style={{ height: "100vh" }}>
-          <div className="d-lg-flex gap-5">
-            <div className="d-block">
-              <form className="card card-body shadow p-2 w-100">
-                {tandaPengenal === null ? (
-                   <img
-                  className="rounded-circle w-75 mr-auto ml-auto"
-                  src="https://cdn.icon-icons.com/icons2/2506/PNG/512/user_icon_150670.png"
-                />
-                ):(
-                  <img style={{maxWidth:"400px", maxHeight:"400px"}}
-                  className="rounded-circle w-75 mr-auto ml-auto"
-                  src={tandaPengenal}
-                />
+        <div className="container mt-3 mb-3 app-main__outer">
+          <div>
+            <form className="card shadow w-100">
+              <h2 className="title fw-bold fs-3 card-header">Detail</h2>
+              <br />
+              <div className="card-body">
+                {fotoIdentitas === null ? (
+                  <img
+                    className="rounded w-75 d-block mr-auto ml-auto"
+                    src="https://cdn.icon-icons.com/icons2/2506/PNG/512/user_icon_150670.png"
+                  />
+                ) : (
+                  <img
+                    style={{ maxWidth: "400px", maxHeight: "400px" }}
+                    className="w-75 d-block mr-auto ml-auto"
+                    src={fotoIdentitas}
+                  />
                 )}
-
-                <p className="text-center">{nama}</p>
-              </form>
-              <form className="card card-body shadow p-2 mt-3">
-                <div className="mb-3">
-                  <label className="form-label">Email</label>
+                <br />
+                <br />
+                <div class="mb-3">
+                  <label class="form-label fw-bold">Email</label>
                   <input
                     type="email"
-                    className="form-control"
+                    class="form-control"
                     disabled
                     value={email}
                   />
                 </div>
-                <div className="mb-3">
-                  <label className="form-label">Alamat</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    disabled
-                    value={alamat}
-                  />
-                </div>
-                <div className="mb-3">
-                  <label className="form-label">No Handphone</label>
+                <div class="mb-3">
+                  <label class="form-label fw-bold">No Telphon</label>
                   <input
                     type="number"
-                    className="form-control"
+                    class="form-control"
                     disabled
-                    value={noTelp}
+                    value={noTlp}
                   />
                 </div>
-              </form>
-            </div>
-            <form className="card card-body p-2" style={{ width: "100%" }}>
-              <div className="mb-3">
-                <label className="form-label">Nomor Identitas</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  disabled
-                  value={nomorIdentitas}
-                />
-              </div>
-              <div className="mb-3">
-                <label className="form-label">Tujuan Pengguna Informasi</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  disabled
-                  value={tujuanPenggunaanInformasi}
-                />
-              </div>
-              <div className="mb-3">
-                <label className="form-label">Jenis Indentitas</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  disabled
-                  value={jenisIdentitas}
-                />
-              </div>
-              <div className="mb-3">
-                <label className="form-label">Kasus Posisi</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  disabled
-                  value={kasusPosisi}
-                />
-              </div>
-              <div className="mb-3">
-                <label className="form-label">Alasan</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  disabled
-                  value={alasan}
-                />
+                <div class="mb-3">
+                  <label class="form-label fw-bold">Tanggal Dibuat</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    disabled
+                    value={format(
+                      new Date(createdDate || new Date()),
+                      "dd MMMM yyyy",
+                      { locale: idLocale }
+                    )}
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fw-bold">Tanggal Update</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    disabled
+                    value={format(
+                      new Date(updateDate || new Date()),
+                      "dd MMMM yyyy",
+                      { locale: idLocale }
+                    )}
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fw-bold">Nama Pemohon</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    disabled
+                    value={namaPemohon}
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fw-bold">Alamat Pemohon</label>
+                  <textarea
+                    disabled
+                    class="form-control"
+                    defaultValue={alamatPemohon}
+                    rows="5"
+                    readOnly
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fw-bold">
+                    Nomor Identitas Pemohon
+                  </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    disabled
+                    value={nomorIdentitas}
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fw-bold">Jenis Identitas</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    disabled
+                    value={jenisIdentitas}
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fw-bold">No Telephone</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    disabled
+                    value={noTlp}
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fw-bold">
+                    Tujuan Penggunaan Informasi
+                  </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    disabled
+                    value={tujuanPenggunaanInformasi}
+                  />
+                </div>
               </div>
             </form>
           </div>

@@ -7,6 +7,9 @@ import { API_DUMMY } from "../../../utils/base_URL";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom/cjs/react-router-dom";
+import { format } from "date-fns";
+import idLocale from "date-fns/locale/id";
+
 
 function RekapBerita() {
     const [rekap, setRekap] = useState([]);
@@ -34,6 +37,7 @@ function RekapBerita() {
       <br />
       <div className="blog-area pd-top-120 pd-bottom-120">
         <div className="container">
+          <h2>{rekap.length > 0 && rekap[0].createdDated}</h2>
           <div className="row">
             <div className="col-lg-8 col-md-12 widget widget-recent-post pe-lg-5">
               <ul>
@@ -51,14 +55,14 @@ function RekapBerita() {
                     </div>
                     <div className="media-body align-self-center">
                       <h6 className="fs-4 title">
-                        <a href={`/isi-rekap/${berita.judulBerita}/${berita.id}`}>
+                        <a href={`/isi-rekap/data-berita/${berita.id}`}>
                           {berita.judulBerita}
                         </a>
                       </h6>
                       <div className="post-info">
                         <span className="mr-3"> BY {berita.author}</span>
                         <i className="far fa-calendar-alt"></i>
-                        <span>{berita.createdDate}</span>
+                        <span>{format(new Date(berita.createdDate), "dd MMMM yyyy", { locale: idLocale })}</span>
                       </div>
                       {/* <br /> */}
                       <p className="fs-6 isiBerita">
