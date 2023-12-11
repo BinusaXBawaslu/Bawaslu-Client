@@ -84,7 +84,7 @@ function Footer() {
               )
             })} */}
             <div className="col-lg-3 col-md-6">
-              <div className="widget widget_nav_menu row">
+              <div className="widget widget_subscribe row">
                 <h4 className="widget-title">Kategori</h4>
                 {category.map((cate) => {
                   return (

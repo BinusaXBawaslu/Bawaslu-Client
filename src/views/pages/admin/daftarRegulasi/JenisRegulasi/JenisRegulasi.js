@@ -171,7 +171,7 @@ function JenisRegulasi() {
               class="table-responsive"
               style={{ overflowY: "auto", maxHeight: "60vh" }}
             >
-              <table class="align-middle mb-0 table table-borderless table-striped table-hover">
+              <table class="align-middle mb-0 table-responsive table table-borderless table-striped table-hover">
                 <thead>
                   <tr>
                     <th className="text-left">No</th>
@@ -189,7 +189,7 @@ function JenisRegulasi() {
                         <td data-label="Jenis Regulasi" className="">
                           {jenis.jenisRegulasi}
                         </td>
-                        <td data-label="Aksi" class="">
+                        <td data-label="Aksi" class="text-center">
                           <button type="button" class="btn-primary btn-sm mr-2">
                             <a
                               style={{ color: "white", textDecoration: "none" }}

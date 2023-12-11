@@ -6,6 +6,9 @@ import { API_DUMMY } from "../../../utils/base_URL";
 import axios from "axios";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom/cjs/react-router-dom";
+import { format } from "date-fns";
+import idLocale from "date-fns/locale/id";
+
 
 function IsiPengumuman() {
   const [createdDate, setCreatedDate] = useState("");
@@ -80,7 +83,8 @@ function IsiPengumuman() {
                       </li>
                       <li>
                         <i class="far fa-calendar-alt"></i>
-                        {createdDate}
+                        {format(new Date(createdDate || new Date()), "dd MMMM yyyy", { locale: idLocale })}
+                          {/* {createdDate} */}
                       </li>
                     </ul>
                     <h4 className="title">{judulPengumuman}</h4>
@@ -101,7 +105,7 @@ function IsiPengumuman() {
                             <div class="media-body">
                               <p>
                                 <a
-                                  href={`/pengumuman/${isi.id}`}>
+                                  href={`/pengumuman/isi-pengumuman/${isi.id}`}>
                                   {isi.judulPengumuman}
                                 </a>
                               </p>

@@ -103,9 +103,9 @@ function Index() {
       <Header />
       <div id="app-main" className="app-main">
         <Sidebar />
-        <div id="container" className="container mt-3 app-main__outer">
-          <div id="main-card" class="main-card mb-3 card">
-            <div id="card-header" class="card-header">
+        <div className="box-tabel container mt-3 app-main__outer">
+          <div class="main-card w-100 mb-3 card">
+            <div class="card-header">
               Jenis Informasi11
               <div className="d-flex ml-auto gap-3">
                 <input
@@ -130,9 +130,8 @@ function Index() {
                 </div>
               </div>
             </div>
-            <TableContainer>
               <div
-                className="table-responsive"
+                className=""
                 style={{ overflowY: "auto", maxHeight: "60vh" }}>
                 <table className="align-middle mb-0 table table-borderless table-striped table-hover">
                   <thead>
@@ -148,13 +147,13 @@ function Index() {
                     {filteredList.map((inf, index) => {
                       return (
                         <tr key={index}>
-                          <td data-label="No" className="t">{index + 1}</td>
+                          <td data-label="No" className="text-center">{index + 1}</td>
                           <td
-                            data-label="keterangan"
+                            data-label="keterangan \"
                             className="t">
                             {inf.jenisKeteranganInformasiDTOList[0].keterangan}
                           </td>
-                          <td data-label="Aksi : " className="pt-3 pb-3 aksi">
+                          <td data-label="Aksi : " className="pt-3 pb-3 aksi text-center">
                             <div className="d-flex justify-content-center">
                               <button
                                 type="button"
@@ -194,7 +193,6 @@ function Index() {
                   </tbody>
                 </table>
               </div>
-            </TableContainer>
             <div className="card-header mt-3 d-flex justify-content-center">
               <Pagination
                 count={paginationInfo.totalPages}

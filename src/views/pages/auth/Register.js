@@ -99,7 +99,7 @@ function Register() {
 
           <div className="col-md-6 right-box max-h-screen">
             <form onSubmit={handleSubmit} className="row align-items-center">
-              <div className="header-text">
+              <div className="header-text text-center">
                 <h2>
                   <img
                     style={{ width: "40px" }}

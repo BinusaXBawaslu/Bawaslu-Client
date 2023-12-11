@@ -6,6 +6,8 @@ import { API_DUMMY } from "../../utils/base_URL";
 import { Pagination } from "@mui/material";
 import Bawaslu from "../../component/Bawaslu";
 import { FacebookShareButton, PinterestShareButton, TwitterShareButton } from "react-share";
+import { format } from "date-fns";
+import idLocale from "date-fns/locale/id";
 
 function Berita() {
   const [scroll, setScroll] = useState(false);
@@ -290,7 +292,8 @@ function Berita() {
                                   <button
                                     style={{
                                       color: "white",
-                                      backgroundColor: "#cf2830",
+                                      backgroundColor: "#cf2830" ,
+                                      width :"80px"
                                     }}
                                     className="border p-2">
                                     <i className="fa-brands fa-pinterest"></i>{" "}
@@ -313,11 +316,9 @@ function Berita() {
                       <div class="details">
                         <h2>
                           <a
-                            href={`/page-isi-berita/${berita.judulBerita}/${berita.id}`}>
+                            href={`/page-isi-berita/${berita.author}/${berita.id}`}>
                             {berita.judulBerita}
                           </a>
-
-                          <a href="">{berita.judulBerita}</a>
                         </h2>
                         <ul class="blog-meta">
                           <li>
@@ -325,7 +326,7 @@ function Berita() {
                           </li>
                           <li>
                             <i class="far fa-calendar-alt"></i>{" "}
-                            {berita.createdDate}
+                            <span>{format(new Date(berita.createdDate), "dd MMMM yyyy", { locale: idLocale })}</span>
                           </li>
                         </ul>
                       </div>
@@ -402,7 +403,7 @@ function Berita() {
                   </div>
                   <div class="details">
                     <h2>
-                      <a href="">COntoh Berita</a>
+                      <a href="">Contoh Berita</a>
                     </h2>
                     <ul class="blog-meta">
                       <li>
@@ -443,11 +444,11 @@ function Berita() {
                               </div>
                               <div class="media-body align-self-center">
                                 <h6 class="title">
-                                  <a href={`/Page-Berita/${beritaTerbaru.id}`}>{beritaTerbaru.judulBerita}</a>
+                                  <a href={`/page-isi-berita/${beritaTerbaru.author}/${beritaTerbaru.id}`}>{beritaTerbaru.judulBerita}</a>
                                 </h6>
                                 <div class="post-info">
                                   <i class="far fa-calendar-alt"></i>
-                                  <span>{beritaTerbaru.createdDate}</span>
+                                  <span>{format(new Date(beritaTerbaru.createdDate), "dd MMMM yyyy", { locale: idLocale })}</span>
                                 </div>
                               </div>
                             </div>

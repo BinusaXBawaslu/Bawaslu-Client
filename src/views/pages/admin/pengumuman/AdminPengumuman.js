@@ -95,7 +95,7 @@ function AdminPengumuman() {
       <Header />
       <div className="app-main">
         <Sidebar />
-        <div className="container mt-3 app-main__outer">
+        <div className="container box-tabel mt-3 app-main__outer">
           <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
             <div class="col-auto">
               <label className="form-label mt-2">Rows per page:</label>
@@ -169,15 +169,16 @@ function AdminPengumuman() {
             <TableContainer>
               <div
                 className="table-responsive"
-                style={{ overflowY: "auto", maxHeight: "60vh" }}>
-                <table className="align-middle mb-0 table table-borderless table-striped table-hover">
+                style={{overflowX: "auto", width:"100%" }}>
+                <table className="align-middle mb-0 table table-borderless table-striped table-hover"
+                style={{  }}>
                   <thead>
                     <tr>
                       <th scope="col">No</th>
-                      <th scope="col">Judul Pengumuman</th>
-                      <th scope="col">Penulis</th>
-                      <th scope="col">Tanggal Dibuat</th>
+                      <th scope="col" style={{minWidth:"150px"}}>Judul Pengumuman</th>
                       <th scope="col">Image</th>
+                      <th scope="col">Isi Pengumuman</th>
+                      <th scope="col">Penulis</th>
                       <th scope="col" className="text-center">
                         Aksi
                       </th>
@@ -188,7 +189,7 @@ function AdminPengumuman() {
                     {filteredList.map((pengumuman, index) => {
                       return (
                         <tr key={index}>
-                          <td data-label="No : ">{index + 1}</td>
+                          <td data-label="No : ">{index + 1 + (currentPage - 1) * rowsPerPage}</td>
                           <td data-label="author : ">{pengumuman.author}</td>
                           <td>
                             <img
@@ -203,10 +204,11 @@ function AdminPengumuman() {
                             {pengumuman.judulPengumuman}
                           </td>
                           <td data-label="tags : ">{pengumuman.tags}</td>
-                          <td data-label="Aksi : " className="aksi">
+                          <td data-label="Aksi : " >
+                            <div className="aksi">
                             <button
                               type="button"
-                              className=".responsive-buttons btn-primary btn-sm mr-2">
+                              className=".responsive-buttons  btn-primary btn-sm mr-2">
                               <a
                                 style={{
                                   color: "white",
@@ -218,7 +220,7 @@ function AdminPengumuman() {
                             </button>
                             <button
                               type="button"
-                              class="btn-warning mr-2 btn-sm">
+                              class="btn-warning  mr-2 btn-sm">
                               <a
                                 className="text-light"
                                 href={"/detail-pengumuman/" + pengumuman.id}>
@@ -227,10 +229,11 @@ function AdminPengumuman() {
                             </button>
                             <button
                               type="button"
-                              className=" btn-danger btn-sm"
+                              className=" btn-danger  btn-sm"
                               onClick={() => deleteData(pengumuman.id)}>
                               <i className="fa-solid fa-trash"></i>
                             </button>
+                            </div>
                           </td>
                         </tr>
                       );

@@ -82,7 +82,7 @@ function JenisInformasi() {
       <Header />
       <div className="app-main">
         <Sidebar />
-        <div className="container mt-3 app-main__outer">
+        <div className="container box-tabel mt-3 app-main__outer">
           <div className="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
             <div className="col-auto">
               <label className="form-label mt-2">Rows per page:</label>
@@ -99,6 +99,13 @@ function JenisInformasi() {
               </select>
             </div>
           </div>
+          <input
+                  type="search"
+                  className="form-control widget-content-right mt-3 mb-3 w-75 d-lg-none d-block"
+                  placeholder="Search..."
+                  value={searchTerm}
+                  onChange={handleSearchChange}
+                />
           <div className="main-card mb-3 card">
             <div className="card-header" style={{ display: "flex" }}>
               <p className="mt-3">Jenis Informasi</p>
@@ -147,7 +154,7 @@ function JenisInformasi() {
             </div>
             <div
               className="table-responsive"
-              style={{ overflowY: "auto", maxHeight: "60vh" }}
+              style={{ overflowY: "auto", maxHeight: "60vh", minWidth:"100%" }}
             >
               <table className="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>

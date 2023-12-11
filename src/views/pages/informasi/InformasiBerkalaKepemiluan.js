@@ -7,14 +7,8 @@ import gambar from "../../../asset/img/bawaslu(berita).jpeg";
 import axios from "axios";
 import { API_DUMMY } from "../../../utils/base_URL";
 import PutusanPelanggaran from "./tabs/SertaMerta/PutusanPelanggaran";
-import SengketaProsesPemilu from "./tabs/SertaMerta/SengketaProsesPemilu";
-import PemungutanSuaraUlang from "./tabs/SertaMerta/PemungutanSuaraUlang";
-import OrganisasiDanAdministrasi from "./tabs/SertaMerta/OrganisasiDanAdministrasi";
-import Sosialisasi from "./tabs/SertaMerta/Sosialisasi";
-import PerselisihanHasilPemilu from "./tabs/SertaMerta/PerselisihanHasilPemilu";
-import Piagam from "./tabs/SertaMerta/Piagam";
 
-function Informasii() {
+function InformasiBerkalaKepemiluan() {
   return (
     <div>
       <Navbar />
@@ -53,7 +47,7 @@ function Informasii() {
                       aria-selected="true"
                     >
                       <span className="font-weight-bold small text-uppercase">
-                        Putusan Pelanggaran
+                        Hasil Pengawasan
                       </span>
                     </a>
 
@@ -67,7 +61,7 @@ function Informasii() {
                       aria-selected="false"
                     >
                       <span class="font-weight-bold small text-uppercase">
-                        Sengketa Proses Pemilu
+                        Analisa Calon Terpilih
                       </span>
                     </a>
 
@@ -81,7 +75,7 @@ function Informasii() {
                       aria-selected="false"
                     >
                       <span class="font-weight-bold small text-uppercase">
-                        Pemungutan Suara Ulang & Susulan
+                        Laporan Akhir Pengawasan
                       </span>
                     </a>
 
@@ -95,7 +89,7 @@ function Informasii() {
                       aria-selected="false"
                     >
                       <span class="font-weight-bold small text-uppercase">
-                        Organisasi dan Administrasi
+                        Penanganan Pelanggaran
                       </span>
                     </a>
 
@@ -109,7 +103,7 @@ function Informasii() {
                       aria-selected="false"
                     >
                       <span class="font-weight-bold small text-uppercase">
-                        Perselisihan Hasil Pemilihan Umum
+                        Naskah Perjanjian Hibah Daerah
                       </span>
                     </a>
 
@@ -123,7 +117,7 @@ function Informasii() {
                       aria-selected="false"
                     >
                       <span class="font-weight-bold small text-uppercase">
-                        Sosialisasi
+                        Layanan Pengaduan Politik
                       </span>
                     </a>
 
@@ -137,7 +131,7 @@ function Informasii() {
                       aria-selected="false"
                     >
                       <span class="font-weight-bold small text-uppercase">
-                        Piagam Penghargaan
+                        Sarana partisipasi Publik
                       </span>
                     </a>
                   </div>
@@ -148,7 +142,7 @@ function Informasii() {
                     <div className="card-header bg-primary text-light">
                       <div style={{ display: "flex" }}>
                         <div className="px-3">
-                          <h4>Kanal Pengawasan Pemilu 2024</h4>
+                          <h4>Informasi Berkala Kepemiluan</h4>
                         </div>
                       </div>
                     </div>
@@ -167,7 +161,7 @@ function Informasii() {
                       role="tabpanel"
                       aria-labelledby="v-pills-profile-tab"
                     >
-                      <SengketaProsesPemilu />
+                      <PutusanPelanggaran />
                     </div>
 
                     <div
@@ -176,7 +170,7 @@ function Informasii() {
                       role="tabpanel"
                       aria-labelledby="v-pills-messages-tab"
                     >
-                      <PemungutanSuaraUlang />
+                      <PutusanPelanggaran />
                     </div>
 
                     <div
@@ -185,31 +179,7 @@ function Informasii() {
                       role="tabpanel"
                       aria-labelledby="v-pills-settings-tab"
                     >
-                      <OrganisasiDanAdministrasi />
-                    </div>
-                    <div
-                      class="tab-pane fade shadow rounded bg-white p-5"
-                      id="v-pills-settings"
-                      role="tabpanel"
-                      aria-labelledby="v-pills-settings-tab"
-                    >
-                      <PerselisihanHasilPemilu />
-                    </div>
-                    <div
-                      class="tab-pane fade shadow rounded bg-white p-5"
-                      id="v-pills-settings"
-                      role="tabpanel"
-                      aria-labelledby="v-pills-settings-tab"
-                    >
-                      <Sosialisasi />
-                    </div>
-                    <div
-                      class="tab-pane fade shadow rounded bg-white p-5"
-                      id="v-pills-settings"
-                      role="tabpanel"
-                      aria-labelledby="v-pills-settings-tab"
-                    >
-                      <Piagam />
+                      <PutusanPelanggaran />
                     </div>
                   </div>
                 </div>
@@ -224,4 +194,4 @@ function Informasii() {
   );
 }
 
-export default Informasii;
+export default InformasiBerkalaKepemiluan;

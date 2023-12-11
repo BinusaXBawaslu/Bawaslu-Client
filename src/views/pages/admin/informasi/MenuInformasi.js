@@ -180,9 +180,9 @@ function MenuInformasi() {
                   {filteredList.map((inf, index) => {
                     return (
                         <tr key={index}>
-                    <td>{index + 1}</td>
-                    <td>{inf.dokumen}</td>
-                    <td> <img style={{width:"150px"}} src={inf.pdfDokumen} alt="" /></td>
+                    <td className="text-center">{index + 1}</td>
+                    <td className="text-center">{inf.dokumen}</td>
+                    <td className="text-center"> <img style={{width:"150px"}} src={inf.pdfDokumen} alt="" /></td>
                     <td class="text-center">
                       <button type="button" onClick={() => deleteData(inf.id)} class="btn-danger btn-sm">
                         <i class="fa-solid fa-trash"></i>

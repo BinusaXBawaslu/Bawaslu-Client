@@ -57,7 +57,7 @@ function Login() {
             <img
               src="https://static.vecteezy.com/system/resources/previews/010/998/284/non_2x/3d-password-input-illustration-design-free-png.png"
               className="img-fluid img-login"
-              
+
               style={{ width: "250px" }}
               alt="Password Illustration"
             />
@@ -65,7 +65,7 @@ function Login() {
         </div>
         <div className="col-md-6 right-box">
           <form onSubmit={handleLogin} className="row align-items-center">
-            <div className="header-text mb-4">
+            <div className="header-text mb-4 text-center">
               <h2>
                 <img
                   style={{ width: "40px" }}

@@ -7,6 +7,8 @@ import Swal from "sweetalert2";
 import { API_DUMMY } from "../../../../utils/base_URL";
 import Header from "../../../../component/Header";
 import Sidebar from "../../../../component/Sidebar";
+import { format } from "date-fns";
+import idLocale from "date-fns/locale/id";
 
 function DetailPengumuman() {
   const [author, setAuthor] = useState("");
@@ -42,29 +44,59 @@ function DetailPengumuman() {
       <Header />
       <div className="app-main">
         <Sidebar />
-        <div
-          className="container mt-3 app-main__outer mb-3 overflow-y-scroll"
-          style={{ height: "100vh" }}>
-          <div className="d-lg-flex gap-5">
-            <div className="d-block">
-              <form className="card card-body shadow p-2 w-100">
+        <div className="container mt-3 app-main__outer mb-3">
+          <div className="gap-5">
+            <form className="card shadow  w-100">
+              <h2 className="fs-3 text-center fw-bold card-header">Detail</h2>
+              <br />
+              <div className="card-body">
                 {file === null ? (
                   <img
-                    className="rounded-circle w-75 mr-auto ml-auto"
+                    className="w-75 d-block mr-auto ml-auto"
                     src="https://cdn.icon-icons.com/icons2/2506/PNG/512/user_icon_150670.png"
                   />
                 ) : (
                   <img
-                    style={{ maxWidth: "400px", maxHeight: "400px", minWidth:"350px", minHeight:"350px" }}
-                    className="w-75 mr-auto ml-auto"
+                    style={{
+                      maxWidth: "400px",
+                      maxHeight: "400px",
+                      minWidth: "350px",
+                      minHeight: "350px",
+                    }}
+                    className="w-75 d-block mr-auto ml-auto"
                     src={file}
                   />
                 )}
-              </form>
-            </div>
-            <form className="card card-body p-2">
+              <br />
+              <br />
               <div class="mb-3">
-                <label class="form-label">Author</label>
+                <label class="form-label">Tanggal Dibuat</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  disabled
+                  value={format(
+                    new Date(createdDate || new Date()),
+                    "dd MMMM yyyy",
+                    { locale: idLocale }
+                  )}
+                />
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Tanggal Update</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  disabled
+                  value={format(
+                    new Date(updateDate || new Date()),
+                    "dd MMMM yyyy",
+                    { locale: idLocale }
+                  )}
+                />
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Penulis</label>
                 <input
                   type="text"
                   class="form-control"
@@ -83,11 +115,18 @@ function DetailPengumuman() {
               </div>
               <div class="mb-3">
                 <label class="form-label">Isi Pengumuman</label>
-                <textarea class="form-control" defaultValue={isiPengumuman} rows="5" readOnly/>
+                <textarea
+                  disabled
+                  class="form-control"
+                  defaultValue={isiPengumuman}
+                  rows="5"
+                  readOnly
+                />
               </div>
               <div class="mb-3">
                 <label class="form-label">Tags</label>
                 <input type="text" class="form-control" disabled value={tags} />
+              </div>
               </div>
             </form>
           </div>

@@ -19,74 +19,75 @@ function Dikecualikan() {
       >
         <div className="kolom-image mx-4 my-4 d-flex  ">
           <div className="d-lg-flex pt-lg-15 ">
-            <div className=" text d-flex flex-column gap-3 bg-white shadow-lg p-3 mb-5 bg-body-tertiary rounded rounded-4 p-4" style={{marginTop:"50px"}}>
+            <div
+              className=" text d-flex flex-column gap-3 bg-white shadow-lg p-3 mb-5 bg-body-tertiary rounded rounded-4 p-4"
+              style={{ marginTop: "50px" }}
+            >
               <h2 className="title">Informasi Dikecualikan</h2>
               <li>
-                <a clas="text-decoration-none text-light " href="#">
+                <a className="text-decoration-none text-dark " href="#">
                   PENETAPAN PPID PENGECUALIAN INFORMASI PENYELESAIAN SENGKETA
                   PEMILIHAN
                 </a>
               </li>
               <li>
-                <a clas="text-decoration-none " href="#">
+                <a className="text-decoration-none text-dark" href="#">
                   PENETAPAN PPID PENGECUALIAN SEBAGIAN PEMBERITAHUAN STATUS
                   LAPORAN
                 </a>
               </li>
               <li>
-                <a clas="text-decoration-none " href="#">
+                <a className="text-decoration-none text-dark" href="#">
                   PENETAPAN PPID PENGECUALIAN INFORMASI MERORANDUM NASKAH
                   RAHASIA
                 </a>
               </li>
               <li>
-                <a clas="text-decoration-none " href="#">
+                <a className="text-decoration-none text-dark" href="#">
                   PENETAPAN PPID KLASIFIKASI INFORMASI DIKECUALIKAN
                 </a>
               </li>
               <li>
-                <a clas="text-decoration-none " href="#">
+                <a className="text-decoration-none text-dark" href="#">
                   PENETAPAN PPID INFORMASI PENGAWASAN PEMILU PEMILIHAN YANG
                   DIKECUALIKAN
                 </a>
               </li>
               <li>
-                <a clas="text-decoration-none " href="#">
+                <a className="text-decoration-none text-dark" href="#">
                   PENETAPAN PPID INFORMASI PENANGANAN PERKARA HUKUM DI
                   PENGADILAN YANG DIKECUALIKAN
                 </a>
               </li>
               <li>
-                <a clas="text-decoration-none " href="#">
+                <a className="text-decoration-none text-dark" href="#">
                   PENETAPAN PPID PENGECUALIAN INFORMASI DIKECUALIKAN TENTANG
                   ALAT KERJA PENGAWASAN
                 </a>
               </li>
               <li>
-                <a clas="text-decoration-none " href="#">
+                <a className="text-decoration-none text-dark" href="#">
                   PENETAPAN PPID PENGECUALIAN INFORMASI TERKAIT PENANGANAN
                   PELANGGARAN PEMILU
                 </a>
               </li>
               <li>
-                <a clas="text-decoration-none " href="#">
+                <a className="text-decoration-none text-dark" href="#">
                   PENETAPAN PPID PENGECUALIAN INFORMASI TERKAIT TINDAK PIDANA
                   PEMILU
                 </a>
               </li>
               <li>
-                <a clas="text-decoration-none " href="#">
+                <a className="text-decoration-none text-dark" href="#">
                   PENETAPAN PPID INFORMASI SELEKSI PENGAWAS PEMILU ADHOC YANG
                   DIKECUALIKAN
                 </a>
               </li>
             </div>
             <div id="div-img" className=" w-50 d-flex align-item-center ">
-            <img id="img" className="w-100" src={informasi} alt="img" />
+              <img id="img" className="w-100" src={informasi} alt="img" />
+            </div>
           </div>
-          </div>
-
-        
         </div>
       </div>
 

@@ -3,7 +3,7 @@ import Footer from "../../../../../component/Footer";
 import Sidebar from "../../../../../component/Sidebar";
 import Header from "../../../../../component/Header";
 import { useState } from "react";
-import { useParams } from "react-router-dom/cjs/react-router-dom";
+import { useHistory, useParams } from "react-router-dom/cjs/react-router-dom";
 import axios from "axios";
 import { API_DUMMY } from "../../../../../utils/base_URL";
 import { useEffect } from "react";
@@ -16,6 +16,7 @@ function AddIsiKeteranganInformasi() {
   const [pdfDokumen, setPdfDokumen] = useState(null);
   const [show, setShow] = useState(false);
   const param = useParams();
+  const history = useHistory();
 
   const getKeterangan = async () => {
     try {
@@ -71,7 +72,8 @@ function AddIsiKeteranganInformasi() {
 
     try {
       const response = await axios.post(
-        `${API_DUMMY}/bawaslu/api/isi-keterangan-informasi/add`, {
+        `${API_DUMMY}/bawaslu/api/isi-keterangan-informasi/add`,
+        {
           dokumen: dokumen,
           pdfDokumen: pdfDokumen,
           jenisKeterangan: jenisKeterangan,
@@ -105,7 +107,7 @@ function AddIsiKeteranganInformasi() {
           showConfirmButton: false,
           timer: 1500,
         });
-
+        history.push(-1);
         setTimeout(() => {
           window.location.reload();
         }, 1500);
@@ -113,7 +115,7 @@ function AddIsiKeteranganInformasi() {
     } catch (error) {
       console.log(error);
     }
-  }
+  };
 
   return (
     <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
@@ -155,6 +157,18 @@ function AddIsiKeteranganInformasi() {
                   </div>
                   <div className="mb-3 col-6">
                     <label for="exampleInputEmail1" className="form-label font-weight-bold">
+
+                      Link Dokumen
+                    </label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      value={pdfDokumen}
+                      onChange={(e) => setPdfDokumen(e.target.value)}
+                    />
+                  </div>
+                   {/* <div className="mb-3 col-6">
+                    <label for="exampleInputEmail1" className="form-label">
                       File
                     </label>
                     <input
@@ -165,9 +179,7 @@ function AddIsiKeteranganInformasi() {
                   </div> 
                 </div>
                 <button type="button" className="btn-danger mt-3 mr-3">
-                  <a
-                    href=""
-                    style={{ color: "white", textDecoration: "none" }}>
+                  <a href="" style={{ color: "white", textDecoration: "none" }}>
                     Batal
                   </a>
                 </button>

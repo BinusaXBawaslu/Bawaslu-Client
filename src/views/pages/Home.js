@@ -178,7 +178,7 @@ function Home() {
                         BY {berita.author}
                         <h6 className="fs-6 title">
                           <a
-                            href={`/page-isi-berita/${berita.id}`}
+                            href={`/page-isi-berita/${berita.author}/${berita.id}`}
                           >
                             {berita.judulBerita}
                           </a>
@@ -338,8 +338,8 @@ function Home() {
             </div>
 
             <div className="row justify-content-center">
-              <div className="col-lg-3 col-md-6">
-                <div className="single-service-inner text-center">
+              <div className="col-lg-3 col-md-6" >
+                <div className="single-service-inner text-center"style={{height: "350px"}}>
                   <div className="details">
                     <img
                       className="d-block w-100"
@@ -361,7 +361,7 @@ function Home() {
                 </div>
               </div>
               <div className="col-lg-3 col-md-6">
-                <div className="single-service-inner text-center">
+                <div className="single-service-inner text-center"style={{height: "350px"}}>
                   <div className="details">
                     <img
                       className="d-block w-100"
@@ -383,7 +383,7 @@ function Home() {
                 </div>
               </div>
               <div className="col-lg-3 col-md-6">
-                <div className="single-service-inner text-center">
+                <div className="single-service-inner text-center"style={{height: "350px"}}>
                   <div className="details">
                     <img
                       className="d-block w-100"
@@ -405,7 +405,7 @@ function Home() {
                 </div>
               </div>
               <div className="col-lg-3 col-md-6">
-                <div className="single-service-inner text-center">
+                <div className="single-service-inner text-center"style={{height: "350px"}}>
                   <div className="details">
                     <img
                       className="d-block w-100"

@@ -114,11 +114,13 @@ function MenuRegulasi() {
           </div>
           <input
             type="search"
-            className="form-control widget-content-right w-100 mt-2 md-2 d-lg-none d-md-block"
+            className="form-control widget-content-right container mt-2 md-2 d-lg-none d-md-block"
             placeholder="Search..."
             value={searchTerm}
             onChange={handleSearchChange}
+            style={{width:"330px"}}
           />
+          <br />
           <div class="main-card mb-3 card">
             <div class="card-header" style={{ display: "flex" }}>
               {menuRegulasi.length > 0 &&
@@ -150,7 +152,7 @@ function MenuRegulasi() {
                   <div role="group" class="btn-group-sm btn-group">
                     <button class="active btn-focus p-2 rounded">
                       <a
-                        href="/add-menu-regulasi"
+                        href={`/add-menu-regulasi/${param.id}`}
                         className="text-light"
                         style={{ textDecoration: "none" }}>
                         {" "}
@@ -162,7 +164,7 @@ function MenuRegulasi() {
               </div>
             </div>
             <div
-              class="table-responsive"
+              class=""
               style={{ overflowY: "auto", maxHeight: "60vh" }}>
               <table class="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>

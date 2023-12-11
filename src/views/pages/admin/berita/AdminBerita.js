@@ -203,7 +203,7 @@ function AdminBerita() {
       <Header />
       <div className="app-main">
         <Sidebar />
-        <div className="container mt-3 app-main__outer">
+        <div className="container box-table mt-3 app-main__outer">
           <div className="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
             <div className="col-auto">
               {/* a */}
@@ -223,7 +223,7 @@ function AdminBerita() {
           </div>
           <input
             type="search"
-            className="form-control widget-content-right w-100 mt-2 md-2 d-lg-none d-md-block"
+            className="form-control widget-content-right w-100 mt-2 mb-2 d-lg-none d-md-block"
             placeholder="Search..."
             value={searchTerm}
             onChange={handleSearchChange}
@@ -280,19 +280,16 @@ function AdminBerita() {
                     <th scope="col" className="text-center">
                       No
                     </th>
-                    <th scope="col" className="text-center">
+                    <th scope="col" className="text-long">
                       Judul Berita
                     </th>
                     {/* <th scope="col" className="text-center">
                       Isi Berita
                     </th> */}
-                    <th scope="col" className="text-center">
+                    <th scope="col" className="text-left" style={{minWidth:"150px"}}>
                       Penulis Berita
                     </th>
-                    <th scope="col" className="text-center">
-                      Tanggal Dibuat
-                    </th>
-                    <th scope="col" className="text-center">
+                    <th scope="col" className="text-left">
                       Image
                     </th>
                     <th scope="col" className="text-center">
@@ -300,25 +297,23 @@ function AdminBerita() {
                     </th>
                   </tr>
                 </thead>
-
                 <tbody>
                   {list.map((berita, no) => {
                     return (
                       <tr key={no}>
-                        <td data-label="No">{no + 1}</td>
-                        <td data-label="Judul Berita">{berita.judulBerita}</td>
+                        <td data-label="No" className="">{no + 1 + (currentPage - 1) * rowsPerPage}</td>
+                        <td data-label="Judul Berita" className="text-long">{berita.judulBerita}</td>
                         {/* <td data-label="">{berita.isiBerita}</td> */}
-                        <td data-label="Penulis Berita">{berita.author}</td>
-                        <td data-label="Created Dtae">{berita.createdDate}</td>
-                        <td data-label="Image">
+                        <td data-label="Penulis Berita" className="">{berita.author}</td>
+                        <td data-label="Image" className="">
                           <img
                             src={berita.image}
                             alt="berita-image"
                             style={{ height: "4.5rem", width: "4.5rem" }}
                           />
                         </td>
-                        <td data-label="Aksi" className="text-center">
-                          <div className="d-flex">
+                        <td data-label="Aksi">
+                          <div className="aksi">
                           <button type="button" className="btn-primary btn-sm mr-2">
                             <a
                               style={{ color: "white", textDecoration: "none" }}
@@ -328,7 +323,15 @@ function AdminBerita() {
                               <i className="fa-solid fa-pen-to-square"></i>
                             </a>
                           </button>
-
+                          <button
+                              type="button"
+                              class="btn-warning  mr-2 btn-sm">
+                              <a
+                                className="text-light"
+                                href={"/detail/berita/" + berita.id}>
+                                <i class="fas fa-info-circle"></i>
+                              </a>
+                            </button>
                           <button
                             onClick={() => deleteData(berita.id)}
                             type="button"
@@ -375,12 +378,12 @@ function AdminBerita() {
           </div>
           <input
             type="search"
-            className="form-control widget-content-right w-100 mt-2 md-2 d-lg-none d-md-block"
+            className="form-control widget-content-right w-100 mt-2 mb-2 d-lg-none d-md-block"
             placeholder="Search..."
             value={searchTerm1}
             onChange={handleSearchChange1}
           />
-           <div className="main-card mb-3 card">
+           <div className="mb-3 card">
             <div
               className="card-header pembungkus-text-button"
               style={{ display: "flex" }}>
@@ -416,7 +419,7 @@ function AdminBerita() {
                       style={{ color: "white", textDecoration: "none" }}
                       href="/tambah-category-berita"
                     >
-                      Tambah Kategori Berita
+                      Tambah Data
                     </a>
                   </button>
                 </div>
@@ -424,15 +427,15 @@ function AdminBerita() {
               </div>
             </div>
             <div
-              className="table-responsive"
+              className="table-responsive-3"
               style={{ overflowY: "auto", maxHeight: "60vh" }}
             >
               <table className="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
                   <tr>
-                    <th className="text-center">No</th>
-                    <th className="text-center">Kategory Berita</th>
-                    <th className="text-center">Tanggal Dibuat</th>
+                    <th className="text-left">No</th>
+                    <th className="text-left">Kategory Berita</th>
+                    <th className="text-left">Tanggal Dibuat</th>
                     <th className="text-center">Aksi</th>
                   </tr>
                 </thead>
@@ -440,16 +443,16 @@ function AdminBerita() {
                   {filteredList1.map((kategory, index) => {
                     return (
                       <tr key={index}>
-                        <td data-label="No" className=" text-muted">
-                          {index + 1}
+                        <td data-label="No" className="text-muted">
+                        {index + 1 + (currentPage1 - 1) * rowsPerPage1}
                         </td>
-                        <td data-label="Category" className="">
+                        <td data-label="Category">
                           {kategory.category}
                         </td>
-                        <td data-label="Created Date" className="">
+                        <td data-label="Created Date">
                           {kategory.createdDate}
                         </td>
-                        <td data-label="Aksi" className="">
+                        <td data-label="Aksi" className="aksi">
                           <button type="button" className="btn-primary btn-sm mr-2">
                             <a
                               style={{ color: "white", textDecoration: "none" }}
@@ -459,7 +462,6 @@ function AdminBerita() {
                               <i className="fa-solid fa-pen-to-square"></i>
                             </a>
                           </button>
-
                           <button
                             onClick={() => deleteData1(kategory.id)}
                             type="button"

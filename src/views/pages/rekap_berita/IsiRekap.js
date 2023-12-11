@@ -8,6 +8,9 @@ import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
 import { useParams } from "react-router-dom/cjs/react-router-dom";
 import { FacebookShareButton, PinterestShareButton, TwitterShareButton } from "react-share";
+import { format } from "date-fns";
+import idLocale from "date-fns/locale/id";
+
 
 function IsiRekap() {
   const [judulBerita, setJudulBerita] = useState("");
@@ -108,6 +111,7 @@ function IsiRekap() {
                                     style={{
                                       color: "white",
                                       backgroundColor: "#cf2830",
+                                      width :"90px"
                                     }}
                                     className="border p-2">
                                     <i className="fa-brands fa-pinterest"></i>{" "}
@@ -134,7 +138,8 @@ function IsiRekap() {
                       <i className="far fa-user"></i>BY {author}
                     </li>
                     <li>
-                      <i className="far fa-calendar-alt"></i> {createdDate}
+                      <i className="far fa-calendar-alt"></i>   <span>{format(new Date(createdDate || new Date()), "dd MMMM yyyy", { locale: idLocale })}</span>
+
                     </li>
                   </ul>
                   <p>{isiBerita}</p>

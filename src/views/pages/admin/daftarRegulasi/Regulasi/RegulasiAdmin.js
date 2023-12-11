@@ -178,9 +178,6 @@ function RegulasiAdmin() {
                     <th scope="" className="text-left">
                       Dokumen
                     </th>
-                    <th scope="" className="text-left">
-                      Gambar
-                    </th>
                     <th scope="" className="text-center">
                       Aksi
                     </th>
@@ -195,9 +192,6 @@ function RegulasiAdmin() {
                         </td>
                         <td data-label="dokumen : " className="text-left">
                           {jenis.dokumen}
-                        </td>
-                        <td data-label="gambar : " className="text-left">
-                          <img style={{width:"150px"}} src={jenis.pdfDokumen} alt="" />
                         </td>
                         <td data-label="Aksi : " class="text-center">
                           <button type="button" class="btn-primary btn-sm mr-2">

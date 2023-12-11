@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-function PutusanPelanggaran() {
+function PerselisihanHasilPemilu() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4040/bawaslu/api/jenis-keterangan/1/isi-informasi?page=0&size=10&sortBy=id&sortOrder=asc"
+          "http://localhost:4040/bawaslu/api/jenis-keterangan/5/isi-informasi?page=0&size=10&sortBy=id&sortOrder=asc"
         );
         setData(response.data.data); // Mengasumsikan properti data berisi array informasi
       } catch (error) {
@@ -25,7 +25,6 @@ function PutusanPelanggaran() {
         <table className="table table1 responsive-3 table-striped table-hover border rounded">
           <thead>
             <tr>
-              <th scope="col text-center"> No</th>
               <th scope="col text-center"> Dokumen</th>
               <th scope="col text-center"> Pdf Document</th>
             </tr>
@@ -35,9 +34,6 @@ function PutusanPelanggaran() {
               data.content.map((item) => (
                 <React.Fragment key={item.id}>
                   <tr>
-                    <td className="" data-cell="dokumen" scope="row">
-                      {item.id}
-                    </td>
                     <td className="" data-cell="dokumen" scope="row">
                       {item.dokumen}
                     </td>
@@ -68,4 +64,4 @@ function PutusanPelanggaran() {
   );
 }
 
-export default PutusanPelanggaran;
+export default PerselisihanHasilPemilu;

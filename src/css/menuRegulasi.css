@@ -1,16 +1,27 @@
 table tbody td {
     text-align: left;
 }
+table tbody td .text-long{
+  text-align: justify;
+}
+table tbody td .aksi {
+  text-align: center;
+  display: flex;
+}
 
 @media screen and (max-width: 600px) {
+
   table {
     border: 0;
+  }
+
+  .box-tabel {
+    width: 200rem;
   }
 
   table caption {
     font-size: 1.3em;
   }
-  
   table thead {
     border: none;
     clip: rect(0 0 0 0);
@@ -21,13 +32,13 @@ table tbody td {
     position: absolute;
     width: 1px;
   }
-  
+
   table tr {
     border-bottom: 3px solid #ddd;
     display: block;
     margin-bottom: .625em;
   }
-  
+
   table tbody td {
     border-bottom: 1px solid #ddd;
     display: block;
@@ -35,11 +46,21 @@ table tbody td {
     text-align: right;
   }
 
+  table tbody td .aksi {
+    text-align: right;
+    display: flex;
+    justify-content: right;
+  }
+
+  table tbody td img {
+    width: 100px;
+  }
+
   /* table tbody td .button {
     justify-content: right;
     display: flex;
   } */
-  
+
   table td::before {
     /*
     * aria-label has no advantage, it won't be read inside a table
@@ -50,7 +71,7 @@ table tbody td {
     font-weight: bold;
     text-transform: uppercase;
   }
-  
+
   table td:last-child {
     border-bottom: 0;
   }
