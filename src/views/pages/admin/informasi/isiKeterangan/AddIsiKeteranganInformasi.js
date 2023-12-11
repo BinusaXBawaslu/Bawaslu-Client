@@ -157,6 +157,7 @@ function AddIsiKeteranganInformasi() {
                   </div>
                   <div className="mb-3 col-6">
                     <label for="exampleInputEmail1" className="form-label font-weight-bold">
+
                       Link Dokumen
                     </label>
                     <input
@@ -190,7 +191,7 @@ function AddIsiKeteranganInformasi() {
           </div>
         </div>
       </div>
-    </div>
+      </div>
   );
 }
 
