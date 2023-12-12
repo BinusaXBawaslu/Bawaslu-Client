@@ -153,24 +153,24 @@ function AdminPermohonankeberatan() {
   return (
     <div>
       <Navbar />
-      <div class="breadcrumb-area bg-black bg-relative">
+      <div className="breadcrumb-area bg-black bg-relative">
         <div
-          class="banner-bg-img"
+          className="banner-bg-img"
           style={{
             backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp') `,
           }}
         ></div>
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-7 col-lg-8">
-              <div class="breadcrumb-inner text-center">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-xl-7 col-lg-8">
+              <div className="breadcrumb-inner text-center">
                 <h2
-                  class="judul"
+                  className="judul"
                   style={{ color: "white", fontWeight: 700, fontSize: 60 }}
                 >
                   Admin Permohonan Keberatan
                 </h2>
-                <ul class="page-list">
+                <ul className="page-list">
                   <li>
                     <a href="/" style={{ textDecoration: "none" }}>
                       Home
@@ -193,14 +193,12 @@ function AdminPermohonankeberatan() {
                 </div>
               </div>
             </div>
-            <table class="table table-hover overflow-x-auto w-100">
+            <table className="table table-hover overflow-x-auto w-100">
               <thead>
                 <tr>
                   <th scope="col">No</th>
                   <th scope="col">Email</th>
-                  <th scope="col">
-                    Nama
-                  </th>
+                  <th scope="col">Nama</th>
                   <th scope="col">Alamat</th>
                   <th scope="col">No Telp</th>
                   <th scope="col">Tags</th>
@@ -243,7 +241,10 @@ function AdminPermohonankeberatan() {
                       <td data-label="kasus posisi : " className="text-llef">
                         <p>{informasi.kasusPosisi} </p>
                       </td>
-                      <td data-label="tujuan penggunaan informasi : " className="text-llef">
+                      <td
+                        data-label="tujuan penggunaan informasi : "
+                        className="text-llef"
+                      >
                         <p>{informasi.tujuanPenggunaanInformasi}</p>
                       </td>
                       <td data-label="alasan : " className="text-llef">
@@ -273,7 +274,7 @@ function AdminPermohonankeberatan() {
                               marginRight: "10px",
                             }}
                           >
-                            <i class="fas fa-edit"></i>
+                            <i className="fas fa-edit"></i>
                           </button>
                           <button
                             onClick={() => deleteData(informasi.id)}
@@ -287,7 +288,7 @@ function AdminPermohonankeberatan() {
                               marginRight: "10px",
                             }}
                           >
-                            <i class="fas fa-trash-alt"></i>
+                            <i className="fas fa-trash-alt"></i>
                           </button>
                         </div>
                       </td>
@@ -304,7 +305,7 @@ function AdminPermohonankeberatan() {
       <div
         show={showEdit}
         onHide={!showEdit}
-        class="modal fade"
+        className="modal fade"
         id="staticBackdrop"
         data-bs-backdrop="static"
         data-bs-keyboard="false"
@@ -312,15 +313,15 @@ function AdminPermohonankeberatan() {
         aria-labelledby="staticBackdropLabel"
         aria-hidden="true"
       >
-        <div class="modal-dialog">
-          <form onSUbmit={put} class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="staticBackdropLabel">
+        <div className="modal-dialog">
+          <form onSUbmit={put} className="modal-content">
+            <div className="modal-header">
+              <h1 className="modal-title fs-5" id="staticBackdropLabel">
                 Modal Edit Data
               </h1>
               <button
                 type="button"
-                class="btn-close"
+                className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
               ></button>
@@ -460,16 +461,16 @@ function AdminPermohonankeberatan() {
                 />
               </div>
             </div>
-            <div class="modal-footer">
+            <div className="modal-footer">
               <button
                 onClick={() => setShowEdit(false)}
                 type="button"
-                class="btn btn-secondary"
+                className="btn btn-secondary"
                 data-bs-dismiss="modal"
               >
                 Close
               </button>
-              <button type="submit" class="btn btn-primary">
+              <button type="submit" className="btn btn-primary">
                 Simpan
               </button>
             </div>

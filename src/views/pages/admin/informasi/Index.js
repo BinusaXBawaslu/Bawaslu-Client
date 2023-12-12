@@ -121,7 +121,8 @@ function Index() {
                       <a
                         href="/tambah-jenis-keterangan"
                         className="text-light"
-                        style={{ textDecoration: "none" }}>
+                        style={{ textDecoration: "none" }}
+                      >
                         {" "}
                         Tambah Data
                       </a>
@@ -130,69 +131,82 @@ function Index() {
                 </div>
               </div>
             </div>
-              <div
-                className=""
-                style={{ overflowY: "auto", maxHeight: "60vh" }}>
-                <table className="align-middle mb-0 table table-borderless table-striped table-hover">
-                  <thead>
-                    <tr>
-                      <th scope="col">No</th>
-                      <th scope="col">Jenis Keterangan</th>
-                      <th scope="col" className="text-center">
-                        Aksi
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {filteredList.map((inf, index) => {
-                      return (
-                        <tr key={index}>
-                          <td data-label="No" className="text-center">{index + 1}</td>
-                          <td
-                            data-label="keterangan \"
-                            className="t">
-                            {inf.jenisKeteranganInformasiDTOList[0].keterangan}
-                          </td>
-                          <td data-label="Aksi : " className="pt-3 pb-3 aksi text-center">
-                            <div className="d-flex justify-content-center">
-                              <button
-                                type="button"
-                                className=".responsive-buttons btn-primary btn-sm mr-2">
-                                <a
-                                  style={{
-                                    color: "white",
-                                    textDecoration: "none",
-                                  }}
-                                  href={`/edit-jenis/${inf.jenisKeteranganInformasiDTOList[0].keterangan}/${inf.jenisKeteranganInformasiDTOList[0].id}`}>
-                                  <i className="fa-solid fa-pen-to-square"></i>
-                                </a>
-                              </button>
-                              <button
-                                type="button"
-                                className="mr-2 btn-danger btn-sm"
-                                onClick={() => deleteData(inf.jenisKeteranganInformasiDTOList[0].id)}>
-                                <i className="fa-solid fa-trash"></i>
-                              </button>
-                              <button type="button" class="btn-info btn-sm">
-                            <a
-                              style={{ color: "white", textDecoration: "none" }}
-                              href={
-                                "/isi-keterangan/" +
-                                inf.jenisKeteranganInformasiDTOList[0].keterangan +
-                                "/" +
-                                inf.jenisKeteranganInformasiDTOList[0].id
-                              }>
-                              <i class="fas fa-plus"></i>
-                            </a>
-                          </button>
-                            </div>
-                          </td>
-                        </tr>
-                      );
-                    })}
-                  </tbody>
-                </table>
-              </div>
+            <div className="" style={{ overflowY: "auto", maxHeight: "60vh" }}>
+              <table className="align-middle mb-0 table table-borderless table-striped table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Jenis Keterangan</th>
+                    <th scope="col" className="text-center">
+                      Aksi
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {filteredList.map((inf, index) => {
+                    return (
+                      <tr key={index}>
+                        <td data-label="No" className="text-center">
+                          {index + 1}
+                        </td>
+                        <td data-label="keterangan \" className="t">
+                          {inf.jenisKeteranganInformasiDTOList[0].keterangan}
+                        </td>
+                        <td
+                          data-label="Aksi : "
+                          className="pt-3 pb-3 aksi text-center"
+                        >
+                          <div className="d-flex justify-content-center">
+                            <button
+                              type="button"
+                              className=".responsive-buttons btn-primary btn-sm mr-2"
+                            >
+                              <a
+                                style={{
+                                  color: "white",
+                                  textDecoration: "none",
+                                }}
+                                href={`/edit-jenis/${inf.jenisKeteranganInformasiDTOList[0].keterangan}/${inf.jenisKeteranganInformasiDTOList[0].id}`}
+                              >
+                                <i className="fa-solid fa-pen-to-square"></i>
+                              </a>
+                            </button>
+                            <button
+                              type="button"
+                              className="mr-2 btn-danger btn-sm"
+                              onClick={() =>
+                                deleteData(
+                                  inf.jenisKeteranganInformasiDTOList[0].id
+                                )
+                              }
+                            >
+                              <i className="fa-solid fa-trash"></i>
+                            </button>
+                            <button type="button" class="btn-info btn-sm">
+                              <a
+                                style={{
+                                  color: "white",
+                                  textDecoration: "none",
+                                }}
+                                href={
+                                  "/isi-keterangan/" +
+                                  inf.jenisKeteranganInformasiDTOList[0]
+                                    .keterangan +
+                                  "/" +
+                                  inf.jenisKeteranganInformasiDTOList[0].id
+                                }
+                              >
+                                <i class="fas fa-plus"></i>
+                              </a>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
             <div className="card-header mt-3 d-flex justify-content-center">
               <Pagination
                 count={paginationInfo.totalPages}
@@ -207,7 +221,6 @@ function Index() {
         </div>
       </div>
     </div>
-
   );
 }
 

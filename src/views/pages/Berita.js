@@ -255,6 +255,43 @@ function Berita() {
                 <h1 style={{color:"white"}}>OSDM & Diklat</h1>
                 <p style={{color:"white"}}>
                 Pengumuman Calon Anggota Bawaslu Kabupaten/Kota Terpilih Masa Jabatan 2023-2028 Provinsi Jawa Tengah. Selengkapnya,                </p>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4">
+              <div
+                class="section-title single-service-inner border-radius-5 p-35 style-white mb-lg-0"
+                style={{
+                  backgroundImage: `url(${gambarTerbaru})`,
+                  minHeight: "93%",
+                }}
+              >
+                <h2 class="title title-berita mt-4">
+                  {listTerbaru.length > 0 && listTerbaru[0].judulBerita}
+                </h2>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="row">
+                {listTerbaru.slice(1, 5).map((berita, index) => (
+                  <div class="col-md-6" key={index}>
+                    <div
+                      class="single-service-inner style-black text-left"
+                      style={{
+                        backgroundImage: `url(${berita.image})`,
+                        minHeight: "93%",
+                      }}
+                    >
+                      <div class="icon-box">
+                        <i class="icomoon-layer"></i>
+                      </div>
+                      <div class="details detailss">
+                        <h3>
+                          <a class="isiBerita">{berita.judulBerita}</a>
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

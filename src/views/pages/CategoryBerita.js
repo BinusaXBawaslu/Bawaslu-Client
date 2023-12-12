@@ -5,7 +5,11 @@ import axios from "axios";
 import { API_DUMMY } from "../../utils/base_URL";
 import { useParams } from "react-router-dom/cjs/react-router-dom";
 import Bawaslu from "../../component/Bawaslu";
-import { FacebookShareButton, PinterestShareButton, TwitterShareButton } from "react-share";
+import {
+  FacebookShareButton,
+  PinterestShareButton,
+  TwitterShareButton,
+} from "react-share";
 
 function CategoryBerita() {
   const [list, setList] = useState([]);
@@ -61,32 +65,34 @@ function CategoryBerita() {
         className="service-area bg-overlay pd-top-120 pd-bottom-90"
         style={{
           backgroundImage: `url(${gambarTerbaru})`,
-        }}>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-4">
+        }}
+      >
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-4">
               <div
-                class="section-title single-service-inner border-radius-5 p-35 style-white mb-lg-0"
+                className="section-title single-service-inner border-radius-5 p-35 style-white mb-lg-0"
                 style={{
                   backgroundImage: `url(${gambarTerbaru})`,
                   minHeight: "93%",
-                }}>
-                <h2 class="title title-berita mt-4">
+                }}
+              >
+                <h2 className="title title-berita mt-4">
                   {listTerbaru.length > 0 && listTerbaru[0].judulBerita}
                 </h2>
               </div>
             </div>
-            <div class="col-lg-8">
-              <div class="row">
+            <div className="col-lg-8">
+              <div className="row">
                 {listTerbaru.slice(1, 5).map((berita, index) => (
-                  <div class="col-md-6" key={index}>
-                    <div class="single-service-inner style-white text-left">
-                      <div class="icon-box">
-                        <i class="icomoon-layer"></i>
+                  <div className="col-md-6" key={index}>
+                    <div className="single-service-inner style-white text-left">
+                      <div className="icon-box">
+                        <i className="icomoon-layer"></i>
                       </div>
-                      <div class="details detailss">
+                      <div className="details detailss">
                         <h3>
-                          <a class="isiBerita">{berita.judulBerita}</a>
+                          <a className="isiBerita">{berita.judulBerita}</a>
                         </h3>
                       </div>
                     </div>
@@ -123,16 +129,19 @@ function CategoryBerita() {
                                   url={`https://bawaslu.excellentsistem.com/category-berita/${category.judulBerita}/${category.id}`}
                                   media={category.image}
                                   description={category.judulBerita}
-                                  quote={category.judulBerita}>
+                                  quote={category.judulBerita}
+                                >
                                   <button
                                     style={{
                                       color: "white",
                                       backgroundColor: "#45629f",
                                     }}
-                                    className="border p-2">
+                                    className="border p-2"
+                                  >
                                     <i
                                       className="fab fa-facebook-f"
-                                      aria-hidden="true"></i>{" "}
+                                      aria-hidden="true"
+                                    ></i>{" "}
                                     Facebook
                                   </button>
                                 </FacebookShareButton>
@@ -142,16 +151,19 @@ function CategoryBerita() {
                                   url={`https://bawaslu.excellentsistem.com/category-berita/${category.judulBerita}/${category.id}`}
                                   media={category.image}
                                   description={category.judulBerita}
-                                  quote={category.judulBerita}>
+                                  quote={category.judulBerita}
+                                >
                                   <button
                                     style={{
                                       color: "white",
                                       backgroundColor: "#5eb2ef",
                                     }}
-                                    className="border p-2">
+                                    className="border p-2"
+                                  >
                                     <i
                                       className="fab fa-twitter"
-                                      aria-hidden="true"></i>{" "}
+                                      aria-hidden="true"
+                                    ></i>{" "}
                                     Twitter
                                   </button>
                                 </TwitterShareButton>
@@ -161,13 +173,15 @@ function CategoryBerita() {
                                   url={`https://bawaslu.excellentsistem.com/category-berita/${category.judulBerita}/${category.id}`}
                                   quote={category.judulBerita}
                                   media={category.image}
-                                  description={category.judulBerita}>
+                                  description={category.judulBerita}
+                                >
                                   <button
                                     style={{
                                       color: "white",
                                       backgroundColor: "#cf2830",
                                     }}
-                                    className="border p-2">
+                                    className="border p-2"
+                                  >
                                     <i className="fa-brands fa-pinterest"></i>{" "}
                                     Pin
                                   </button>
@@ -186,7 +200,14 @@ function CategoryBerita() {
                       />
                     </div>
                     <div className="details">
-                      <h2><a style={{color:"black", textDecoration:"none"}} href={`/page-berita/${category.judulBerita}/${category.id}`}>{category.judulBerita}</a></h2>
+                      <h2>
+                        <a
+                          style={{ color: "black", textDecoration: "none" }}
+                          href={`/page-berita/${category.judulBerita}/${category.id}`}
+                        >
+                          {category.judulBerita}
+                        </a>
+                      </h2>
                       <ul className="blog-meta">
                         <li>
                           <i className="far fa-user"></i>
@@ -202,17 +223,18 @@ function CategoryBerita() {
                     <div className="row">
                       {related.map((post) => {
                         return (
-                          <div class="col-md-6">
-                            <div class="media single-choose-inner">
-                              <div class="media-left">
-                                <div class="icon">
-                                  <i class="fas fa-bullhorn"></i>
+                          <div className="col-md-6">
+                            <div className="media single-choose-inner">
+                              <div className="media-left">
+                                <div className="icon">
+                                  <i className="fas fa-bullhorn"></i>
                                 </div>
                               </div>
-                              <div class="media-body">
+                              <div className="media-body">
                                 <p>
                                   <a
-                                    href={`/page-berita/${post.judulBerita}/${post.id}`}>
+                                    href={`/page-berita/${post.judulBerita}/${post.id}`}
+                                  >
                                     {post.judulBerita}
                                   </a>
                                 </p>

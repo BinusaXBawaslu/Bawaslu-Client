@@ -104,7 +104,8 @@ function AdminPengumuman() {
               <select
                 className="form-select form-select-xl w-auto"
                 onChange={handleRowsPerPageChange}
-                value={rowsPerPage}>
+                value={rowsPerPage}
+              >
                 <option value={5}>5</option>
                 <option value={10}>10</option>
                 <option value={20}>20</option>
@@ -121,7 +122,8 @@ function AdminPengumuman() {
           <div className="main-card mb-3 card">
             <div
               className="card-header pembungkus-text-button"
-              style={{ display: "flex" }}>
+              style={{ display: "flex" }}
+            >
               <p className="mt-3">Pengumuman</p>
               <div class="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
                 <div class="col-auto">
@@ -131,7 +133,8 @@ function AdminPengumuman() {
                   <select
                     className="form-select form-select-sm"
                     onChange={handleRowsPerPageChange}
-                    value={rowsPerPage}>
+                    value={rowsPerPage}
+                  >
                     <option value={5}>5</option>
                     <option value={10}>10</option>
                     <option value={20}>20</option>
@@ -149,14 +152,17 @@ function AdminPengumuman() {
                 <div className="btn-actions-pane-right">
                   <div
                     role="group"
-                    className="btn-group-sm btn-group button-pembungkus">
+                    className="btn-group-sm btn-group button-pembungkus"
+                  >
                     <button
                       id="button-tambah"
-                      className="active btn-focus p-2 rounded button-tambah">
+                      className="active btn-focus p-2 rounded button-tambah"
+                    >
                       <a
                         href="/add-pengumuman"
                         className="text-light txt-tambah"
-                        style={{ textDecoration: "none" }}>
+                        style={{ textDecoration: "none" }}
+                      >
                         {" "}
                         Tambah Pengumuman
                       </a>
@@ -169,13 +175,18 @@ function AdminPengumuman() {
             <TableContainer>
               <div
                 className="table-responsive"
-                style={{overflowX: "auto", width:"100%" }}>
-                <table className="align-middle mb-0 table table-borderless table-striped table-hover"
-                style={{  }}>
+                style={{ overflowX: "auto", width: "100%" }}
+              >
+                <table
+                  className="align-middle mb-0 table table-borderless table-striped table-hover"
+                  style={{}}
+                >
                   <thead>
                     <tr>
                       <th scope="col">No</th>
-                      <th scope="col" style={{minWidth:"150px"}}>Judul Pengumuman</th>
+                      <th scope="col" style={{ minWidth: "150px" }}>
+                        Judul Pengumuman
+                      </th>
                       <th scope="col">Image</th>
                       <th scope="col">Isi Pengumuman</th>
                       <th scope="col">Penulis</th>
@@ -189,7 +200,9 @@ function AdminPengumuman() {
                     {filteredList.map((pengumuman, index) => {
                       return (
                         <tr key={index}>
-                          <td data-label="No : ">{index + 1 + (currentPage - 1) * rowsPerPage}</td>
+                          <td data-label="No : ">
+                            {index + 1 + (currentPage - 1) * rowsPerPage}
+                          </td>
                           <td data-label="author : ">{pengumuman.author}</td>
                           <td>
                             <img
@@ -200,39 +213,45 @@ function AdminPengumuman() {
                           </td>
                           <td
                             className="judulPengumuman"
-                            data-label="judulPengumuman : ">
+                            data-label="judulPengumuman : "
+                          >
                             {pengumuman.judulPengumuman}
                           </td>
                           <td data-label="tags : ">{pengumuman.tags}</td>
-                          <td data-label="Aksi : " >
+                          <td data-label="Aksi : ">
                             <div className="aksi">
-                            <button
-                              type="button"
-                              className=".responsive-buttons  btn-primary btn-sm mr-2">
-                              <a
-                                style={{
-                                  color: "white",
-                                  textDecoration: "none",
-                                }}
-                                href={`/edit-pengumuman/${pengumuman.id}`}>
-                                <i className="fa-solid fa-pen-to-square"></i>
-                              </a>
-                            </button>
-                            <button
-                              type="button"
-                              class="btn-warning  mr-2 btn-sm">
-                              <a
-                                className="text-light"
-                                href={"/detail-pengumuman/" + pengumuman.id}>
-                                <i class="fas fa-info-circle"></i>
-                              </a>
-                            </button>
-                            <button
-                              type="button"
-                              className=" btn-danger  btn-sm"
-                              onClick={() => deleteData(pengumuman.id)}>
-                              <i className="fa-solid fa-trash"></i>
-                            </button>
+                              <button
+                                type="button"
+                                className=".responsive-buttons  btn-primary btn-sm mr-2"
+                              >
+                                <a
+                                  style={{
+                                    color: "white",
+                                    textDecoration: "none",
+                                  }}
+                                  href={`/edit-pengumuman/${pengumuman.id}`}
+                                >
+                                  <i className="fa-solid fa-pen-to-square"></i>
+                                </a>
+                              </button>
+                              <button
+                                type="button"
+                                class="btn-warning  mr-2 btn-sm"
+                              >
+                                <a
+                                  className="text-light"
+                                  href={"/detail-pengumuman/" + pengumuman.id}
+                                >
+                                  <i class="fas fa-info-circle"></i>
+                                </a>
+                              </button>
+                              <button
+                                type="button"
+                                className=" btn-danger  btn-sm"
+                                onClick={() => deleteData(pengumuman.id)}
+                              >
+                                <i className="fa-solid fa-trash"></i>
+                              </button>
                             </div>
                           </td>
                         </tr>

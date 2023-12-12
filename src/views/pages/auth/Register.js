@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-import"../../../css/login.css"
+import "../../../css/login.css";
 import { API_DUMMY } from "../../../utils/base_URL";
 import Swal from "sweetalert2";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
@@ -58,7 +58,7 @@ function Register() {
           showConfirmButton: false,
           timer: 1500,
         });
-          history.push("/login");
+        history.push("/login");
         setTimeout(() => {
           window.location.reload();
         }, 1500);
@@ -80,12 +80,16 @@ function Register() {
       <div className="container d-flex justify-content-center align-items-center min-vh-100">
         {/* <!----------------------- Login Container --------------------------> */}
 
-        <div id="responsive-register" className="row border rounded-5 p-3 bg-white shadow box-area padding-login responsive-login">
+        <div
+          id="responsive-register"
+          className="row border rounded-5 p-3 bg-white shadow box-area padding-login responsive-login"
+        >
           {/* <!--------------------------- Left Box -----------------------------> */}
 
           <div
             className="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box img-login"
-            style={{ background: "#103cbe" }}>
+            style={{ background: "#103cbe" }}
+          >
             <div className="featured-image mb-3 img-login-register">
               <img
                 src="https://cdn3d.iconscout.com/3d/premium/thumb/form-4721284-3927997.png"
@@ -153,7 +157,8 @@ function Register() {
                   />
                   <label
                     htmlFor="showPassword"
-                    className="form-check-label text-secondary">
+                    className="form-check-label text-secondary"
+                  >
                     <small>Tampilkan Password</small>
                   </label>
                 </div>
@@ -162,14 +167,14 @@ function Register() {
                 <button
                   type="submit"
                   name="submit"
-                  className="btn btn-lg btn-primary w-100 fs-6">
+                  className="btn btn-lg btn-primary w-100 fs-6"
+                >
                   Register
                 </button>
               </div>
               <div className="row">
                 <small>
-                  Sudah Memiliki Akun Silahkan{" "}
-                  <a href="/login">Login</a>
+                  Sudah Memiliki Akun Silahkan <a href="/login">Login</a>
                 </small>
               </div>
             </form>

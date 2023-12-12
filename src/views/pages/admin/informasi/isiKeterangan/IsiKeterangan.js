@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import Footer from "../../../../../component/Footer";
 import Sidebar from "../../../../../component/Sidebar";
@@ -119,19 +118,20 @@ function IsiKeterangan() {
               <select
                 className="form-select form-select-xl w-auto"
                 onChange={handleRowsPerPageChange}
-                value={rowsPerPage}>
+                value={rowsPerPage}
+              >
                 <option value={5}>5</option>
                 <option value={10}>10</option>
                 <option value={20}>20</option>
               </select>
             </div>
             <input
-                  type="search"
-                  className="form-control widget-content-right w-100"
-                  placeholder="Search..."
-                  value={searchTerm}
-                  onChange={handleSearchChange}
-                />
+              type="search"
+              className="form-control widget-content-right w-100"
+              placeholder="Search..."
+              value={searchTerm}
+              onChange={handleSearchChange}
+            />
           </div>
           <div className="main-card mb-3 card">
             <div className="card-header" style={{ display: "flex" }}>
@@ -144,7 +144,8 @@ function IsiKeterangan() {
                   <select
                     className="form-select form-select-sm"
                     onChange={handleRowsPerPageChange}
-                    value={rowsPerPage}>
+                    value={rowsPerPage}
+                  >
                     <option value={5}>5</option>
                     <option value={10}>10</option>
                     <option value={20}>20</option>
@@ -165,7 +166,8 @@ function IsiKeterangan() {
                       <a
                         href={"/add-isi-keterangan"}
                         className="text-light"
-                        style={{ textDecoration: "none" }}>
+                        style={{ textDecoration: "none" }}
+                      >
                         {" "}
                         Tambah Data
                       </a>
@@ -176,7 +178,8 @@ function IsiKeterangan() {
             </div>
             <div
               className="table-responsive"
-              style={{ overflowY: "auto", maxHeight: "60vh" }}>
+              style={{ overflowY: "auto", maxHeight: "60vh" }}
+            >
               <table className="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
                   <tr>
@@ -193,17 +196,20 @@ function IsiKeterangan() {
                       <td data-label="Aksi" className="text-center">
                         <button
                           type="button"
-                          className="btn-primary btn-sm mr-2">
+                          className="btn-primary btn-sm mr-2"
+                        >
                           <a
                             style={{ color: "white", textDecoration: "none" }}
-                            href={`/edit-isi-keterangan/${jenis.dokumen}/${jenis.id}`}>
+                            href={`/edit-isi-keterangan/${jenis.dokumen}/${jenis.id}`}
+                          >
                             <i className="fa-solid fa-pen-to-square"></i>
                           </a>
                         </button>
                         <button
                           onClick={() => deleteData(jenis.id)}
                           type="button"
-                          className="btn-danger btn-sm mr-2">
+                          className="btn-danger btn-sm mr-2"
+                        >
                           <i className="fa-solid fa-trash"></i>
                         </button>
                       </td>
@@ -213,7 +219,7 @@ function IsiKeterangan() {
               </table>
             </div>
             <div className="card-header mt-3 d-flex justify-content-center">
-            <Pagination
+              <Pagination
                 count={paginationInfo.totalPages}
                 page={currentPage}
                 onChange={(event, value) => setCurrentPage(value)}

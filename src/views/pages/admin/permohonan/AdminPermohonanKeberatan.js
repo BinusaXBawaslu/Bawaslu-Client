@@ -109,7 +109,8 @@ function AdminPermohonanKeberatan() {
               <select
                 className="form-select form-select-xl w-auto"
                 onChange={handleRowsPerPageChange}
-                value={rowsPerPage}>
+                value={rowsPerPage}
+              >
                 <option value={5}>5</option>
                 <option value={10}>10</option>
                 <option value={20}>20</option>
@@ -134,7 +135,8 @@ function AdminPermohonanKeberatan() {
                   <select
                     className="form-select form-select-sm"
                     onChange={handleRowsPerPageChange}
-                    value={rowsPerPage}>
+                    value={rowsPerPage}
+                  >
                     <option value={5}>5</option>
                     <option value={10}>10</option>
                     <option value={20}>20</option>
@@ -200,26 +202,34 @@ function AdminPermohonanKeberatan() {
                         </td>
                         <td
                           data-label="jenis identitas : "
-                          className="text-left">
-                          <img style={{width:"150px"}} src={informasi.fotoIdentitas} alt="" />
+                          className="text-left"
+                        >
+                          <img
+                            style={{ width: "150px" }}
+                            src={informasi.fotoIdentitas}
+                            alt=""
+                          />
                         </td>
                         <td data-label="Aksi : " class="text-center">
                           <div className="d-flex">
                             <button
                               type="button"
-                              class="btn-warning mr-2 btn-sm">
+                              class="btn-warning mr-2 btn-sm"
+                            >
                               <a
                                 className="text-light"
                                 href={
                                   "/detail/permohonan-keberatan/" + informasi.id
-                                }>
+                                }
+                              >
                                 <i class="fas fa-info-circle"></i>
                               </a>
                             </button>
                             <button
                               onClick={() => deleteData(informasi.id)}
                               type="button"
-                              className="bg-danger btn-sm text-light">
+                              className="bg-danger btn-sm text-light"
+                            >
                               <i class="fas fa-trash-alt"></i>
                             </button>
                           </div>

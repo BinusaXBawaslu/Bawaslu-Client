@@ -126,26 +126,26 @@ function Navbar() {
                   href="https://www.facebook.com/Bawaslu.Kabupaten.Boyolali"
                   target="_blank"
                 >
-                  <i class="fab fa-facebook"></i>
+                  <i className="fab fa-facebook"></i>
                 </a>
                 <a
                   href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbawasluboyolali"
                   target="_blank"
                 >
-                  <i class="fab fa-twitter" aria-hidden="true"></i>
+                  <i className="fab fa-twitter" aria-hidden="true"></i>
                 </a>
                 <a
                   href="https://www.instagram.com/bawaslu_boyolali/"
                   target="_blank"
                 >
-                  <i class="fab fa-instagram" aria-hidden="true"></i>
+                  <i className="fab fa-instagram" aria-hidden="true"></i>
                 </a>
                 <a
                   className="youtube"
                   href="https://www.youtube.com/channel/UC-OZT-HT_Qg7cUmo-oHfkAw"
                   target="_blank"
                 >
-                  <i class="fab fa-youtube"></i>
+                  <i className="fab fa-youtube"></i>
                 </a> */}
                 <ul className="social-media">
                   <li>
@@ -195,17 +195,19 @@ function Navbar() {
           isSticky ? "sticky-active" : ""
         }`}
       >
-        <div class="container nav-container">
-          <div class="responsive-mobile-menu">
+        <div className="container nav-container">
+          <div className="responsive-mobile-menu">
             <button
-              class={`d-lg-none menu toggle-btn ${menuOpen ? "is-active" : ""}`}
+              className={`d-lg-none menu toggle-btn ${
+                menuOpen ? "is-active" : ""
+              }`}
               onClick={toggleMenu}
               data-target="#Iitechie_main_menu"
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <span class="icon-left"></span>
-              <span class="icon-right"></span>
+              <span className="icon-left"></span>
+              <span className="icon-right"></span>
             </button>
           </div>
           <div className="d-inline-block d-lg-none">
@@ -215,11 +217,11 @@ function Navbar() {
             />
           </div>
           <div
-            class={`collapse navbar-collapse ${menuOpen ? "sopen" : ""}`}
+            className={`collapse navbar-collapse ${menuOpen ? "sopen" : ""}`}
             id="Iitechie_main_menu"
           >
-            <ul class="navbar-nav menu-open text-lg-start">
-              <li class="">
+            <ul className="navbar-nav menu-open text-lg-start">
+              <li className="">
                 <a href="/">Home</a>
               </li>
               <li className="">
@@ -246,7 +248,7 @@ function Navbar() {
                   Informasi Publik
                 </a>
                 {/* <ul
-                  class={`${isMobile ? "collapse" : "sub-menu"}`}
+                  className={`${isMobile ? "collapse" : "sub-menu"}`}
                   id="submenu"
                 > {informasi.map((informasi) => {
                   return (
@@ -260,7 +262,7 @@ function Navbar() {
                         }
                         style={{ textDecoration: "none" }}
                       >
-                        <i class="metismenu-icon"></i>
+                        <i className="metismenu-icon"></i>
                         {informasi.namaInformasi}
                       </a>
                     </li>
@@ -272,7 +274,7 @@ function Navbar() {
                   </li>
                 </ul> */}
                 <ul
-                  class={`${isMobile ? "collapse" : "sub-menu"}`}
+                  className={`${isMobile ? "collapse" : "sub-menu"}`}
                   id="submenu"
                   data-bs-parent="#menu"
                 >
@@ -311,7 +313,7 @@ function Navbar() {
                 </a>
                 {/* <li className="text-black"><a>Daftar Informasi Publik</a></li> */}
                 <ul
-                  class={`${isMobile ? "collapse" : "sub-menu"}`}
+                  className={`${isMobile ? "collapse" : "sub-menu"}`}
                   id="submenu2"
                   data-bs-parent="#menu">
                     {regulasi.map((isiRegulasi) => {
@@ -348,7 +350,7 @@ function Navbar() {
                   Form Online
                 </a>
                 <ul
-                  class={`${isMobile ? "collapse" : "sub-menu"}`}
+                  className={`${isMobile ? "collapse" : "sub-menu"}`}
                   id="submenu3"
                   data-bs-parent="#menu"
                 >
@@ -381,7 +383,7 @@ function Navbar() {
                   Prosedur
                 </a>
                 <ul
-                  class={`${isMobile ? "collapse" : "sub-menu"}`}
+                  className={`${isMobile ? "collapse" : "sub-menu"}`}
                   id="submenu4"
                   data-bs-parent="#menu"
                 >

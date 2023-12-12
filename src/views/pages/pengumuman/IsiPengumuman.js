@@ -9,7 +9,6 @@ import { useParams } from "react-router-dom/cjs/react-router-dom";
 import { format } from "date-fns";
 import idLocale from "date-fns/locale/id";
 
-
 function IsiPengumuman() {
   const [createdDate, setCreatedDate] = useState("");
   const [judulPengumuman, setJudulPengumuman] = useState("");
@@ -70,11 +69,7 @@ function IsiPengumuman() {
               <div class="blog-details-page-content">
                 <div class="single-blog-inner">
                   <div class="thumb">
-                    <img
-                      className="pengumuman"
-                      src={image}
-                      alt="img"
-                    />
+                    <img className="pengumuman" src={image} alt="img" />
                   </div>
                   <div class="details">
                     <ul class="blog-meta">
@@ -83,8 +78,12 @@ function IsiPengumuman() {
                       </li>
                       <li>
                         <i class="far fa-calendar-alt"></i>
-                        {format(new Date(createdDate || new Date()), "dd MMMM yyyy", { locale: idLocale })}
-                          {/* {createdDate} */}
+                        {format(
+                          new Date(createdDate || new Date()),
+                          "dd MMMM yyyy",
+                          { locale: idLocale }
+                        )}
+                        {/* {createdDate} */}
                       </li>
                     </ul>
                     <h4 className="title">{judulPengumuman}</h4>
@@ -105,7 +104,8 @@ function IsiPengumuman() {
                             <div class="media-body">
                               <p>
                                 <a
-                                  href={`/pengumuman/isi-pengumuman/${isi.id}`}>
+                                  href={`/pengumuman/isi-pengumuman/${isi.id}`}
+                                >
                                   {isi.judulPengumuman}
                                 </a>
                               </p>
@@ -123,7 +123,8 @@ function IsiPengumuman() {
                 <Bawaslu />
                 <div
                   class="widget widget_tag_cloud mb-0"
-                  style={{ background: "#F1F6F9" }}>
+                  style={{ background: "#F1F6F9" }}
+                >
                   <h4 class="widget-title">Berbagi</h4>
                   <div class="tagcloud">
                     <a
@@ -134,7 +135,8 @@ function IsiPengumuman() {
                         alignItems: "center",
                         justifyContent: "center",
                         fontWeight: "bold",
-                      }}>
+                      }}
+                    >
                       <i class="fab fa-facebook"></i> Share To Facebook
                     </a>
                     <a
@@ -145,7 +147,8 @@ function IsiPengumuman() {
                         alignItems: "center",
                         justifyContent: "center",
                         fontWeight: "bold",
-                      }}>
+                      }}
+                    >
                       <i class="fab fa-twitter"></i> Share To Twitter
                     </a>
                   </div>

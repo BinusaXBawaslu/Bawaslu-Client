@@ -97,15 +97,16 @@ function MenuRegulasi() {
       <div className="app-main">
         <Sidebar />
         <div className="container mt-3 app-main__outer">
-          <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
-            <div class="col-auto">
+          <div className="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
+            <div className="col-auto">
               <label className="form-label mt-2">Rows per page:</label>
             </div>
-            <div class="col-auto">
+            <div className="col-auto">
               <select
                 className="form-select form-select-xl w-auto"
                 onChange={handleRowsPerPageChange}
-                value={rowsPerPage}>
+                value={rowsPerPage}
+              >
                 <option value={5}>5</option>
                 <option value={10}>10</option>
                 <option value={20}>20</option>
@@ -118,119 +119,140 @@ function MenuRegulasi() {
             placeholder="Search..."
             value={searchTerm}
             onChange={handleSearchChange}
-            style={{width:"330px"}}
+            style={{ width: "330px" }}
           />
-          <br />
-          <div class="main-card mb-3 card">
-            <div class="card-header" style={{ display: "flex" }}>
-              {menuRegulasi.length > 0 &&
-                menuRegulasi[0].jenisRegulasiId.jenisRegulasi}
-              <div class="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
-                <div class="col-auto">
-                  <label className="form-label mt-2">Rows per page:</label>
-                </div>
-                <div class="col-auto">
-                  <select
-                    className="form-select form-select-sm"
-                    onChange={handleRowsPerPageChange}
-                    value={rowsPerPage}>
-                    <option value={5}>5</option>
-                    <option value={10}>10</option>
-                    <option value={20}>20</option>
-                  </select>
-                </div>
-              </div>
-              <div className="d-flex ml-auto gap-3">
-                <input
-                  type="search"
-                  className="form-control widget-content-right w-75 d-lg-block d-none d-md-none"
-                  placeholder="Search..."
-                  value={searchTerm}
-                  onChange={handleSearchChange}
-                />
-                <div class="btn-actions-pane-right">
-                  <div role="group" class="btn-group-sm btn-group">
-                    <button class="active btn-focus p-2 rounded">
-                      <a
-                        href={`/add-menu-regulasi/${param.id}`}
-                        className="text-light"
-                        style={{ textDecoration: "none" }}>
-                        {" "}
-                        Tambah Data
-                      </a>
-                    </button>
+          <div className="main-card mb-3 card">
+            <div className="card-header" style={{ display: "flex" }}>
+              <br />
+              <div class="main-card mb-3 card">
+                <div class="card-header" style={{ display: "flex" }}>
+                  {menuRegulasi.length > 0 &&
+                    menuRegulasi[0].jenisRegulasiId.jenisRegulasi}
+                  <div className="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
+                    <div className="col-auto">
+                      <label className="form-label mt-2">Rows per page:</label>
+                    </div>
+                    <div className="col-auto">
+                      <select
+                        className="form-select form-select-sm"
+                        onChange={handleRowsPerPageChange}
+                        value={rowsPerPage}
+                      >
+                        <option value={5}>5</option>
+                        <option value={10}>10</option>
+                        <option value={20}>20</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div className="d-flex ml-auto gap-3">
+                    <input
+                      type="search"
+                      className="form-control widget-content-right w-75 d-lg-block d-none d-md-none"
+                      placeholder="Search..."
+                      value={searchTerm}
+                      onChange={handleSearchChange}
+                    />
+                    <div className="btn-actions-pane-right">
+                      <div role="group" className="btn-group-sm btn-group">
+                        <button className="active btn-focus p-2 rounded">
+                          <a
+                            href={`/add-menu-regulasi/${param.id}`}
+                            className="text-light"
+                            style={{ textDecoration: "none" }}
+                          >
+                            {" "}
+                            Tambah Data
+                          </a>
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div
-              class=""
-              style={{ overflowY: "auto", maxHeight: "60vh" }}>
-              <table class="align-middle mb-0 table table-borderless table-striped table-hover">
-                <thead>
-                  <tr>
-                    <th scope="col" className="text-left">
-                      No
-                    </th>
-                    <th scope="col" className="text-left">
-                      Menu Regulasi{" "}
-                    </th>
-                    <th scope="col" className="text-center">
-                      Aksi
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {filteredList.map((jenis, index) => {
-                    return (
-                      <tr key={index}>
-                        <td data-label="No : " className="">
-                          {index + 1}
-                        </td>
-                        <td data-label="jenis : " className="">
-                          {jenis.menuRegulasi}
-                        </td>
-                        <td data-label="Aksi : " class="text-center">
-                          <button type="button" class="btn-primary btn-sm mr-2">
-                            <a
-                              style={{ color: "white", textDecoration: "none" }}
-                              href={
-                                "/edit-data/" +
-                                jenis.menuRegulasi +
-                                "/" +
-                                jenis.id
-                              }>
-                              <i class="fa-solid fa-pen-to-square"></i>
-                            </a>
-                          </button>
-                          <button
-                            onClick={() => deleteData(jenis.id)}
-                            type="button"
-                            class="btn-danger btn-sm mr-2">
-                            <i class="fa-solid fa-trash"></i>
-                          </button>
-                          <button type="button" class="btn-info btn-sm">
-                            <a
-                              style={{ color: "white", textDecoration: "none" }}
-                              href={"/" + jenis.menuRegulasi + "/" + jenis.id}>
-                              <i class="fas fa-plus"></i>
-                            </a>
-                          </button>
-                        </td>
+                <div
+                  className="table-responsive"
+                  style={{ overflowY: "auto", maxHeight: "60vh" }}
+                >
+                  <table class="align-middle mb-0 table table-borderless table-striped table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col" className="text-left">
+                          No
+                        </th>
+                        <th scope="col" className="text-left">
+                          Menu Regulasi{" "}
+                        </th>
+                        <th scope="col" className="text-center">
+                          Aksi
+                        </th>
                       </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-              <div className="card-header mt-3 d-flex justify-content-center">
-                <Pagination
-                  count={paginationInfo.totalPages}
-                  page={currentPage}
-                  onChange={(event, value) => setCurrentPage(value)}
-                  showFirstButton
-                  showLastButton
-                  color="primary"
-                />
+                    </thead>
+                    <tbody>
+                      {filteredList.map((jenis, index) => {
+                        return (
+                          <tr key={index}>
+                            <td data-label="No : " className="">
+                              {index + 1}
+                            </td>
+                            <td data-label="jenis : " className="">
+                              {jenis.menuRegulasi}
+                            </td>
+                            <td data-label="Aksi : " className="text-center">
+                              <button
+                                type="button"
+                                className="btn-primary btn-sm mr-2"
+                              >
+                                <a
+                                  style={{
+                                    color: "white",
+                                    textDecoration: "none",
+                                  }}
+                                  href={
+                                    "/edit-data/" +
+                                    jenis.menuRegulasi +
+                                    "/" +
+                                    jenis.id
+                                  }
+                                >
+                                  <i className="fa-solid fa-pen-to-square"></i>
+                                </a>
+                              </button>
+                              <button
+                                onClick={() => deleteData(jenis.id)}
+                                type="button"
+                                className="btn-danger btn-sm mr-2"
+                              >
+                                <i className="fa-solid fa-trash"></i>
+                              </button>
+                              <button type="button" className="btn-info btn-sm">
+                                <a
+                                  style={{
+                                    color: "white",
+                                    textDecoration: "none",
+                                  }}
+                                  href={
+                                    "/" + jenis.menuRegulasi + "/" + jenis.id
+                                  }
+                                >
+                                  <i className="fas fa-plus"></i>
+                                </a>
+                              </button>
+                            </td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                  <div className="card-header mt-3 d-flex justify-content-center">
+                    <Pagination
+                      count={paginationInfo.totalPages}
+                      page={currentPage}
+                      onChange={(event, value) => setCurrentPage(value)}
+                      showFirstButton
+                      showLastButton
+                      color="primary"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>

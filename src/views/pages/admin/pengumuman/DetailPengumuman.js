@@ -67,66 +67,71 @@ function DetailPengumuman() {
                     src={file}
                   />
                 )}
-              <br />
-              <br />
-              <div class="mb-3">
-                <label class="form-label">Tanggal Dibuat</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  disabled
-                  value={format(
-                    new Date(createdDate || new Date()),
-                    "dd MMMM yyyy",
-                    { locale: idLocale }
-                  )}
-                />
-              </div>
-              <div class="mb-3">
-                <label class="form-label">Tanggal Update</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  disabled
-                  value={format(
-                    new Date(updateDate || new Date()),
-                    "dd MMMM yyyy",
-                    { locale: idLocale }
-                  )}
-                />
-              </div>
-              <div class="mb-3">
-                <label class="form-label">Penulis</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  disabled
-                  value={author}
-                />
-              </div>
-              <div class="mb-3">
-                <label class="form-label">Judul Pengumuman</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  disabled
-                  value={judulPengumuman}
-                />
-              </div>
-              <div class="mb-3">
-                <label class="form-label">Isi Pengumuman</label>
-                <textarea
-                  disabled
-                  class="form-control"
-                  defaultValue={isiPengumuman}
-                  rows="5"
-                  readOnly
-                />
-              </div>
-              <div class="mb-3">
-                <label class="form-label">Tags</label>
-                <input type="text" class="form-control" disabled value={tags} />
-              </div>
+                <br />
+                <br />
+                <div class="mb-3">
+                  <label class="form-label">Tanggal Dibuat</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    disabled
+                    value={format(
+                      new Date(createdDate || new Date()),
+                      "dd MMMM yyyy",
+                      { locale: idLocale }
+                    )}
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Tanggal Update</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    disabled
+                    value={format(
+                      new Date(updateDate || new Date()),
+                      "dd MMMM yyyy",
+                      { locale: idLocale }
+                    )}
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Penulis</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    disabled
+                    value={author}
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Judul Pengumuman</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    disabled
+                    value={judulPengumuman}
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Isi Pengumuman</label>
+                  <textarea
+                    disabled
+                    class="form-control"
+                    defaultValue={isiPengumuman}
+                    rows="5"
+                    readOnly
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Tags</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    disabled
+                    value={tags}
+                  />
+                </div>
               </div>
             </form>
           </div>
