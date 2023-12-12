@@ -104,7 +104,6 @@ function MenuEditRegulasi() {
                       onChange={(e) => setIdJenisRegulasi(e.target.value)}
                       value={idJenisRegulasi}>
                       <option selected>Pilih Jenis Regulasi</option>
-                      <option selected>PIlih Jenis Regulasi</option>
                       {jenisRegulasi.map((down) => {
                         return (
                           <option value={down.id}>{down.jenisRegulasi}</option>

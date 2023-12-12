@@ -5,6 +5,7 @@ import axios from "axios";
 import { API_DUMMY } from "../../utils/base_URL";
 import { Pagination } from "@mui/material";
 import Bawaslu from "../../component/Bawaslu";
+import "../../css/berita.css";
 import {
   FacebookShareButton,
   PinterestShareButton,
@@ -12,7 +13,6 @@ import {
 } from "react-share";
 import { format } from "date-fns";
 import idLocale from "date-fns/locale/id";
-
 function Berita() {
   const [scroll, setScroll] = useState(false);
   const [list, setList] = useState([]);
@@ -163,14 +163,98 @@ function Berita() {
 
   return (
     <>
+    
       <Navbar />
       {/* <!-- page title start --> */}
       <div
-        class="service-area bg-overlay pd-top-120 pd-bottom-90"
+        class="service-area pd-top-120 pd-bottom-90"
         style={{
           backgroundImage: `url(${gambarTerbaru})`,
         }}
       >
+       <div className="container mt4">
+       <div id="carouselExampleDark" class="carousel carousel-dark slide">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="3"
+              aria-label="Slide 4"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="4"
+              aria-label="Slide 5"
+            ></button>
+          </div>
+          <div class="carousel-inner" id="background-linnear">
+            <div id="background-linnear" class="carousel-item active" data-bs-interval="10000">
+              <img
+              id="background-linnear"
+                src="https://www.inilah.com/_next/image?url=https%3A%2F%2Fc.inilah.com%2Freborn%2F2023%2F11%2FIMG_20231125_WA_0020_68c10d8068.jpg&w=1920&q=75"
+                class="d-block w-100 img-fluid" 
+                alt="dokumentasi1"
+              />
+              <div  class="carousel-caption  d-md-block text-center">
+                <h1 style={{color:"white"}}>Berita</h1>
+                <p style={{color:"white"}}>
+                  Boyolali – Untuk menjaga suasana Pemilu 2024 agar tetap
+                  aman,damai, dan berkualitas ditengah maraknya informasi hoax.
+                  Jum’at(1/12) Bawaslu Kabupaten Boyolali...
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="https://jateng.bawaslu.go.id/wp-content/uploads/2019/04/Cegah-Pelanggaran-Pemilu-Bawaslu-Boyolali-Gelar-Apel-Siaga-1024x682.jpeg" class="d-block w-100 img-fluid"  alt="..." />
+              <div class="carousel-caption  d-md-block text-center">
+                <h1 style={{color:"white"}}>Kehumasan</h1>
+                <p style={{color:"white"}}>
+                Jadwal pendaftaran Kelompok Penyelenggara Pemungutan Suara (KPPS) Pemilu 2024 dimulai pada 11 Desember 2023 mendatang. Komisi Pemilihan Umum... Read ...                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="https://www.bawaslu.go.id/sites/default/files/styles/gambar_berita_besar/public/foto_berita/IMG-20220718-WA0014.jpg?itok=Ixek3vWA" class="d-block w-100 img-fluid"  alt="..." />
+              <div class="carousel-caption  d-md-block text-center">
+                <h1 style={{color:"white"}}>Pencegahan</h1>
+                <p style={{color:"white"}}>
+                Badan Pengawas Pemilihan Umum - Koordinator Divisi Pencegahan, Partisipasi Masyarakat, dan Hubungan Masyarakat Bawaslu Lolly Suhenty ...                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="https://bawaslu.go.id/sites/default/files/foto_berita/IMG-20220822-WA0003.jpg"  class="d-block w-100 img-fluid"  alt="..." />
+              <div class="carousel-caption  d-md-block text-center">
+                <h1 style={{color:"white"}}>Penangan Pelanggaran</h1>
+                <p style={{color:"white"}}>
+                Dugaan pelanggaran Pemilu sebagaimana dimaksud berupa: pelanggaran kode etik Penyelenggara Pemilu;; pelanggaran administrasi Pemilu; dan/atau; tindak pidana ... </p>
+                              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="https://boyolali.bawaslu.go.id/cepogo/2023/09/20230718121531.jpeg"  class="d-block w-100 img-fluid"  alt="..." />
+              <div class="carousel-caption  d-md-block text-center">
+                <h1 style={{color:"white"}}>OSDM & Diklat</h1>
+                <p style={{color:"white"}}>
+                Pengumuman Calon Anggota Bawaslu Kabupaten/Kota Terpilih Masa Jabatan 2023-2028 Provinsi Jawa Tengah. Selengkapnya,                </p>
         <div class="container">
           <div class="row">
             <div class="col-lg-4">
@@ -211,7 +295,27 @@ function Berita() {
               </div>
             </div>
           </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
+       </div>
+     
       </div>
 
       <br />

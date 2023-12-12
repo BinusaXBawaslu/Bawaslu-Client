@@ -100,6 +100,8 @@ import CategoryBerita from "./views/pages/CategoryBerita";
 import AddRegulasi from "./views/pages/admin/daftarRegulasi/Regulasi/AddRegulasi";
 import MenuInformasi from "./views/pages/admin/informasi/MenuInformasi";
 import MenuEditRegulasi from "./views/pages/admin/daftarRegulasi/MenuRegulasi/MenuEditRegulasi";
+import IsiDaftarRegulasi from "./views/pages/daftarRegulasi/IsiDaftarRegulasi";
+
 import RekapBerita from "./views/pages/rekap_berita/RekapBerita";
 import InformasiBerkalaKelembagaan from "./views/pages/informasi/InformasiBerkalaKelembagaan";
 import InformasiBerkalaKepemiluan from "./views/pages/informasi/InformasiBerkalaKepemiluan";
@@ -142,8 +144,7 @@ function App() {
           />
           <Route
             path="/informasi-berkala-Kepemiluan"
-            component={InformasiBerkalaKepemiluan}
-            exact
+            component={InformasiBerkalaKepemiluan}            exact
           />
           <Route path="/informasi-dikecuali" component={Dikecualikan} exact />
           <Route path="/informasi-kanal" component={Kanal} exact />
