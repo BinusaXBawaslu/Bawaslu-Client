@@ -45,7 +45,7 @@ function PenyelesaianSengketa() {
           </div>
           <div className="row justify-content-center">
             <div className="col-lg-4 col-md-6">
-              <div className="single-service-inner style-5 text-center">
+              <div className="single-service-inner style-5 text-center" style={{height:"430px"}}>
                 <div className="thumb">
                   <img
                     src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/service/service-01.webp"
@@ -75,7 +75,7 @@ function PenyelesaianSengketa() {
               </div>
             </div>
             <div className="col-lg-4 col-md-6">
-              <div className="single-service-inner style-5 text-center">
+              <div className="single-service-inner style-5 text-center" style={{height:"430px"}}>
                 <div className="thumb">
                   <img
                     src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/service/service-05.webp"
@@ -105,7 +105,7 @@ function PenyelesaianSengketa() {
               </div>
             </div>
             <div className="col-lg-4 col-md-6">
-              <div className="single-service-inner style-5 text-center">
+              <div className="single-service-inner style-5 text-center" style={{height:"430px"}}>
                 <div className="thumb">
                   <img
                     src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/service/service-04.webp"
@@ -135,7 +135,7 @@ function PenyelesaianSengketa() {
               </div>
             </div>
             <div className="col-lg-4 col-md-6">
-              <div className="single-service-inner style-5 text-center">
+              <div className="single-service-inner style-5 text-center" style={{height:"430px"}}>
                 <div className="thumb">
                   <img
                     src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/service/3.webp"
@@ -168,7 +168,7 @@ function PenyelesaianSengketa() {
               </div>
             </div>
             <div className="col-lg-4 col-md-6">
-              <div className="single-service-inner style-5 text-center">
+              <div className="single-service-inner style-5 text-center" style={{height:"430px"}}>
                 <div className="thumb">
                   <img
                     src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/service/2.webp"

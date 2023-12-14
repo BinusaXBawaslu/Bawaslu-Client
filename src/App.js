@@ -101,12 +101,14 @@ import AddRegulasi from "./views/pages/admin/daftarRegulasi/Regulasi/AddRegulasi
 import MenuInformasi from "./views/pages/admin/informasi/MenuInformasi";
 import MenuEditRegulasi from "./views/pages/admin/daftarRegulasi/MenuRegulasi/MenuEditRegulasi";
 import RekapBerita from "./views/pages/rekap_berita/RekapBerita";
+
 import InformasiBerkalaKelembagaan from "./views/pages/informasi/InformasiBerkalaKelembagaan";
 import InformasiBerkalaKepemiluan from "./views/pages/informasi/InformasiBerkalaKepemiluan";
 import AddIsiInformasi from "./views/pages/admin/AddIsiInformasi";
 import PutIsiInformasi from "./views/pages/admin/PutIsiInformasi";
 import AdminSertaMerta from "./views/pages/admin/AdminSertaMerta";
 import InformasiBerkala from "./views/pages/informasi/InformasiBerkala";
+
 import AdminSetiapSaat from "./views/pages/admin/AdminSetiapSaat";
 
 // test
