@@ -295,10 +295,12 @@ function Profil() {
             <div className="row">
               <div className="col-lg-3 col-md-6">
                 <div className="single-work-inner style-three text-center">
+                  <a href="/informasi-serta-merta">
                   <div className="count-inner">
                     <i className="fa-solid fa-1"></i>
                   </div>
-                  <div className="details-wrap">
+                  </a>
+                  <div className="details-wrap"> 
                     <div className="details-inner">
                       <h4>Informasi Serta Merta</h4>
                     </div>
@@ -307,9 +309,11 @@ function Profil() {
               </div>
               <div className="col-lg-3 col-md-6">
                 <div className="single-work-inner style-three text-center">
+                  <a href="/informasi-berkala">
                   <div className="count-inner">
                     <i className="fa-solid fa-2"></i>
                   </div>
+                  </a>
                   <div className="details-wrap">
                     <div className="details-inner">
                       <h4>Informasi Berkala</h4>
@@ -319,9 +323,11 @@ function Profil() {
               </div>
               <div className="col-lg-3 col-md-6">
                 <div className="single-work-inner style-three text-center">
+                  <a href="/informasi-setiap-saat">
                   <div className="count-inner">
                     <i className="fa-solid fa-3"></i>
                   </div>
+                  </a>
                   <div className="details-wrap">
                     <div className="details-inner">
                       <h4>Informasi Setiap Saat</h4>
@@ -331,9 +337,11 @@ function Profil() {
               </div>
               <div className="col-lg-3 col-md-6">
                 <div className="single-work-inner style-three text-center">
+                  <a href="/informasi-dikecuali">
                   <div className="count-inner">
                     <i className="fa-solid fa-4"></i>
                   </div>
+                  </a>
                   <div className="details-wrap">
                     <div className="details-inner">
                       <h4>Informasi DIkecualikan</h4>
