@@ -8,7 +8,7 @@ function OrganisasiDanAdministrasiSetiapSaat() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4040/bawaslu/api/jenis-keterangan/4/isi-informasi?page=0&size=10&sortBy=id&sortOrder=asc"
+          "http://localhost:4040/bawaslu/api/jenis-keterangan/8/isi-informasi?page=0&size=10&sortBy=id&sortOrder=asc"
         );
         setData(response.data.data); // Mengasumsikan properti data berisi array informasi
       } catch (error) {

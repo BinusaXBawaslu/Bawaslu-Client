@@ -1,11 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Footer from "../../../component/Footer";
 import Navbar from "../../../component/Navbar";
-import jsPDF from "jspdf";
-import html2canvas from "html2canvas";
-import gambar from "../../../asset/img/bawaslu(berita).jpeg";
-import axios from "axios";
-import { API_DUMMY } from "../../../utils/base_URL";
 import PutusanPelanggaran from "./tabs/SertaMerta/PutusanPelanggaran";
 import SengketaProsesPemilu from "./tabs/SertaMerta/SengketaProsesPemilu";
 import PemungutanSuaraUlang from "./tabs/SertaMerta/PemungutanSuaraUlang";

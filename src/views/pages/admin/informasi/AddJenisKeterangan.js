@@ -34,6 +34,22 @@ function AddJenisKeterangan() {
   };
 
   useEffect(() => {
+    axios
+      .get(`${API_DUMMY}/bawaslu/api/jenis-informasi/getBy/` + param.id, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      })
+      .then((ress) => {
+        const response = ress.data.data;
+        setJenisInformasi(response.id);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
+  useEffect(() => {
     getInformasi();
   }, []);
 
@@ -61,6 +77,7 @@ function AddJenisKeterangan() {
         showConfirmButton: false,
         timer: 1500,
       });
+      history.push(`/admin-informasi/${informasi.length > 0 && informasi[0].namaInformasi }/${param.id}`)
       setTimeout(() => {
         window.location.reload();
       }, 1500);
@@ -81,12 +98,12 @@ function AddJenisKeterangan() {
               <hr />
               <form onSubmit={add}>
                 <div className="row">
-                  <div className="col-6">
+                  <div className="col-lg-6 mb-2">
                     <label className="form-label font-weight-bold">Jenis Informasi</label>
-                    <select
+                    <select disabled
                       className="form-select form-select-sm"
                       aria-label="Small select example"
-                      onChange={(e) => setJenisInformasi(e.target.value)}>
+                      onChange={(e) => setJenisInformasi(e.target.value)} value={jenisInformasi}>
                       <option selected>PIlih Jenis Informasi</option>
                       {informasi.map((down) => {
                         return (
@@ -95,7 +112,7 @@ function AddJenisKeterangan() {
                       })}
                     </select>
                   </div>
-                  <div className="mb-3 col-6">
+                  <div className="mb-3 col-lg-6">
                     <label for="exampleInputEmail1" className="form-label font-weight-bold">
                       Keterangan
                     </label>
@@ -109,7 +126,7 @@ function AddJenisKeterangan() {
                 </div>
                 <button type="button" className="btn-danger mt-3 mr-3">
                   <a
-                    href={``}
+                    href={`/admin-informasi/${informasi.length > 0 && informasi[0].namaInformasi}/${param.id}`}
                     style={{ color: "white", textDecoration: "none" }}>
                     Batal
                   </a>

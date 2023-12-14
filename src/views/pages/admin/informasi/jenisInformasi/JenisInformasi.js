@@ -99,14 +99,16 @@ function JenisInformasi() {
               </select>
             </div>
           </div>
+          <div className="search">
           <input
                   type="search"
-                  className="form-control widget-content-right mt-3 mb-3 w-75 d-lg-none d-block"
+                  className="form-control widget-content-right mt-3 mb-3 d-lg-none d-block"
                   placeholder="Search..."
                   value={searchTerm}
                   onChange={handleSearchChange}
                 />
-          <div className="main-card mb-3 card">
+                </div>
+          <div className="main-card box-tabel mb-3 card">
             <div className="card-header" style={{ display: "flex" }}>
               <p className="mt-3">Jenis Informasi</p>
               <div className="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
@@ -170,6 +172,7 @@ function JenisInformasi() {
                       <td data-label="No" className="">{ index + 1}</td>
                       <td data-label="Jenis Informasi" className="">{jenis.namaInformasi}</td>
                       <td data-label="Aksi" className="text-center">
+                        <div className="aksi">
                         <button type="button" className="btn-primary btn-sm mr-2">
                           <a
                             style={{ color: "white", textDecoration: "none" }}
@@ -185,6 +188,7 @@ function JenisInformasi() {
                         >
                           <i className="fa-solid fa-trash"></i>
                         </button>
+                        </div>
                       </td>
                     </tr>
                   ))}

@@ -8,7 +8,7 @@ function Piagam() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4040/bawaslu/api/jenis-keterangan/1/isi-informasi?page=0&size=10&sortBy=id&sortOrder=asc"
+          "http://localhost:4040/bawaslu/api/jenis-keterangan/7 /isi-informasi?page=0&size=10&sortBy=id&sortOrder=asc"
         );
         setData(response.data.data); // SMengasumsikan properti data berisi array informasi
       } catch (error) {

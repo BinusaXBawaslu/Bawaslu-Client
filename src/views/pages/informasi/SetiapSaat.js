@@ -7,6 +7,13 @@ import gambar from "../../../asset/img/bawaslu(berita).jpeg";
 import axios from "axios";
 import { API_DUMMY } from "../../../utils/base_URL";
 import PutusanPelanggaran from "./tabs/SertaMerta/PutusanPelanggaran";
+import OrganisasiDanAdministrasiSetiapSaat from "./tabs/SetiapSaat/OrganisasiDanAdminsitrasiSetiapSaat";
+import PeraturanDanKebijakan from "./tabs/SetiapSaat/PeraturanDanKebijakan";
+import MOU from "./tabs/SetiapSaat/MOU";
+import PemantauPemilu from "./tabs/SetiapSaat/PemantauPemilu";
+import RencanaStrategi from "./tabs/SetiapSaat/RencanaStrategi";
+import MateriRakor from "./tabs/SetiapSaat/MateriRakor";
+import PiagamSetiapSaat from "./tabs/SetiapSaat/PiagamSetiapSaat";
 
 function SetiapSaat() {
   return (
@@ -152,7 +159,7 @@ function SetiapSaat() {
                       role="tabpanel"
                       aria-labelledby="v-pills-home-tab"
                     >
-                      <PutusanPelanggaran />
+                      <OrganisasiDanAdministrasiSetiapSaat />
                     </div>
 
                     <div
@@ -161,7 +168,7 @@ function SetiapSaat() {
                       role="tabpanel"
                       aria-labelledby="v-pills-profile-tab"
                     >
-                      <PutusanPelanggaran />
+                      <PeraturanDanKebijakan />
                     </div>
 
                     <div
@@ -170,7 +177,7 @@ function SetiapSaat() {
                       role="tabpanel"
                       aria-labelledby="v-pills-messages-tab"
                     >
-                      <PutusanPelanggaran />
+                      <MOU />
                     </div>
 
                     <div
@@ -179,7 +186,23 @@ function SetiapSaat() {
                       role="tabpanel"
                       aria-labelledby="v-pills-settings-tab"
                     >
-                      <PutusanPelanggaran />
+                      <RencanaStrategi />
+                    </div>
+                    <div
+                      className="tab-pane fade shadow rounded bg-white p-5"
+                      id="v-pills-settings"
+                      role="tabpanel"
+                      aria-labelledby="v-pills-settings-tab"
+                    >
+                      <MateriRakor />
+                    </div>
+                    <div
+                      className="tab-pane fade shadow rounded bg-white p-5"
+                      id="v-pills-settings"
+                      role="tabpanel"
+                      aria-labelledby="v-pills-settings-tab"
+                    >
+                      <PiagamSetiapSaat />
                     </div>
                   </div>
                 </div>

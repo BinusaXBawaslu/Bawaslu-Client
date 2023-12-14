@@ -19,6 +19,7 @@ function EditRegulasi() {
   const [regulasi, setRegulasi] = useState([]);
   const [regulasi1, setRegulasi1] = useState([]);
   const param = useParams();
+  const [menuRegulasi, setMenuRegulasi] = useState("");
 
   const getMenuRegulasi = async () => {
     try {
@@ -32,17 +33,7 @@ function EditRegulasi() {
     }
   };
 
-  const getRegulasi = async () => {
-    try {
-      const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=${param.id}&page=0&size=100&sortBy=id&sortOrder=desc`
-      );
-      setRegulasi1(response.data.data.content);
-      console.log(response.data.data.content);
-    } catch (error) {
-      console.error("Terjadi Kesalahan", error);
-    }
-  };
+
 
   useEffect(() => {
     axios
@@ -53,6 +44,7 @@ function EditRegulasi() {
         setDokumen(response.dokumen);
         setIdMenuRegulasi(response.menuRegulasi.id);
         setupload(response.pdfDokumen);
+        setMenuRegulasi(response.menuRegulasi.menuRegulasi);
       })
       .catch((error) => {
         console.log(error);
@@ -84,9 +76,7 @@ function EditRegulasi() {
         timer: 1500,
       });
       history.push(
-        `/${regulasi1.length > 0 && regulasi1[0].menuRegulasi.menuRegulasi}/${
-          param.id
-        }`
+        `/${menuRegulasi}/${idMenuRegulasi}`
       );
       setTimeout(() => {
         window.location.reload();
@@ -98,7 +88,6 @@ function EditRegulasi() {
 
   useEffect(() => {
     getMenuRegulasi();
-    getRegulasi();
   }, []);
   return (
     <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
@@ -158,10 +147,7 @@ function EditRegulasi() {
                 </div>
                 <button type="submit" className="btn-danger mt-3 mr-3">
                   <a
-                    href={`/${
-                      regulasi1.length > 0 &&
-                      regulasi1[0].menuRegulasi.menuRegulasi
-                    }/${param.id}`}
+                    href={`/${menuRegulasi}/${idMenuRegulasi}`}
                     style={{ color: "white", textDecoration: "none" }}>
                     {" "}
                     Batal

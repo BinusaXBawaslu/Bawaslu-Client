@@ -118,15 +118,17 @@ function AdminPermohonanInformasi() {
                   </select>
                 </div>
               </div>
+              <div className="search">
               <input
                 type="search"
-                className="form-control widget-content-right w-100 mt-2 md-2 d-lg-none d-md-block"
+                className="form-control widget-content-right w-100 mt-2 mb-2 d-lg-none d-md-block"
                 placeholder="Search..."
                 value={searchTerm}
                 onChange={handleSearchChange}
               />
-              <div class="main-card mb-3 card">
-                <div style={{ overflowX: "auto" }} class="card-header">
+              </div>
+              <div class="main-card mb-3 card box-tabel">
+                <div class="card-header">
                   <p className="mt-3">Permohonan Informasi</p>
                   <div class="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
                     <div class="col-auto">

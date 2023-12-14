@@ -7,6 +7,7 @@ import gambar from "../../../asset/img/bawaslu(berita).jpeg";
 import axios from "axios";
 import { API_DUMMY } from "../../../utils/base_URL";
 import PutusanPelanggaran from "./tabs/SertaMerta/PutusanPelanggaran";
+import HasilPengawasan from "./tabs/Berkala/kepemiluan/HasilPengawasan";
 
 function InformasiBerkalaKepemiluan() {
   return (
@@ -152,7 +153,7 @@ function InformasiBerkalaKepemiluan() {
                       role="tabpanel"
                       aria-labelledby="v-pills-home-tab"
                     >
-                      <PutusanPelanggaran />
+                      <HasilPengawasan />
                     </div>
 
                     <div
@@ -173,6 +174,30 @@ function InformasiBerkalaKepemiluan() {
                       <PutusanPelanggaran />
                     </div>
 
+                    <div
+                      className="tab-pane fade shadow rounded bg-white p-5"
+                      id="v-pills-settings"
+                      role="tabpanel"
+                      aria-labelledby="v-pills-settings-tab"
+                    >
+                      <PutusanPelanggaran />
+                    </div>
+                    <div
+                      className="tab-pane fade shadow rounded bg-white p-5"
+                      id="v-pills-settings"
+                      role="tabpanel"
+                      aria-labelledby="v-pills-settings-tab"
+                    >
+                      <PutusanPelanggaran />
+                    </div>
+                    <div
+                      className="tab-pane fade shadow rounded bg-white p-5"
+                      id="v-pills-settings"
+                      role="tabpanel"
+                      aria-labelledby="v-pills-settings-tab"
+                    >
+                      <PutusanPelanggaran />
+                    </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-5"
                       id="v-pills-settings"

@@ -77,18 +77,18 @@ function Register() {
 
   return (
     <>
-      <div className="container d-flex justify-content-center align-items-center min-vh-100">
+      <div className="containeriimg d-flex justify-content-center align-items-center min-vh-100">
         {/* <!----------------------- Login Container --------------------------> */}
 
         <div
-          id="responsive-register"
-          className="row border rounded-5 p-3 bg-white shadow box-area padding-login responsive-login"
+          id="responsive-login"
+          className="row border rounded-5 p-3 bg-white  box-area padding-login"
         >
           {/* <!--------------------------- Left Box -----------------------------> */}
 
-          <div
+          <div id="gambar"
             className="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box img-login"
-            style={{ background: "#103cbe" }}
+           
           >
             <div className="featured-image mb-3 img-login-register">
               <img

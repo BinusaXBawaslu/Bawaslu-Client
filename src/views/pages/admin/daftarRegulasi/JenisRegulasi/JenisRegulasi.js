@@ -114,17 +114,19 @@ function JenisRegulasi() {
                 <option value={20}>20</option>
               </select>
             </div>
+            <div className="search">
             <input
               type="search"
-              className="form-control widget-content-right w-100"
+              className="form-control mb-2 widget-content-right"
               placeholder="Search..."
               value={searchTerm}
               onChange={handleSearchChange}
             />
+            </div>
             <br />
           </div>
 
-          <div class="main-card mb-3 card">
+          <div class="main-card mb-3 card box-tabel">
             <div class="card-header" style={{ display: "flex" }}>
               <p className="mt-3">Jenis Regulasi</p>
               <div class="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
@@ -168,10 +170,10 @@ function JenisRegulasi() {
               </div>
             </div>
             <div
-              class="table-responsive"
+              class=""
               style={{ overflowY: "auto", maxHeight: "60vh" }}
             >
-              <table class="align-middle mb-0 table-responsive table table-borderless table-striped table-hover">
+              <table class="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
                   <tr>
                     <th className="text-left">No</th>

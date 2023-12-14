@@ -7,14 +7,34 @@ table tbody td .text-long{
 table tbody td .aksi {
   text-align: center;
   display: flex;
+  justify-content: center;
 }
 #table-padding{
   margin-top: 520px;
 }
 
 @media screen and (max-width: 600px) {
+.box-tabel {
+  overflow-y: auto;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.search {
+  width: 95%;
+}
+table tbody tr td {
+  min-width: 80px;
+}
+table thead tr th {
+  min-width: 150px;
+}
+.card-header {
+  overflow-y: auto;
+  width: 95%;
+}
 
-  table {
+  /* table {
     border: 0;
   }
 
@@ -58,17 +78,7 @@ table tbody td .aksi {
   table tbody td img {
     width: 100px;
   }
-
-  /* table tbody td .button {
-    justify-content: right;
-    display: flex;
-  } */
-
   table td::before {
-    /*
-    * aria-label has no advantage, it won't be read inside a table
-    content: attr(aria-label);
-    */
     content: attr(data-label);
     float: left;
     font-weight: bold;
@@ -77,11 +87,5 @@ table tbody td .aksi {
 
   table td:last-child {
     border-bottom: 0;
-  }
-}
-
-/* general styling */
-body {
-  font-family: "Open Sans", sans-serif;
-  line-height: 1.25;
+  } */
 }

@@ -51,11 +51,12 @@ function Login() {
     <div className="containeriimg d-flex justify-content-center align-items-center min-vh-100">
       <div
         id="responsive-login"
-        className="row border rounded-5 p-3 bg-white shadow box-area padding-login"
+        className="row border rounded-5 p-3 bg-white  box-area padding-login"
       >
         <div
-          className="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box img-login"
-          style={{ background: "#103cbe" }}
+        id="gambar"
+          className=" col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box img-login"
+   
         >
           <div className="featured-image mb-3 img-login">
             <img
@@ -65,11 +66,14 @@ function Login() {
               alt="Password Illustration"
             />
           </div>
+
+          
         </div>
         <div className="col-md-6 right-box">
           <form onSubmit={handleLogin} className="row align-items-center">
-            <div className="header-text mb-4 text-center">
+            <div className="header-text mb-4 text-center " style={{marginTop: "20px"}}>
               <h2>
+             
                 <img
                   style={{ width: "40px" }}
                   src="https://jombang.bawaslu.go.id/wp-content/uploads/2019/04/Logo-Bawaslu-2018-Icon-PNG-HD.png"

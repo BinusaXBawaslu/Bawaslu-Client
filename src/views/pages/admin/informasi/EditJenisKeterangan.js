@@ -68,7 +68,11 @@ function EditJenisKeterangan() {
         showConfirmButton: false,
         timer: 1500,
       });
-
+      history.push(
+        `/admin-informasi/${
+          jenisInformasii.length > 0 && jenisInformasii[0].namaInformasi
+        }/${jenisInformasii.length > 0 && jenisInformasii[0].id}`
+      );
       setTimeout(() => {
         window.location.reload();
       }, 1500);
@@ -94,13 +98,17 @@ function EditJenisKeterangan() {
               <form onSubmit={update}>
                 <div className="row">
                   <div className="mb-3 col-lg-6">
-                     <label htmlFor="exampleInputEmail1" className="form-label font-weight-bold">
+                    <label
+                      htmlFor="exampleInputEmail1"
+                      className="form-label font-weight-bold">
                       Jenis Informasi
                     </label>
-                    <select disabled
+                    <select
+                      disabled
                       className="form-select form-select-sm"
                       aria-label="Small select example"
-                      onChange={(e) => setJenisInformasi(e.target.value)} value={jenisInformasi}>
+                      onChange={(e) => setJenisInformasi(e.target.value)}
+                      value={jenisInformasi}>
                       <option selected>PIlih Jenis Informasi</option>
                       {jenisInformasii.map((down) => {
                         return (
@@ -111,7 +119,9 @@ function EditJenisKeterangan() {
                   </div>
 
                   <div className="mb-3 col-lg-6">
-                    <label htmlFor="exampleInputEmail1" className="form-label font-weight-bold">
+                    <label
+                      htmlFor="exampleInputEmail1"
+                      className="form-label font-weight-bold">
                       Keterangan
                     </label>
                     <input
@@ -122,8 +132,14 @@ function EditJenisKeterangan() {
                     />
                   </div>
                 </div>
-                <button type="reset" className="btn-danger mt-3 mr-3">
-                  Batal
+                <button type="button" className="btn-danger mt-3 mr-3">
+                  <a style={{color:"white", textDecoration:"none"}}
+                    href={`/admin-informasi/${
+                      jenisInformasii.length > 0 &&
+                      jenisInformasii[0].namaInformasi
+                    }/${jenisInformasii.length > 0 && jenisInformasii[0].id}`}>
+                    Batal
+                  </a>
                 </button>
                 <button type="submit" className="btn-primary mt-3">
                   Simpan

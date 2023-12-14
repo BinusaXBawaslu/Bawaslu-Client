@@ -121,8 +121,16 @@ function MenuRegulasi() {
             />
             <br />
           </div>
-
-          <div class="main-card mb-3 card">
+          <div className="search">
+          <input
+            type="search"
+            className="form-control widget-content-right mt-2 mb-2 d-lg-none d-md-block"
+            placeholder="Search..."
+            value={searchTerm}
+            onChange={handleSearchChange}
+          />
+          </div>
+          <div class="main-card mb-3 card box-tabel">
             <div class="card-header" style={{ display: "flex" }}>
               {menuRegulasi.length > 0 &&
                 menuRegulasi[0].jenisRegulasiId.jenisRegulasi}
@@ -134,8 +142,7 @@ function MenuRegulasi() {
                   <select
                     className="form-select form-select-sm"
                     onChange={handleRowsPerPageChange}
-                    value={rowsPerPage}
-                  >
+                    value={rowsPerPage}>
                     <option value={5}>5</option>
                     <option value={10}>10</option>
                     <option value={20}>20</option>
@@ -145,49 +152,42 @@ function MenuRegulasi() {
               <div className="d-flex ml-auto gap-3">
                 <input
                   type="search"
-                  className="form-control widget-content-right w-75 d-lg-block d-none"
+                  className="form-control widget-content-right w-75 d-lg-block d-none d-md-none"
                   placeholder="Search..."
                   value={searchTerm}
                   onChange={handleSearchChange}
                 />
-                <div className="btn-actions-pane-right">
-                  <div role="group" className="btn-group-sm btn-group">
-                    <button className="active btn-focus p-2 rounded">
+                <div class="btn-actions-pane-right">
+                  <div role="group" class="btn-group-sm btn-group">
+                    <button class="active btn-focus p-2 rounded">
                       <a
-                        href={`/add-menu-regulasi/${param.id}`}
+                        href={`/add/menu-regulasi/${param.id}`}
                         className="text-light"
-                        style={{ textDecoration: "none" }}
-                      >
+                        style={{ textDecoration: "none" }}>
                         {" "}
                         Tambah Data
                       </a>
                     </button>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div
-              className="table-responsive"
-              style={{
-                overflowY: "auto",
-                maxHeight: "60vh",
-                marginLeft: "0 auto",
-              }}
-            >
-              <table class="align-middle mb-0 table table-borderless table-striped table-hover">
-                <thead>
-                  <tr>
-                    <th scope="col" className="text-left">
-                      No
-                    </th>
-                    <th scope="col" className="text-left">
-                      Menu Regulasi{" "}
-                    </th>
-                    <th scope="col" className="text-center">
-                      Aksi
-                    </th>
-                  </tr>
-                </thead>
+                <div
+                  className="table-responsive"
+                  style={{ overflowY: "auto", maxHeight: "60vh" }}
+                >
+                  <table class="align-middle mb-0 table table-borderless table-striped table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col" className="text-left">
+                          No
+                        </th>
+                        <th scope="col" className="text-left">
+                          Menu Regulasi{" "}
+                        </th>
+                        <th scope="col" className="text-center">
+                          Aksi
+                        </th>
+                      </tr>
+                      </thead>
                 <tbody>
                   {filteredList.map((jenis, index) => {
                     return (
@@ -256,6 +256,8 @@ function MenuRegulasi() {
           </div>
         </div>
       </div>
+    </div>
+    </div>
     </div>
   );
 }

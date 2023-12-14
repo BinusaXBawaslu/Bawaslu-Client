@@ -61,7 +61,7 @@ function InformasiBerkalaKelembagaan() {
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
-                        Peraturan Dan Kebijakan
+                        Layanan Publik Khusus
                       </span>
                     </a>
 
@@ -75,7 +75,7 @@ function InformasiBerkalaKelembagaan() {
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
-                        MOU
+                        Program Kerja
                       </span>
                     </a>
 
@@ -89,7 +89,7 @@ function InformasiBerkalaKelembagaan() {
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
-                        Pemantau Pemilu
+                        Ringkasan Kegiatan
                       </span>
                     </a>
 
@@ -103,7 +103,7 @@ function InformasiBerkalaKelembagaan() {
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
-                        Rencana Strategi
+                        Ringkasan & Anggaran Kegiatan
                       </span>
                     </a>
 
@@ -117,10 +117,114 @@ function InformasiBerkalaKelembagaan() {
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
-                        Materi Rakor
+                        Keuangan Bawaslu
                       </span>
                     </a>
 
+                    <a
+                      className="nav-link mb-3 p-3 shadow"
+                      id="v-pills-settings-tab"
+                      data-toggle="pill"
+                      href="#v-pills-settings"
+                      role="tab"
+                      aria-controls="v-pills-settings"
+                      aria-selected="false"
+                    >
+                      <span className="font-weight-bold small text-uppercase">
+                        Layanan Informasi Publik
+                      </span>
+                    </a>
+                    <a
+                      className="nav-link mb-3 p-3 shadow"
+                      id="v-pills-settings-tab"
+                      data-toggle="pill"
+                      href="#v-pills-settings"
+                      role="tab"
+                      aria-controls="v-pills-settings"
+                      aria-selected="false"
+                    >
+                      <span className="font-weight-bold small text-uppercase">
+                        Sosialisasi
+                      </span>
+                    </a>
+                    <a
+                      className="nav-link mb-3 p-3 shadow"
+                      id="v-pills-settings-tab"
+                      data-toggle="pill"
+                      href="#v-pills-settings"
+                      role="tab"
+                      aria-controls="v-pills-settings"
+                      aria-selected="false"
+                    >
+                      <span className="font-weight-bold small text-uppercase">
+                        SDM, Organisasi, & Adminsitrasi
+                      </span>
+                    </a>
+                    <a
+                      className="nav-link mb-3 p-3 shadow"
+                      id="v-pills-settings-tab"
+                      data-toggle="pill"
+                      href="#v-pills-settings"
+                      role="tab"
+                      aria-controls="v-pills-settings"
+                      aria-selected="false"
+                    >
+                      <span className="font-weight-bold small text-uppercase">
+                        Laporan Barang Milik Negara
+                      </span>
+                    </a>
+                    <a
+                      className="nav-link mb-3 p-3 shadow"
+                      id="v-pills-settings-tab"
+                      data-toggle="pill"
+                      href="#v-pills-settings"
+                      role="tab"
+                      aria-controls="v-pills-settings"
+                      aria-selected="false"
+                    >
+                      <span className="font-weight-bold small text-uppercase">
+                        Perjanjian Kinerja
+                      </span>
+                    </a>
+                    <a
+                      className="nav-link mb-3 p-3 shadow"
+                      id="v-pills-settings-tab"
+                      data-toggle="pill"
+                      href="#v-pills-settings"
+                      role="tab"
+                      aria-controls="v-pills-settings"
+                      aria-selected="false"
+                    >
+                      <span className="font-weight-bold small text-uppercase">
+                        TAPKIN
+                      </span>
+                    </a>
+                    <a
+                      className="nav-link mb-3 p-3 shadow"
+                      id="v-pills-settings-tab"
+                      data-toggle="pill"
+                      href="#v-pills-settings"
+                      role="tab"
+                      aria-controls="v-pills-settings"
+                      aria-selected="false"
+                    >
+                      <span className="font-weight-bold small text-uppercase">
+                        Pengadaan Barang & Jasa
+                      </span>
+                    </a>
+                    <a
+                      className="nav-link mb-3 p-3 shadow"
+                      id="v-pills-settings-tab"
+                      data-toggle="pill"
+                      href="#v-pills-settings"
+                      role="tab"
+                      aria-controls="v-pills-settings"
+                      aria-selected="false"
+                    >
+                      <span className="font-weight-bold small text-uppercase">
+                        Laporan Realisasi Anggaran
+                      </span>
+                    </a>
                     <a
                       className="nav-link mb-3 p-3 shadow"
                       id="v-pills-settings-tab"

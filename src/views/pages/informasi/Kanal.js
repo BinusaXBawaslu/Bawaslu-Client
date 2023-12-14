@@ -19,7 +19,6 @@ function Kanal() {
     <div>
       <Navbar />
 
-      {/* <!-- project area start --> */}
       <div
         style={{
           backgroundImage: `url('https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg?w=740&t=st=1698973959~exp=1698974559~hmac=418240e9f8d698b9b7f2c0907f5c8e0013885b44976fa36e713b8801491993db')`,
@@ -53,7 +52,7 @@ function Kanal() {
                       aria-selected="true"
                     >
                       <span className="font-weight-bold small text-uppercase">
-                        Putusan Pelanggaran
+                        Imbauan
                       </span>
                     </a>
 
@@ -67,7 +66,7 @@ function Kanal() {
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
-                        Sengketa Proses Pemilu
+                        Anggaran
                       </span>
                     </a>
 
@@ -81,7 +80,7 @@ function Kanal() {
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
-                        Pemungutan Suara Ulang & Susulan
+                        Pencegahan & Penanganan
                       </span>
                     </a>
 
@@ -95,7 +94,7 @@ function Kanal() {
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
-                        Organisasi dan Administrasi
+                        SDM Pengawas Pemilu
                       </span>
                     </a>
 
@@ -109,7 +108,7 @@ function Kanal() {
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
-                        Perselisihan Hasil Pemilihan Umum
+                        Hasil Pengawasan
                       </span>
                     </a>
 
@@ -123,7 +122,7 @@ function Kanal() {
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
-                        Sosialisasi
+                        Siaran Pers
                       </span>
                     </a>
 
@@ -137,7 +136,7 @@ function Kanal() {
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
-                        Piagam Penghargaan
+                        Putusan
                       </span>
                     </a>
                   </div>

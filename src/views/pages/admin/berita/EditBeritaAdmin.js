@@ -44,8 +44,8 @@ function EditBeritaAdmin() {
           showConfirmButton: false,
           timer: 1500,
         });
-        setTimeout(() => {
           history.push("/admin-berita");
+        setTimeout(() => {
           window.location.reload();
         }, 1500);
       })

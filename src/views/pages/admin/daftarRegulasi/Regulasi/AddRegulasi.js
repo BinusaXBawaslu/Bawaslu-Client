@@ -10,7 +10,6 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 
 function AddRegulasi() {
-  const [idMenuRegulasi, setIdMenuRegulasi] = useState();
   const [dokumen, setDokumen] = useState("");
   const [pdfDokumen, setPdfDokumen] = useState("");
   const history = useHistory();
@@ -18,6 +17,7 @@ function AddRegulasi() {
   const [regulasi, setRegulasi] = useState([]);
   const [regulasi1, setRegulasi1] = useState([]);
   const param = useParams();
+  const [idMenuRegulasi, setIdMenuRegulasi] = useState(0);
 
   const getByMenuRegulasi = async () => {
     try {
@@ -31,17 +31,20 @@ function AddRegulasi() {
   };
 
 
-  const getRegulasi = async () => {
-    try {
-      const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=${param.id}&page=0&size=100&sortBy=id&sortOrder=desc`
-      );
-      setRegulasi1(response.data.data.content);
-      console.log(response.data.data.content);
-    } catch (error) {
-      console.error("Terjadi Kesalahan", error);
-    }
-  };
+
+  useEffect(() => {
+    axios
+      .get(`${API_DUMMY}/bawaslu/api/menu-regulasi/get/` + param.id)
+      .then((ress) => {
+        const response = ress.data.data;
+        setRegulasi1(response.menuRegulasi);
+        setIdMenuRegulasi(response.id);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [param.id]);
+
 
   const addData = async (e) => {
     e.preventDefault();
@@ -73,7 +76,7 @@ function AddRegulasi() {
         showConfirmButton: false,
         timer: 1500,
       });
-      history.push(`/${regulasi1.length > 0 && regulasi1[0].menuRegulasi.menuRegulasi}`)
+      history.push(`/${regulasi1}/${param.id}`)
       setTimeout(() => {
         window.location.reload();
       }, 1500);
@@ -84,7 +87,6 @@ function AddRegulasi() {
 
   useEffect(() => {
     getByMenuRegulasi();
-    getRegulasi();
   }, []);
   return (
     <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
@@ -102,13 +104,13 @@ function AddRegulasi() {
                     <label
                       for="exampleInputPassword1"
                       className="form-label font-weight-bold">
-                      Jenis Regulasi
+                      Menu Regulasi
                     </label>
-                    <select
+                    <select disabled
                       className="form-select form-select-sm"
                       aria-label="Small select example"
-                      onChange={(e) => setIdMenuRegulasi(e.target.value)}>
-                      <option selected>PIlih Jenis Regulasi</option>
+                      onChange={(e) => setIdMenuRegulasi(e.target.value)} value={idMenuRegulasi}>
+                      <option selected>PIlih Menu Regulasi</option>
                       {regulasi.map((down) => {
                         return (
                           <option value={down.id}>{down.menuRegulasi}</option>
@@ -147,7 +149,7 @@ function AddRegulasi() {
                   </div>
                 </div>
                 <button type="submit" className="btn-danger mt-3 mr-3">
-                  <a href="" style={{ color: "white", textDecoration: "none" }}>
+                  <a href={`/${regulasi1}/${param.id}`} style={{ color: "white", textDecoration: "none" }}>
                     {" "}
                     Batal
                   </a>

@@ -112,6 +112,7 @@ function AdminPengumuman() {
               </select>
             </div>
           </div>
+          <div className="search">
           <input
             type="search"
             className="form-control widget-content-right w-100 mt-2 md-2 d-lg-none d-md-block"
@@ -119,7 +120,8 @@ function AdminPengumuman() {
             value={searchTerm}
             onChange={handleSearchChange}
           />
-          <div className="main-card mb-3 card">
+          </div>
+          <div className="main-card mb-3 card box-tabel">
             <div
               className="card-header pembungkus-text-button"
               style={{ display: "flex" }}
@@ -183,10 +185,8 @@ function AdminPengumuman() {
                 >
                   <thead>
                     <tr>
-                      <th scope="col">No</th>
-                      <th scope="col" style={{ minWidth: "150px" }}>
-                        Judul Pengumuman
-                      </th>
+                      <th scope="col" className="nomor">No</th>
+                      <th scope="col" style={{minWidth:"150px"}}>Judul Pengumuman</th>
                       <th scope="col">Image</th>
                       <th scope="col">Isi Pengumuman</th>
                       <th scope="col">Penulis</th>
@@ -200,9 +200,7 @@ function AdminPengumuman() {
                     {filteredList.map((pengumuman, index) => {
                       return (
                         <tr key={index}>
-                          <td data-label="No : ">
-                            {index + 1 + (currentPage - 1) * rowsPerPage}
-                          </td>
+                          <td data-label="No : " className="nomor">{index + 1 + (currentPage - 1) * rowsPerPage}</td>
                           <td data-label="author : ">{pengumuman.author}</td>
                           <td>
                             <img

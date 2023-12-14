@@ -122,15 +122,8 @@ function AdminSertaMerta() {
           <div id="container" className="container mt-3 app-main__outer">
             <div id="main-card" className="main-card mb-3 card">
               <div id="card-header" className="card-header">
-                Putusan Pelanggaran
+                Admin Serta Merta
                 <div className="d-flex ml-auto gap-3">
-                  <input
-                    type="search"
-                    className="form-control widget-content-right w-75"
-                    placeholder="Search..."
-                    value={searchTerm}
-                    onChange={handleSearchChange}
-                  />
                   <select
                     className="form-select form-select-sm"
                     aria-label="Small select example"

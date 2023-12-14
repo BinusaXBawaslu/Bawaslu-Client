@@ -63,7 +63,7 @@ function DetailPermohonanInformasi() {
       <div className="app-main">
         <Sidebar />
         <div className="container mt-3 mb-3 app-main__outer">
-          <div className="">
+          <div className="box-tabel">
             <form className="card shadow w-100">
               <h2 className="title fw-bold fs-3 card-header">Detail</h2>
               <br />

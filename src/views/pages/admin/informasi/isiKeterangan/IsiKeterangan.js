@@ -126,12 +126,12 @@ function IsiKeterangan() {
               </select>
             </div>
             <input
-              type="search"
-              className="form-control widget-content-right w-100"
-              placeholder="Search..."
-              value={searchTerm}
-              onChange={handleSearchChange}
-            />
+                  type="search"
+                  className="form-control widget-content-right w-100 mb-2"
+                  placeholder="Search..."
+                  value={searchTerm}
+                  onChange={handleSearchChange}
+                />
           </div>
           <div className="main-card mb-3 card">
             <div className="card-header" style={{ display: "flex" }}>
@@ -164,7 +164,7 @@ function IsiKeterangan() {
                   <div role="group" className="btn-group-sm btn-group">
                     <button className="active btn-focus p-2 rounded">
                       <a
-                        href={"/add-isi-keterangan"}
+                        href={"/add/isi-keterangan/" + param.id}
                         className="text-light"
                         style={{ textDecoration: "none" }}
                       >

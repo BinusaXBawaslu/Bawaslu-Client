@@ -53,11 +53,7 @@ function PageBerita() {
 
   useEffect(() => {
     axios
-      .get(`${API_DUMMY}/bawaslu/api/berita/get/` + param.id, {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      })
+      .get(`${API_DUMMY}/bawaslu/api/berita/get/` + param.id)
       .then((ress) => {
         const response = ress.data.data;
         setAuthor(response.author);
@@ -87,9 +83,6 @@ function PageBerita() {
         <div class="container">
           <div class="row">
             <div class="col-lg-8">
-              <h1 style={{ fontWeight: "bold", fontSize: "45px" }}>
-                {judulBerita}
-              </h1>
               <div class="single-blog-inner">
                 <div class="tag-and-share">
                   <div class="row">
@@ -179,7 +172,9 @@ function PageBerita() {
                   )}
                 </div>
                 <div class="details">
-                  <h2></h2>
+                  <h2>
+                    {judulBerita}
+                  </h2>
                   <ul class="blog-meta">
                     <li>
                       <i class="far fa-user"></i>By {author}
