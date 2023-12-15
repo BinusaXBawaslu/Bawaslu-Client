@@ -11,6 +11,7 @@ function AddJenisRegulasi() {
   const [show, setShow] = useState(false);
   const history = useHistory();
 
+  //add rejenis regulasi
   const add = async (e) => {
     e.preventDefault();
     e.persist();

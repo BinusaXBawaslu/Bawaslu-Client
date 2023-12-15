@@ -20,6 +20,7 @@ function DetailBerita() {
   const [image, setImage] = useState("");
   const param = useParams();
 
+  // get by id berita
   useEffect(() => {
     axios
       .get(`${API_DUMMY}/bawaslu/api/berita/get/` + param.id, {

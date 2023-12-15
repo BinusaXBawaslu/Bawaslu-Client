@@ -65,6 +65,7 @@ function AdminPermohonanInformasi() {
     )
   );
 
+  //totoal page
   const totalPages = Math.ceil(filteredList.length / rowsPerPage);
 
   const deleteData = async (id) => {

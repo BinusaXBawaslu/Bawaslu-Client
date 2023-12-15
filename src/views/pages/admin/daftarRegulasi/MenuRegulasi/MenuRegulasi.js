@@ -24,7 +24,6 @@ function MenuRegulasi() {
   const [searchTerm, setSearchTerm] = useState("");
 
   const param = useParams();
-  const history = useHistory();
 
   const getMenuRegulasi = async (page) => {
     try {

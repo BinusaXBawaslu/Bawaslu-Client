@@ -10,10 +10,9 @@ import { useParams } from "react-router-dom/cjs/react-router-dom";
 import { format } from "date-fns";
 import idLocale from "date-fns/locale/id";
 
-
 function RekapBerita() {
-    const [rekap, setRekap] = useState([]);
-    const { tahun_bulan } = useParams();
+  const [rekap, setRekap] = useState([]);
+  const { tahun_bulan } = useParams();
 
   const getAllRekap = async () => {
     try {
@@ -27,6 +26,7 @@ function RekapBerita() {
     }
   };
 
+  //useEffect
   useEffect(() => {
     getAllRekap();
   }, [tahun_bulan]);
@@ -37,46 +37,54 @@ function RekapBerita() {
       <br />
       <div className="blog-area pd-top-120 pd-bottom-120">
         <div className="container">
-          <h2>{rekap.length > 0 && rekap[0].createdDated}</h2>
+          <h2>{format(new Date(rekap.length > 0 && rekap[0].createdDate), "dd MMMM yyyy", {
+            locale: idLocale,
+          })}</h2>
+          <br />
+          <br />
           <div className="row">
             <div className="col-lg-8 col-md-12 widget widget-recent-post pe-lg-5">
               <ul>
-              {rekap.length > 0 ? (
-                rekap.map((berita, index) => {
-                  return (
-                <li>
-                  <div className="media">
-                    <div className="media-left">
-                      <img
-                        src={berita.image}
-                        alt="blog"
-                        style={{ width: "200px" }}
-                      />
-                    </div>
-                    <div className="media-body align-self-center">
-                      <h6 className="fs-4 title">
-                        <a href={`/isi-rekap/data-berita/${berita.id}`}>
-                          {berita.judulBerita}
-                        </a>
-                      </h6>
-                      <div className="post-info">
-                        <span className="mr-3"> BY {berita.author}</span>
-                        <i className="far fa-calendar-alt"></i>
-                        <span>{format(new Date(berita.createdDate), "dd MMMM yyyy", { locale: idLocale })}</span>
-                      </div>
-                      {/* <br /> */}
-                      <p className="fs-6 isiBerita">
-                        {berita.isiBerita}
-                      </p>
-                    </div>
-                  </div>
-                  <hr />
-                </li>
-                  );
-                })
-              ):(
-                <h1>Data Tidak Ada</h1>
-              )}
+                {rekap.length > 0 ? (
+                  rekap.map((berita, index) => {
+                    return (
+                      <li>
+                        <div className="media">
+                          <div className="media-left">
+                            <img
+                              src={berita.image}
+                              alt="blog"
+                              style={{ width: "200px" }}
+                            />
+                          </div>
+                          <div className="media-body align-self-center">
+                            <h6 className="fs-4 title">
+                              <a href={`/isi-rekap/data-berita/${berita.id}`}>
+                                {berita.judulBerita}
+                              </a>
+                            </h6>
+                            <div className="post-info">
+                              <span className="mr-3"> BY {berita.author}</span>
+                              <i className="far fa-calendar-alt"></i>
+                              <span>
+                                {format(
+                                  new Date(berita.createdDate),
+                                  "dd MMMM yyyy",
+                                  { locale: idLocale }
+                                )}
+                              </span>
+                            </div>
+                            {/* <br /> */}
+                            <p className="fs-6 isiBerita">{berita.isiBerita}</p>
+                          </div>
+                        </div>
+                        <hr />
+                      </li>
+                    );
+                  })
+                ) : (
+                  <h1>Data Tidak Ada</h1>
+                )}
               </ul>
             </div>
             <div className="col-lg-4 col-12">

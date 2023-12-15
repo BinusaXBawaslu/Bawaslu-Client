@@ -352,7 +352,8 @@ function Home() {
                     />
                     <h3>Informasi Berkala</h3>
                   </div>
-                  <a href="/informasi-berkala">
+
+                  <a href="/informasi-berkala"></a>
                   <div className="details-hover-wrap">
                     <div className="details-hover">
                       <img

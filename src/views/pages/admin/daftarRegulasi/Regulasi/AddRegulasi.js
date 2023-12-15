@@ -19,6 +19,7 @@ function AddRegulasi() {
   const param = useParams();
   const [idMenuRegulasi, setIdMenuRegulasi] = useState(0);
 
+  //get menu regulasi
   const getByMenuRegulasi = async () => {
     try {
       const response = await axios.get(

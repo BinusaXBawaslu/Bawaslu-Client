@@ -17,6 +17,7 @@ function MenuEditRegulasi() {
   const [jenisRegulasi, setJenisRegulasi] = useState([]);
   const param = useParams();
 
+  // get jenis regulasi
   const getJenisRegulasi = async () => {
     try {
       const response = await axios.get(

@@ -54,6 +54,7 @@ function EditBeritaAdmin() {
       });
   };
 
+  //get by id category
   const getAllCategoryId = async () => {
     try {
       const response = await axios.get(

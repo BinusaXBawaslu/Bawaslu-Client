@@ -34,6 +34,7 @@ function IsiRekap() {
     }
   };
 
+  //berita get
   useEffect(() => {
     axios
       .get(`${API_DUMMY}/bawaslu/api/berita/get/` + param.id)

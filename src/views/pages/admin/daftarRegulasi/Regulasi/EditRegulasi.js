@@ -51,6 +51,7 @@ function EditRegulasi() {
       });
   }, [param.id]);
 
+  //edit regulasi
   const update = async (e) => {
     e.preventDefault();
 

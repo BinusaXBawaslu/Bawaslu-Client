@@ -67,6 +67,7 @@ function AdminPermohonanKeberatan() {
 
   const totalPages = Math.ceil(filteredList.length / rowsPerPage);
 
+  //delete data
   const deleteData = async (id) => {
     Swal.fire({
       title: "Anda Ingin Menghapus Data ?",

@@ -20,6 +20,7 @@ function DetailPengumuman() {
   const [file, setFile] = useState("");
   const param = useParams();
 
+  //get by id pengumuman
   useEffect(() => {
     axios
       .get(`${API_DUMMY}/bawaslu/api/pengumuman/get/` + param.id)

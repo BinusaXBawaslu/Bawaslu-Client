@@ -29,6 +29,7 @@ function AddMenuRegulasi() {
     }
   };
 
+  // get by id jenis regulasi
   useEffect(() => {
     axios
       .get(`${API_DUMMY}/bawaslu/api/jenis-regulasi/get-by-id/` + param.id, {

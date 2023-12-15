@@ -323,6 +323,9 @@ function Navbar() {
                       </li>
                     );
                   })}
+                   <li>
+                    <a href="/maklumat-pelayanan">Maklumat Pelayanan</a>
+                  </li>
                   {/* <li className="text-black"><a>Daftar Informasi Publik</a></li> */}
                   {/* <li>
                     <a href="/regulasi">Regulasi</a>

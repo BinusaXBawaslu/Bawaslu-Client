@@ -116,6 +116,7 @@ function AdminBerita() {
     });
   };
 
+  //delete category
   const deleteData1 = async (id) => {
     Swal.fire({
       title: "Apakah Anda Ingin Menghapus Kategori Berita?",

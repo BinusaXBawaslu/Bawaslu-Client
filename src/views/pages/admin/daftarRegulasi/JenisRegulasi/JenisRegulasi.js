@@ -19,6 +19,7 @@ function JenisRegulasi() {
   const [searchTerm, setSearchTerm] = useState("");
   const history = useHistory();
 
+  // get all jenis regulasi
   const getAll = async (page) => {
     try {
       const response = await axios.get(

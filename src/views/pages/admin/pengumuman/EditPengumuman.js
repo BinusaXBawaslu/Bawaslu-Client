@@ -41,6 +41,7 @@ function EditPengumuman() {
       });
   }, []);
 
+  //edit pengumuman
   const update = async (e) => {
     e.preventDefault();
 
@@ -120,7 +121,7 @@ function EditPengumuman() {
                       id="exampleInputPassword1"
                     />
                   </div>
-                  <div className="mb-3 col-lg-6"> 
+                  <div className="mb-3 col-lg-6">
                     <label for="exampleInputPassword1" className="form-label font-weight-bold">
                       Tags
                     </label>

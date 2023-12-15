@@ -29,6 +29,7 @@ function DetailPermohonanKeberatan() {
     useState("");
   const param = useParams();
 
+  //by if permohonan keberatan
   useEffect(() => {
     axios
       .get(`${API_DUMMY}/bawaslu/api/permohonan-keberatan/get/` + param.id, {

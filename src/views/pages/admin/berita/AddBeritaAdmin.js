@@ -18,6 +18,7 @@ function AddBeritaAdmin() {
   const [show, setShow] = useState(false);
   const history = useHistory();
 
+  //add
   const add = async (e) => {
     e.preventDefault();
     e.persist();

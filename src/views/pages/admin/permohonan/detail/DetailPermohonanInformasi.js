@@ -29,6 +29,7 @@ function DetailPermohonanInformasi() {
     useState("");
   const param = useParams();
 
+  //permohonan informasi
   useEffect(() => {
     axios
       .get(`${API_DUMMY}/bawaslu/api/permohonan-informasi/get/` + param.id, {

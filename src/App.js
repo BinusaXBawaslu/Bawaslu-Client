@@ -100,23 +100,13 @@ import CategoryBerita from "./views/pages/CategoryBerita";
 import AddRegulasi from "./views/pages/admin/daftarRegulasi/Regulasi/AddRegulasi";
 import MenuInformasi from "./views/pages/admin/informasi/MenuInformasi";
 import MenuEditRegulasi from "./views/pages/admin/daftarRegulasi/MenuRegulasi/MenuEditRegulasi";
-import RekapBerita from "./views/pages/rekap_berita/RekapBerita";
+import IsiDaftarRegulasi from "./views/pages/daftarRegulasi/IsiDaftarRegulasi";
+import InformasiBerkala from "./views/pages/informasi/InformasiBerkala"
 import InformasiBerkalaKelembagaan from "./views/pages/informasi/InformasiBerkalaKelembagaan";
-import InformasiBerkalaKepemiluan from "./views/pages/informasi/InformasiBerkalaKepemiluan";
-import AddIsiInformasi from "./views/pages/admin/Add/AddSertaMerta";
+import InformasiBerkalaKepemiluan from "./views/pages/informasi/InformasiBerkalaKepemiluan"
+import DetailBerita from "./views/pages/admin/berita/DetailBerita";
+import AddIsiInformasi from "./views/pages/admin/AddIsiInformasi";
 import PutIsiInformasi from "./views/pages/admin/PutIsiInformasi";
-import AdminSertaMerta from "./views/pages/admin/AdminSertaMerta";
-import InformasiBerkala from "./views/pages/informasi/InformasiBerkala";
-import AdminSetiapSaat from "./views/pages/admin/AdminSetiapSaat";
-import AddSertaMerta from "./views/pages/admin/Add/AddSertaMerta";
-import AddSetiapSaat from "./views/pages/admin/Add/AddSetiapSaat";
-import AdminBerkalaKepemiluan from "./views/pages/admin/AdminBerkalaKepemiluan";
-import AdminBerkalaKelembagaan from "./views/pages/admin/AdminBerkalaKelembagaan";
-import AdminKanal from "./views/pages/admin/AdminKanal";
-import AddBerkalaKepemiluan from "./views/pages/admin/Add/AddBerkalaKepemiluan";
-import AddBerkalaKelembagaan from "./views/pages/admin/Add/AddBerkalaKelembagaan";
-import AddKanal from "./views/pages/admin/Add/AddKanal";
-
 // test
 function App() {
   return (
@@ -142,6 +132,7 @@ function App() {
             component={EditCategory}
             exact
           />
+                    <PrivateRoute path="/detail/berita/:id" component={DetailBerita} exact />
           {/* daftar informasi */}
           <Route path="/informasi-serta-merta" component={SertaMerta} exact />
           <Route path="/informasi-setiap-saat" component={SetiapSaat} exact />
@@ -151,6 +142,7 @@ function App() {
             exact
           />
           <Route path="/informasi-berkala" component={InformasiBerkala} exact />
+         
           <Route
             path="/informasi-berkala-Kepemiluan"
             component={InformasiBerkalaKepemiluan}
@@ -230,11 +222,14 @@ function App() {
           {/* daftar regulasi */}
 
           <Route path="/maklumat-pelayanan" component={Maklumat} exact />
+          <Route
+            path="/daftar-regulasi/:jenisRegulasi/:id"
+            component={IsiDaftarRegulasi}
           <Route path="/regulasi" component={Regulasi} exact />
           <Route path="/dip" component={Dip} exact />
           <Route
-            path="/standar-operasional-prosedur"
-            component={InformasiStandarProsedur}
+            path="/daftar-regulasi/:jenisRegulasi/:id"
+            component={IsiDaftarRegulasi}
             exact
           />
 
@@ -244,7 +239,7 @@ function App() {
             component={AdminFormInformasi}
             exact
           />
-          <PrivateRoute path="/add-regulasi" component={AddRegulasi} exact />
+          <PrivateRoute path="/add/regulasi/:id" component={AddRegulasi} exact />
           <PrivateRoute
             path="/tambah-jenis-regulasi"
             component={AddJenisRegulasi}
@@ -310,7 +305,7 @@ function App() {
             exact
           />
           <PrivateRoute
-            path="/add-menu-regulasi"
+            path="/add/menu-regulasi/:id"
             component={AddMenuRegulasi}
             exact
           />
@@ -331,8 +326,8 @@ function App() {
             component={DetailPermohonanInformasi}
             exact
           />
-          <Route
-            path="/detail-permohonan-keberatan/:id"
+           <Route
+            path="/detail/permohonan-keberatan/:id"
             component={DetailPermohonanKeberatan}
             exact
           />
@@ -348,20 +343,7 @@ function App() {
             exact
           />
           {/* admin informasi */}
-
-          <Route path="/admin-serta-merta" component={AdminSertaMerta} exact />
-          <Route path="/admin-setiap-saat" component={AdminSetiapSaat} exact />
-          <Route
-            path="/admin-berkala-kepemiluan"
-            component={AdminBerkalaKepemiluan}
-            exact
-          />
-          <Route
-            path="/admin-berkala-kelembagaan"
-            component={AdminBerkalaKelembagaan}
-            exact
-          />
-          <Route path="/admin-kanal" component={AdminKanal} exact />
+          {/* <Route path="/admin-serta-merta" component={AdminSertaMerta} exact /> */}
 
           <Route
             path="/admin-informasi/:namaInformasi/:id"
@@ -380,7 +362,7 @@ function App() {
             exact
           />
           <Route
-            path="/tambah-jenis-keterangan"
+            path="/tambah/jenis-keterangan/:id"
             component={AddJenisKeterangan}
             exact
           />
@@ -395,7 +377,7 @@ function App() {
             exact
           />
           <Route
-            path="/add-isi-keterangan"
+            path="/add/isi-keterangan/:id"
             component={AddIsiKeteranganInformasii}
             exact
           />
@@ -406,8 +388,8 @@ function App() {
           />
           {/* rekap data perbulan */}
           <Route
-            path="/rekap-berita/:tahun_bulan"
-            component={RekapBerita}
+            path="/rekap/berita/:tahun_bulan"
+            component={RekapBeritaa}
             exact
           />
           <Route
@@ -533,7 +515,7 @@ function App() {
             component={IsiPengumuman}
             exact
           /> */}
-          <Route path="/page-isi-berita/:id" component={PageBerita} exact />
+          <Route path="/page-isi-berita/:author/:id" component={PageBerita} exact />
           <Route
             path="/penyelesaian-sengketa-footer"
             component={PenyelesaianSengketaFooter}

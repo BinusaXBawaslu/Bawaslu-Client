@@ -30,6 +30,7 @@ function EditJenisRegulasi() {
       });
   }, []);
 
+  // update jenis regulasi
   const update = async (e) => {
     e.preventDefault();
 

@@ -41,6 +41,7 @@ function AdminPengumuman() {
     getAll(currentPage);
   }, [currentPage, rowsPerPage]);
 
+  //delete data
   const deleteData = async (id) => {
     Swal.fire({
       title: "Anda Ingin Menghapus Data ?",

@@ -618,7 +618,7 @@ function Berita() {
 
                         return (
                           <li key={`${tahun_bulan}`}>
-                            <a href={`/${tahun_bulan}`}>
+                            <a href={`/rekap/berita/${tahun_bulan}`}>
                               <i class="fa-solid fa-file"></i> {monthData.label}{" "}
                               {monthData.year} ({totalData})
                             </a>

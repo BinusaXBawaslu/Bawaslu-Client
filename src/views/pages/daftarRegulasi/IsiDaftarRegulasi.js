@@ -17,20 +17,30 @@ function IsiDaftarRegulasi() {
   const [selectedTableId, setSelectedTableId] = useState(null);
   const [list, setList] = useState([]);
   const [isi, setIsi] = useState([]);
+  const [jenisRegulasi, setJenisRegulasi] = useState([]);
+
 
   const getMenuRegulasi = async () => {
-    await axios
-      .get(
+    try {
+      const response = await axios.get(
         `${API_DUMMY}/bawaslu/api/menu-regulasi/get-by-jenis-regulasi?id-jenis-regulasi=${param.id}&page=0&size=10`
-      )
-      .then((response) => {
-        setList(response.data.data);
-        console.log(response.data.data);
-      })
-      .catch((error) => {
-        alert("Terjadi kesalahan" + error);
-      });
+      );
+
+      const dataList = response.data.data;
+
+      if (dataList.length > 0) {
+        const jenisRegulasi = dataList[0].jenisRegulasiId.jenisRegulasi;
+        setList(dataList);
+        setJenisRegulasi(jenisRegulasi);
+        console.log(jenisRegulasi);
+      } else {
+        console.log("Data tidak ditemukan");
+      }
+    } catch (error) {
+      alert("Terjadi kesalahan: " + error);
+    }
   };
+
 
   const getRegulasi = async (tableId) => {
     try {
@@ -83,7 +93,7 @@ function IsiDaftarRegulasi() {
             <div className="col-xl-6 col-lg-7 col-md-10">
               <div className="section-title text-center">
                 <h5 className="sub-title double-line">Bawaslu Boyolali</h5>
-                <h2 className="title">{list.length > 0 && list[0].judulBerita}</h2>
+                <h2 className="title">{jenisRegulasi}</h2>
               </div>
             </div>
           </div>
@@ -123,7 +133,7 @@ function IsiDaftarRegulasi() {
                     <thead>
                       <tr>
                         <th scope="col"> Dokumen</th>
-                        <th scope="col"> Unduh / Lihat</th>
+                        <th scope="col" style={{width:"150px"}}> Unduh / Lihat</th>
                       </tr>
                     </thead>
                     {isi.map((item) => {
@@ -142,13 +152,10 @@ function IsiDaftarRegulasi() {
                                   className="bg-primary text-light"
                                   style={{
                                     border: "none",
-                                    padding: "7px",
-                                    paddingLeft: "13px",
-                                    paddingRight: "13px",
                                     borderRadius: "5px",
                                     marginRight: "10px",
                                   }}>
-                                  Unduh / Lihat
+                                  <i class="fas fa-file-download"></i> / <i class="fas fa-eye"></i>
                                 </button>
                               </a>
                             </td>
