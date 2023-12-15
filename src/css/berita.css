@@ -1,8 +1,20 @@
-
+#img-berita-carousel{
+    width: 990px;
+}
+@media (max-width: 768px) {
+    #img-berita-carousel{
+        width: 600px;
+    }
+}
 .carousel-control-prev,
 .carousel-control-next {
   color: white;
 }
+.img-berita-carousel{
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
+}
+
+
 
 /* Gaya untuk mengubah warna indicator carousel menjadi putih */
 .carousel-indicators button {

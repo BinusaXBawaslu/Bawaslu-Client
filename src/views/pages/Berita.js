@@ -12,7 +12,7 @@ import {
 } from "react-share";
 import { format } from "date-fns";
 import idLocale from "date-fns/locale/id";
-import "../../css/berita.css"
+import "../../css/berita.css";
 function Berita() {
   const [scroll, setScroll] = useState(false);
   const [list, setList] = useState([]);
@@ -166,7 +166,13 @@ function Berita() {
       <Navbar />
       {/* <!-- page title start --> */}
       <div id="carouselExampleDark" class="carousel carousel-dark slide">
-        <div class="carousel-indicators" style={{backgroundColor:"white", border:"1px solid #fff"}}>
+        <div
+          class="carousel-indicators"
+          style={{
+            backgroundColor: "rgba(255, 255, 255, 0.7)",
+            border: "1px solid #fff",
+          }}
+        >
           <button
             type="button"
             data-bs-target="#carouselExampleDark"
@@ -202,29 +208,36 @@ function Berita() {
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="10000">
-            <img
-              src="https://www.inilah.com/_next/image?url=https%3A%2F%2Fc.inilah.com%2Freborn%2F2023%2F11%2FIMG_20231125_WA_0020_68c10d8068.jpg&w=1920&q=75"
-              class="d-block w-100"
-              alt="Berita1"
-            />
-            <div class="carousel-caption  d-md-block">
-              <h1 style={{ color: "white" }}>Berita</h1>
-              <p style={{ color: "white" }}>
-                Hasil penelusuran Bawaslu Boyolali menyatakan Kades Jerukan,
-                Juwangi, melanggar netralitas kades dalam pemilu karena
-                mengarahkan warganya ...
-              </p>
+            <div className="pmbngks-img-caraousel">
+              <img
+                id="img-berita-carousel"
+                src="https://i1.wp.com/www.fokusjateng.com/wp-content/uploads/2018/10/bawaslu.jpg?fit=432%2C289&ssl=1"
+                class="d-block"
+                alt="Berita1"
+              />
+              <div
+                style={{ borderRadius: "0px" }}
+                class="carousel-caption  d-md-block"
+              >
+                <h1 style={{ color: "white", fontWeight: "bold" }}>BERITA</h1>
+                <p style={{ color: "white", fontWeight: "bold" }}>
+                  Hasil penelusuran Bawaslu Boyolali menyatakan Kades Jerukan,
+                  Juwangi, melanggar netralitas kades dalam pemilu karena
+                  mengarahkan warganya ...
+                </p>
+              </div>
             </div>
           </div>
           <div class="carousel-item" data-bs-interval="2000">
             <img
-              src="https://jateng.bawaslu.go.id/wp-content/uploads/2018/09/IMG-20180905-WA0010-1024x576.jpg"
-              class="d-block w-100"
+              id="img-berita-carousel"
+              src="https://www.bawaslu.go.id/sites/default/files/styles/gambar_berita_besar/public/foto_berita/WhatsApp%20Image%202018-12-10%20at%2012.18.18.jpeg?itok=bKIRR9lh"
+              class="d-block"
               alt="Berita2"
             />
             <div class="carousel-caption d-md-block">
-              <h1 style={{ color: "white" }}>Kehumasan</h1>
-              <p style={{ color: "white" }}>
+              <h1 style={{ color: "white", fontWeight: "bold" }}>KEHUMASAN</h1>
+              <p style={{ color: "white", fontWeight: "bold" }}>
                 Boyolali – Jadwal pendaftaran Kelompok Penyelenggara Pemungutan
                 Suara (KPPS) Pemilu 2024 dimulai pada 11 Desember 2023
                 mendatang. Komisi Pemilihan Umum... Read ...
@@ -233,13 +246,14 @@ function Berita() {
           </div>
           <div class="carousel-item">
             <img
-              src="https://pangkep.bawaslu.go.id/wp-content/uploads/2023/09/IMG_5619.jpg"
-              class="d-block w-100"
+              id="img-berita-carousel"
+              src="https://jateng.bawaslu.go.id/wp-content/uploads/2018/09/IMG-20180905-WA0010-thegem-blog-default.jpg"
+              class="d-block"
               alt="Berita3"
             />
             <div class="carousel-caption d-md-block">
-              <h1 style={{ color: "white" }}>Pencegahan</h1>
-              <p style={{ color: "white" }}>
+              <h1 style={{ color: "white", fontWeight: "bold" }}>PENCEGAHAN</h1>
+              <p style={{ color: "white", fontWeight: "bold" }}>
                 {" "}
                 BOYOLALI – Seiring dengan tahapan Kampanye Pemilihan umum Tahun
                 2019 yang akan segara berlangsung, Bawaslu Kabupaten Boyolali
@@ -249,13 +263,16 @@ function Berita() {
           </div>
           <div class="carousel-item">
             <img
-              src="https://bawaslu.go.id/sites/default/files/styles/gambar_berita_besar/public/foto_berita/IMG-20220616-WA0008.jpg?itok=AdgsjibP"
-              class="d-block w-100"
+              id="img-berita-carousel"
+              src="https://i0.wp.com/sampit.id/wp-content/uploads/2023/11/apel-siaga-bawaslu-boyolali-jpg.webp?fit=800%2C450&ssl=1"
+              class="d-block"
               alt="Berita4"
             />
             <div class="carousel-caption  d-md-block">
-              <h1 style={{ color: "white" }}>Penanganan Pelanggaran</h1>
-              <p style={{ color: "white" }}>
+              <h1 style={{ color: "white", fontWeight: "bold" }}>
+                PENANGANAN PELANGGARAN
+              </h1>
+              <p style={{ color: "white", fontWeight: "bold" }}>
                 Dugaan pelanggaran Pemilu sebagaimana dimaksud berupa:
                 pelanggaran kode etik Penyelenggara Pemilu;; pelanggaran
                 administrasi Pemilu; dan/atau; tindak pidana ...
@@ -264,13 +281,16 @@ function Berita() {
           </div>
           <div class="carousel-item">
             <img
-              src="https://jateng.bawaslu.go.id/wp-content/uploads/2023/04/BENTUK-DARI-SARANA-MARKETING-BAWASLU-BOYOLALI-ADAKAN-PELATIHAN-PEMBUATAN-VIDEO-PELIPUTAN.jpeg"
-              class="d-block w-100"
+              id="img-berita-carousel"
+              src="https://halosemarang.id/wp-content/uploads/2022/09/0e39dae6.jpg"
+              class="d-block"
               alt="Berita5"
             />
             <div class="carousel-caption  d-md-block">
-              <h1 style={{ color: "white" }}>OSDM & Diklat</h1>
-              <p style={{ color: "white" }}>
+              <h1 style={{ color: "white", fontWeight: "bold" }}>
+                OSDM & DIKLAT
+              </h1>
+              <p style={{ color: "white", fontWeight: "bold" }}>
                 Membangun aparatur dan kelembagaan pengawas pemilu yang kuat,
                 mandiri dan solid;; Mengembangkan pola dan metode pengawasan
                 yang efektif dan efisien;; Memperkuat ...

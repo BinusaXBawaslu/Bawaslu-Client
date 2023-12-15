@@ -33,6 +33,10 @@
         display: flex;
         flex-direction: column;
     }
+    
+    .kelembagaan-btn{
+        width: 100px;
+    }
 }
 @media screen and (max-width: 768px) {
     #display{
