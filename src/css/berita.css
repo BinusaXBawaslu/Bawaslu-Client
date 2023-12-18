@@ -285,7 +285,7 @@
   /* ====================================================================================================================
    * RESPONSIVE
    * ====================================================================================================================*/
-  @media screen and (max-width: 860px) {
+  @media screen and (max-width: 768px) {
     .flex-direction-nav .flex-prev {
       opacity: 1;
       left: 10px;
@@ -294,14 +294,52 @@
       opacity: 1;
       right: 10px;
     }
+    #img-carousel {
+        margin-top: 50px;
+        padding-top: 100px;
+        padding: 30px; /* Sesuaikan nilai padding sesuai kebutuhan */
+      }
+  }
+  .carousel-item img {
+    max-width: 100%; /* Membuat gambar sesuai lebar maksimum */
+    height: auto;    /* Menjaga aspek ratio gambar */
   }
   
+  .carousel-caption {
+    padding: 20px;    /* Menambahkan padding pada caption */
+  }
+  .carousel-item img {
+    max-width: 100%; /* Membuat gambar sesuai lebar maksimum */
+    height: auto;    /* Menjaga aspek ratio gambar */
+  }
+
+  .carousel-caption {
+    padding: 20px;    /* Menambahkan padding pada caption */
+  }
+  #img-carousel{
+    width: auto;
+    height: 500px;
+    margin: 0 auto;
+  }
 
 /* Gaya untuk mengubah warna indicator carousel menjadi putih */
 .carousel-indicators button {
   background-color: white;
   border: 1px solid #fff;
 }
+@media (max-width: 768px) {
+    #img-carousel {
+        width: 300px;
+        margin-top: 50px;
+        padding-top: 100px;
+        padding: 30px; /* Sesuaikan nilai padding sesuai kebutuhan */
+      }
+}
+#img-carousel {
+    margin-top: 100px;
+    padding-top: 100px;
+    padding: 10px; /* Sesuaikan nilai padding sesuai kebutuhan */
+  }
   #carouselExampleDark {
     margin-top: 60px;
     padding: 50px; /* Atur jarak dari layar */

@@ -164,6 +164,39 @@ function Berita() {
   return (
     <>
       <Navbar />
+      {/* <!-- page title start --> */}
+      <div id="carouselExampleFade" class="carousel slide carousel-fade">
+        <div class="carousel-inner padding-img">
+          <div class="carousel-item active">
+            <img
+            id="img-carousel"
+              src="https://www.bawaslu.go.id/sites/default/files/styles/gambar_berita_besar/public/foto_berita/WhatsApp%20Image%202018-12-10%20at%2012.18.18.jpeg?itok=bKIRR9lh"
+              class="d-block img-fluid"
+              alt="..."
+            />
+            <div class="carousel-caption d-md-block">
+              <h1 style={{ color: "white", fontWeight: "bold" }}>KEHUMASAN</h1>
+              <p style={{ color: "white", fontWeight: "bold" }}>
+                Boyolali – Jadwal pendaftaran Kelompok Penyelenggara Pemungutan
+                Suara (KPPS) Pemilu 2024 dimulai pada 11 Desember 2023
+                mendatang. Komisi Pemilihan Umum... Read ...
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+                        id="img-carousel"
+              src="https://jateng.bawaslu.go.id/wp-content/uploads/2018/09/IMG-20180905-WA0010-thegem-blog-default.jpg"
+              class="d-blockimg-fluid"
+              alt="..."
+            />
+            <div class="carousel-caption d-md-block">
+              <h1 style={{ color: "white", fontWeight: "bold" }}>KEHUMASAN</h1>
+              <p style={{ color: "white", fontWeight: "bold" }}>
+                Boyolali – Jadwal pendaftaran Kelompok Penyelenggara Pemungutan
+                Suara (KPPS) Pemilu 2024 dimulai pada 11 Desember 2023
+                mendatang. Komisi Pemilihan Umum... Read ...
+              </p>
       <div
         class="editors-news container"
         style={{ marginTop: "100px", marginBottom: "50px" }}>
@@ -213,7 +246,30 @@ function Berita() {
               })}
             </div>
           </div>
+         
         </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleFade"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleFade"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+  
+
+      <br />
       </div>
       <div class="blog-area pd-top-120 pd-bottom-120">
         <div class="container">
