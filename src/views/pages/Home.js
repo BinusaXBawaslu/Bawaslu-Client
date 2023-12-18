@@ -16,6 +16,7 @@ import "../../css/home.css";
 
 function Home() {
   const [list, setList] = useState([]);
+  const [pengumuman, setPengumuman] = useState([]);
   const [listTerbaru, setListTerbaru] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [paginationInfo, setPaginationInfo] = useState({
@@ -66,6 +67,19 @@ function Home() {
     }
   };
 
+  const getAllPengumuman = async (page) => {
+    await axios
+      .get(
+        `${API_DUMMY}/bawaslu/api/pengumuman?page=0&size=10&sortBy=id&sortOrder=desc`
+      )
+      .then((res) => {
+        setPengumuman(res.data.data.content);
+      })
+      .catch((error) => {
+        alert("Terjadi kesalahan" + error);
+      });
+  };
+
   useEffect(() => {
     getAll(currentPage);
   }, [currentPage]);
@@ -73,7 +87,9 @@ function Home() {
   useEffect(() => {
     getAllTerbaru();
     getAllInformasi();
+    getAllPengumuman();
   }, []);
+
   return (
     <div>
       <Navbar />
@@ -84,8 +100,7 @@ function Home() {
             backgroundImage: `url(${
               listTerbaru.length > 0 && listTerbaru[0].image
             })`,
-          }}
-        >
+          }}>
           <div className="bg-overlay-gradient" />
           <div
             className="banner-bg-img"
@@ -103,8 +118,7 @@ function Home() {
                   <div className="banner-inner">
                     <h1
                       className="sub-title left-border text-primary"
-                      style={{ fontSize: "50px" }}
-                    >
+                      style={{ fontSize: "50px" }}>
                       Berita
                     </h1>
                   </div>
@@ -120,8 +134,7 @@ function Home() {
         {/* intro area start */}
         <div
           className="intro-area mg-top--100 bg-relative"
-          style={{ minHeight: "100ppx" }}
-        >
+          style={{ minHeight: "100ppx" }}>
           <div className="container">
             <div className="row justify-content-center">
               {listTerbaru.slice(1, 4).map((berita, index) => (
@@ -132,8 +145,7 @@ function Home() {
                       background: "#F1F6F9",
                       maxHeight: "200px",
                       minHeight: "200px",
-                    }}
-                  >
+                    }}>
                     <div className="thumb media">
                       <div className="media-left">
                         <i className="fa-solid fa-newspaper"></i>
@@ -155,8 +167,7 @@ function Home() {
         {/* intro area end */}
         <div
           className="container"
-          style={{ marginTop: "30px", marginBottom: "70px" }}
-        >
+          style={{ marginTop: "30px", marginBottom: "70px" }}>
           <div className="section-title text-center">
             <h5 className="sub-title double-line">Bawaslu Boyolali</h5>
             <h2 className="title">Berita Bawaslu</h2>
@@ -178,8 +189,7 @@ function Home() {
                         BY {berita.author}
                         <h6 className="fs-6 title">
                           <a
-                            href={`/page-isi-berita/${berita.author}/${berita.id}`}
-                          >
+                            href={`/page-isi-berita/${berita.author}/${berita.id}`}>
                             {berita.judulBerita}
                           </a>
                         </h6>
@@ -202,8 +212,7 @@ function Home() {
                 borderRadius: "10px",
                 background: "#F1F6F9",
                 float: "inline-end",
-              }}
-            >
+              }}>
               <h4 className="widget-title">
                 Tautan{" "}
                 <span className="text-primary">
@@ -216,8 +225,7 @@ function Home() {
                   <a
                     href="https://bawaslu.go.id/"
                     target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                    rel="noopener noreferrer">
                     <img
                       src="https://boyolali.bawaslu.go.id/cepogo/2023/09/Bawaslu-RI-300x73-1.png"
                       alt=""
@@ -228,8 +236,7 @@ function Home() {
                   <a
                     href="https://dkpp.go.id/"
                     target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                    rel="noopener noreferrer">
                     <img
                       src="https://boyolali.bawaslu.go.id/cepogo/2023/09/dkpp-300x73-1.png"
                       alt=""
@@ -240,8 +247,7 @@ function Home() {
                   <a
                     href="https://www.mkri.id/"
                     target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                    rel="noopener noreferrer">
                     <img
                       src="https://boyolali.bawaslu.go.id/cepogo/2023/09/MAHKAMAKONSTITUSI-300x73-1.png"
                       alt=""
@@ -252,8 +258,7 @@ function Home() {
                   <a
                     href="https://jateng.bawaslu.go.id/"
                     target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                    rel="noopener noreferrer">
                     <img
                       src="https://boyolali.bawaslu.go.id/cepogo/2023/09/KPU-300x73-1.png"
                       alt=""
@@ -352,7 +357,7 @@ function Home() {
                     />
                     <h3>Informasi Berkala</h3>
                   </div>
-                  <a href="/informasi-berkala">
+                  <a href="/informasi-berkala"></a>
                   <div className="details-hover-wrap">
                     <div className="details-hover">
                       <img
@@ -363,8 +368,6 @@ function Home() {
                       <h3>Informasi Berkala</h3>
                     </div>
                   </div>
-                  </a>
-                 
                 </div>
               </div>
               <div className="col-lg-3 col-md-6">
@@ -437,6 +440,134 @@ function Home() {
                       </div>
                     </div>
                   </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="container mt-5">
+          <div className="section-title text-center">
+            <h5 className="sub-title double-line">Bawaslu Boyolali</h5>
+            <h2 className="title">Pengumuman</h2>
+          </div>
+          <div class="row">
+            <div class="col-lg-8">
+              <Swiper
+                spaceBetween={30}
+                slidesPerView={1}
+                navigation
+                pagination={{ clickable: true }}
+                autoplay={{ delay: 5000 }}>
+                {pengumuman.map((png) => {
+                  return (
+                    <SwiperSlide>
+                      <div className="item">
+                        <div className="carousel-content-wrapper mb-2">
+                          <div className="carousel-image">
+                            <img src={png.image} alt="" />
+                          </div>
+                        </div>
+                      </div>
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
+            </div>
+            <div class="col-lg-4">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="py-3 border-bottom">
+                    <div class="d-flex align-items-center pb-2">
+                      <img
+                        src="assets/images/dashboard/Profile_1.jpg"
+                        class="img-xs img-rounded mr-2"
+                        alt="thumb"
+                      />
+                      <span class="fs-12 text-muted">Henry Itondo</span>
+                    </div>
+                    <p class="fs-14 m-0 font-weight-medium line-height-sm">
+                      The Most And Least Visited Countries In The World
+                    </p>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="py-3 border-bottom">
+                    <div class="d-flex align-items-center pb-2">
+                      <img
+                        src="assets/images/dashboard/Profile_2.jpg"
+                        class="img-xs img-rounded mr-2"
+                        alt="thumb"
+                      />
+                      <span class="fs-12 text-muted">Oka Tomoaki</span>
+                    </div>
+                    <p class="fs-14 m-0 font-weight-medium line-height-sm">
+                      The Best Places to Travel in month August
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="pt-4 pb-4 border-bottom">
+                    <div class="d-flex align-items-center pb-2">
+                      <img
+                        src="assets/images/dashboard/Profile_2.jpg"
+                        class="img-xs img-rounded mr-2"
+                        alt="thumb"
+                      />
+                      <span class="fs-12 text-muted">Joana Leite</span>
+                    </div>
+                    <p class="fs-14 m-0 font-weight-medium line-height-sm">
+                      Focus On Fun And Challenging Lifetime Activities
+                    </p>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="pt-3 pb-4 border-bottom">
+                    <div class="d-flex align-items-center pb-2">
+                      <img
+                        src="assets/images/dashboard/Profile_4.jpg"
+                        class="img-xs img-rounded mr-2"
+                        alt="thumb"
+                      />
+                      <span class="fs-12 text-muted">Rita Leite</span>
+                    </div>
+                    <p class="fs-14 m-0 font-weight-medium line-height-sm">
+                      Bread Is The Most Widely Consumed Food In The World
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="pt-4 pb-4">
+                    <div class="d-flex align-items-center pb-2">
+                      <img
+                        src="assets/images/dashboard/Profile_5.jpg"
+                        class="img-xs img-rounded mr-2"
+                        alt="thumb"
+                      />
+                      <span class="fs-12 text-muted">Jurrien Oldhof</span>
+                    </div>
+                    <p class="fs-14 m-0 font-weight-medium line-height-sm">
+                      What Is Music, And What Does It Mean To Us
+                    </p>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="pt-3 pb-4">
+                    <div class="d-flex align-items-center pb-2">
+                      <img
+                        src="assets/images/dashboard/Profile_6.jpg"
+                        class="img-xs img-rounded mr-2"
+                        alt="thumb"
+                      />
+                      <span class="fs-12 text-muted">Yamaha Toshinobu</span>
+                    </div>
+                    <p class="fs-14 m-0 font-weight-medium line-height-sm">
+                      Is Breakfast The Most Important Meal Of The Day
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

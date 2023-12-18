@@ -4,7 +4,7 @@ function Bawaslu() {
   return (
     <div
     className="widget widget_catagory"
-    style={{ background: "#F1F6F9" }}>
+    style={{ background:"#F1F6F9" }}>
     <h4 className="widget-title">
       Tautan{" "}
       <span className="text-primary">

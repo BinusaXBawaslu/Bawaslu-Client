@@ -42,6 +42,41 @@ Version: 1.0.5
 /*-----------------
     # Typography
 -----------------*/
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.thumb-title {
+  padding: 14px 24px;
+  background: #000;
+  font-size: 12px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: #ffffff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.image-hover {
+  overflow: hidden;
+}
+
+.image-hover img,
+.image-hover .thumb-title {
+  transition: transform 0.4s;
+  /* Animation */
+}
+
+.image-hover:hover img {
+  transform: scale(1.25);
+}
+
+.image-hover:hover .thumb-title {
+  background: #0a62fb;
+}
 @media (max-width: 390px) {
   .navbar-area {
     overflow-y: auto;
