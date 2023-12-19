@@ -100,6 +100,10 @@ import CategoryBerita from "./views/pages/CategoryBerita";
 import AddRegulasi from "./views/pages/admin/daftarRegulasi/Regulasi/AddRegulasi";
 import MenuInformasi from "./views/pages/admin/informasi/MenuInformasi";
 import MenuEditRegulasi from "./views/pages/admin/daftarRegulasi/MenuRegulasi/MenuEditRegulasi";
+
+import IsiDaftarRegulasi from "./views/pages/daftarRegulasi/IsiDaftarRegulasi";
+
+
 import RekapBerita from "./views/pages/rekap_berita/RekapBerita";
 // import InformasiBerkalaKelembagaan from "./views/pages/informasi/InformasiBerkalaKelembagaan";
 // import InformasiBerkalaKepemiluan from "./views/pages/informasi/InformasiBerkalaKepemiluan";
@@ -117,7 +121,6 @@ import AdminKanal from "./views/pages/admin/AdminKanal";
 import AddBerkalaKepemiluan from "./views/pages/admin/Add/AddBerkalaKepemiluan";
 import AddBerkalaKelembagaan from "./views/pages/admin/Add/AddBerkalaKelembagaan";
 import AddKanal from "./views/pages/admin/Add/AddKanal";
-import IsiDaftarRegulasi from "../src/views/pages/daftarRegulasi/IsiDaftarRegulasi";
 
 // test
 
@@ -262,6 +265,11 @@ function App() {
             path="/daftar-regulasi/:jenisRegulasi/:id"
             component={IsiDaftarRegulasi}
           />
+          <Route path="/regulasi" component={Regulasi} exact />
+          <Route path="/dip" component={Dip} exact />
+            exact
+          />
+          {/* /> */}
           <Route path="/regulasi" component={Regulasi} exact />
           <Route path="/dip" component={Dip} exact />
 

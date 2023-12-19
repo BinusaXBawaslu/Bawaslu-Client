@@ -14,6 +14,7 @@ import { Pagination } from "@mui/material";
 import Regulasi from "../../../daftarRegulasi/Regulasi";
 
 function MenuRegulasi() {
+  const [regulasi, setRegulasi] = useState ([]);
   const [menuRegulasi, setMenuRegulasi] = useState([]);
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
@@ -226,17 +227,7 @@ function MenuRegulasi() {
                           >
                             <i className="fa-solid fa-trash"></i>
                           </button>
-                          <button type="button" className="btn-info btn-sm">
-                            <a
-                              style={{
-                                color: "white",
-                                textDecoration: "none",
-                              }}
-                              href={"/" + jenis.menuRegulasi + "/" + jenis.id}
-                            >
-                              <i className="fas fa-plus"></i>
-                            </a>
-                          </button>
+                         
                         </td>
                       </tr>
                     );

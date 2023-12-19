@@ -96,6 +96,7 @@
   height: 105px;
   margin-bottom: 20px;
 }
+
 @media screen and (max-width: 768px) {
     .judul {
       font-size: 30px !important;
@@ -122,3 +123,6 @@
   .img-top{
     padding-top: 70px;
   }
+
+
+
