@@ -262,14 +262,9 @@ function Library() {
                     Napak Tilas | Sejarah Pengawasan Pemilihan Umum Kab.
                     Boyolali
                   </p>
-<<<<<<< HEAD
                   <div 
                   id="btn-6" >  
                   
-=======
-                  <div style={{ marginTop:  "40px"}}>
-
->>>>>>> 4beec4f24a668f05f8b36eebaa516d1be2c61cc5
                   <a
                     className="btn-primary" style={{borderRadius: "100%", padding: "15px",}}
                     href="https://boyolali.bawaslu.go.id/cepogo/2023/09/Napak-Tilas-Depan-212x300-1.jpg"
