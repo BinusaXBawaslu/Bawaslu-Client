@@ -3,6 +3,7 @@ import waktu from "../../../aset/Time management-rafiki.png";
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
 import AOS from 'aos';
+import "../../../css/gabung.css"
 
 function WaktuLayanan() {
   useEffect(() => {
@@ -33,8 +34,9 @@ function WaktuLayanan() {
           <div className="row">
             <div
           data-aos="fade-right" className="col-lg-6 col-md-8 order-lg-last">
-              <div className="thumb">
+              <div id="thumb-img" className="thumb">
                 <img
+                id="thumb-img"
                   src={waktu}
                   alt="img"
                 />
@@ -45,8 +47,8 @@ function WaktuLayanan() {
               <div className="section-title px-lg-5 mb-0 text-center">
                 <h5 id="text1-gabung" className="sub-title double-line">Bawaslu Boyolali</h5>
                 <h2 id="text2-gabung" className="title">Waktu Pelayanan Informasi</h2>
-                <div className="choose-wrap mt-4">
-                  <div className="media single-choose-inner">
+                <div id="icon-text-waktu" className="choose-wrap mt-4">
+                  <div id="icon-waktu1" className="media single-choose-inner">
                     <div className="media-left">
                       <div className="icon">
                         <i className="fa-solid fa-phone"></i>
@@ -57,7 +59,7 @@ function WaktuLayanan() {
                       <p>(0276)320420</p>
                     </div>
                   </div>
-                  <div className="media single-choose-inner mb-3">
+                  <div id="icon-waktu2" className="media single-choose-inner mb-3">
                     <div className="media-left">
                       <div className="icon">
                         <i className="fa-solid fa-clock"></i>
@@ -68,7 +70,7 @@ function WaktuLayanan() {
                       <p>Dari jam 08.00 - 15.00</p>
                     </div>
                   </div>
-                  <div className="media single-choose-inner mb-3">
+                  <div id="icon-waktu3" className="media single-choose-inner mb-3">
                     <div className="media-left">
                       <div className="icon">
                         <i className="fa-solid fa-calendar-days"></i>
@@ -79,7 +81,7 @@ function WaktuLayanan() {
                       <p>Senin s.d Jum'at</p>
                     </div>
                   </div>
-                  <div className="media single-choose-inner mb-3">
+                  <div id="icon-waktu4" className="media single-choose-inner mb-3">
                     <div className="media-left">
                       <div className="icon">
                         <i className="fa-solid fa-envelope"></i>

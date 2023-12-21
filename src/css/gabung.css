@@ -28,6 +28,27 @@
         justify-content: center;
         text-align: center;
     }
+   
+    #icon-text-waktu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       
+    }
+    #icon-waktu1{
+        padding-right: 120px;
+    }
+    #icon-waktu2{
+        padding-right: 80px;
+    }
+    #icon-waktu3{
+        padding-right: 110px;
+    }
+    #icon-waktu4{
+        padding-right: 5px;
+    }
+
 }
 
 @media screen and (max-width: 320px) {
@@ -79,5 +100,17 @@
     .form-control.widget-content-right.w-75 {
       margin-left: auto;
       margin-right: auto;
+    }
+    #icon-waktu1{
+        padding-right: 90px;
+    }
+    #icon-waktu2{
+        padding-right: 50px;
+    }
+    #icon-waktu3{
+        padding-right: 80px;
+    }
+    #icon-waktu4{
+        padding-left: 25px;
     }
   }

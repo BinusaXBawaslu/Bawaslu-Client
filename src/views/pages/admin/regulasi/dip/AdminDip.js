@@ -207,7 +207,7 @@ function AdminDip() {
                                   color: "white",
                                   textDecoration: "none",
                                 }}
-                                href={`/put-dip-admin/${dip.id}`}
+                                href={`/put-admin/dip/${dip.id}`}
                               >
                                 <button
                                   type="button"

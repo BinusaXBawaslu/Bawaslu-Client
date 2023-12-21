@@ -218,7 +218,7 @@ function AdminRegulasi() {
                                   color: "white",
                                   textDecoration: "none",
                                 }}
-                                href={`/update-regulasi/${regulasi.id}`}
+                                href={`/put-admin/regulasi/${regulasi.id}`}
                               >
                                 <button
                                   type="button"

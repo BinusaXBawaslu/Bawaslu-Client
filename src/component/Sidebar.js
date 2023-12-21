@@ -49,7 +49,6 @@ function Sidebar() {
   return (
     <div
       className="app-theme-white body-tabs-shadow fixed-sidebar fixed-header overflow-auto"
-      style={{ height: "100vh" }}
     >
       <div
         className="app-sidebar sidebar-shadow"
@@ -190,37 +189,6 @@ function Sidebar() {
                   })}
                 </ul>
               </li>
-              {/*  */}
-              <li>
-                <a style={{ textDecoration: "none" }} href="/jenis-regulasi">
-                  <i class="fa-solid fa-clipboard-list  metismenu-icon"></i>
-                  Jenis Regulasi
-                </a>
-              </li>
-              <li>
-                <a style={{ textDecoration: "none" }} href="#">
-                  <i class="fa-solid fa-list  metismenu-icon"></i> Daftar
-                  Regulasi
-                  {/* <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i> */}
-                  <i class="fas fa-arrow-circle-down metismenu-state-icon caret-left"></i>
-                </a>
-                <ul>
-                  {regulasi.map((reg) => {
-                    return (
-                      <li>
-                        <a
-                          style={{ textDecoration: "none" }}
-                          href={`/admin-regulasi/${reg.id}`}
-                        >
-                          <i class="fas fa-arrow-circle-down metismenu-icon"></i>
-                          {reg.jenisRegulasi}
-                        </a>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </li>
-
               {/* MENU REGULASI */}
               <li class="app-sidebar__heading">Regulasi</li>
               <li>

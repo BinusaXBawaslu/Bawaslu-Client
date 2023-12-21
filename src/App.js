@@ -139,6 +139,8 @@ import AddSop from "./views/pages/admin/regulasi/sop/AddSop";
 import AddDip from "./views/pages/admin/regulasi/dip/AddDip";
 import AddRegulasiAdmin from "./views/pages/admin/regulasi/regulasi/AddRegulasiAdmin";
 import PutDip from "./views/pages/admin/regulasi/dip/PutDip";
+import PutSop from "./views/pages/admin/regulasi/sop/PutSop";
+import PutRegulasiAdmin from "./views/pages/admin/regulasi/regulasi/PutRegulasiAdmin";
 // END ADMIN MENU REGULASI
 
 function App() {
@@ -625,9 +627,12 @@ function App() {
           {/* dip */}
           <Route path="/dip-admin" component={AdminDip} exact />
           <Route path="/add-dip-admin" component={AddDip} exact />
+          <Route path="/put-admin/dip/:id" component={PutDip} exact />
+
           {/* sop */}
           <Route path="/sop-admin" component={AdminSop} exact />
           <Route path="/add-sop-admin" component={AddSop} exact />
+          <Route path="/put-admin/sop/:id" component={PutSop} exact />
           {/* regulasi */}
           <Route path="/regulasi-admin" component={AdminRegulasi} exact />
           <Route
@@ -635,6 +640,7 @@ function App() {
             component={AddRegulasiAdmin}
             exact
           />
+          <Route path="/put-admin/regulasi/:id" component={PutRegulasiAdmin} exact />
           {/* end admin menu regulasi */}
         </Switch>
       </main>

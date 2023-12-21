@@ -207,7 +207,7 @@ function AdminSop() {
                                   color: "white",
                                   textDecoration: "none",
                                 }}
-                                href={`/update-sop/${sop.id}`}
+                                href={`/put-admin/sop/${sop.id}`}
                               >
                                 <button
                                   type="button"

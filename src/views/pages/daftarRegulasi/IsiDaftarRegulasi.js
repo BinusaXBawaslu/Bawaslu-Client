@@ -11,7 +11,7 @@ import {
 } from "react-router-dom/cjs/react-router-dom.min";
 import { Pagination } from "@mui/material";
 import jsPDF from "jspdf";
-import AOS from 'aos'
+import AOS from "aos";
 
 function IsiDaftarRegulasi() {
   const param = useParams();
@@ -19,7 +19,6 @@ function IsiDaftarRegulasi() {
   const [list, setList] = useState([]);
   const [isi, setIsi] = useState([]);
   const [jenisRegulasi, setJenisRegulasi] = useState([]);
-
 
   const getMenuRegulasi = async () => {
     try {
@@ -42,7 +41,6 @@ function IsiDaftarRegulasi() {
     }
   };
 
-
   const getRegulasi = async (tableId) => {
     try {
       const response = await axios.get(
@@ -64,7 +62,7 @@ function IsiDaftarRegulasi() {
   };
 
   useEffect(() => {
-    AOS.init()
+    AOS.init();
     getMenuRegulasi();
   }, []);
 
@@ -89,46 +87,67 @@ function IsiDaftarRegulasi() {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
-        className="project-area pd-top-115 pd-bottom-90">
+        className="project-area pd-top-115 pd-bottom-90"
+      >
         <div className="container">
-        <div className="row justify-content-center">
+          <div className="row justify-content-center">
             <div className="col-xl-6 col-lg-7 col-md-10">
-              <div data-aos="fade-up"
-     data-aos-anchor-placement="bottom-bottom" className="section-title text-center">
+              <div
+                data-aos="fade-up"
+                data-aos-anchor-placement="bottom-bottom"
+                className="section-title text-center"
+              >
                 <h5 className="sub-title double-line">Bawaslu Boyolali</h5>
                 <h2 className="title">{jenisRegulasi}</h2>
               </div>
             </div>
           </div>
           <div className="d-lg-flex gap-5">
-            <div style = {{background:"white", borderRadius:"7px", height:"fit-content", minWidth:"265px"}}
-              data-aos="fade-right" className="bg-body-tertiary shadow isotope-filters project-isotope-btn text-left mb-5">
-                <div className="bg-primary" style={{borderTopLeftRadius:"7px",borderTopRightRadius:"7px"}}>
-              <h5 className="title fw-bold p-3 text-white">Menu Regulasi</h5></div>
-                <div style = {{padding : "7px"}}>
-              {list.map((menu) => (
-                <button
-                  key={menu.id}
-                  style={{ width: "250px", textAlign: "left" }}
-                  className={`button ml-0 ${
-                    selectedTableId === menu.id ? "active" : ""
-                  }`}
-                  data-filter="*"
-                  onClick={() => showTable(menu.id)}>
-                  {menu.menuRegulasi}
-                </button>
-              ))}
+            <div
+              style={{
+                background: "white",
+                borderRadius: "7px",
+                height: "fit-content",
+                minWidth: "265px",
+              }}
+              data-aos="fade-right"
+              className="bg-body-tertiary shadow isotope-filters project-isotope-btn text-left mb-5"
+            >
+              <div
+                className="bg-primary"
+                style={{
+                  borderTopLeftRadius: "7px",
+                  borderTopRightRadius: "7px",
+                }}
+              >
+                <h5 className="title fw-bold p-3 text-white">Menu Regulasi</h5>
+              </div>
+              <div style={{ padding: "7px" }}>
+                {list.map((menu) => (
+                  <button
+                    key={menu.id}
+                    id="btn-sop"
+                    className={` btn-sop button w-100 ml-0 ${
+                      selectedTableId === menu.id ? "active" : ""
+                    }`}
+                    data-filter="*"
+                    onClick={() => showTable(menu.id)}
+                  >
+                    {menu.menuRegulasi}
+                  </button>
+                ))}
               </div>
             </div>
             {list.map((menu) => (
               <div
-              data-aos="fade-left"
+                data-aos="fade-left"
                 className="card mb-4 shadow"
                 id="table1"
                 style={{
                   display: selectedTableId === menu.id ? "table" : "none",
                   width: "100%",
-                }}>
+                }}
+              >
                 <div className="card-header bg-primary text-light">
                   <div style={{ display: "flex" }}>
                     <div className="">
@@ -142,7 +161,10 @@ function IsiDaftarRegulasi() {
                     <thead>
                       <tr>
                         <th scope="col"> Dokumen</th>
-                        <th scope="col" style={{width:"150px"}}> Unduh / Lihat</th>
+                        <th scope="col" style={{ width: "150px" }}>
+                          {" "}
+                          Unduh / Lihat
+                        </th>
                       </tr>
                     </thead>
                     {isi.map((item) => {
@@ -156,15 +178,18 @@ function IsiDaftarRegulasi() {
                               <a
                                 href={item.pdfDokumen}
                                 target="_blank"
-                                rel="noopener noreferrer">
+                                rel="noopener noreferrer"
+                              >
                                 <button
                                   className="bg-primary text-light"
                                   style={{
                                     border: "none",
                                     borderRadius: "5px",
                                     marginRight: "10px",
-                                  }}>
-                                  <i class="fas fa-file-download"></i> / <i class="fas fa-eye"></i>
+                                  }}
+                                >
+                                  <i class="fas fa-file-download"></i> /{" "}
+                                  <i class="fas fa-eye"></i>
                                 </button>
                               </a>
                             </td>

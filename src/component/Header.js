@@ -150,13 +150,13 @@ function Header() {
             </button>
           </div>
         </div>
-        <div className="app-header__menu">
+        <div style={{border:'1px solid red'}} className="app-header__menu">
           <span>
             <button
               onClick={logout}
               type="button"
               className="btn-shadow p-1 btn-danger btn-sm">
-              <i className="fas fa-sign-out-alt"></i> Logouti
+              <i className="fas fa-sign-out-alt d-none d-md-none d-lg-flex" ></i> Logout
             </button>
           </span>
         </div>{" "}

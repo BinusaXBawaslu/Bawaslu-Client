@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+
+import React, { useState, useEffect } from "react";
 import Header from "../../../../../component/Header";
 import Sidebar from "../../../../../component/Sidebar";
 import axios from "axios";
@@ -98,72 +99,49 @@ function PutDip() {
         <div className="container mt-3 app-main__outer">
           <div className="card shadow">
             <div className="card-body">
-              <h1 className="fs-4">Form Edit Data</h1>
+              <h1 className="fs-4">Form Ubah Data</h1>
               <hr />
               <form onSubmit={updateBerita}>
                 <div className="row">
                   <div className="mb-3 col-lg-6">
-                    {/* 
-                    <label className="form-label font-weight-bold">Category</label>
-                    <select
+                    
+//                     <label className="form-label font-weight-bold">Category</label>
+//                     <select
                       className="form-control"
                       aria-label="Small select example"
-                      onChange={(e) => setCategoryId(e.target.value)}
+                      value={daftarDip}
+                      onChange={(e) => setDaftarDip(e.target.value)}
                     >
-                      <option selected value={categoryId.id}>{categoryId.category}</option>
-                      {category.map((down) => {
-                        return <option value={down.id}>{down.category}</option>;
-                      })}
+                      <option>PIlih Daftar DIP</option>
+                      <option value="SK DIP">SK DIP</option>
                     </select>
                   </div>
                   <div className="mb-3 col-lg-6">
-                    {/*  */}
-                    <label for="exampleInputEmail1" className="form-label font-weight-bold">
-                      Penulis Berita
+                    <label
+                      for="exampleInputEmail1"
+                      className="form-label  font-weight-bold "
+                    >
+                      Nama Dokumen DIP
                     </label>
                     <input
-                      value={author}
-                      onChange={(e) => setAuthor(e.target.value)}
+                      value={namaDokumen}
+                      onChange={(e) => setNamaDokumen(e.target.value)}
                       type="text"
                       className="form-control"
-                      placeholder="Masukkan penulis berita"
+                      placeholder="Masukkan nama dokumen"
                     />
                   </div>
-                  <div className="mb-3 co-lg-6">
-                    {/*  */}
-                    <label className="form-label font-weight-bold">Gambar</label>
+                  <div className="mb-3 co-lg-12">
+                    <label className="form-label font-weight-bold">
+                      Link Drive Dokumen
+                    </label>
                     <input
-                      onChange={(e) =>
-                        setImage(e.target.files ? e.target.files[0] : null)
-                      }
-                      type="file"
-                      className="form-control"
-                    />
-                  </div>
-                  <div className="mb-3 col-lg-12">
-                    {/*  */}
-                    <label className="form-label font-weight-bold">Judul Berita</label>
-                    <input
-                      value={judulBerita}
-                      onChange={(e) => setJudulBerita(e.target.value)}
+                      value={link}
+                      onChange={(e) => setLink(e.target.value)}
                       type="text"
                       className="form-control"
-                      placeholder="Masukkan judul berita"
+                      placeholder="Masukkan link drive dokumen"
                     />
-                  </div>
-                  <div className="col-lg-12">
-                    {/*  */}
-                    <label className="form-label font-weight-bold">Isi Berita</label>
-                    <div className="">
-                      <textarea
-                        value={isiBerita}
-                        onChange={(e) => setIsiBerita(e.target.value)}
-                        className="form-control"
-                        placeholder="Masukkan isi berita"
-                        id="floatingTextarea2"
-                        rows="5"
-                      ></textarea>
-                    </div>
                   </div>
                 </div>
                 <button type="submit" className="btn-primary mt-3">
