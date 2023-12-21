@@ -150,7 +150,7 @@ function Header() {
             </button>
           </div>
         </div>
-        <div className="app-header__menu">
+        <div style={{border:'1px solid red'}} className="app-header__menu">
           <span>
             <button
               onClick={logout}

@@ -100,7 +100,6 @@ import CategoryBerita from "./views/pages/CategoryBerita";
 import AddRegulasi from "./views/pages/admin/daftarRegulasi/Regulasi/AddRegulasi";
 import MenuInformasi from "./views/pages/admin/informasi/MenuInformasi";
 import MenuEditRegulasi from "./views/pages/admin/daftarRegulasi/MenuRegulasi/MenuEditRegulasi";
-
 import IsiDaftarRegulasi from "./views/pages/daftarRegulasi/IsiDaftarRegulasi";
 import DetailBerita from "./views/pages/admin/berita/DetailBerita";
 import PutIsiInformasi from "./views/pages/admin/PutIsiInformasi";
@@ -116,7 +115,6 @@ import AdminKanal from "./views/pages/admin/AdminKanal";
 import AddBerkalaKepemiluan from "./views/pages/admin/Add/AddBerkalaKepemiluan";
 import AddBerkalaKelembagaan from "./views/pages/admin/Add/AddBerkalaKelembagaan";
 import AddKanal from "./views/pages/admin/Add/AddKanal";
-import AdminSertaMerta from "./views/pages/admin/AdminSertaMerta";
 
 // test
 
@@ -124,8 +122,12 @@ import AdminSertaMerta from "./views/pages/admin/AdminSertaMerta";
 // import PutIsiInformasi from "./views/pages/admin/PutIsiInformasi";
 // import AdminSertaMerta from "./views/pages/admin/AdminSertaMerta";
 // import InformasiBerkala from "./views/pages/informasi/InformasiBerkala";
+import AdminSetiapSaat from "./views/pages/admin/AdminSetiapSaat";
 // import AddSertaMerta from "./views/pages/admin/Add/AddSertaMerta";
 // import AddSetiapSaat from "./views/pages/admin/Add/AddSetiapSaat";
+import AdminBerkalaKepemiluan from "./views/pages/admin/AdminBerkalaKepemiluan";
+import AdminBerkalaKelembagaan from "./views/pages/admin/AdminBerkalaKelembagaan";
+import AdminKanal from "./views/pages/admin/AdminKanal";
 // import AddBerkalaKepemiluan from "./views/pages/admin/Add/AddBerkalaKepemiluan";
 // import AddBerkalaKelembagaan from "./views/pages/admin/Add/AddBerkalaKelembagaan";
 // import AddKanal from "./views/pages/admin/Add/AddKanal";
@@ -270,7 +272,7 @@ function App() {
           {/* admin */}
 
           {/* admin informasi */}
-          <Route path="/admin-serta-merta" component={AdminSertaMerta} exact />
+          {/* <Route path="/admin-serta-merta" component={AdminSertaMerta} exact />
           <Route path="/admin-setiap-saat" component={AdminSetiapSaat} exact />
           <Route
             path="/admin-berkala-kepemiluan"
@@ -282,7 +284,7 @@ function App() {
             component={AdminBerkalaKelembagaan}
             exact
           />
-          <Route path="/admin-kanal" component={AdminKanal} exact />
+          <Route path="/admin-kanal" component={AdminKanal} exact /> */}
 
           {/* tambah dan ubah data informasi */}
           <Route

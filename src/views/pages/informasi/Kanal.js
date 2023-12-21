@@ -152,6 +152,7 @@ function Kanal() {
                 <div className="col-md-9">
                   <div className="tab-content" id="v-pills-tabContent">
                     <div style={{}} className="card-header w-auto bg-primary text-light">
+
                       <div style={{ display: "flex" }}>
                         <div className="px-3">
                           <h4>Kanal Pengawasan Pemilu 2024</h4>

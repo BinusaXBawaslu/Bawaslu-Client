@@ -168,7 +168,7 @@ function AddBeritaAdmin() {
                           </div>
                         </div>
                       </div>
-                      <button type="submit" className="btn-primary mt-3">
+                      <button type="submit" className="btn-primary mt-3">         
                         Submit
                       </button>
                       <button type="button" className="btn-danger mt-3 mr-3">

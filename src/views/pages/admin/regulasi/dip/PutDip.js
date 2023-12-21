@@ -1,6 +1,15 @@
-// import React, { useEffect, useState } from "react";
-// import Header from "../../../../../component/Header";
-// import Sidebar from "../../../../../component/Sidebar";
+
+
+import React, { useState, useEffect } from "react";
+import Header from "../../../../../component/Header";
+import Sidebar from "../../../../../component/Sidebar";
+import {
+  useHistory,
+  useParams,
+} from "react-router-dom/cjs/react-router-dom.min";
+import axios from "axios";
+import { API_DUMMY } from "../../../../../utils/base_URL";
+import Swal from "sweetalert2";
 
 // function PutDip() {
 // //   const [author, setAuthor] = useState("");

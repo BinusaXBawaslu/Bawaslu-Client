@@ -234,7 +234,7 @@ function AdminBerita() {
             />
           </div>
           <div className="main-card box-tabel mb-3 card">
-            <div className="card-header" style={{ display: "flex" }}>
+            <div className="card-header" style={{ display: "flex",}}>
               <p className="mt-3">Berita</p>
               <div className="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
                 <div className="col-auto">
@@ -253,7 +253,7 @@ function AdminBerita() {
                   </select>
                 </div>
               </div>
-              <div className="d-flex ml-auto gap-3">
+              <div className="d-flex ml-auto gap-3" >
                 <input
                   type="search"
                   className="form-control widget-content-right w-75 d-lg-block d-none d-md-none"
@@ -261,7 +261,7 @@ function AdminBerita() {
                   value={searchTerm}
                   onChange={handleSearchChange}
                 />
-                <div className="btn-actions-pane-right">
+                <div className="btn-actions-pane-right" >
                   <div role="group" className="btn-group-sm btn-group">
                     <button className="active btn-focus p-2 rounded">
                       <a
@@ -327,21 +327,7 @@ function AdminBerita() {
                         </td>
                         <td data-label="Aksi">
                           <div className="aksi">
-                            <button
-                              type="button"
-                              className="btn-primary btn-sm mr-2"
-                            >
-                              <a
-                                style={{
-                                  color: "white",
-                                  textDecoration: "none",
-                                }}
-                                href={`/edit-berita-admin/${berita.id}`}
-                              >
-                                {" "}
-                                <i className="fa-solid fa-pen-to-square"></i>
-                              </a>
-                            </button>
+                          
                             <button
                               type="button"
                               className="btn-primary btn-sm mr-2"
