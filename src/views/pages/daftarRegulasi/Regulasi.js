@@ -298,7 +298,7 @@ function Regulasi() {
                   width: "100%",
                 }}
               >
-                <div className="card-header bg-primary text-light">
+                <div className="card-header w-auto bg-primary text-light">
                   <div id="display">
                     <div className="">
                       <h4>Undang Undang</h4>

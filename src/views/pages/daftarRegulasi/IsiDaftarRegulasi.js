@@ -148,6 +148,7 @@ function IsiDaftarRegulasi() {
                   width: "100%",
                 }}
               >
+
                 <div className="card-header bg-primary text-light">
                   <div style={{ display: "flex" }}>
                     <div className="">
