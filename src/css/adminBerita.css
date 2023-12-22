@@ -9,8 +9,8 @@
 
 @media only screen and (max-width: 390px) {
     .container {
-        padding-left: 15px; /* Adjust the left padding as needed */
-        padding-right: 15px; /* Adjust the right padding as needed */
+        padding-left: 15px;
+        padding-right: 15px; 
         margin-left: 15px;
         margin-right: 100px;
       }
@@ -32,9 +32,9 @@
   }
 }
 
-/* Media query untuk layar dengan lebar 390px */
+
 @media screen and (max-width: 390px) {
   .button {
-    /* Gaya responsif untuk lebar 390px di sini */
+   
   }
 }

@@ -15,6 +15,9 @@ function PutDip() {
   const [categoryId, setCategoryId] = useState(0);
   const [category, setCategory] = useState([]);
   const [isiBerita, setIsiBerita] = useState("");
+  const [link, setLink] = useState("");
+  const [daftarDip, setDaftarDip] = useState("");
+  const [namaDokumen, setNamaDokumen] = useState("");
 
   const param = useParams();
   const history = useHistory();
