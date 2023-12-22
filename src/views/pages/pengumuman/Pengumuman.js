@@ -7,6 +7,7 @@ import { Pagination } from "@mui/material";
 import { format } from "date-fns";
 import idLocale from "date-fns/locale/id";
 import AOS from  'aos'
+import "../../../css/card.css"
 
 function Pengumuman() {
   const [pengumuman, setPengumuman] = useState([]);
@@ -74,18 +75,42 @@ function Pengumuman() {
               </div>
             </div>
           </div>
-          <div className="row justify-content-center">
+
+<section class="light">
+	<div class="container py-2">
+  {filteredList.map((isi) => {
+              return (
+		<article class="postcard light blue">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src={isi.image} alt="Image Title" />
+			</a>
+			<div class="postcard__text t-dark">
+				<h1 class="postcard__title blue"><a href="#" style={{color:"black", textDecoration:"none"}}>{isi.judulPengumuman}</a></h1>
+				<div class="postcard__subtitle small">
+					<time datetime="2020-05-25 12:00:00">
+						<i class="fas fa-calendar-alt mr-2 text-black"></i><span className="text-black">{format(new Date(isi.createdDate), "dd MMMM yyyy", { locale: idLocale })}</span>
+					</time>
+				</div>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt text-black">{isi.isiPengumuman}</div>
+			</div>
+		</article>
+              );
+            })}
+	</div>
+</section>
+          {/* <div className="row justify-content-center">
             {filteredList.map((isi) => {
               return (
                 <div data-aos="fade-up"
                 data-aos-anchor-placement="bottom-bottom" className="col-lg-4 col-md-6">
                   <div
-                    className="single-blog-inner style-2"
-                    style={{ maxHeight: "800px", minHeight: "300px" }}
+                    className="single-blog-inner style-2 shadow"
+                    style={{ maxHeight: "800px", minHeight: "300px", borderRadius:"10px" }}
                   >
                     <div className="thumb">
                       <img
-                        style={{ maxHeight: "400px", minHeight: "100px" }}
+                        style={{ maxHeight: "400px", minHeight: "100px", borderTopRightRadius:"10px", borderTopLeftRadius:"10px" }}
                         src={isi.image}
                         alt="img"
                       />
@@ -115,7 +140,7 @@ function Pengumuman() {
                 </div>
               );
             })}
-          </div>
+          </div> */}
           <div data-aos="fade-up"
      data-aos-anchor-placement="bottom-bottom" className="card-header mt-3 d-flex justify-content-center">
             <Pagination

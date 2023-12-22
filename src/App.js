@@ -113,23 +113,7 @@ import AddSetiapSaat from "./views/pages/admin/Add/AddSetiapSaat";
 import AddBerkalaKepemiluan from "./views/pages/admin/Add/AddBerkalaKepemiluan";
 import AddBerkalaKelembagaan from "./views/pages/admin/Add/AddBerkalaKelembagaan";
 import AddKanal from "./views/pages/admin/Add/AddKanal";
-
-// test
-
-// lllll
-// import PutIsiInformasi from "./views/pages/admin/PutIsiInformasi";
-// import AdminSertaMerta from "./views/pages/admin/AdminSertaMerta";
-// import InformasiBerkala from "./views/pages/informasi/InformasiBerkala";
-import AdminSetiapSaat from "./views/pages/admin/AdminSetiapSaat";
-// import AddSertaMerta from "./views/pages/admin/Add/AddSertaMerta";
-// import AddSetiapSaat from "./views/pages/admin/Add/AddSetiapSaat";
-import AdminBerkalaKepemiluan from "./views/pages/admin/AdminBerkalaKepemiluan";
-import AdminBerkalaKelembagaan from "./views/pages/admin/AdminBerkalaKelembagaan";
-import AdminKanal from "./views/pages/admin/AdminKanal";
-// import AddBerkalaKepemiluan from "./views/pages/admin/Add/AddBerkalaKepemiluan";
-// import AddBerkalaKelembagaan from "./views/pages/admin/Add/AddBerkalaKelembagaan";
-// import AddKanal from "./views/pages/admin/Add/AddKanal";
-// import IsiDaftarRegulasi from "../src/views/pages/daftarRegulasi/IsiDaftarRegulasi";
+import AdminSertaMerta from "./views/pages/admin/AdminSertaMerta";
 
 // ADMIN MENU REGULASI
 import AdminDip from "./views/pages/admin/regulasi/dip/AdminDip";
@@ -141,6 +125,9 @@ import AddRegulasiAdmin from "./views/pages/admin/regulasi/regulasi/AddRegulasiA
 import PutDip from "./views/pages/admin/regulasi/dip/PutDip";
 import PutSop from "./views/pages/admin/regulasi/sop/PutSop";
 import PutRegulasiAdmin from "./views/pages/admin/regulasi/regulasi/PutRegulasiAdmin";
+import RegulasiPublic from "./views/pages/regulasi/RegulasiPublic";
+import DipPublic from "./views/pages/regulasi/DipPublic";
+import SopPublic from "./views/pages/regulasi/SopPublic";
 // END ADMIN MENU REGULASI
 
 function App() {
@@ -623,7 +610,7 @@ function App() {
           />
           <Route path="/informasi-serta-merta" component={SertaMerta} exact />
 
-          {/* admin menu regulasi */}
+          {/* ADMIN MENU REGULASI */}
           {/* dip */}
           <Route path="/dip-admin" component={AdminDip} exact />
           <Route path="/add-dip-admin" component={AddDip} exact />
@@ -641,7 +628,13 @@ function App() {
             exact
           />
           <Route path="/put-admin/regulasi/:id" component={PutRegulasiAdmin} exact />
-          {/* end admin menu regulasi */}
+          {/* END ADMIN MENU REGULASI */}
+
+          {/* PUBLIC MENU REGULASI */}
+          <Route path="/regulasi-public" component={RegulasiPublic} exact />
+          <Route path="/dip-public" component={DipPublic} exact />
+          <Route path="/sop-public" component={SopPublic} exact />
+          {/* END PUBLIC MENU REGULASI */}
         </Switch>
       </main>
     </BrowserRouter>

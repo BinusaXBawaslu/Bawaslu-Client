@@ -13,16 +13,6 @@ const LayananInformasi = () => {
     <>
         <Navbar />
         <div className="div">
-        <img
-          className="shape-left-top top_image_bounce"
-          src="https://www.solverwp.com/demo/html/itechie/assets/img/shape/3.webp"
-          alt="img"
-        />
-        <img
-          className="shape-right-top top_image_bounce"
-          src="https://www.solverwp.com/demo/html/itechie/assets/img/shape/4.webp"
-          alt="img"
-        />
         <div className="vid" style={{}}>
           <div data-aos="fade-right" id="div-pembungkus">
             <div className="form-permohonan section-title text-center">
@@ -37,7 +27,7 @@ const LayananInformasi = () => {
               {/* <p className="content">Dcidunt eget semper nec quam. Sed hendrerit. acfelis Nunc egestas augue
                         atpellentesque laoreet</p> */}
             </div>
-          
+
             <br></br>
             <p
               id="download"

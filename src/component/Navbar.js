@@ -122,31 +122,6 @@ function Navbar() {
             </div>
             <div className="col-lg-2 d-lg-block d-none align-self-center">
               <div className="text-md-end text-center">
-                {/* <a
-                  href="https://www.facebook.com/Bawaslu.Kabupaten.Boyolali"
-                  target="_blank"
-                >
-                  <i className="fab fa-facebook"></i>
-                </a>
-                <a
-                  href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbawasluboyolali"
-                  target="_blank"
-                >
-                  <i className="fab fa-twitter" aria-hidden="true"></i>
-                </a>
-                <a
-                  href="https://www.instagram.com/bawaslu_boyolali/"
-                  target="_blank"
-                >
-                  <i className="fab fa-instagram" aria-hidden="true"></i>
-                </a>
-                <a
-                  className="youtube"
-                  href="https://www.youtube.com/channel/UC-OZT-HT_Qg7cUmo-oHfkAw"
-                  target="_blank"
-                >
-                  <i className="fab fa-youtube"></i>
-                </a> */}
                 <ul className="social-media">
                   <li>
                     <a
@@ -247,32 +222,6 @@ function Navbar() {
                 >
                   Informasi Publik
                 </a>
-                {/* <ul
-                  className={`${isMobile ? "collapse" : "sub-menu"}`}
-                  id="submenu"
-                > {informasi.map((informasi) => {
-                  return (
-                    <li>
-                      <a
-                        href={
-                          "/informasi/" +
-                          informasi.namaInformasi +
-                          "/" +
-                          informasi.id
-                        }
-                        style={{ textDecoration: "none" }}
-                      >
-                        <i className="metismenu-icon"></i>
-                        {informasi.namaInformasi}
-                      </a>
-                    </li>
-                  );
-                })}
-                  <li className="text-black"><a>Daftar Informasi Publik</a></li>
-                  <li>
-                    <a href="/informasi-dikecuali">Informasi DiKecualikan</a>
-                  </li>
-                </ul> */}
                 <ul
                   className={`${isMobile ? "collapse" : "sub-menu"}`}
                   id="submenu"
@@ -306,41 +255,23 @@ function Navbar() {
                 >
                   Daftar Regulasi
                 </a>
-                {/* <li className="text-black"><a>Daftar Informasi Publik</a></li> */}
                 <ul
                   className={`${isMobile ? "collapse" : "sub-menu"}`}
                   id="submenu2"
                   data-bs-parent="#menu"
                 >
-                  {regulasi.map((isiRegulasi) => {
-                    return (
-                      <li>
-                        <a
-                          href={`/daftar-regulasi/${isiRegulasi.jenisRegulasi}/${isiRegulasi.id}`}
-                        >
-                          {isiRegulasi.jenisRegulasi}
-                        </a>
-                      </li>
-                    );
-                  })}
-                   <li>
-                    <a href="/maklumat-pelayanan">Maklumat Pelayanan</a>
-                  </li>
-                  {/* <li className="text-black"><a>Daftar Informasi Publik</a></li> */}
-                  {/* <li>
-                    <a href="/regulasi">Regulasi</a>
+                  <li>
+                    <a href="/regulasi-public">Regulasi</a>
                   </li>
                   <li>
-                    <a href="/dip">DIP</a>
+                    <a href="/dip-public">DIP</a>
                   </li>
                   <li>
-                    <a href="/standar-operasional-prosedur">
-                      Standar Operasional Prosedur
-                    </a>
+                    <a href="/sop-public">SOP</a>
                   </li>
                   <li>
                     <a href="/maklumat-pelayanan">Maklumat Pelayanan</a>
-                  </li> */}
+                  </li>
                 </ul>
               </li>
               <li className="menu-item-has-children">
