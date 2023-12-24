@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
 import Header from "../../../../../component/Header";
 import Sidebar from "../../../../../component/Sidebar";
 import { Pagination, TableContainer } from "@mui/material";
+import "../../../../../css/adminRegulasi.css";
 
 function AdminSop() {
   const [selectedValue, setSelectedValue] = useState("");
@@ -139,12 +140,20 @@ function AdminSop() {
         <div id="app-main" className="app-main">
           <Sidebar />
           <div id="container" className="container mt-3 app-main__outer">
+          <select
+                    className="option-1 form-select-sm"
+                    aria-label="Small select example"
+                    onChange={handleChange}
+                  >
+                    <option disabled>Pilih Jenis Informasi</option>
+                    <option value="SOP">SOP</option>;
+                  </select>
             <div id="main-card" className="main-card mb-3 card">
               <div id="card-header" className="card-header">
-                Admin SOP
+                <p className="p">Admin SOP</p>
                 <div className="d-flex ml-auto gap-3">
                   <select
-                    className="form-select form-select-sm"
+                    className="option-2 form-select-sm"
                     aria-label="Small select example"
                     onChange={handleChange}
                   >

@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
 import Header from "../../../../../component/Header";
 import Sidebar from "../../../../../component/Sidebar";
 import { Pagination, TableContainer } from "@mui/material";
+import "../../../../../css/adminRegulasi.css";
 
 function AdminRegulasi() {
   const [selectedValue, setSelectedValue] = useState("");
@@ -142,12 +143,8 @@ function AdminRegulasi() {
         <div id="app-main" className="app-main">
           <Sidebar />
           <div id="container" className="container mt-3 app-main__outer">
-            <div id="main-card" className="main-card mb-3 card">
-              <div id="card-header" className="card-header">
-                Admin Regulasi
-                <div className="d-flex ml-auto gap-3">
-                  <select
-                    className="form-select form-select-sm"
+          <select
+                    className="option-1 form-select-sm"
                     aria-label="Small select example"
                     onChange={handleChange}
                   >
@@ -162,6 +159,29 @@ function AdminRegulasi() {
                     <option value="Surat Edaran">Surat Edaran</option>;
                     <option value="Instruksi Kabupaten">Instruksi Kabupaten</option>;
                   </select>
+            <div id="main-card" className="main-card mb-3 card">
+                
+
+              <div id="card-header" className="card-header">
+              <p className="p">Admin Regulasi</p>  
+                <div className="d-flex  gap-3">
+                  <select
+                    className="option-2 form-select-sm"
+                    aria-label="Small select example"
+                    onChange={handleChange}
+                  >
+                    <option disabled>Pilih Jenis Informasi</option>
+                    <option value="Undang-Undang">Undang-Undang</option>;
+                    <option value="Peraturan Pemerintah">Peraturan Pemerintah</option>;
+                    <option value="Peraturan Mahkamah Agung">Peraturan Mahkamah Agung</option>;
+                    <option value="Peraturan Komisi Informasi">Peraturan Komisi Informasi</option>;
+                    <option value="Peraturan Menteri">Peraturan Menteri</option>;
+                    <option value="Perbawaslu">Perbawaslu</option>;
+                    <option value="Penetapan PPID">Penetapan PPID</option>;
+                    <option value="Surat Edaran">Surat Edaran</option>;
+                    <option value="Instruksi Kabupaten">Instruksi Kabupaten</option>;
+                  </select>
+                
                   <div className="btn-actions-pane-right">
                     <div
                       id="butoon"
@@ -193,10 +213,10 @@ function AdminRegulasi() {
                   <table className="align-middle mb-0 table table-borderless table-striped table-hover">
                     <thead>
                       <tr>
-                        <th scope="col" className="text-center">
+                        <th scope="col" className="text-left">
                           No
                         </th>
-                        <th scope="col" className="text-center">
+                        <th scope="col" className="text-left">
                           Dokumen
                         </th>
                         <th scope="col" className="text-center">
@@ -207,7 +227,7 @@ function AdminRegulasi() {
                     <tbody>
                       {tableData.map((regulasi, index) => (
                         <tr key={index}>
-                          <td data-label="No" className="text-center">
+                          <td data-label="No" className="text-left">
                             {(currentPage - 1) * 10 + index + 1}
                           </td>
                           <td data-label="Dokumen">{regulasi.namaDokumen}</td>

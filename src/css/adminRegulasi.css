@@ -1,0 +1,76 @@
+.table-responsive {
+  display: flex;
+}
+#card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.option-1 {
+  display: none;
+}
+.option-2 {
+  border:1px solid grey;
+}
+
+@media screen and (max-width: 767px) {
+  #main-card {
+    width: 280px;
+  }
+
+  .table-responsive {
+    width: 280px;
+    overflow-x: auto;
+  }
+
+  .option-2 {
+    display: none;
+  }
+  .option-1 {
+    display: flex;
+    width: 280px;
+    height: 30px;
+    border: none;
+  }
+  #button {
+    height: 40px;
+    width: 100px;
+    font-size: 10px;
+    text-align: center;
+    margin-right: 30px;
+  }
+
+  .table td,
+  .table th {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .aksi {
+    padding: 5px;
+    text-align: center;
+  }
+
+  .card-footer {
+    padding: 5px;
+  }
+
+  #card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .d-flex {
+    display: flex;
+    gap: 1px; /* Adjust the gap as needed */
+  }
+  .p {
+    margin-right: 30px; /* Sesuaikan nilai ini sesuai dengan keinginan Anda */
+    margin-top: 20px; /* Sesuaikan nilai ini sesuai dengan keinginan Anda */
+  }
+
+  #card-header {
+    width: 100%;
+  }
+}
