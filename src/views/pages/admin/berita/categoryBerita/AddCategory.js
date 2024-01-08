@@ -71,6 +71,10 @@ function AddCategory() {
                     />
                   </div>
                 </div>
+                <button type="button" className="btn-danger mt-3 mr-3">
+                      <a style={{color:"white", textDecoration:"none"}} href="/admin-berita">Batal</a>
+                      </button>
+                      {" "}
                 <button type="submit" className="btn-primary mt-3">
                   Submit
                 </button>

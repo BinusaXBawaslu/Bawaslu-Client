@@ -137,9 +137,7 @@ function PutRegulasiAdmin() {
                     />
                   </div>
                 </div>
-
-                <div className="d-flex justify-content-between">
-                  <button type="button" className="btn-danger mt-3">
+                <button type="button" className="btn-danger mt-3">
                     <a
                       style={{ color: "white", textDecoration: "none" }}
                       href="/regulasi-admin"
@@ -147,9 +145,13 @@ function PutRegulasiAdmin() {
                       Batal
                     </a>
                   </button>
+                  {" "}
                   <button type="submit" className="btn-primary mt-3">
                     Ubah
                   </button>
+
+                <div className="d-flex justify-content-between">
+                 
                 </div>
               </form>
             </div>

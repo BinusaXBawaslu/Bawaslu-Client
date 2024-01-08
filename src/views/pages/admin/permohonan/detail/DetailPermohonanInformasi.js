@@ -230,6 +230,15 @@ function DetailPermohonanInformasi() {
                   />
                 </div>
               </div>
+              <button type="submit" className="btn-kembali btn-danger mt-3 mr-3">
+                  <a
+                    href="/adminn-permohonan-informasi"
+                    style={{ color: "white", textDecoration: "none" }}
+                  >
+                    {" "}
+                   Kembali
+                  </a>
+                </button>
             </form>
           </div>
         </div>

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
+import Header from "../../../../component/Header";
+import Sidebar from "../../../../component/Sidebar";
 import { API_DUMMY } from "../../../../utils/base_URL";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
@@ -50,7 +52,10 @@ function AddDiKecualikan() {
 
   return (
     <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
+      <Header/>
       {/* ... (Header, Sidebar, etc.) ... */}
+      <Sidebar/>
+      <div className="app-main">
       <div className="container mt-3 app-main__outer">
         <div className="card shadow">
           <div className="card-body">
@@ -73,7 +78,7 @@ function AddDiKecualikan() {
                     onChange={(e) => setDokumen(e.target.value)}
                   />
                 </div>
-                <div className="mb-3 col-6">
+                <div className="mb-3 col-6 ">
                   <label
                     htmlFor="pdfDokumen"
                     className="form-label font-weight-bold"
@@ -88,7 +93,7 @@ function AddDiKecualikan() {
                     onChange={(e) => setPdfDokumen(e.target.value)}
                   />
                 </div>
-                <div className="mb-3 col-12">
+                <div className="mb-3 col-12 ">
                   <label
                     htmlFor="pdfDokumen"
                     className="form-label font-weight-bold"
@@ -107,7 +112,7 @@ function AddDiKecualikan() {
               </div>
 
               <button type="button" className="btn-danger mt-3 mr-3">
-                <a href={``} style={{ color: "white", textDecoration: "none" }}>
+                <a href={`/admin-dikecualikan`} style={{ color: "white", textDecoration: "none" }}>
                   Batal
                 </a>
               </button>
@@ -117,6 +122,7 @@ function AddDiKecualikan() {
             </form>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

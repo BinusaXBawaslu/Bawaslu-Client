@@ -189,6 +189,15 @@ function DetailPermohonanKeberatan() {
                   />
                 </div>
               </div>
+              <button type="submit" className="btn-kembali btn-danger mt-3 mr-3">
+                  <a
+                    href="/admin-permohonan-keberatan"
+                    style={{ color: "white", textDecoration: "none" }}
+                  >
+                    {" "}
+                   Kembali
+                  </a>
+                </button>
             </form>
           </div>
         </div>

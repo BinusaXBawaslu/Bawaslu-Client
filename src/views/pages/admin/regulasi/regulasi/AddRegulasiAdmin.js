@@ -82,7 +82,7 @@ function AddRegulasiAdmin() {
                             <option value="Instruksi Kabupaten">Instruksi Kabupaten</option>;
                           </select>
                         </div>
-                        <div className="mb-3 col-lg-6">
+                        <div className="mb-3 col-lg-6 ">
                           <label
                             for="exampleInputEmail1"
                             className="form-label  font-weight-bold "
@@ -110,8 +110,7 @@ function AddRegulasiAdmin() {
                           />
                         </div>
                       </div>
-                      <div className="d-flex justify-content-between">
-                        <button type="button" className="btn-danger mt-3">
+                      <button type="button" className="btn-danger mr-3 mt-3">
                           <a
                             style={{ color: "white", textDecoration: "none" }}
                             href="/dip-admin"
@@ -122,7 +121,7 @@ function AddRegulasiAdmin() {
                         <button type="submit" className="btn-primary mt-3">
                           Tambah
                         </button>
-                      </div>
+                      
                     </form>
                   </div>
                 </div>

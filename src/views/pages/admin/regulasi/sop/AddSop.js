@@ -104,8 +104,7 @@ function AddSop() {
                           />
                         </div>
                       </div>
-                      <div className="d-flex justify-content-between">
-                        <button type="button" className="btn-danger mt-3">
+                      <button type="button" className="btn-danger mr-3 mt-3">
                           <a
                             style={{ color: "white", textDecoration: "none" }}
                             href="/sop-admin"
@@ -116,7 +115,6 @@ function AddSop() {
                         <button type="submit" className="btn-primary mt-3">
                           Tambah
                         </button>
-                      </div>
                     </form>
                   </div>
                 </div>

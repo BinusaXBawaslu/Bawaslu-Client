@@ -9,6 +9,11 @@
     display: flex;
     gap: 100px;
 }
+.btn-kembali{
+    width: 100px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
 @media screen and (max-width:768px) {
     .pembungkus-gabung{
         display: flex;

@@ -133,6 +133,8 @@ function Dikecualikan() {
               borderRadius: "10px",
               background: "#EEF5FF",
               float: "inline-end",
+              background:" rgb(241, 246, 249)",
+              border: "1px solid blue", boxShadow: "rgba(47, 60, 95, 0.24) 0px 6px 10px"
             }}
           >
             <h4 className="widget-title">

@@ -5,6 +5,7 @@ import Sidebar from "../../../../component/Sidebar";
 import Swal from "sweetalert2";
 import { API_DUMMY } from "../../../../utils/base_URL";
 import axios from "axios";
+import { useHistory } from "react-router-dom/cjs/react-router-dom";
 
 function AddPengumuman() {
   const [author, setAuthor] = useState("");
@@ -12,7 +13,7 @@ function AddPengumuman() {
   const [judulPengumuman, setJudulPengumuman] = useState("");
   const [tags, setTags] = useState("");
   const [image, setImage] = useState("");
-  const history = useState();
+  const history = useHistory();
   const [show, setShow] = useState(false);
 
   const add = async (e) => {
@@ -40,6 +41,7 @@ function AddPengumuman() {
       });
       history.push("/admin-pengumuman");
       setTimeout(() => {
+      
         window.location.reload();
       }, 1500);
     } catch (error) {

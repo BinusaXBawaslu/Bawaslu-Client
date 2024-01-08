@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
+import Header from "../../../../component/Header";
+import Sidebar from "../../../../component/Sidebar";
 import { API_DUMMY } from "../../../../utils/base_URL";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
@@ -50,7 +52,10 @@ function AddBerkalaKelembagaan() {
 
   return (
     <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
+     <Header/>
       {/* ... (Header, Sidebar, etc.) ... */}
+      <div className="app-main">
+        <Sidebar/>
       <div className="container mt-3 app-main__outer">
         <div className="card shadow">
           <div className="card-body">
@@ -124,7 +129,7 @@ function AddBerkalaKelembagaan() {
               </div>
 
               <button type="button" className="btn-danger mt-3 mr-3">
-                <a href={``} style={{ color: "white", textDecoration: "none" }}>
+                <a href={`/admin-berkala-kelembagaan`} style={{ color: "white", textDecoration: "none" }}>
                   Batal
                 </a>
               </button>
@@ -135,6 +140,8 @@ function AddBerkalaKelembagaan() {
           </div>
         </div>
       </div>
+      </div>
+
     </div>
   );
 }

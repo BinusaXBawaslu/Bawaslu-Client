@@ -507,7 +507,7 @@ function Home() {
                     />
                     <h3>Informasi Berkala</h3>
                   </div>
-                  <a href="/informasi-berkala"></a>
+                  <a href="/informasi-berkala">
                   <div className="details-hover-wrap">
                     <div className="details-hover">
                       <img
@@ -518,6 +518,8 @@ function Home() {
                       <h3>Informasi Berkala</h3>
                     </div>
                   </div>
+                  </a>
+                 
                 </div>
               </div>
               <div className="col-lg-3 col-md-6">

@@ -9,6 +9,7 @@ import Header from "../../../../component/Header";
 import Sidebar from "../../../../component/Sidebar";
 import { format } from "date-fns";
 import idLocale from "date-fns/locale/id";
+import "../../../../css/gabung.css"
 
 function DetailPengumuman() {
   const [author, setAuthor] = useState("");
@@ -133,7 +134,17 @@ function DetailPengumuman() {
                     value={tags}
                   />
                 </div>
+
               </div>
+              <button type="submit" className="btn-kembali btn-danger mt-3 mr-3">
+                  <a
+                    href="/admin-pengumuman"
+                    style={{ color: "white", textDecoration: "none" }}
+                  >
+                    {" "}
+                   Kembali
+                  </a>
+                </button>
             </form>
           </div>
         </div>

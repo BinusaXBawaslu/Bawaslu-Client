@@ -151,8 +151,8 @@ function Footer() {
         <div className="footer-bottom text-center">
           <div className="container">
             <div className="row">
-              <div className="col-md-12 align-self-center">
-              <ul className="social-media d-block d-md-block d-lg-none d-md-flex gap-5">
+              <div className="col-md-12 align-self-center footer-media">
+              <ul className="social-media  d-block d-md-block d-lg-none d-md-flex gap-2">
                     <li>
                       <a
                         className="facebook"

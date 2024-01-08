@@ -1,11 +1,12 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom/cjs/react-router-dom.min";
+import { useHistory, useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { API_DUMMY } from "../../../../../utils/base_URL";
 import Swal from "sweetalert2";
 import Header from "../../../../../component/Header";
 import Sidebar from "../../../../../component/Sidebar";
 import { Pagination, TableContainer } from "@mui/material";
+import Pengumuman from "../../../pengumuman/Pengumuman";
 
 function AdminDip() {
   const [selectedValue, setSelectedValue] = useState("");
@@ -13,6 +14,7 @@ function AdminDip() {
   const [currentPage, setCurrentPage] = useState(1);
   const [paginationInfo, setPaginationInfo] = useState({});
   const [searchTerm, setSearchTerm] = useState("");
+  const history = useHistory();
   const [tableData, setTableData] = useState([]);
   const [default1, setDefault] = useState("SK DIP");
 
@@ -98,6 +100,15 @@ function AdminDip() {
       setPaginationInfo({});
     }
   };
+
+  const redirectToDetail = (id) => {
+    history.push(`/detail-pengumuman/${id}`);
+  };
+
+  // const redirectToEdit = (id) => {
+  //   history.push(`/edit-pengumuman/${id}`);
+  // };
+
 
   const handlePageChange = (event, value) => {
     setCurrentPage(value);
@@ -212,6 +223,7 @@ function AdminDip() {
                                 <button
                                   type="button"
                                   className="btn-sm btn-primary mr-2"
+                                  onClick={() => redirectToDetail(dip.id)}
                                 >
                                   <i className="fa-solid fa-pen-to-square"></i>
                                 </button>
@@ -220,6 +232,7 @@ function AdminDip() {
                                 type="button"
                                 onClick={() => deleteData(dip.id)}
                                 className="mr-2 btn-danger btn-sm"
+                                
                               >
                                 <i className="fa-solid fa-trash"></i>
                               </button>
