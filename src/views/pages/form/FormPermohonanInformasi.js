@@ -83,7 +83,7 @@ const FormPermohonanInformasi = () => {
     <>
       <div>
         <Navbar />
-        <div className="head" style={{marginBottom: "101px"}}>
+        <div className="head" style={{marginBottom: "100px"}}>
           <div
             data-aos="fade-up"
             data-aos-anchor-placement="bottom-bottom"
